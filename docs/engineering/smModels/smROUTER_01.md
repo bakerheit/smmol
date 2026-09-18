@@ -114,7 +114,9 @@ headline number, wins web-off and arithmetic, and is 52 s faster.
 **Best-epoch selection did not change the outcome.** The trainer now keeps the best epoch, selecting on generated
 held-out all-right — never on the 93 hand-written messages, which would corrupt the reported number. But that metric
 saturates at 98% by epoch 4, so it ranked epoch 5 highest and v3 saved the last epoch anyway. The hand-written peak
-was epoch 3 (72%). The mechanism is right; the signal is too easy. A harder generated held-out set would be needed.
+was 72% at epoch 3, but that is one message ahead of epoch 5 on a 93-message set and inside both the 4.7-point
+standard error and the 2.1-point gap between v1 and v3 on the same config. Neither metric resolves these epochs.
+Ranking them at all needs a larger held-out set, not just a harder generated one.
 
 The web-off rows aren't a better model: with web tools off, `none` is the right tool for more messages.
 

@@ -250,8 +250,10 @@ only differences — a two-way confound, stated rather than hidden.
 **The fix did not fire.** `best_epoch` came out 5 — the last one — so v3 saved exactly what the old
 code would have. The reason is that the selection metric is saturated: generated all-right reaches
 0.98 by epoch 4 and stops discriminating. Meanwhile the hand-written set moved
-0.62 → 0.70 → 0.72 → 0.70 → 0.71, so there *was* a peak at epoch 3 worth catching, and the metric we
-are allowed to select on cannot see it.
+0.62 → 0.70 → 0.72 → 0.70 → 0.71. **Corrected:** this first read as "a peak at epoch 3 worth catching".
+It is not. One message is 1.1 points on a 93-message set, so epochs 2-5 span two messages against a
+4.7-point standard error, and the same config ran 0.731 (v1) and 0.710 (v3). Neither metric can rank
+these epochs — the generated one saturates, the hand-written one is too small to resolve the difference.
 
 So the mechanism is correct and currently inert for this trainer. Catching that peak needs a harder
 generated held-out set — examples the model does not ace by epoch 4 — which is separate work and an

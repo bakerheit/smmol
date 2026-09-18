@@ -48,12 +48,14 @@ M5. It's scored on 93 hand-written messages that never appear in training (a tes
   the LLM.
 - **It overfits the generator.**
   - Held-out generated messages reach 98%, but the hand-written score wobbles from epoch to epoch.
-    v1 peaked after epoch 1 (74%), v2 after epoch 4 (73%), v3 after epoch 3 (72%).
+    v1's best was epoch 1 (74%), v2's epoch 4 (73%), v3's epoch 3 (72%) — but on 93 messages these are
+    one-to-two message differences, inside run-to-run noise. Treat them as "no epoch clearly best".
   - It learned the templates better than it learned how people actually talk.
 - **Best-epoch selection can't fix that wobble yet.** The trainer keeps the best epoch instead of the
   last, but it selects on generated held-out all-right, which saturates at 98% by epoch 4 and stops
   telling epochs apart — so v3 kept epoch 5 anyway. Selecting on the hand-written set would corrupt
-  the number this table reports. Catching the real peak needs a harder generated held-out set.
+  the number this table reports. And the hand-written set cannot break the tie either: its epochs sit
+  one to two messages apart out of 93. Ranking them needs a *larger* held-out set, not just a harder one.
 - **The web-off row isn't a better model.** With web tools off, "none" is the right tool for more
   messages, so tool accuracy is easier to get.
 

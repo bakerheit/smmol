@@ -569,7 +569,12 @@ in `smROUTER_01/out/v2/`.
 
 **The fix did not fire, and that is the finding.** `best_epoch` was 5 — the last — so v3 saved what the old code
 would have. The selection metric is saturated: generated all-right hits 0.98 by epoch 4 and stops discriminating,
-while the hand-written set moved 0.62 → 0.70 → 0.72 → 0.70 → 0.71. A real peak existed at epoch 3 and the only
-metric we are permitted to select on cannot see it. Catching it needs a harder generated held-out set, which is
-separate work; selecting on the hand-written set would corrupt the headline number and is not an option. The
-mechanism is correct and currently inert for this trainer.
+while the hand-written set moved 0.62 → 0.70 → 0.72 → 0.70 → 0.71. **Corrected 2026-09-17:** an earlier version of
+this entry called epoch 3 "a real peak". It is not one. On 93 messages one message is 1.1 points, so epochs 2-5
+span two messages, the standard error at p=0.71 is 4.7 points, and v1 scored 0.731 where v3 scored 0.710 on the
+same config — run-to-run noise of the same size as the whole spread. The honest reading is that **neither** metric
+can rank these epochs: the generated one because it saturates, the hand-written one because it is too small.
+That is a stronger reason to doubt the best-epoch machinery for this model than the one originally given.
+Ranking epochs at all would need a *larger* held-out set, not merely a harder generated one; selecting on the
+hand-written set would corrupt the headline number and is not an option either way. The mechanism is correct and
+currently inert for this trainer, and it is an open question whether it earns its keep here at all.

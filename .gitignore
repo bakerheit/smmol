@@ -74,6 +74,15 @@ env/
 .ruff_cache/
 .ipynb_checkpoints/
 
+# ---- Agent scratch ------------------------------------------------------------------
+# Claude Code puts agent worktrees under .claude/worktrees/, inside the repo. Each is a
+# full checkout, so a stray `git add -A` would otherwise stage tens of MB of duplicate
+# tree. Scoped to the volatile subdirs so a future .claude/skills/ can still be committed
+# on purpose.
+.claude/worktrees/
+.claude/sessions/
+.claude/tasks/
+
 # ---- Editors and OS -----------------------------------------------------------------
 .obsidian/
 .vscode/
