@@ -32,9 +32,28 @@ no model at all, and Ministral 8B prompted to do the same job. The full table wi
 | Same — right program | 64% | 60% | **79%** |
 | Same — stays quiet when it isn't a terminal job (6) | **100%** | 33% | 50% |
 
-**Read that honestly.** The router beats an 8B model at routing, by 13 points, roughly a thousand times faster.
-The maths reader loses to it. The CLI model gets the exact command right more often than the 8B model but names
-the right program far less often — it knows the shape of an answer better than it knows the tools.
+**Read that honestly, and read the paired tests before the percentages.** These are 40–93 hand-written items, and
+until 2026-09-18 not one number in this repo had an interval on it. Now they do
+([significance.py](benchmarks/when_small_wins/significance.py)):
+
+| Claim | Gap | McNemar p | 95% CI |
+|---|---:|---:|---|
+| Router beats a prompted 8B | +12.9 | **0.073** | [+0.2, +25.6] |
+| CLI, exact command | +31.9 | **0.0026** | [+14.1, +49.7] |
+| Maths reader vs the 8B | −5.0 | **0.80** | [−24.5, +14.5] |
+
+So: **the router's headline win is not significant at 0.05** — its interval nearly touches zero. The maths reader
+does **not** lose to the 8B; on 40 items the two are indistinguishable. The one genuinely solid accuracy result is
+the CLI model's, which is also the one this README spent a day hedging on other grounds.
+
+**And the opponent was never chosen.** Every baseline here is `ministral-8b` because that is what was running on
+the PC; no document gives a reason. Running the same CLI test against `qwen3-coder-30b` — same prompt, same schema,
+same grading, only the model name changed — puts the big model at 34.0% exact instead of 14.9%. The small model
+still wins, but by **+12.8 rather than +31.9**: about 60% of the published margin was opponent choice. The
+right-program picture is unchanged, 63.8% against 76.6%.
+
+The CLI model gets the exact command right more often than either big model and names the right program less often
+— it knows the shape of an answer better than it knows the tools.
 
 **The rule this used to state has not survived contact with the item-level data.** It read: *a small model wins
 when the job is narrow, has a closed output space, and can be generated in bulk.* But the CLI model has by far

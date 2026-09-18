@@ -11,7 +11,7 @@ Every experiment's key numbers, oldest first, with the baselines they were measu
 
 | Job | Small model trained here | Keyword rules or regex (no model) | Ministral 8B, prompted |
 |---|---|---|---|
-| Routing: intent, tool and ask-first all right (93 hand-written messages) | smROUTER_01 v3: **71%**, 2.04 ms on the CPU | keyword rules (`rules.py`): 63% | 58%, 1.99 s median |
+| Routing: intent, tool and ask-first all right (93 hand-written messages) | smROUTER_01 v3: 71%, 2.04 ms on the CPU | keyword rules (`rules.py`): 63% | 58%, 1.99 s median |
 | Routing bare arithmetic (17 messages) | v3: **94%** (v2: 82%, v1: 59%) | keyword rules: 24% | not run |
 | Reading math out of a message: every problem right (40 messages) | smMATH_LANGUAGE_001: **78%**, 28.9 ms | harness regex: 30% | **82%**, 3.13 s median |
 | Same, final answer right | 80% | 32.5% | **95%** |
@@ -30,6 +30,11 @@ Every experiment's key numbers, oldest first, with the baselines they were measu
 > [selection-metric.md](../plans/selection-metric.md) is for. Do not retrain this model until it is fixed.
 | Same, right program | 64% | catalog lookup: 60% | **79%** |
 | Same, quiet when it isn't a terminal job (6 requests) | **100%** | catalog lookup: 33% | 50% |
+
+> **Read the paired tests with this table.** Bolding here marks the larger number, not a demonstrated difference.
+> On 40-93 items the router's +12.9 is p = 0.073 and the maths reader's -5.0 is p = 0.80; only the CLI row's +31.9
+> (p = 0.0026) is significant. The 8B column is `ministral-8b` throughout, which was never chosen on merit — a
+> code-specialised 30B scores 34.0% where it scores 14.9% on the CLI job. See the 2026-09-18 entry.
 
 ---
 
@@ -712,3 +717,55 @@ and two messages wide. The CLI regression at 6.4 points is three messages, and i
 larger than one message. The
 live re-run scores the CLI small model at 44.7% where its `results.json` says 46.8%, a one-item difference between
 re-running the checkpoint now and the number recorded during training; it is not explained and is left visible.
+
+### Paired tests, and a baseline nobody chose, 2026-09-18
+
+Source: `benchmarks/when_small_wins/significance.py`, `baseline_models.py`, `data/significance.json`,
+`data/baseline_qwen3-coder-30b.json`.
+
+**Every headline in this log was a difference of two percentages with no interval on it**, on 40–93 hand-written
+items, in a project that had already caught itself reading a one-message difference as a peak. There was no
+McNemar, binomial or confidence interval anywhere in the repo. Two models scored on the same messages are a paired
+comparison; only the items they disagree on carry information.
+
+| Claim | n | Gap | small-only | 8B-only | McNemar p | 95% CI on the gap |
+|---|---:|---:|---:|---:|---:|---|
+| Router, all three right | 93 | +12.9 | 25 | 13 | **0.073** | [+0.2, +25.6] |
+| CLI, exact command | 47 | +31.9 | 19 | 4 | **0.0026** | [+14.1, +49.7] |
+| Maths reader, every problem | 40 | −5.0 | 7 | 9 | **0.80** | [−24.5, +14.5] |
+
+- **The router's headline is not significant at 0.05.** "Beats an 8B at routing by 13 points" sits at p = 0.073
+  with an interval that nearly touches zero — and that is *before* the 8B is given a single example. Two messages
+  moving columns takes it to p ≈ 0.14. The repo's own measured run-to-run noise is about two messages.
+- **The maths reader does not lose.** p = 0.80 is a coin flip. The log has been describing it as a loss.
+- **The CLI result is the only solid accuracy claim here**, at p = 0.0026 — and it is the one that spent a day
+  being hedged for grader-dependence, which is a separate and still-valid caveat.
+
+**The opponent was never chosen either.** Every baseline is `ministral-8b` because it was the model running on the
+PC; no document in the repo gives a reason. Re-running the CLI test against `qwen3-coder-30b` on the same 47 items,
+changing only the model name in `baseline_llm.py`'s own request:
+
+| Same 47 items | Exact command | Right program | Median s |
+|---|---:|---:|---:|
+| smTOOLS_COMPUTER_CLI_01 (4.9M) | **46.8%** | 63.8% | 0.047 |
+| ministral-8b (the published baseline) | 14.9% | 78.7% | 1.94 |
+| qwen3-coder-30b | 34.0% | **76.6%** | ~3.5 |
+
+- **About 60% of the repo's largest win was opponent choice.** The lead falls from +31.9 to +12.8. It does not
+  invert — a 4.9M model still writes the exact command more often than a 30B one — but "beats an 8B" was never a
+  well-defined claim, and the number quoted depended on which 8B happened to be loaded.
+- **The grader sign-flip survives the stronger opponent.** qwen3-coder-30b names the right program 76.6% of the
+  time against the small model's 63.8%, almost exactly Ministral's 78.7%. Big models know which tool; the small
+  model knows the house spelling. That is now two independent big models agreeing on the shape of the difference,
+  which is better evidence for [phase 3a's conclusion](#when-small-wins-phase-3a-the-cli-win-is-not-a-grading-artefact-2026-09-17)
+  than the single comparison it was drawn from.
+
+**A caveat about how this was found.** The 12-item probe that prompted the full run showed the coder model at 50%
+against the small model's 25% and looked like an inversion. At 21 items it was 38% against 29%. At 47 it is 34%
+against 46.8% — the opposite conclusion. The probe was not wrong so much as meaningless, and it was run by the
+same party who had written up the dangers of small samples the day before.
+
+**Caveats.** One run per model, temperature 0, one prompt — the committed one. `qwen3-coder-30b` is a 30B
+mixture-of-experts at IQ4_XS on the PC's GPU, not a like-for-like parameter comparison with an 8B; it is a *fairer*
+opponent for this task, not a controlled one. The paired intervals assume nothing beyond the pairing, but 40–93
+items is still small, and an interval of [+0.2, +25.6] should be read as "we do not know the size of this effect".

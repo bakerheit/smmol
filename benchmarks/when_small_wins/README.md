@@ -9,8 +9,16 @@ Nothing here trains or runs a model. It joins and re-scores files already commit
 
 ```bash
 python3 join.py                     # rebuild the item table, gated on reproducing results.md
+python3 significance.py             # paired McNemar tests on every headline. instant, no network
 python3 score_normalised.py         # phase 3a: re-score the CLI comparison three ways
+python3 handoff.py                  # phase 4: small first, big when unsure, all three jobs
 python3 -m unittest discover -s tests
+```
+
+Needs the PC's LLM server:
+
+```bash
+SMMOL_LLM_URL=http://<pc>:8081 python3 baseline_models.py qwen3-coder-30b
 ```
 
 ## Files
@@ -22,6 +30,10 @@ python3 -m unittest discover -s tests
 | `score_normalised.py` | Phase 3a — strict, spelling-forgiven and most-permissive scoring, printing every forgiven item by name |
 | `data/items.jsonl` | 186 items: `job`, `text`, `want`, `small_right`, `llm_right`, and the stored `got` strings |
 | `data/normalised_cli.json` | The three CLI scores and the forgiven items |
+| `significance.py` | Paired McNemar tests and intervals on every headline. The repo had none before 2026-09-18 |
+| `baseline_models.py` | Re-runs the CLI comparison against any model the PC serves, changing only the model name |
+| `handoff.py` | Phase 4, all three jobs, each in its own interpreter (the projects' modules collide) |
+| `data/significance.json`, `data/baseline_*.json`, `data/handoff*.json` | Their results |
 
 ## What phase 0 found
 
