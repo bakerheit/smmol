@@ -55,6 +55,8 @@ not a status page: [../product/whats-next.md](../product/whats-next.md) says wha
 | File | What it plans | Written |
 |---|---|---|
 | [smCLM_02.md](plans/smCLM_02.md) | smCLM_01 on real sentences, about 2,500 words and 150 ideas, then memory that searches by meaning in paratroop_harness_02 | 2026-09-17 |
+| [when-small-wins.md](plans/when-small-wins.md) | Finds the rule that predicts, before training, whether a small model will beat a prompted 8B — and runs three controls that could downgrade this repo's own headline claims | 2026-09-17 |
+| [selection-metric.md](plans/selection-metric.md) | A generated validation split that holds out phrasings rather than rows, so best-checkpoint and early-stopping have a metric that can rank epochs | 2026-09-17 |
 | [smRTS_01.md](plans/smRTS_01.md) | Three minimal recurrent state cells trained online with eligibility traces, no backprop through time, tested on associative recall and Tiny Shakespeare against truncated BPTT and smLLM_01. From a public repo's claims | 2026-09-17 |
 
 ## The projects
