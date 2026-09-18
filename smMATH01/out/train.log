@@ -2,7 +2,7 @@
 smMATH01 plain: 4.75M params on mps, numbers of 1 to 6 digits, 20 steps of 256
 plain step     10 |  0.0 min |  0.00M problems | loss 2.5593 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
 plain step     20 |  0.0 min |  0.01M problems | loss 2.3397 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
-plain done: 20 steps, 0.01M problems in 0.0 min, saved /private/tmp/claude-501/-Users-andrewbaker-workspace/906aeadb-cea2-4885-a1c9-5f305496e348/scratchpad/smmath-steps-check/plain.pt
+plain done: 20 steps, 0.01M problems in 0.0 min, saved <scratch>/smmath-steps-check/plain.pt
 
 next: python3 evaluate.py
 .......

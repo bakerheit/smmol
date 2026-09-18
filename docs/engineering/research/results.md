@@ -769,3 +769,71 @@ same party who had written up the dangers of small samples the day before.
 mixture-of-experts at IQ4_XS on the PC's GPU, not a like-for-like parameter comparison with an 8B; it is a *fairer*
 opponent for this task, not a controlled one. The paired intervals assume nothing beyond the pairing, but 40–93
 items is still small, and an interval of [+0.2, +25.6] should be read as "we do not know the size of this effect".
+
+### when-small-wins phase 3b: the router's win was supervision, not size, 2026-09-18
+
+**F5 fires.** [when-small-wins.md](../plans/when-small-wins.md) pre-registered that if giving the 8B 32
+examples got it to 68%, the router's 12.9-point win was supervised-vs-prompted rather than small-vs-big. It
+reached **73.1%**, which is not merely 68% — it is above smROUTER_01 v3's own 71.0%.
+
+Source: [`benchmarks/when_small_wins/kshot.py`](../../../benchmarks/when_small_wins/kshot.py), data in
+`data/kshot_router.json`. Examples are retrieved by BM25 from the router's own generator at a seed used nowhere
+else, and prepended as user/assistant turns. **Only the `messages` array changes** — the system prompt, JSON
+schema, model, temperature and grader are all imported from `smROUTER_01/baseline_llm.py` unchanged.
+
+| k examples | All three right | Intent | Tool | Ask first | Median |
+|---:|---:|---:|---:|---:|---:|
+| 0 (the published baseline) | 58.1% | 79.6% | 80.6% | 94.6% | 1.97 s |
+| 8 | 66.7% | 86.0% | 82.8% | 90.3% | 5.11 s |
+| 32 | **73.1%** | 89.2% | 87.1% | 89.2% | 13.56 s |
+| smROUTER_01 v3 (~50k examples, in the weights) | 71.0% | — | — | — | **2.04 ms** |
+
+Paired against the small model on the same 93 messages:
+
+| k | Gap | small-only | 8B-only | McNemar p | 95% CI |
+|---:|---:|---:|---:|---:|---|
+| 0 | +12.9 | 25 | 13 | 0.073 | [+0.2, +25.6] |
+| 8 | +4.3 | 17 | 13 | 0.58 | [−7.2, +15.8] |
+| 32 | **−2.2** | 14 | 16 | 0.86 | [−13.7, +9.4] |
+
+**Both gates passed before any of this counted.** k=0 reproduced the committed 58.1% *exactly* — 0.581, and
+intent/tool/ask identical to three decimals, median 1.97 s against the recorded 1.99 s — so the arms differ only
+in the examples. And the leak gate dropped **1,226 of 50,000** pool examples whose text matched a test message,
+2.5% of the pool and precisely the ones BM25 ranks first. Without that gate the k=32 arm would have been reading
+answers off the test set, and nothing in the output would have shown it.
+
+- **32 examples close a 12.9-point gap and then cross it.** That is 0.06% of the supervision in the small
+  model's weights, pasted into a prompt. The published comparison pitted ~50,000 labelled examples against a
+  single zero-shot instruction and reported the difference as a fact about model size. It was not.
+- **P11 holds, monotonically:** 58.1 → 66.7 → 73.1. Dose-response is what a supervision explanation predicts
+  and what a size explanation does not, so this is the mechanism, not a lucky arm.
+- **The lift is not uniform, and one sub-score moves the wrong way.** Intent +9.6 and tool +6.5, but ask-first
+  goes **down** every step: 94.6 → 90.3 → 89.2. Examples teach the label taxonomy and cost the model calibration
+  about when to stop and ask. The one judgement call in the job is the one supervision-by-prompt degrades.
+- **Nothing here is significant, including the reversal.** At k=32 the 8B leads by 2.2 points with p = 0.86 —
+  that is a tie, not a win, and it should not be reported as the 8B beating the small model. The honest
+  statement is that the gap is gone.
+
+**What it costs to be that good.** Every point the 8B gained was bought with prompt length, and it pays for it
+on every message forever: 1.97 s → 5.11 s → 13.56 s. Against the small model's 2.04 ms that is a **6,647×**
+latency gap, up from 976× at k=0. Supervision compiled into weights is free at inference; supervision pasted
+into the context window is rented.
+
+**A coincidence worth not misreading.** 73.1% is also the number in
+[the phase 4 hand-off table](#when-small-wins-phase-4-all-three-jobs-the-hand-off-is-job-dependent-2026-09-17) —
+small-first-then-8B scored 73.1% too. These are different systems that happen to tie. The comparison that
+matters is the clock: the hand-off reaches 73.1% at a **0.96 s** median because it only escalates 48% of
+messages, while 32-shot prompting reaches the same 73.1% at 13.56 s because it pays the long prompt on all of
+them. Fourteen times the latency for the same accuracy.
+
+**What this does to the repo's headline.** "Beats a prompted 8B at routing by 13 points" is retired. What
+survives is narrower and, on the evidence, better supported: *a 500KB model matches a well-supervised 8B on this
+job, at 2.04 ms against 13.56 s, on hardware you already own.* The accuracy claim is gone; the efficiency claim
+is untouched and was always the more interesting one.
+
+**Caveats.** One run per arm, temperature 0, greedy BM25 retrieval — a better retriever or a tuned prompt would
+likely push the 8B higher, not lower, so this is a floor on what supervision buys it. 93 items, so every
+interval here is wide enough to be honest about. `ministral-8b` is still the opponent and still was never chosen
+on merit ([phase 3a addendum](#when-small-wins-phase-3a-the-cli-win-is-not-a-grading-artefact-2026-09-17)); a
+stronger model given the same 32 examples would presumably do better again. The other two jobs' k-shot arms
+(~1,300 calls) have not been run, so it is not yet known whether the CLI model's +31.9 survives the same test.

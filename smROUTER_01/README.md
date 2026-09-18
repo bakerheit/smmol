@@ -13,7 +13,12 @@ For each message (plus the assistant's last reply), it gives back three things:
 | ask first | true or false |
 
 - **Size:** 1.87M parameters, a byte-level transformer (d 192, 4 layers, 6 heads, 192 bytes of input).
-- **Speed:** about 2 ms per message on the CPU. The same routing through Ministral 8B takes about 2 s.
+- **Speed:** 2.04 ms per message on the CPU. The same routing through Ministral 8B takes 1.99 s cold, and
+  13.56 s once you paste in the 32 examples it needs to match this model's accuracy.
+- **Accuracy:** 71.0% all-three-right on 93 hand-written messages. A prompted Ministral 8B gets 58.1% cold but
+  **73.1%** shown 32 examples, so the gap this model was once credited with is supervision, not size —
+  see [phase 3b](../docs/engineering/research/results.md#when-small-wins-phase-3b-the-routers-win-was-supervision-not-size-2026-09-18).
+  What survives is the clock: same job, same accuracy, 6,647× faster, on a CPU.
 
 ## Switched-off tools
 

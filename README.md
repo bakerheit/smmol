@@ -24,7 +24,7 @@ no model at all, and Ministral 8B prompted to do the same job. The full table wi
 
 | Job | Small model here | No model (rules/regex) | Ministral 8B |
 |---|---|---|---|
-| Routing — intent, tool and ask-first all right (93 messages) | **71%**, 2.0 ms | 63% | 58%, 2.0 s |
+| Routing — intent, tool and ask-first all right (93 messages) | 71%, **2.0 ms** | 63% | 58% cold / **73%** shown 32 examples, 2.0–13.6 s |
 | Routing bare arithmetic (17 messages) | **94%** | 24% | not run |
 | Reading maths out of a message — every problem (40 messages) | 78%, 29 ms | 30% | **82%**, 3.1 s |
 | Same — final answer right | 80% | 33% | **95%** |
@@ -45,6 +45,15 @@ until 2026-09-18 not one number in this repo had an interval on it. Now they do
 So: **the router's headline win is not significant at 0.05** — its interval nearly touches zero. The maths reader
 does **not** lose to the 8B; on 40 items the two are indistinguishable. The one genuinely solid accuracy result is
 the CLI model's, which is also the one this README spent a day hedging on other grounds.
+
+**And the router's win turned out not to be about size at all.** Every comparison above pits ~50,000 labelled
+examples against a single zero-shot instruction. Give the 8B a taste of the same supervision — 32 examples
+retrieved into the prompt, nothing else changed — and it goes 58.1% → 66.7% → 73.1%, past the small model's 71.0%
+([phase 3b](docs/engineering/research/results.md#when-small-wins-phase-3b-the-routers-win-was-supervision-not-size-2026-09-18)).
+That is 0.06% of the small model's supervision, and the 12.9-point gap becomes −2.2. Neither number is
+significant; the honest reading is that **the gap is gone.** What it costs the 8B to get there is the whole
+remaining story: 13.56 s a message against 2.04 ms, a 6,647× difference, paid on every call forever because a
+prompt is rented and weights are owned.
 
 **And the opponent was never chosen.** Every baseline here is `ministral-8b` because that is what was running on
 the PC; no document gives a reason. Running the same CLI test against `qwen3-coder-30b` — same prompt, same schema,
