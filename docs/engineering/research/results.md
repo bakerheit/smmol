@@ -578,3 +578,47 @@ That is a stronger reason to doubt the best-epoch machinery for this model than 
 Ranking epochs at all would need a *larger* held-out set, not merely a harder generated one; selecting on the
 hand-written set would corrupt the headline number and is not an option either way. The mechanism is correct and
 currently inert for this trainer, and it is an open question whether it earns its keep here at all.
+
+### when-small-wins phase 3a: the CLI win is not a grading artefact, 2026-09-17
+
+Source: `benchmarks/when_small_wins/` (`join.py`, `normalise.py`, `score_normalised.py`,
+`data/normalised_cli.json`). No model was run: normalising can only turn a wrong answer right, so re-scoring the
+committed `mistakes` lists is exact.
+
+**Phase 0 first.** The item-level table is now rebuilt from committed files and gated on reproducing this log:
+CLI exact 0.468 / 0.149, CLI quiet 1.000 / 0.500, router 0.710 / 0.581, math reader 0.775. All four reproduce.
+186 items. One trap worth recording: a miss on a say-nothing item stores the literal string `"(nothing)"` in
+`want`, so a naive join scores Ministral's CLI exact at 0.085 instead of 0.149.
+
+**The control.** [when-small-wins.md](../plans/when-small-wins.md) pre-registered that Ministral's CLI failures are
+mostly right-program-wrong-string, and predicted normalising spelling would lift it from 14.9% to **40-55%** (P5)
+and cut the lead below **+10** (P7). Rules fixed before running: a leading package refresh, flag order, documented
+long/short pairs, quoting, `./` vs `.`. Never forgiven: a different program, a different subcommand, an added or
+removed flag that changes output, an extra pipeline stage, a different target, or a change in privilege.
+
+| Grader, same 47 items | smTOOLS_COMPUTER_CLI_01 | Ministral 8B | Lead |
+|---|---:|---:|---:|
+| Exact command (as published) | 46.8% | 14.9% | **+31.9** |
+| Spelling forgiven | 46.8% | 19.1% | **+27.7** |
+| Right program (most permissive defensible) | 63.8% | 78.7% | **−14.9** |
+
+- **P5 and P7 both missed, and F4 did not fire.** Normalising moved the lead 4.3 points, not 22. Exactly **two** of
+  Ministral's 40 command misses were spelling: a leading `apt update &&`, and `-y` written after the package name.
+- **Why the prediction was wrong:** "right program, wrong string" (30 of 40) is a far weaker property than "a shell
+  user would accept this". The other 28 name the right program and still do something else — `systemctl is-active`
+  for `status`, `uname -r` for `-a`, `grep -rl` for `-rn`, `systemctl enable --now` for `enable`. Those are real
+  errors, not formatting.
+- **By the plan's own rule, the win is stronger than reported.** It pre-committed that a normalised lead above +25
+  means the result should be stated more confidently. It is +27.7.
+
+**The finding that replaces the one we went looking for.** Two graders already in this repo disagree about *sign*
+on the same 47 items from the same run: exact command says the small model leads by 31.9, right program says
+Ministral leads by 14.9. Normalising does not bridge them, so this is not a formatting artefact — it is a real
+disagreement about what counts as a right answer. The small model reliably produces the house convention and picks
+the wrong tool; the 8B picks the right tool and spells it its own way. Any future claim of the form "X beats Y at
+shell commands" has to say which of those it means.
+
+**Caveat:** the normalisation rules were written from the plan's specification and self-tested on 13 cases, but they
+are still a judgement call, and they were written by the same party that ran the scoring. They are in
+`normalise.py` with a comment on every rule so each one can be argued with, and the two forgiven items are printed
+by name. The permissive row is an upper bound on what any normaliser could buy, not a proposal.

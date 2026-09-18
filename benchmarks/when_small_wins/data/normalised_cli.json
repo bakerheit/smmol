@@ -1,0 +1,28 @@
+{
+ "n": 47,
+ "strict": {
+  "small": 0.46808510638297873,
+  "llm": 0.14893617021276595
+ },
+ "normalised": {
+  "small": 0.46808510638297873,
+  "llm": 0.19148936170212766
+ },
+ "forgiven": {
+  "small": [],
+  "llm": [
+   {
+    "want": "sudo apt install -y nginx",
+    "got": "sudo apt update && sudo apt install -y nginx"
+   },
+   {
+    "want": "sudo dnf install -y ripgrep",
+    "got": "sudo dnf install ripgrep -y"
+   }
+  ]
+ },
+ "right_program_among_misses": {
+  "small": 8,
+  "llm": 30
+ }
+}
