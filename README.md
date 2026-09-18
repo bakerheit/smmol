@@ -36,8 +36,23 @@ no model at all, and Ministral 8B prompted to do the same job. The full table wi
 The maths reader loses to it. The CLI model gets the exact command right more often than the 8B model but names
 the right program far less often — it knows the shape of an answer better than it knows the tools.
 
-The pattern that holds up: a small model wins when the job is narrow, has a closed output space, and can be
-generated in bulk for training. It loses when the job needs world knowledge.
+**The rule this used to state has not survived contact with the item-level data.** It read: *a small model wins
+when the job is narrow, has a closed output space, and can be generated in bulk.* But the CLI model has by far
+the **largest** output space here — arbitrary shell strings — and posts the **largest** win; the program name it
+picks comes from a closed 79-task catalog, and that is exactly where it loses. Same model, same 47 messages,
+same run, opposite sign. "Closed output space" is not the axis.
+
+What replaced it, measured rather than asserted
+([write-up](docs/engineering/research/results.md), [code](benchmarks/when_small_wins/)): **two defensible
+graders disagree about who is better.** Forgiving only spelling — a leading `apt update &&`, flag order — moves
+the CLI lead just 4.3 points, from +31.9 to +27.7, because only two of Ministral's forty command misses were
+spelling. Score by "did it name the right program" instead and the lead inverts to −14.9. The small model
+reliably produces the house convention and picks the wrong tool; the 8B picks the right tool and spells it its
+own way.
+
+Finding the axis that actually predicts this, before a model is trained, is what
+[when-small-wins.md](docs/engineering/plans/when-small-wins.md) is for. It also runs the control nobody has run
+yet: every comparison here pits tens of thousands of labelled examples against a single zero-shot prompt.
 
 ---
 
@@ -57,14 +72,25 @@ These are written up in full in [`docs/engineering/research/results.md`](docs/en
   memory pressure. Earlier wall-clock numbers in the same log are explicitly re-labelled as upper bounds
   because of it.
 
-- **Keeping the best checkpoint only helps if your selection metric can still tell epochs apart.** Four trainers
-  were silently saving the last checkpoint instead of the best. Fixing that changed nothing for the router,
-  because its held-out metric saturates at 98% by epoch 4 while the hand-written score still moves. The
-  mechanism was right; the signal was too easy.
+- **Keeping the best checkpoint only helps if some metric can tell epochs apart.** Four trainers were silently
+  saving the last checkpoint instead of the best. Fixing it changed nothing for the router: its generated metric
+  saturates at 98% by epoch 4, and the hand-written set cannot break the tie either — its epochs sit one to two
+  messages apart out of 93, inside the run-to-run gap between two identical configs. An earlier version of this
+  README called epoch 3 "a real peak"; that was reading noise, and the correction is recorded in place.
 
 - **A negative result, kept.** [`smCONVERSATION_001/experiments/muon/FINDINGS.md`](smCONVERSATION_001/experiments/muon/FINDINGS.md)
   — the Muon optimiser came out 0.075% ahead, called out as smaller than seed variance and explicitly *not*
   worth a production switch.
+
+- **Small first, big when unsure, beats both.** The maths reader and a prompted 8B are wrong on *zero of the
+  same 40 items* — the union is perfect. Handing off only the messages the small model is unsure about, with the
+  threshold chosen on generated data and never on the reported set, scores **85.0%** against 77.5% for the small
+  model alone and 82.5% for the 8B, at 2.3× less latency than the 8B.
+  → [benchmarks/when_small_wins](benchmarks/when_small_wins/)
+
+- **The same distribution gap has now broken three different things.** Generated held-out data saturates — 98%
+  for the router, 98.9% for the maths reader — so it cannot rank checkpoints, cannot fire early stopping, and
+  picks a hand-off threshold that over-refers by 12 points. Three symptoms, one cause.
 
 - **A file whose entire job is to say "this is not a result."**
   [`smRTS_01/out/smoke-cpu/NOT_A_RESULT.md`](smRTS_01/out/smoke-cpu/NOT_A_RESULT.md)

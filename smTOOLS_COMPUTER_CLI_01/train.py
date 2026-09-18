@@ -51,6 +51,12 @@ def rows(examples):
 def standing(hand):
     """How good a checkpoint is, best first: exact commands, then right program, right risk, staying quiet.
 
+    WARNING, 2026-09-17: this selects on `test.json` — the same 53 hand-written requests the run
+    reports as its headline. A number chosen this way is selection on the reported set and is not
+    comparable to the Ministral baseline beside it. The currently published 46.8% is unaffected,
+    because that run predates this function and kept its last checkpoint. **Do not retrain this
+    model until the selection metric is fixed**; see docs/engineering/plans/selection-metric.md.
+
     Only the hand-written set can tell checkpoints apart. The generated one saturates at 99% by step 3000.
     Quiet comes last because it was 100% at every checkpoint of the first run, so it only breaks ties: a
     checkpoint that starts writing commands at "what's the weather" should lose one.

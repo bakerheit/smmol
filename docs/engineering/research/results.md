@@ -19,6 +19,15 @@ Every experiment's key numbers, oldest first, with the baselines they were measu
 | A held-out word's ideas: precision@k | smCLM_01 idea reader: 0.82 | common ideas, no reading: 0.14 | not run |
 | Gadget world: all 8 right after 20 experiments | smALLM_01: 83% random, 82% curious | lazy guess: 61% | not run |
 | Plain request to the right shell command, exact (53 hand-written requests) | smTOOLS_COMPUTER_CLI_01: **47%**, 47 ms on the CPU | catalog lookup: 40% | 15%, 1.94 s median |
+
+> **On the CLI row.** `smTOOLS_COMPUTER_CLI_01/train.py` chooses its checkpoint and early-stops on
+> `standing(hand)`, where `hand` is scored on the same 53 hand-written requests reported here. The published
+> 46.8% is **not** affected — that run predates the selection code, as its `results.json` shows by having no
+> `best_step` field, and it is the last checkpoint rather than a chosen one. But the retrain already on the
+> project's list would ship a number selected on its own test set. Its docstring says why the shortcut exists:
+> *"Only the hand-written set can tell checkpoints apart. The generated one saturates at 99% by step 3000."*
+> That is the same saturation the router has, and fixing it is what
+> [selection-metric.md](../plans/selection-metric.md) is for. Do not retrain this model until it is fixed.
 | Same, right program | 64% | catalog lookup: 60% | **79%** |
 | Same, quiet when it isn't a terminal job (6 requests) | **100%** | catalog lookup: 33% | 50% |
 
@@ -622,3 +631,39 @@ shell commands" has to say which of those it means.
 are still a judgement call, and they were written by the same party that ran the scoring. They are in
 `normalise.py` with a comment on every rule so each one can be argued with, and the two forgiven items are printed
 by name. The permissive row is an upper bound on what any normaliser could buy, not a proposal.
+
+### when-small-wins phase 4: small first, big when unsure, beats either alone, 2026-09-17
+
+Source: `benchmarks/when_small_wins/handoff.py`, `data/handoff_mathlang.json`. CPU only, no GPU, nothing under
+`out/` written.
+
+The 2×2 in phase 0 showed the maths reader and Ministral 8B are wrong on **zero of the same 40 items** — the union
+is perfect. This asks whether the small model's own confidence is enough to exploit that.
+
+**The threshold is chosen on generated held-out messages, never on the 40 reported ones.** 1,200 fresh messages at
+seed 777 (not the training seed 0, not the val seed 1000), picked by Youden's J on the small model's own
+right/wrong labels. Ministral is not consulted while choosing. The threshold is then frozen and applied.
+
+| On the 40 hand-written messages | Every problem right | Average latency |
+|---|---:|---:|
+| smMATH_LANGUAGE_001 alone | 77.5% | 28.9 ms |
+| Ministral 8B alone | 82.5% | 3,130 ms |
+| **Small first, hand off when `sure` < 0.9985** | **85.0%** | **1,347 ms** |
+| Oracle ceiling | 100.0% | |
+
+- **It beats both single models, so F6 does not fire.** 85.0% against 77.5% and 82.5%, at 2.3× less latency than
+  the 8B alone. This is the first configuration in the project that is better than either component.
+- **P12 half-missed, and the miss is the interesting part.** The accuracy landed inside the predicted 82-88%, but
+  the hand-off rate is **42%**, not the predicted ≤30%, so average latency is 1.35 s rather than under 1 s.
+- **Why: the same saturation, a third time.** On generated messages the model is right **98.9%** of the time and
+  the confidence signal is near-perfect there (AUC 0.996). A threshold tuned where the model is 98.9% right is far
+  too cautious where it is 77.5% right, so it over-refers. The generated-to-hand-written distribution gap has now
+  broken three separate things: checkpoint selection, early stopping, and threshold choice. That is a stronger
+  argument for [selection-metric.md](../plans/selection-metric.md) than the epoch-ranking case it was written on.
+
+**What this changes.** The thesis's defensible form is not "small beats big", which this repo's own scoreboard only
+half-supports. It is **"small first, big when the small one is unsure, beats either alone"** — and the harness can
+implement that today, because all three small models already emit a confidence the code currently throws away.
+
+**Caveat:** 40 items. One message is 2.5 points, so 85.0% versus 82.5% is a one-message lead. The result is that
+the hand-off is not *worse*, and that the ceiling is real and far away; it is not yet evidence of a 2.5-point win.
