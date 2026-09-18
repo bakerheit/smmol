@@ -82,15 +82,19 @@ These are written up in full in [`docs/engineering/research/results.md`](docs/en
   — the Muon optimiser came out 0.075% ahead, called out as smaller than seed variance and explicitly *not*
   worth a production switch.
 
-- **Small first, big when unsure, beats both.** The maths reader and a prompted 8B are wrong on *zero of the
-  same 40 items* — the union is perfect. Handing off only the messages the small model is unsure about, with the
-  threshold chosen on generated data and never on the reported set, scores **85.0%** against 77.5% for the small
-  model alone and 82.5% for the 8B, at 2.3× less latency than the 8B.
-  → [benchmarks/when_small_wins](benchmarks/when_small_wins/)
+- **"Small first, big when unsure" works on some jobs and hurts on others.** The maths reader and a prompted 8B
+  are wrong on *zero of the same 40 items*, so handing off the messages the small model is unsure about scores
+  **85.0%** against 77.5% alone and 82.5% for the 8B. But the same method costs the CLI model 6.4 points, because
+  it refers to a model that scores 14.9% at that job. And the router's 2-point gain costs a **482× slowdown**
+  (2 ms → 964 ms), which throws away the only thing that made it interesting. The rule is duller than it first
+  looked: hand off only to a model that is actually better at the job, and only when the latency is worth it.
+  An earlier version of this README stated the general claim from the maths reader alone; running the other two
+  jobs refuted it. → [benchmarks/when_small_wins](benchmarks/when_small_wins/)
 
-- **The same distribution gap has now broken three different things.** Generated held-out data saturates — 98%
-  for the router, 98.9% for the maths reader — so it cannot rank checkpoints, cannot fire early stopping, and
-  picks a hand-off threshold that over-refers by 12 points. Three symptoms, one cause.
+- **The same distribution gap has now broken four different things.** Generated held-out data saturates — 98.1%
+  for the router, 99.4% for the maths reader, 97.5% for the CLI model — so it cannot rank checkpoints, cannot
+  fire early stopping, and fits hand-off thresholds that over-refer on real phrasing at 32%, 48% and 64%.
+  Four symptoms, one cause.
 
 - **A file whose entire job is to say "this is not a result."**
   [`smRTS_01/out/smoke-cpu/NOT_A_RESULT.md`](smRTS_01/out/smoke-cpu/NOT_A_RESULT.md)

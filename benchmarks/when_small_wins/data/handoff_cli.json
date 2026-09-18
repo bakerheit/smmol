@@ -1,0 +1,21 @@
+{
+ "job": "cli",
+ "signal": "weakest",
+ "threshold": 0.9822,
+ "generated": {
+  "n": 800,
+  "accuracy": 0.975,
+  "auc": {
+   "sure": 0.9875320512820512,
+   "weakest": 0.9885576923076923
+  }
+ },
+ "n": 47,
+ "small_alone": 0.44680851063829785,
+ "llm_alone": 0.14893617021276595,
+ "handoff": 0.3829787234042553,
+ "handoff_rate": 0.6382978723404256,
+ "oracle_ceiling": 0.5319148936170213,
+ "avg_ms": 1255.3340425531915,
+ "beats_both": false
+}

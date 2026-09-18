@@ -42,6 +42,23 @@ router 0.710 / 0.581, math reader 0.775 — and the test keeps it that way.
 The maths reader row is the interesting one: **neither model misses a single item.** The union is perfect, which is
 what phase 4's "small first, big when unsure" rests on.
 
+## What phase 4 found
+
+All three jobs, threshold fitted on 800 generated messages and frozen before the reported set is touched:
+
+| Job | Small alone | Ministral 8B | Hand-off | Handed off |
+|---|---:|---:|---:|---:|
+| maths reader | 77.5% | 82.5% | **85.0%** | 32% |
+| router | 71.0% | 58.1% | 73.1% | 48% |
+| CLI | 44.7% | 14.9% | 38.3% | 64% |
+
+It beats both single models on two jobs and costs the CLI model 6.4 points. The rule: hand off only to a model
+that is actually better at the job. The router's 2-message gain also costs a 482× slowdown, which is a bad trade
+for a model whose value is being 2 ms.
+
+The CLI result moves 8.5 points depending on whether the threshold is fitted on 600 or 800 generated messages,
+so treat its magnitude as unreliable; only the sign is stable.
+
 ## What phase 3a found
 
 The prediction failed. Normalising spelling moved the CLI lead 4.3 points, not the 22 predicted — only two of

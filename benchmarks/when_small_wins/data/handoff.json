@@ -1,0 +1,65 @@
+[
+ {
+  "job": "mathlang",
+  "signal": "weakest",
+  "threshold": 0.9428,
+  "generated": {
+   "n": 800,
+   "accuracy": 0.99375,
+   "auc": {
+    "sure": 0.9947169811320755,
+    "weakest": 0.9954716981132076
+   }
+  },
+  "n": 40,
+  "small_alone": 0.775,
+  "llm_alone": 0.825,
+  "handoff": 0.85,
+  "handoff_rate": 0.325,
+  "oracle_ceiling": 1.0,
+  "avg_ms": 1036.7575,
+  "beats_both": true
+ },
+ {
+  "job": "router",
+  "signal": "sure",
+  "threshold": 0.9973,
+  "generated": {
+   "n": 800,
+   "accuracy": 0.98125,
+   "auc": {
+    "sure": 0.969171974522293,
+    "weakest": 0.9680254777070064
+   }
+  },
+  "n": 93,
+  "small_alone": 0.7096774193548387,
+  "llm_alone": 0.5806451612903226,
+  "handoff": 0.7311827956989247,
+  "handoff_rate": 0.4838709677419355,
+  "oracle_ceiling": 0.8494623655913979,
+  "avg_ms": 963.956129032258,
+  "beats_both": true
+ },
+ {
+  "job": "cli",
+  "signal": "weakest",
+  "threshold": 0.9822,
+  "generated": {
+   "n": 800,
+   "accuracy": 0.975,
+   "auc": {
+    "sure": 0.9875320512820512,
+    "weakest": 0.9885576923076923
+   }
+  },
+  "n": 47,
+  "small_alone": 0.44680851063829785,
+  "llm_alone": 0.14893617021276595,
+  "handoff": 0.3829787234042553,
+  "handoff_rate": 0.6382978723404256,
+  "oracle_ceiling": 0.5319148936170213,
+  "avg_ms": 1255.3340425531915,
+  "beats_both": false
+ }
+]

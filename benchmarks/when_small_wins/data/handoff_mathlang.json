@@ -1,21 +1,21 @@
 {
  "job": "mathlang",
- "signal": "sure",
- "threshold": 0.9985,
- "chosen_on": {
-  "n": 1200,
-  "seed": 777,
-  "accuracy": 0.9891666666666666,
-  "auc_sure": 0.9962413323828656,
-  "auc_weakest": 0.9960469185406001
+ "signal": "weakest",
+ "threshold": 0.9428,
+ "generated": {
+  "n": 800,
+  "accuracy": 0.99375,
+  "auc": {
+   "sure": 0.9947169811320755,
+   "weakest": 0.9954716981132076
+  }
  },
- "hand_written": {
-  "n": 40,
-  "small_alone": 0.775,
-  "llm_alone": 0.825,
-  "handoff": 0.85,
-  "handoff_rate": 0.425,
-  "oracle_ceiling": 1.0,
-  "avg_ms": 1346.8675
- }
+ "n": 40,
+ "small_alone": 0.775,
+ "llm_alone": 0.825,
+ "handoff": 0.85,
+ "handoff_rate": 0.325,
+ "oracle_ceiling": 1.0,
+ "avg_ms": 1036.7575,
+ "beats_both": true
 }

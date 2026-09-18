@@ -667,3 +667,48 @@ implement that today, because all three small models already emit a confidence t
 
 **Caveat:** 40 items. One message is 2.5 points, so 85.0% versus 82.5% is a one-message lead. The result is that
 the hand-off is not *worse*, and that the ceiling is real and far away; it is not yet evidence of a 2.5-point win.
+
+### when-small-wins phase 4, all three jobs: the hand-off is job-dependent, 2026-09-17
+
+Source: `benchmarks/when_small_wins/handoff.py`. CPU only. **This corrects the entry above**, which reported the
+maths reader alone and drew a general conclusion from it. Running the other two jobs refutes that conclusion.
+
+Method unchanged: the threshold is fitted on freshly generated messages at seed 777 by Youden's J, using only the
+small model's own right/wrong labels, then frozen before the reported set is touched.
+
+All three fitted on 800 generated messages, so the rows are comparable.
+
+| Job | Small alone | Ministral 8B | Hand-off | Handed off | Ceiling |
+|---|---:|---:|---:|---:|---:|
+| Maths reader (40 messages) | 77.5%, 29 ms | 82.5%, 3.13 s | **85.0%**, 1.04 s | 32% | 100% |
+| Router (93 messages) | 71.0%, **2 ms** | 58.1%, 1.99 s | 73.1%, 0.96 s | 48% | 84.9% |
+| CLI (47 messages) | 44.7%, 47 ms | 14.9%, 1.94 s | **38.3%**, 1.26 s | 64% | 53.2% |
+
+- **It beats both single models on two jobs and damages the third.** On the CLI it loses 6.4 points against the
+  small model alone, because it refers 64% of messages to a model that scores 14.9% at that job.
+- **And the CLI result is unstable in the threshold.** Fitting on 600 generated messages instead of 800 moved the
+  threshold from 0.9822 to 0.9985, the referral rate from 64% to 83%, and the score from 38.3% to 29.8%. The sign
+  never changes — it is worse than the small model alone either way — but the magnitude is not trustworthy to
+  better than several points, and a result that swings 8.5 points on the size of its fitting set is a warning
+  about the method, not a measurement of the models.
+- **The router win is real and practically worthless.** 73.1% against 71.0% is two messages out of 93, inside the
+  2.1-point gap already measured between v1 and v3 on an identical config. It costs 2 ms → 964 ms, a **482×
+  slowdown**, and the router's entire value is being a thousand times faster than the 8B.
+- **The rule, which is duller than the one we hoped for:** a hand-off helps only when the bigger model is actually
+  better on the items handed to it. The maths reader refers to a model better than itself overall (82.5 vs 77.5)
+  and gains. The CLI refers to one far worse (14.9 vs 44.7) and loses. The router refers to one that is worse
+  overall (58.1 vs 71.0) and still gains slightly, because the confidence signal is good enough to isolate the few
+  items the 8B wins — which is the most interesting of the three results and the thinnest.
+- **The same saturation, a fourth time.** Generated accuracy is 99.4% (maths), 98.1% (router) and high on CLI, so
+  every threshold fitted there over-refers on real phrasing: 32%, 48%, 83%.
+
+**What this retracts.** The previous entry concluded the defensible thesis was *"small first, big when unsure,
+beats either alone"*. On this evidence that is true of one job out of three, false on one, and technically true
+but practically useless on the third. The honest version is conditional: **hand off only to a model that is better
+at the job, and only when the latency you give up is worth the accuracy you gain.** For the router it is not.
+
+**Caveats.** 40, 93 and 47 items — one message is 2.5, 1.1 and 2.1 points respectively, so the two "wins" are one
+and two messages wide. The CLI regression at 6.4 points is three messages, and is the only effect here clearly
+larger than one message. The
+live re-run scores the CLI small model at 44.7% where its `results.json` says 46.8%, a one-item difference between
+re-running the checkpoint now and the number recorded during training; it is not explained and is left visible.

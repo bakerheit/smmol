@@ -1,0 +1,21 @@
+{
+ "job": "router",
+ "signal": "sure",
+ "threshold": 0.9973,
+ "generated": {
+  "n": 800,
+  "accuracy": 0.98125,
+  "auc": {
+   "sure": 0.969171974522293,
+   "weakest": 0.9680254777070064
+  }
+ },
+ "n": 93,
+ "small_alone": 0.7096774193548387,
+ "llm_alone": 0.5806451612903226,
+ "handoff": 0.7311827956989247,
+ "handoff_rate": 0.4838709677419355,
+ "oracle_ceiling": 0.8494623655913979,
+ "avg_ms": 963.956129032258,
+ "beats_both": true
+}
