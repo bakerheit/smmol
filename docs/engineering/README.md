@@ -67,7 +67,7 @@ not a status page: [../product/whats-next.md](../product/whats-next.md) says wha
 | `paratroop_harness_02/` | The main project: a "brain" of small modules around structured working memory. Page on port 8771, CLI, shell pipes | [README](../../paratroop_harness_02/README.md), [architecture.md](paratroop_harness/architecture.md) |
 | `smLLM_01/` | Tiny Shakespeare byte GPT | [README](../../smLLM_01/README.md) |
 | `smALLM_01/` | Learn-by-doing model in a gadget world | [README](../../smALLM_01/README.md) |
-| `smEFFICIENCY_01/` | Not a model: measures the M5's real training throughput ceiling, and which free optimizations (bf16, `torch.compile`, batch size) are real | [README](../../smEFFICIENCY_01/README.md) |
+| `smEFFICIENCY_01/` | Not a model: measures the MacBook Pro M5's real training-throughput ceiling, and which free optimizations (bf16, `torch.compile`, batch size) are real | [README](../../smEFFICIENCY_01/README.md) |
 | `smCLM_01/` | Ideas reader vs words reader | [README](../../smCLM_01/README.md) |
 | `smROUTER_01/` | Trained Router module | [README](../../smROUTER_01/README.md) |
 | `smMATH01/` | Arithmetic in the model's own weights, three variants | [README](../../smMATH01/README.md) |

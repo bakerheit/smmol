@@ -141,7 +141,7 @@ page's switches weren't touched.
 
 ## Run it
 
-The page (only answers on this Mac):
+The page (only answers on the MacBook Pro M5 itself):
 
 ```bash
 python3 server.py

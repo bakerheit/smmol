@@ -112,7 +112,7 @@ python3 demo.py --policy curious --seed 7
 
 ## Results
 
-First run, 2026-09-14: 20 minutes on the M5.
+First run, 2026-09-14: 20 minutes on the MacBook Pro M5.
 
 - 3,864 steps, 247k brand-new worlds.
 - Loss went from 0.58 to 0.134 and was still falling at the end, so more time would help.

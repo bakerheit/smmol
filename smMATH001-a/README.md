@@ -57,7 +57,7 @@ It follows [smMATH01](../smMATH01/README.md), which did one step at a time and c
     Each number has a 30% chance of being a decimal, and most examples have several numbers.
   - **Sizes are capped:** multipliers have at most 3 nonzero digits, divisors are at most 9999.99, and
     the work is at most 420 characters.
-- **Training:** 10,000 steps of about 8,192 tokens each, 32 minutes on the M5.
+- **Training:** 10,000 steps of about 8,192 tokens each, 32 minutes on the MacBook Pro M5.
 
 ## Results
 

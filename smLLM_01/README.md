@@ -1,6 +1,6 @@
 # smLLM_01
 
-A tiny GPT trained from scratch on the Mac, just for fun. It's the first model in the SMMOL
+A tiny GPT trained from scratch on a MacBook Pro M5, just for fun. It's the first model in the SMMOL
 series.
 
 ## What it is

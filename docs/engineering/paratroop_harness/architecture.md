@@ -22,7 +22,7 @@ Contents:
 
 SMMOL is a research workspace for small models. It has two kinds of project:
 
-- **Models trained from scratch on the Mac** (Apple M5, PyTorch on MPS): smLLM_01, smALLM_01, smCLM_01, smROUTER_01,
+- **Models trained from scratch on a MacBook Pro M5** (PyTorch on MPS): smLLM_01, smALLM_01, smCLM_01, smROUTER_01,
   smMATH01, smMATH_LANGUAGE_001 and smMATH001-a. Each is a folder with `model.py`, `train.py`, usually `tests/`, and
   `out/` for checkpoints and results. See [smModels/](../smModels/).
 - **Harnesses** that run a "brain" made of parts:

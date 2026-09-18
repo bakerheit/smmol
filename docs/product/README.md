@@ -15,8 +15,8 @@ models, each doing one "brain job", running on computers at home.**
 A web page called the harness puts the pieces together into one assistant you can chat with. You can switch each piece
 on or off and watch how the answer changes.
 
-All the small models were trained from scratch on a MacBook. Bigger AI jobs that still need a larger model run on a
-gaming PC in the house.
+All the small models were trained from scratch on a MacBook Pro M5. Bigger AI jobs that still need a larger
+model run on a gaming PC in the house.
 
 ## Why it might matter
 

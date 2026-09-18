@@ -3,7 +3,8 @@
 The harness is the web page where all the parts of the assistant come together. You chat on the right, and on the left
 you watch the parts work.
 
-**Where it runs:** on the Mac itself, at http://127.0.0.1:8771. It won't open from another computer, on purpose.
+**Where it runs:** on the MacBook Pro M5 itself, at http://127.0.0.1:8771. It won't open from another
+computer, on purpose.
 
 **Before you start:** it's slow. Most parts still ask one mid-sized AI model on the home PC, one after another. In
 tests, a full reply took from 46 seconds to more than 2 minutes.

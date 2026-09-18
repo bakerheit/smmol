@@ -1,6 +1,6 @@
 # smROUTER_01
 
-A tiny model trained from scratch on this Mac for one small brain function: reading a message and
+A tiny model trained from scratch on a MacBook Pro M5 for one small brain function: reading a message and
 deciding where it goes. It's the first module in
 [paratroop_harness_02](../paratroop_harness_02/README.md).
 

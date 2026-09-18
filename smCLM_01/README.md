@@ -27,7 +27,7 @@ designed so ideas are visible in usage. Real language is messier.
 | A held-out word | starts with no ideas; after each pass, its ideas become the average of what the reader predicts wherever the word was hidden | just another word |
 
 Both are 2-layer transformers, 128 wide. Training used 80,000 sentences, 8 passes and 3 seeds,
-on the Mac's CPU (19 minutes in total).
+on the MacBook Pro M5's CPU (19 minutes in total).
 
 ## Results
 

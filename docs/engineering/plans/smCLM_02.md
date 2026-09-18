@@ -81,7 +81,8 @@ These aren't up for debate inside the run. If one turns out to be wrong, stop an
   pure BM25 and behaves exactly as today. "Invisible when off" is a rule of the harness, not a preference.
 - **Test sets first.** The hand-written recall pairs and held-out word tags are written before any data is generated,
   and a unit test proves nothing in them appears in the training data.
-- **The loader runs on the CPU.** Training may use the Mac's GPU, with the Mac's Ministral unloaded first.
+- **The loader runs on the CPU.** Training may use the MacBook Pro M5's GPU, with the Mac's Ministral
+  unloaded first.
 
 ## 5. Phases
 

@@ -98,7 +98,7 @@ python3 baseline_llm.py
 
 ## Results
 
-**2026-09-15 17:37**: 1,577 s (26.3 minutes) on the M5 (`out/results.json`).
+**2026-09-15 17:37**: 1,577 s (26.3 minutes) on the MacBook Pro M5 (`out/results.json`).
 
 | Reader | Every problem right | Final answer right | Found the math | Quiet when there's none | Time per message |
 |---|---|---|---|---|---|

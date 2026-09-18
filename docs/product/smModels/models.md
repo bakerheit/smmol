@@ -1,6 +1,7 @@
 # The models
 
-SMMOL has eight small models, all trained from scratch on a MacBook. Four of them are plugged into the assistant.
+SMMOL has eight small models, all trained from scratch on a MacBook Pro M5. Four of them are plugged into
+the assistant.
 
 **How to read the scores:**
 - **"Hand-written test messages"** are questions a person wrote on purpose, phrased differently from what the model

@@ -106,7 +106,7 @@ python3 solve.py "(12+8)/5"
 
 ## Results
 
-**2026-09-15 18:09** (`out/results.json`): 10,000 steps in 1,913 s (31.9 minutes) on the M5; 4,747,520
+**2026-09-15 18:09** (`out/results.json`): 10,000 steps in 1,913 s (31.9 minutes) on the MacBook Pro M5; 4,747,520
 parameters.
 
 Whole worked solution exactly right on held-out examples, with the greedy spot check (15 per kind, written on the CPU):

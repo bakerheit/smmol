@@ -8,7 +8,7 @@ specialised models, each handling one narrow "brain job", wired together by a we
 One model sorts messages by intent. One pulls the arithmetic out of a sentence. One does the arithmetic.
 Ordinary code does the jobs that never needed a model — exact maths, saving files, remembering facts.
 
-Every model here was trained from scratch on one MacBook M5. Nothing was fine-tuned from a pretrained
+Every model here was trained from scratch on a MacBook Pro M5. Nothing was fine-tuned from a pretrained
 checkpoint. The largest is 10.8M parameters.
 
 This is a solo home research project, and the numbers below are small-sample and single-machine. They are

@@ -38,7 +38,7 @@ module, or the calculator, then works them out. It's the model behind the Math L
 - **Noise:** messages are roughened with greetings, dropped punctuation, casing, and typos in letters
   only, never in digits.
 - **Every target is checked:** a generated answer that doesn't work out isn't used.
-- **Training:** 6,000 steps of 64 messages, 26 minutes on the M5.
+- **Training:** 6,000 steps of 64 messages, 26 minutes on the MacBook Pro M5.
 
 ## Results
 

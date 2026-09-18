@@ -35,7 +35,8 @@ If it learned from its own guesses, it would teach itself its own mistakes.
    how we know.
 2. **Quick fix first.** An approved lesson goes on a short list the part checks before answering. It takes effect on
    the next message, with no training.
-3. **Retrain later.** When a part has piled up enough lessons (50 was the example given), or the Mac is idle:
+3. **Retrain later.** When a part has piled up enough lessons (50 was the example given), or the
+   MacBook Pro M5 is idle:
    - train a copy on its original lessons plus the new ones, so it doesn't forget old skills;
    - test the copy;
    - use it only if it's no worse than before and fixes most of the lessons;

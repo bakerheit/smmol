@@ -1,6 +1,6 @@
 # smEFFICIENCY_01
 
-Not a model. A measurement of where SMMOL's training compute actually goes on the M5, and which of
+Not a model. A measurement of where SMMOL's training compute actually goes on the MacBook Pro M5, and which of
 three free optimizations are real.
 
 The project's founding claim is that small local models are cheaper than one big cloud model. Every
@@ -9,7 +9,7 @@ None of them says what fraction of the machine a run actually used. This measure
 
 ## The questions
 
-1. What matmul throughput can this Mac actually reach, per precision? Measured, not from a spec sheet.
+1. What matmul throughput can the MacBook Pro M5 actually reach, per precision? Measured, not from a spec sheet.
 2. What does a real SMMOL training loop achieve against that ceiling?
 3. Do mixed precision, `torch.compile`, or a bigger batch change it, and does quality survive?
 

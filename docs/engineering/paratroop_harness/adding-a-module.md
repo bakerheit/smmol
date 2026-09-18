@@ -55,7 +55,7 @@ Rules that come from `load_local()`:
   loading. Your `model.py` won't clash with another project's `model.py`: same-named modules are taken out of
   `sys.modules` before the import and restored afterwards.
 - **Load on the CPU** (`map_location="cpu"`, no `.to("mps")`), like `Router`, `Reader` and both `Solver`s, so the
-  harness never competes with training for the Mac's GPU.
+  harness never competes with training for the MacBook Pro M5's GPU.
 - **Any exception** while loading becomes `HarnessError` "couldn't load <path> (<error>)".
 - **Give the project a `__main__` CLI** that loads `out/<name>.pt` and prints one result, like `route.py`, `read.py`
   and `solve.py`. It's the quickest manual check.

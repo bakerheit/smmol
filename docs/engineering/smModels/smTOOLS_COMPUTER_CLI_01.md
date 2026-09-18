@@ -97,7 +97,8 @@ python3 cli.py --platform macos "what's using port 8771"
 
 ## Results
 
-**2026-09-15 21:45, first run.** 200,000 generated requests, 6,000 steps of 64, 2 h 26 min on the M5's GPU.
+**2026-09-15 21:45, first run.** 200,000 generated requests, 6,000 steps of 64, 2 h 26 min on the
+MacBook Pro M5's GPU.
 Scored on 53 hand-written requests (47 with a command, 6 without), worded differently from the catalog.
 
 | Model | Exact command | Right program | Right risk | Quiet | Per request |

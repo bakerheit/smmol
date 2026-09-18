@@ -27,7 +27,7 @@ produces lands on a shared whiteboard that the later functions read.
 
 ## Run it
 
-The page (only answers on this Mac):
+The page (only answers on the MacBook Pro M5 itself):
 
 ```bash
 python3 server.py
@@ -74,7 +74,7 @@ python3 harness.py --test route
 ## Swapping models
 
 - Each dropdown lists what the servers offer right now: the PC gateway's models, the models
-  UnlimitedStudio has on this Mac, the browse server, and Stable Diffusion. The choice is saved
+  UnlimitedStudio has on the MacBook Pro M5, the browse server, and Stable Diffusion. The choice is saved
   in `choices.json`.
 - **Test** (or `--test`) runs that function's cases from `checks.json` and saves the score
   for that exact model in `scores.json`, so you can compare models by swapping and testing.

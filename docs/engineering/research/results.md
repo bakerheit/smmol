@@ -44,7 +44,7 @@ Every experiment's key numbers, oldest first, with the baselines they were measu
 
 Source: `smLLM_01/out/train.log`, `out/log.csv`.
 
-- **Setup:** 10.8M parameters, bytes of Tiny Shakespeare, 20 minutes on the M5's GPU.
+- **Setup:** 10.8M parameters, bytes of Tiny Shakespeare, 20 minutes on the MacBook Pro M5's GPU.
 - **How far it got:** 1,915 steps (batch 64 × 256 bytes), 31.4M tokens, about 26,100–27,000 tokens/s.
 
 | Step | Minutes | Train loss | Val loss (bits/char) |

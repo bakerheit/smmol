@@ -153,7 +153,8 @@ Not up for debate inside the run. If one turns out to be wrong, stop and say so 
   `--val-split {iid,phrasings}` defaulting to `iid` in phase 1, flip the default to `phrasings` only at the phase 3
   gate, and record the flip's date in results.md. Every number already in results.md must still be reproducible by a
   documented flag combination.
-- **One GPU job at a time on the Mac**, harness pointed at `pc` with the Mac's model unloaded before each run. The
+- **One GPU job at a time on the MacBook Pro M5**, harness pointed at `pc` with the Mac's model unloaded before
+  each run. The
   7× contention finding is not repeated.
 - **smRTS_01 is not touched.** Its sources are sha256-hashed into Phase 2 run manifests and it is mid-experiment.
 

@@ -31,7 +31,7 @@ for it, and a risk level. 195 of the 395 commands are unique.
   to undo).
 - **Checked by real shells:** `check.py` fills in sample values and parses all 316 Linux and macOS commands
   with `bash -n` or `zsh -n`. Nothing is executed.
-- **The 79 Windows commands are unverified.** There's no PowerShell on this Mac.
+- **The 79 Windows commands are unverified.** There's no PowerShell on macOS.
 - **Written from knowledge, not from running them.** Treat the catalog as a careful first draft.
 
 ## Safety
@@ -52,7 +52,7 @@ for it, and a risk level. 195 of the 395 commands are unique.
   never touch a path or a flag).
 - **A fifth of the messages aren't terminal jobs at all** ("what's the weather", "remember my dentist",
   "2+2"). The right answer there is nothing.
-- **Training:** 6,000 steps of 64 requests on the M5.
+- **Training:** 6,000 steps of 64 requests on a MacBook Pro M5.
 
 ## Results
 

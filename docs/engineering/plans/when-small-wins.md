@@ -7,7 +7,8 @@ are reproducible from files already in the repo; the commands are given. Each ph
 and what to write down. A phase that fails its gate is still a result, and it goes in
 [results.md](../research/results.md).
 
-**Nothing in this plan trains anything.** No M5 GPU job. Phases 0-2 and 3a are pure re-analysis of files already
+**Nothing in this plan trains anything.** No GPU job on the MacBook Pro M5. Phases 0-2 and 3a are pure re-analysis
+of files already
 committed. Phases 3b, 4 and 5 need Ministral calls on the PC and CPU-only model runs.
 
 Contents:

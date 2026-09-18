@@ -311,8 +311,8 @@ intervals; bytes seen and bytes/second; half-lives; state capacity; and which pr
 
 ### Phase 3: Shakespeare, bits per char, and the cost per bit
 
-Same data as smLLM_01: `smLLM_01/data/input.txt`, the last 10% held out. Same 20-minute budget on the M5. Same
-reference numbers, from [smLLM_01.md](../smModels/smLLM_01.md):
+Same data as smLLM_01: `smLLM_01/data/input.txt`, the last 10% held out. Same 20-minute budget on the
+MacBook Pro M5. Same reference numbers, from [smLLM_01.md](../smModels/smLLM_01.md):
 
 | smLLM_01 | |
 |---|---|

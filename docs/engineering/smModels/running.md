@@ -7,7 +7,8 @@ Harness commands are in [../paratroop_harness/running.md](../paratroop_harness/r
 
 ## Before you train
 
-- **One GPU job at a time on the Mac.** Training scripts pick `mps` when it's available. smCLM_01 trains on the CPU,
+- **One GPU job at a time on the MacBook Pro M5.** Training scripts pick `mps` when it's available. smCLM_01
+  trains on the CPU,
   and smALLM_01 takes `--device auto`.
 - **`baseline_llm.py` uses the PC's GPU.** It calls Ministral 8B at `http://127.0.0.1:8081`, which is shared.
 - **Training overwrites `out/`.** Copy anything you want to keep first. smROUTER_01's first run was kept by hand in

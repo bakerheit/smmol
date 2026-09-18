@@ -5,8 +5,8 @@ and `out/log.csv` on 2026-09-15.
 
 ## Purpose
 
-The first model in SMMOL, "just for fun": a GPT trained from scratch on the Mac. The layout copies nanoGPT's
-`shakespeare-char` setup, so the result can be compared with a well-known number.
+The first model in SMMOL, "just for fun": a GPT trained from scratch on a MacBook Pro M5. The layout copies
+nanoGPT's `shakespeare-char` setup, so the result can be compared with a well-known number.
 
 ## Input and output
 

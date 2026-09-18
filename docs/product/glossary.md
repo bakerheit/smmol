@@ -30,7 +30,8 @@ mean similar things get similar numbers. Vector memory would need one.
 **Generated data.** Practice examples made by a program instead of written by people. It's quick to make hundreds of
 thousands of them, but they can all sound alike, so models can get too used to them.
 
-**GPU (graphics card).** The chip that makes AI training and answering fast. The Mac's GPU trains SMMOL's models. The
+**GPU (graphics card).** The chip that makes AI training and answering fast. A MacBook Pro M5's GPU trains
+SMMOL's models. The
 home PC's graphics card (an RX 580) runs the bigger model, and the family's other AI tools share it.
 
 **Hand-written test messages.** Test questions a person wrote on purpose, phrased differently from the practice

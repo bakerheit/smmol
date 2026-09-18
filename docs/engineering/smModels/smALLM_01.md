@@ -61,7 +61,7 @@ python3 check_curious.py
 
 ## Results
 
-**2026-09-14**, 20 minutes on the M5:
+**2026-09-14**, 20 minutes on the MacBook Pro M5:
 
 - **Training:** 3,864 steps and 247.3k worlds. The best checkpoint was step 3750.
 - **Loss:** 0.583 at step 250, down to 0.134 at the end, still falling.

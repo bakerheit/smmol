@@ -1,13 +1,14 @@
 # Running the harnesses
 
 Commands that exist in the code on 2026-09-15. Run each one from its project folder, for example
-`cd ~/workspace/SMMOL/paratroop_harness_02`.
+`cd ~/workspace/SMMOL/paratroop_harness_02`. "The Mac" below is the MacBook Pro M5 that trains the models;
+"the PC" is the desktop with the RX 580 that serves the big one.
 
 Training and testing the models is in [../smModels/running.md](../smModels/running.md).
 
 ## Before you run anything
 
-| Command | Uses the PC's RX 580 | Leaves this Mac | Writes into `paratroop_harness_02/` |
+| Command | Uses the PC's RX 580 | Leaves the Mac idle | Writes into `paratroop_harness_02/` |
 |---|---|---|---|
 | `python3 server.py`, then chatting | yes, for every prompted module that's on | PC gateway; browse server for web tools | `runs/`, `conversations/`, `memory/`, `workspace/`, and `choices.json`, `switches.json`, `settings.json`, `scores.json` when you use those controls |
 | `python3 harness.py "..."` | yes | same | `runs/`, `conversations/`, `memory/`, `workspace/` |

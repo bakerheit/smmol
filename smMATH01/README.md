@@ -33,7 +33,7 @@ steps, and differ in only two ways:
   - Reversing digits comes from "Teaching Arithmetic to Small Transformers" (Lee et al., 2023).
   - Place-in-number embeddings come from "Transformers Can Do Arithmetic with the Right Embeddings"
     (McLeish et al., 2024).
-  - This is a small replication on a MacBook, not a new result.
+  - This is a small replication on a MacBook Pro M5, not a new result.
 
 ## The problems
 
