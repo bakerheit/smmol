@@ -1,0 +1,17 @@
+{"stage": "general_conversation_v1", "step": 1, "train_loss": 2.137214, "validation_loss": 1.099606, "validation_bits_per_byte": 1.586397, "learning_rate": 5.999999999999999e-06, "elapsed_seconds": 0.423}
+{"stage": "general_conversation_v1", "step": 100, "train_loss": 0.975275, "validation_loss": 1.050302, "validation_bits_per_byte": 1.515265, "learning_rate": 0.0002993347647058549, "elapsed_seconds": 6.824}
+{"stage": "general_conversation_v1", "step": 200, "train_loss": 0.762543, "validation_loss": 1.065698, "validation_bits_per_byte": 1.537478, "learning_rate": 0.00029389044749298466, "elapsed_seconds": 13.427}
+{"stage": "general_conversation_v1", "step": 300, "train_loss": 0.456, "validation_loss": 1.080021, "validation_bits_per_byte": 1.55814, "learning_rate": 0.00028316934021576707, "elapsed_seconds": 19.651}
+{"stage": "general_conversation_v1", "step": 400, "train_loss": 0.545714, "validation_loss": 1.102438, "validation_bits_per_byte": 1.590482, "learning_rate": 0.00026761036626580804, "elapsed_seconds": 25.984}
+{"stage": "general_conversation_v1", "step": 500, "train_loss": 0.504065, "validation_loss": 1.150199, "validation_bits_per_byte": 1.659386, "learning_rate": 0.0002478505118647208, "elapsed_seconds": 32.318}
+{"stage": "general_conversation_v1", "step": 600, "train_loss": 0.433529, "validation_loss": 1.166489, "validation_bits_per_byte": 1.682889, "learning_rate": 0.00022469874777336995, "elapsed_seconds": 38.732}
+{"stage": "general_conversation_v1", "step": 700, "train_loss": 0.339838, "validation_loss": 1.159883, "validation_bits_per_byte": 1.673357, "learning_rate": 0.00019910290993387244, "elapsed_seconds": 44.982}
+{"stage": "general_conversation_v1", "step": 800, "train_loss": 0.298965, "validation_loss": 1.181308, "validation_bits_per_byte": 1.704267, "learning_rate": 0.00017211089495476034, "elapsed_seconds": 51.29}
+{"stage": "general_conversation_v1", "step": 900, "train_loss": 0.407074, "validation_loss": 1.216127, "validation_bits_per_byte": 1.7545, "learning_rate": 0.00014482775910070568, "elapsed_seconds": 57.525}
+{"stage": "general_conversation_v1", "step": 1000, "train_loss": 0.231226, "validation_loss": 1.222721, "validation_bits_per_byte": 1.764013, "learning_rate": 0.00011837047715920576, "elapsed_seconds": 63.769}
+{"stage": "general_conversation_v1", "step": 1100, "train_loss": 0.245122, "validation_loss": 1.258968, "validation_bits_per_byte": 1.816308, "learning_rate": 9.382221336154433e-05, "elapsed_seconds": 70.539}
+{"stage": "general_conversation_v1", "step": 1200, "train_loss": 0.288157, "validation_loss": 1.279463, "validation_bits_per_byte": 1.845875, "learning_rate": 7.218797651189601e-05, "elapsed_seconds": 76.901}
+{"stage": "general_conversation_v1", "step": 1300, "train_loss": 0.204313, "validation_loss": 1.299812, "validation_bits_per_byte": 1.875232, "learning_rate": 5.4353474808800465e-05, "elapsed_seconds": 83.232}
+{"stage": "general_conversation_v1", "step": 1400, "train_loss": 0.217689, "validation_loss": 1.328585, "validation_bits_per_byte": 1.916743, "learning_rate": 4.104885484744727e-05, "elapsed_seconds": 89.576}
+{"stage": "general_conversation_v1", "step": 1500, "train_loss": 0.252109, "validation_loss": 1.346294, "validation_bits_per_byte": 1.942292, "learning_rate": 3.2818809332280796e-05, "elapsed_seconds": 95.859}
+{"stage": "general_conversation_v1", "step": 1600, "train_loss": 0.254301, "validation_loss": 1.342227, "validation_bits_per_byte": 1.936425, "learning_rate": 3.000027729368117e-05, "elapsed_seconds": 102.109}

@@ -1,0 +1,228 @@
+{
+  "corpus_sha256": "13b883001ed7fd9ba16fdccb6cfcc09a1b56739e0cc25a8f59a67a414fed5e4b",
+  "created_unix_seconds": 1789619028.968168,
+  "data": {
+    "assistant_targets": 300,
+    "conversations": 25,
+    "history_message_counts": {
+      "1": 25,
+      "3": 35,
+      "4": 14,
+      "5": 79,
+      "6": 32,
+      "7": 74,
+      "8": 25,
+      "9": 13,
+      "10": 2,
+      "11": 1
+    },
+    "max_dropped_messages": 9,
+    "max_history_turns": 6,
+    "school_replay_examples": 89,
+    "school_replay_fraction": 0.25,
+    "train_conversations": 22,
+    "train_examples": 354,
+    "validation_conversations": 3,
+    "validation_domains": [
+      "game_and_story_ideas",
+      "learning_reflection",
+      "writing_revision"
+    ],
+    "validation_examples": 35
+  },
+  "environment": {
+    "device": "mps",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "python": "3.9.6",
+    "pytorch": "2.8.0"
+  },
+  "experiment": "smCONVERSATION_001-muon",
+  "format_version": 1,
+  "runs": [
+    {
+      "best_bits_per_byte": 4.750729264348367,
+      "best_step": 5,
+      "best_validation_loss": 3.2929545951866936,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 3.1103897094726562,
+      "mean_gradient_norm_before_clip": 8.300996685028077,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 4.750729264348367,
+          "step": 5,
+          "train_loss": 3.1103897094726562,
+          "training_seconds_before_eval": 1.758983792,
+          "validation_loss": 3.2929545951866936
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 2.2927601782854534,
+      "training_seconds_including_eval": 2.180777583,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 5.89780836351669,
+      "best_step": 5,
+      "best_validation_loss": 4.088049238654459,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 3.7912111282348633,
+      "mean_gradient_norm_before_clip": 12.039781188964843,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 5.89780836351669,
+          "step": 5,
+          "train_loss": 3.7912111282348633,
+          "training_seconds_before_eval": 2.0498390000000004,
+          "validation_loss": 4.088049238654459
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 2.006539847906543,
+      "training_seconds_including_eval": 2.491851834,
+      "validation_target_bytes": 6123,
+      "variant": "muon_rms"
+    }
+  ],
+  "selected_variants": [
+    "adamw",
+    "muon_rms"
+  ],
+  "settings": {
+    "adamw_learning_rate": 0.0002,
+    "batch_size": 4,
+    "corpus_conversations": 25,
+    "eval_steps": [
+      0,
+      5
+    ],
+    "format_version": 1,
+    "gradient_clip": 1.0,
+    "seeds": [
+      16001
+    ],
+    "steps": 5,
+    "variants": {
+      "adamw": {
+        "optimizer": "adamw"
+      },
+      "muon_original_10m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.01,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_original_20m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.02,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_rms": {
+        "muon_adjustment": "match_rms_adamw",
+        "muon_learning_rate": 0.0002,
+        "optimizer": "hybrid_muon"
+      }
+    },
+    "warmup_steps": 1,
+    "weight_decay": 0.05
+  }
+}

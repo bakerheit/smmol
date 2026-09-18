@@ -1,0 +1,14 @@
+smLANGUAGE_en_SCH_001 | kindergarten | 1.85M params | mps | 300 items | steps 10->1200
+step  100 | train 1.771 | val 1.765 (2.55 bpb) | best
+step  200 | train 1.137 | val 1.225 (1.77 bpb) | best
+step  300 | train 0.982 | val 1.126 (1.62 bpb) | best
+step  400 | train 0.951 | val 1.111 (1.60 bpb) | best
+step  500 | train 0.819 | val 1.084 (1.56 bpb) | best
+step  600 | train 0.722 | val 1.086 (1.57 bpb)
+step  700 | train 0.617 | val 1.106 (1.60 bpb)
+step  800 | train 0.581 | val 1.125 (1.62 bpb)
+step  900 | train 0.522 | val 1.157 (1.67 bpb)
+step 1000 | train 0.434 | val 1.212 (1.75 bpb)
+step 1100 | train 0.416 | val 1.235 (1.78 bpb)
+step 1200 | train 0.361 | val 1.258 (1.81 bpb)
+done | best validation 1.0840 | smLANGUAGE_en_SCH_001/checkpoints/kindergarten/weights.safetensors

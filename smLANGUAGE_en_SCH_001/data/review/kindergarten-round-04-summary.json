@@ -1,0 +1,10 @@
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 12,
+  "carried_from_earlier_review": 188,
+  "accepted": 196,
+  "rejected": 4,
+  "rewritten": 8,
+  "round": 4
+}

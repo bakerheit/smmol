@@ -1,0 +1,56 @@
+reviewed 20/200 | accepted 10 | rejected 10 | rewrote 9
+reviewed 40/200 | accepted 23 | rejected 17 | rewrote 16
+reviewed 60/200 | accepted 32 | rejected 28 | rewrote 25
+reviewed 80/200 | accepted 46 | rejected 34 | rewrote 39
+reviewed 100/200 | accepted 60 | rejected 40 | rewrote 51
+reviewed 120/200 | accepted 70 | rejected 50 | rewrote 59
+reviewed 140/200 | accepted 81 | rejected 59 | rewrote 68
+reviewed 160/200 | accepted 95 | rejected 65 | rewrote 81
+reviewed 180/200 | accepted 106 | rejected 74 | rewrote 91
+reviewed 200/200 | accepted 113 | rejected 87 | rewrote 96
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 200,
+  "accepted": 113,
+  "rejected": 87,
+  "rewritten": 96
+}
+reviewed 133/200 | accepted 126 | rejected 7 | rewrote 11
+reviewed 153/200 | accepted 142 | rejected 11 | rewrote 27
+reviewed 173/200 | accepted 152 | rejected 21 | rewrote 37
+reviewed 193/200 | accepted 163 | rejected 30 | rewrote 37
+reviewed 200/200 | accepted 168 | rejected 32 | rewrote 42
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 87,
+  "carried_from_earlier_review": 113,
+  "accepted": 168,
+  "rejected": 32,
+  "rewritten": 42,
+  "round": 2
+}
+reviewed 188/200 | accepted 180 | rejected 8 | rewrote 9
+reviewed 200/200 | accepted 188 | rejected 12 | rewrote 16
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 32,
+  "carried_from_earlier_review": 168,
+  "accepted": 188,
+  "rejected": 12,
+  "rewritten": 16,
+  "round": 3
+}
+reviewed 200/200 | accepted 196 | rejected 4 | rewrote 8
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 12,
+  "carried_from_earlier_review": 188,
+  "accepted": 196,
+  "rejected": 4,
+  "rewritten": 8,
+  "round": 4
+}

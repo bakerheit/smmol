@@ -1,0 +1,112 @@
+{
+ "when": "2026-09-15 18:09",
+ "params": 4747520,
+ "steps": 10000,
+ "seconds": 1913,
+ "args": {
+  "pool": 300000,
+  "steps": 10000,
+  "tokens": 8192,
+  "lr": 0.0006,
+  "d": 256,
+  "layers": 6,
+  "heads": 8,
+  "offset_max": 16,
+  "eval_every": 1000,
+  "seed": 0,
+  "out": "smMATH001-a/out",
+  "device": "mps"
+ },
+ "trained_sizes": {
+  "mixed": 0.843,
+  "decimals": 0.817,
+  "harness-like": 0.847,
+  "add": 1.0,
+  "multiply": 0.967,
+  "divide": 0.38,
+  "subtract": 0.987
+ },
+ "beyond": {
+  "add, 8-10 digit numbers": 0.067,
+  "subtract, 8-10 digit numbers": 0.0,
+  "multiply, 4-digit multiplier": 0.207,
+  "multiply, 5-6 digit multiplier": 0.0,
+  "divide, 8-9 digit dividend": 0.0,
+  "divide, 5-digit divisor": 0.0
+ },
+ "greedy_spot_check": {
+  "mixed": {
+   "answer_right": 14,
+   "work_exact": 14,
+   "of": 15
+  },
+  "decimals": {
+   "answer_right": 14,
+   "work_exact": 14,
+   "of": 15
+  },
+  "harness-like": {
+   "answer_right": 13,
+   "work_exact": 13,
+   "of": 15
+  },
+  "add": {
+   "answer_right": 15,
+   "work_exact": 15,
+   "of": 15
+  },
+  "multiply": {
+   "answer_right": 14,
+   "work_exact": 14,
+   "of": 15
+  },
+  "divide": {
+   "answer_right": 7,
+   "work_exact": 7,
+   "of": 15
+  },
+  "subtract": {
+   "answer_right": 14,
+   "work_exact": 14,
+   "of": 15
+  },
+  "add, 8-10 digit numbers": {
+   "answer_right": 1,
+   "work_exact": 1,
+   "of": 15
+  },
+  "subtract, 8-10 digit numbers": {
+   "answer_right": 0,
+   "work_exact": 0,
+   "of": 15
+  },
+  "multiply, 4-digit multiplier": {
+   "answer_right": 4,
+   "work_exact": 4,
+   "of": 15
+  },
+  "multiply, 5-6 digit multiplier": {
+   "answer_right": 0,
+   "work_exact": 0,
+   "of": 15
+  },
+  "divide, 8-9 digit dividend": {
+   "answer_right": 0,
+   "work_exact": 0,
+   "of": 15
+  },
+  "divide, 5-digit divisor": {
+   "answer_right": 0,
+   "work_exact": 0,
+   "of": 15
+  }
+ },
+ "ms_per_token_cpu": 0.84,
+ "volume_example": {
+  "expression": "322234*21323*212231",
+  "wrote": "1145340042",
+  "right": "1458238263363442",
+  "seconds": 0.3,
+  "characters": 388
+ }
+}

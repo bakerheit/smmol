@@ -1,0 +1,3 @@
+{"kind":"conversation_outlines","seed":116001,"attempt":1,"seconds":28.0,"metadata":{"target":1,"existing":0,"domains":["creative_brainstorming"]},"usage":{"completion_tokens":446,"prompt_tokens":576,"total_tokens":1022,"prompt_tokens_details":{"cached_tokens":575}},"ok":true}
+{"kind":"conversation_outlines","seed":116002,"attempt":1,"seconds":25.776,"metadata":{"target":1,"existing":0,"domains":["creative_brainstorming"]},"usage":{"completion_tokens":410,"prompt_tokens":576,"total_tokens":986,"prompt_tokens_details":{"cached_tokens":575}},"ok":true}
+{"kind":"conversation_outlines","seed":116003,"attempt":1,"seconds":25.448,"metadata":{"target":1,"existing":0,"domains":["creative_brainstorming"]},"ok":false,"error":"HTTP Error 500: Internal Server Error"}

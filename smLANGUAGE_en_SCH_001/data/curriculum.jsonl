@@ -1,0 +1,600 @@
+{"level":"preschool","word":"mom","sentence":"My mom gives me a hug."}
+{"level":"preschool","word":"dad","sentence":"My dad reads with me."}
+{"level":"preschool","word":"baby","sentence":"The baby claps both hands."}
+{"level":"preschool","word":"friend","sentence":"My friend shares a toy."}
+{"level":"preschool","word":"cat","sentence":"The cat naps by me."}
+{"level":"preschool","word":"dog","sentence":"The dog wags its tail."}
+{"level":"preschool","word":"bird","sentence":"A bird sings in the tree."}
+{"level":"preschool","word":"fish","sentence":"The fish swims in water."}
+{"level":"preschool","word":"bear","sentence":"The bear walks through grass."}
+{"level":"preschool","word":"duck","sentence":"A duck splashes in the pond."}
+{"level":"preschool","word":"cow","sentence":"The cow eats green grass."}
+{"level":"preschool","word":"pig","sentence":"The pig rolls in mud."}
+{"level":"preschool","word":"frog","sentence":"A frog jumps off a rock."}
+{"level":"preschool","word":"bug","sentence":"The little bug crawls away."}
+{"level":"preschool","word":"eye","sentence":"I close one eye."}
+{"level":"preschool","word":"ear","sentence":"My ear can hear music."}
+{"level":"preschool","word":"nose","sentence":"My nose smells warm bread."}
+{"level":"preschool","word":"mouth","sentence":"I open my mouth wide."}
+{"level":"preschool","word":"hand","sentence":"I wave my hand."}
+{"level":"preschool","word":"foot","sentence":"My foot fits this shoe."}
+{"level":"preschool","word":"ball","sentence":"I roll the blue ball."}
+{"level":"preschool","word":"book","sentence":"We look at a book."}
+{"level":"preschool","word":"cup","sentence":"The red cup holds milk."}
+{"level":"preschool","word":"hat","sentence":"My hat keeps me warm."}
+{"level":"preschool","word":"shoe","sentence":"I tie my shoe."}
+{"level":"preschool","word":"bed","sentence":"I sleep in my bed."}
+{"level":"preschool","word":"chair","sentence":"I sit on the chair."}
+{"level":"preschool","word":"table","sentence":"The plates are on the table."}
+{"level":"preschool","word":"door","sentence":"Please close the door."}
+{"level":"preschool","word":"box","sentence":"The toy is in the box."}
+{"level":"preschool","word":"toy","sentence":"This toy makes a sound."}
+{"level":"preschool","word":"sun","sentence":"The sun shines on us."}
+{"level":"preschool","word":"moon","sentence":"The moon glows at night."}
+{"level":"preschool","word":"star","sentence":"One star twinkles above us."}
+{"level":"preschool","word":"sky","sentence":"The sky looks blue today."}
+{"level":"preschool","word":"tree","sentence":"A bird sits in the tree."}
+{"level":"preschool","word":"flower","sentence":"The flower smells sweet."}
+{"level":"preschool","word":"grass","sentence":"The soft grass feels cool."}
+{"level":"preschool","word":"rain","sentence":"Rain taps on the window."}
+{"level":"preschool","word":"snow","sentence":"The white snow feels cold."}
+{"level":"preschool","word":"water","sentence":"I drink clean water."}
+{"level":"preschool","word":"apple","sentence":"I eat a red apple."}
+{"level":"preschool","word":"banana","sentence":"The banana has a yellow peel."}
+{"level":"preschool","word":"milk","sentence":"I pour milk in my cup."}
+{"level":"preschool","word":"bread","sentence":"We slice the warm bread."}
+{"level":"preschool","word":"egg","sentence":"The egg is round and white."}
+{"level":"preschool","word":"cake","sentence":"We share a small cake."}
+{"level":"preschool","word":"soup","sentence":"The hot soup smells good."}
+{"level":"preschool","word":"juice","sentence":"I drink apple juice."}
+{"level":"preschool","word":"run","sentence":"I can run fast."}
+{"level":"preschool","word":"walk","sentence":"We walk to the park."}
+{"level":"preschool","word":"jump","sentence":"I jump over the line."}
+{"level":"preschool","word":"sit","sentence":"Please sit beside me."}
+{"level":"preschool","word":"stand","sentence":"We stand in a row."}
+{"level":"preschool","word":"eat","sentence":"We eat lunch together."}
+{"level":"preschool","word":"drink","sentence":"I drink when I am thirsty."}
+{"level":"preschool","word":"sleep","sentence":"I sleep when night comes."}
+{"level":"preschool","word":"play","sentence":"We play with the ball."}
+{"level":"preschool","word":"read","sentence":"I read with my teacher."}
+{"level":"preschool","word":"look","sentence":"Look at the bright moon."}
+{"level":"preschool","word":"see","sentence":"I see a little bird."}
+{"level":"preschool","word":"hear","sentence":"I hear the dog bark."}
+{"level":"preschool","word":"talk","sentence":"We talk about our day."}
+{"level":"preschool","word":"help","sentence":"I help my friend stand."}
+{"level":"preschool","word":"wash","sentence":"I wash my hands."}
+{"level":"preschool","word":"big","sentence":"The big bus stops here."}
+{"level":"preschool","word":"small","sentence":"A small bug sits there."}
+{"level":"preschool","word":"red","sentence":"The red car goes fast."}
+{"level":"preschool","word":"blue","sentence":"My cup is blue."}
+{"level":"preschool","word":"green","sentence":"The green frog can jump."}
+{"level":"preschool","word":"hot","sentence":"The soup is hot."}
+{"level":"preschool","word":"cold","sentence":"The snow feels cold."}
+{"level":"preschool","word":"happy","sentence":"I feel happy with my friend."}
+{"level":"preschool","word":"sad","sentence":"The boy feels sad today."}
+{"level":"preschool","word":"soft","sentence":"The soft sock feels nice."}
+{"level":"preschool","word":"hard","sentence":"This rock feels hard."}
+{"level":"preschool","word":"fast","sentence":"The red car is fast."}
+{"level":"preschool","word":"slow","sentence":"The little bug moves slow."}
+{"level":"preschool","word":"one","sentence":"I have one blue cup."}
+{"level":"preschool","word":"two","sentence":"I see two yellow ducks."}
+{"level":"preschool","word":"up","sentence":"The bird flies up."}
+{"level":"preschool","word":"down","sentence":"The ball rolls down."}
+{"level":"preschool","word":"in","sentence":"The apple is in the box."}
+{"level":"preschool","word":"out","sentence":"The cat runs out."}
+{"level":"preschool","word":"on","sentence":"My hat is on."}
+{"level":"preschool","word":"off","sentence":"I take my coat off."}
+{"level":"preschool","word":"yes","sentence":"I say yes with a smile."}
+{"level":"preschool","word":"no","sentence":"I say no when I need to."}
+{"level":"preschool","word":"day","sentence":"We play outside each day."}
+{"level":"preschool","word":"night","sentence":"The moon comes out at night."}
+{"level":"preschool","word":"home","sentence":"We go home after school."}
+{"level":"preschool","word":"school","sentence":"I learn and play at school."}
+{"level":"preschool","word":"boy","sentence":"The boy kicks the ball."}
+{"level":"preschool","word":"girl","sentence":"The girl reads a book."}
+{"level":"preschool","word":"car","sentence":"The blue car stops."}
+{"level":"preschool","word":"bus","sentence":"The big bus has many seats."}
+{"level":"preschool","word":"bike","sentence":"I ride my bike slowly."}
+{"level":"preschool","word":"house","sentence":"My house has a red door."}
+{"level":"preschool","word":"sock","sentence":"I put on one sock."}
+{"level":"preschool","word":"coat","sentence":"My coat keeps me warm."}
+{"level":"kindergarten","word":"basket","sentence":"The basket holds three strawberries."}
+{"level":"kindergarten","word":"bell","sentence":"Ring the bell to call everyone inside."}
+{"level":"kindergarten","word":"blanket","sentence":"Wrap yourself in a warm blanket."}
+{"level":"kindergarten","word":"bubble","sentence":"The bubble floats in the air."}
+{"level":"kindergarten","word":"butter","sentence":"Butter is yellow and spreads on bread."}
+{"level":"kindergarten","word":"crack","sentence":"The egg makes a crack when it breaks."}
+{"level":"kindergarten","word":"cream","sentence":"Sweet cream is on top of the cake."}
+{"level":"kindergarten","word":"dinner","sentence":"Dinner is on the table tonight."}
+{"level":"kindergarten","word":"dress","sentence":"The dress is red and blue."}
+{"level":"kindergarten","word":"dust","sentence":"Wipe the dust off the table."}
+{"level":"kindergarten","word":"easy","sentence":"Peeling bananas feels easy and fun."}
+{"level":"kindergarten","word":"grow","sentence":"The tiny seed will grow into a big plant soon."}
+{"level":"kindergarten","word":"hold","sentence":"Can you hold the door for me?"}
+{"level":"kindergarten","word":"hug","sentence":"The cat gave the girl a warm hug."}
+{"level":"kindergarten","word":"hush","sentence":"We whisper hush when the baby sleeps."}
+{"level":"kindergarten","word":"hurt","sentence":"The sharp rock hurt his foot."}
+{"level":"kindergarten","word":"hopscotch","sentence":"They played hopscotch on the sidewalk chalk."}
+{"level":"kindergarten","word":"honey","sentence":"The bee made honey for the little bees."}
+{"level":"kindergarten","word":"ice","sentence":"The ice feels cold and slippery."}
+{"level":"kindergarten","word":"island","sentence":"A boat sailed to a small island in the lake."}
+{"level":"kindergarten","word":"leaf","sentence":"A bright leaf fell from the tree."}
+{"level":"kindergarten","word":"light","sentence":"The light from the lamp shone on the wall."}
+{"level":"kindergarten","word":"lily","sentence":"A pretty lily bloomed in the garden."}
+{"level":"kindergarten","word":"ladder","sentence":"A ladder helps us reach high shelves."}
+{"level":"kindergarten","word":"lake","sentence":"Ducks swim in the calm lake."}
+{"level":"kindergarten","word":"medicine","sentence":"The nurse gives medicine when you feel sick."}
+{"level":"kindergarten","word":"mask","sentence":"Wear a mask to stay safe and healthy."}
+{"level":"kindergarten","word":"mealtime","sentence":"We eat our lunch at mealtime every day."}
+{"level":"kindergarten","word":"mist","sentence":"The morning mist makes the garden look soft."}
+{"level":"kindergarten","word":"mirror","sentence":"Check your face in the mirror every morning."}
+{"level":"kindergarten","word":"medal","sentence":"You get a medal for doing something great."}
+{"level":"kindergarten","word":"mop","sentence":"Dad uses a mop to clean the floor."}
+{"level":"kindergarten","word":"milkshake","sentence":"I love drinking a sweet milkshake with a straw."}
+{"level":"kindergarten","word":"monkey","sentence":"The monkey swings on a vine in the jungle."}
+{"level":"kindergarten","word":"mug","sentence":"I drink hot chocolate from my favorite mug."}
+{"level":"kindergarten","word":"pillow","sentence":"I snuggle into my fluffy pillow at bedtime."}
+{"level":"kindergarten","word":"quiet","sentence":"Please be quiet during story time."}
+{"level":"kindergarten","word":"raincoat","sentence":"I wear my raincoat when it rains outside."}
+{"level":"kindergarten","word":"rainbow","sentence":"Look at the colorful rainbow after the rain."}
+{"level":"kindergarten","word":"roar","sentence":"The big lion makes a loud roar."}
+{"level":"kindergarten","word":"ride","sentence":"I enjoy my bike ride in the park."}
+{"level":"kindergarten","word":"rock","sentence":"I find a smooth rock by the stream."}
+{"level":"kindergarten","word":"ruler","sentence":"I use the ruler to measure my crayon."}
+{"level":"kindergarten","word":"shovel","sentence":"I dig with my shovel in the sandbox."}
+{"level":"kindergarten","word":"shout","sentence":"I shout happily when I see my friend."}
+{"level":"kindergarten","word":"skip","sentence":"I skip over the puddles after the rain."}
+{"level":"kindergarten","word":"slide","sentence":"I slide down the red slide at the park."}
+{"level":"kindergarten","word":"swing","sentence":"I swing high on the swing at recess."}
+{"level":"kindergarten","word":"team","sentence":"We play together on our team at school."}
+{"level":"kindergarten","word":"taste","sentence":"I taste the sweet cookie with my mouth."}
+{"level":"kindergarten","word":"tug","sentence":"I tug hard on the rope with my friend."}
+{"level":"kindergarten","word":"umbrella","sentence":"I hold my umbrella when it rains."}
+{"level":"kindergarten","word":"wagon","sentence":"Grandma pushes the wagon with toys inside."}
+{"level":"kindergarten","word":"zipper","sentence":"I pull the zipper up on my jacket."}
+{"level":"kindergarten","word":"zoo","sentence":"We visit the zoo to see animals."}
+{"level":"kindergarten","word":"zebra","sentence":"The zebra has black and white stripes."}
+{"level":"kindergarten","word":"yarn","sentence":"I pull the yarn from my colorful ball."}
+{"level":"kindergarten","word":"yogurt","sentence":"I eat yogurt for breakfast."}
+{"level":"kindergarten","word":"yellow","sentence":"The banana is yellow and sweet."}
+{"level":"kindergarten","word":"yoga","sentence":"I do yoga poses with my teacher."}
+{"level":"kindergarten","word":"angel","sentence":"He folded his paper into an angel shape."}
+{"level":"kindergarten","word":"apron","sentence":"The chef wore a clean apron to work."}
+{"level":"kindergarten","word":"autumn","sentence":"The leaves turn red in autumn."}
+{"level":"kindergarten","word":"chick","sentence":"The chick chirped in its nest."}
+{"level":"kindergarten","word":"backpack","sentence":"I put my lunch in my backpack."}
+{"level":"kindergarten","word":"bamboo","sentence":"The bamboo plant grows tall and straight."}
+{"level":"kindergarten","word":"barrel","sentence":"The barrel rolled down the hill."}
+{"level":"kindergarten","word":"bucket","sentence":"We filled the bucket with sand."}
+{"level":"kindergarten","word":"beehive","sentence":"The bees live in the beehive."}
+{"level":"kindergarten","word":"behind","sentence":"The cat hid behind the door."}
+{"level":"kindergarten","word":"beside","sentence":"Sit beside me at the lunch table."}
+{"level":"kindergarten","word":"evening","sentence":"We eat dinner in the evening."}
+{"level":"kindergarten","word":"farm","sentence":"Cows live happily on the farm."}
+{"level":"kindergarten","word":"fence","sentence":"She climbed over the fence."}
+{"level":"kindergarten","word":"frost","sentence":"Frost makes pretty patterns on the window."}
+{"level":"kindergarten","word":"fruit","sentence":"The tree has juicy red fruit."}
+{"level":"kindergarten","word":"garden","sentence":"We plant flowers in the garden."}
+{"level":"kindergarten","word":"grasshopper","sentence":"A grasshopper jumps high on the grass."}
+{"level":"kindergarten","word":"heavy","sentence":"The wet towel feels heavy to lift."}
+{"level":"kindergarten","word":"hill","sentence":"We slide down the hill."}
+{"level":"kindergarten","word":"kiss","sentence":"Grandma gave me a warm kiss."}
+{"level":"kindergarten","word":"lift","sentence":"Can you lift the small box for me?"}
+{"level":"kindergarten","word":"listen","sentence":"Listen to the teacher’s story."}
+{"level":"kindergarten","word":"low","sentence":"The little table is low to the ground."}
+{"level":"kindergarten","word":"nurse","sentence":"The nurse smiled at me in the hospital."}
+{"level":"kindergarten","word":"near","sentence":"The book is near the window."}
+{"level":"kindergarten","word":"nest","sentence":"The bird made a nest in the tree."}
+{"level":"kindergarten","word":"over","sentence":"The kite flew over the hill."}
+{"level":"kindergarten","word":"pack","sentence":"Pack your toys in the box."}
+{"level":"kindergarten","word":"paw","sentence":"The dog hurt its paw."}
+{"level":"kindergarten","word":"peel","sentence":"Peel the banana carefully."}
+{"level":"kindergarten","word":"rub","sentence":"Rub your hands together to warm them up."}
+{"level":"kindergarten","word":"rabbit","sentence":"The rabbit hopped in the field."}
+{"level":"kindergarten","word":"rattle","sentence":"The baby shook the rattle."}
+{"level":"kindergarten","word":"recess","sentence":"We play outside at recess."}
+{"level":"kindergarten","word":"rope","sentence":"We jump over the rope at recess."}
+{"level":"kindergarten","word":"sandwich","sentence":"I love my sandwich with cheese and turkey."}
+{"level":"kindergarten","word":"scarecrow","sentence":"The scarecrow stands in the garden to keep birds away."}
+{"level":"kindergarten","word":"scoop","sentence":"The scoop holds one ball of ice cream."}
+{"level":"kindergarten","word":"shy","sentence":"The shy puppy hid behind his owner’s legs."}
+{"level":"kindergarten","word":"splash","sentence":"The stone made a big splash."}
+{"level":"kindergarten","word":"van","sentence":"We rode in the van to the park."}
+{"level":"kindergarten","word":"watch","sentence":"My watch tells me when it’s time to play outside."}
+{"level":"kindergarten","word":"winter","sentence":"Snow falls on the ground in winter."}
+{"level":"kindergarten","word":"zip","sentence":"I zip my jacket to keep warm outside."}
+{"level":"kindergarten","word":"wrap","sentence":"I wrap my sandwich in foil for lunch."}
+{"level":"kindergarten","word":"ant","sentence":"A tiny ant climbs up the crack."}
+{"level":"kindergarten","word":"aunt","sentence":"My aunt waves goodbye with a big smile."}
+{"level":"kindergarten","word":"backyard","sentence":"We play and run in the backyard."}
+{"level":"kindergarten","word":"badge","sentence":"She wears a badge on her shirt pocket."}
+{"level":"kindergarten","word":"bacon","sentence":"The bacon sizzles and smells good."}
+{"level":"kindergarten","word":"badger","sentence":"The badger digs under the bush."}
+{"level":"kindergarten","word":"earthworm","sentence":"The earthworm moves in the garden soil."}
+{"level":"kindergarten","word":"racecar","sentence":"The racecar zooms fast around the track."}
+{"level":"kindergarten","word":"radio","sentence":"Grandpa listens to music on the radio."}
+{"level":"kindergarten","word":"rack","sentence":"Coats hang on the coat rack."}
+{"level":"kindergarten","word":"refrigerator","sentence":"Mom puts snacks in the refrigerator to keep them cold."}
+{"level":"kindergarten","word":"rooster","sentence":"The rooster crows loudly in the morning."}
+{"level":"kindergarten","word":"saucepan","sentence":"We cook soup in a big saucepan."}
+{"level":"kindergarten","word":"saucer","sentence":"The saucer holds the cup steady."}
+{"level":"kindergarten","word":"scarf","sentence":"Dad wears a scarf around his neck."}
+{"level":"kindergarten","word":"scissors","sentence":"She cuts paper with scissors."}
+{"level":"kindergarten","word":"scooter","sentence":"He rides his scooter on the sidewalk."}
+{"level":"kindergarten","word":"shower","sentence":"I take a shower to wash my body."}
+{"level":"kindergarten","word":"sink","sentence":"We wash our hands in the sink."}
+{"level":"kindergarten","word":"skillet","sentence":"She cooks eggs in a skillet."}
+{"level":"kindergarten","word":"tickle","sentence":"A feather can tickle my hand."}
+{"level":"kindergarten","word":"stretch","sentence":"I stretch my arms up high like a cat."}
+{"level":"kindergarten","word":"pour","sentence":"I pour water into my cup at snack time."}
+{"level":"kindergarten","word":"giggle","sentence":"We giggle when someone tells a silly joke."}
+{"level":"kindergarten","word":"drum","sentence":"I tap the drum with two sticks."}
+{"level":"kindergarten","word":"crawl","sentence":"I crawl under the picnic table to play hide-and-seek."}
+{"level":"kindergarten","word":"branch","sentence":"A bird sits on the tree branch."}
+{"level":"kindergarten","word":"breeze","sentence":"The leaves move in a soft breeze."}
+{"level":"kindergarten","word":"bud","sentence":"The pink bud will open into a flower."}
+{"level":"kindergarten","word":"clover","sentence":"I look for clover in the green grass."}
+{"level":"kindergarten","word":"cloud","sentence":"A big white cloud floats in the sky."}
+{"level":"kindergarten","word":"clump","sentence":"A clump of mud sticks to my shoe."}
+{"level":"kindergarten","word":"damp","sentence":"The towel feels damp after washing."}
+{"level":"kindergarten","word":"dirt","sentence":"I play in a pile of fresh dirt."}
+{"level":"kindergarten","word":"dusk","sentence":"Fireflies shine at dusk outside."}
+{"level":"kindergarten","word":"dusty","sentence":"The bookshelf has dusty books on it."}
+{"level":"kindergarten","word":"moss","sentence":"Green moss grows on the tree trunk."}
+{"level":"kindergarten","word":"puddle","sentence":"Rain made a puddle on the sidewalk."}
+{"level":"kindergarten","word":"shelter","sentence":"The roof gives us shelter from rain."}
+{"level":"kindergarten","word":"snowy","sentence":"The snowy mountain sparkled in the sun."}
+{"level":"kindergarten","word":"elbow","sentence":"She bumped her elbow on the table."}
+{"level":"kindergarten","word":"fairy","sentence":"The fairy flew with a tiny wand."}
+{"level":"kindergarten","word":"fluffy","sentence":"The fluffy pillow is soft and white."}
+{"level":"kindergarten","word":"fresh","sentence":"The fresh apple smells sweet."}
+{"level":"kindergarten","word":"itchy","sentence":"The wool hat feels itchy on my head."}
+{"level":"kindergarten","word":"kite","sentence":"The kite soars high in the sky."}
+{"level":"kindergarten","word":"lovely","sentence":"The lovely song made everyone smile."}
+{"level":"kindergarten","word":"magic","sentence":"The magic wand made the toy dance."}
+{"level":"kindergarten","word":"meet","sentence":"We all meet here for recess games."}
+{"level":"kindergarten","word":"paintbrush","sentence":"Use the paintbrush to paint blue clouds."}
+{"level":"kindergarten","word":"parade","sentence":"The parade has floats and marching bands."}
+{"level":"kindergarten","word":"pencil","sentence":"Hold the pencil tight to draw a line."}
+{"level":"kindergarten","word":"popcorn","sentence":"The popcorn tastes crunchy and buttery."}
+{"level":"kindergarten","word":"pretend","sentence":"Let’s pretend the stick is a sword."}
+{"level":"kindergarten","word":"skateboard","sentence":"He glides on a skateboard outside."}
+{"level":"kindergarten","word":"maple","sentence":"The syrup comes from a maple tree."}
+{"level":"kindergarten","word":"matchstick","sentence":"An adult uses a matchstick to light candles."}
+{"level":"kindergarten","word":"mustard","sentence":"The sandwich had yellow mustard on top."}
+{"level":"kindergarten","word":"mushroom","sentence":"The child found a small mushroom in the yard."}
+{"level":"kindergarten","word":"needle","sentence":"The sewing needle can prick your finger."}
+{"level":"kindergarten","word":"oatmeal","sentence":"Dad made oatmeal for breakfast."}
+{"level":"kindergarten","word":"oven","sentence":"The cake baked in the oven."}
+{"level":"kindergarten","word":"kitchen","sentence":"The kids set the table in the kitchen."}
+{"level":"kindergarten","word":"label","sentence":"Mom wrote a label on the milk carton."}
+{"level":"kindergarten","word":"lamp","sentence":"The lamp on the shelf lights up the room at night."}
+{"level":"kindergarten","word":"lemon","sentence":"Squeeze a little lemon into your water."}
+{"level":"kindergarten","word":"lemonade","sentence":"She poured lemonade into her glass."}
+{"level":"kindergarten","word":"line","sentence":"Draw a straight line with your crayon."}
+{"level":"kindergarten","word":"log","sentence":"The fire needs another log to keep burning."}
+{"level":"kindergarten","word":"oak","sentence":"The big oak tree has strong branches."}
+{"level":"kindergarten","word":"paint","sentence":"We spread fresh paint with a brush."}
+{"level":"kindergarten","word":"pan","sentence":"The cook stirred batter in the metal pan."}
+{"level":"kindergarten","word":"pile","sentence":"Kids pile leaves in a big heap outside."}
+{"level":"kindergarten","word":"wait","sentence":"Please wait until the light turns green."}
+{"level":"kindergarten","word":"warm","sentence":"The sun makes my hands feel warm."}
+{"level":"kindergarten","word":"waterfall","sentence":"The waterfall splashes over rocks in the forest."}
+{"level":"kindergarten","word":"whisper","sentence":"I can whisper a secret to my friend."}
+{"level":"kindergarten","word":"wildflower","sentence":"A wildflower grows beside the path."}
+{"level":"kindergarten","word":"wobble","sentence":"My legs wobble when I run too fast."}
+{"level":"kindergarten","word":"zigzag","sentence":"The snake’s path makes a zigzag line."}
+{"level":"kindergarten","word":"balloon","sentence":"The little girl blew up a red balloon."}
+{"level":"kindergarten","word":"braid","sentence":"She made a pretty braid in her hair."}
+{"level":"kindergarten","word":"circle","sentence":"A circle is round with no corners."}
+{"level":"kindergarten","word":"edge","sentence":"The table’s edge is sharp."}
+{"level":"kindergarten","word":"honeybee","sentence":"The honeybee flies to the flowers."}
+{"level":"kindergarten","word":"land","sentence":"The land is covered in grass."}
+{"level":"kindergarten","word":"lump","sentence":"She found a lump of clay."}
+{"level":"kindergarten","word":"toss","sentence":"I toss the ball to my friend."}
+{"level":"kindergarten","word":"dance","sentence":"The children dance to the music."}
+{"level":"kindergarten","word":"dig","sentence":"I dig in the dirt."}
+{"level":"kindergarten","word":"square","sentence":"A square has four equal sides."}
+{"level":"kindergarten","word":"triangle","sentence":"A triangle has three straight sides."}
+{"level":"kindergarten","word":"count","sentence":"We count five ducks in the pond."}
+{"level":"kindergarten","word":"build","sentence":"We build a tall tower with blocks."}
+{"level":"grade_01","word":"arrow","sentence":"The red arrow points toward the library door."}
+{"level":"grade_01","word":"raft","sentence":"The kids built a raft for their toy boats to float."}
+{"level":"grade_01","word":"reach","sentence":"Can you reach the tall shelf to get the book?"}
+{"level":"grade_01","word":"refill","sentence":"Mom helped me refill my water bottle after I drank it."}
+{"level":"grade_01","word":"remote","sentence":"We used the remote to change the TV channel."}
+{"level":"grade_01","word":"warmth","sentence":"The cat snuggled near the heater for warmth."}
+{"level":"grade_01","word":"artist","sentence":"The artist paints bright pictures for our classroom."}
+{"level":"grade_01","word":"acorn","sentence":"A squirrel climbed up to gather an acorn from the oak tree."}
+{"level":"grade_01","word":"climb","sentence":"The little monkey loved to climb up the tall tree."}
+{"level":"grade_01","word":"fall","sentence":"The red leaves began to fall from the tree in autumn."}
+{"level":"grade_01","word":"muddy","sentence":"The children laughed as they splashed in the muddy water."}
+{"level":"grade_01","word":"shadow","sentence":"The sun made a long shadow on the ground."}
+{"level":"grade_01","word":"equal","sentence":"The two friends got equal turns playing with the toy car."}
+{"level":"grade_01","word":"escape","sentence":"The bunny hopped under the fence to escape the cat."}
+{"level":"grade_01","word":"extra","sentence":"Mom gave me an extra cookie for sharing my toys."}
+{"level":"grade_01","word":"favorite","sentence":"My favorite game is hide-and-seek at recess."}
+{"level":"grade_01","word":"firm","sentence":"The ground felt firm after the rain stopped."}
+{"level":"grade_01","word":"flour","sentence":"Mama sprinkled flour on the table to make cookies."}
+{"level":"grade_01","word":"imagine","sentence":"Can you imagine how fun it would be to fly like a bird?"}
+{"level":"grade_01","word":"improve","sentence":"Practicing helped me improve my drawing skills."}
+{"level":"grade_01","word":"insect","sentence":"A tiny bug crawled on the flower—it was an insect!"}
+{"level":"grade_01","word":"invite","sentence":"She wrote an invite for her birthday party."}
+{"level":"grade_01","word":"joy","sentence":"Her face lit up with joy when she saw the puppy."}
+{"level":"grade_01","word":"kind","sentence":"A kind friend shared her crayons with me."}
+{"level":"grade_01","word":"knot","sentence":"He tied a knot in the rope to hold it tight."}
+{"level":"grade_01","word":"lunchbox","sentence":"Her lunchbox had a picture of a cat on it."}
+{"level":"grade_01","word":"playground","sentence":"We ran to the playground for recess."}
+{"level":"grade_01","word":"pumpkin","sentence":"The pumpkin rolled down the hill in the yard."}
+{"level":"grade_01","word":"mailbox","sentence":"Dad puts letters in the blue mailbox every day."}
+{"level":"grade_01","word":"muffin","sentence":"The blueberry muffin smelled sweet and warm."}
+{"level":"grade_01","word":"napkin","sentence":"I wiped my mouth with my paper napkin."}
+{"level":"grade_01","word":"noodles","sentence":"The noodles swirled in the bubbling pasta water."}
+{"level":"grade_01","word":"notebook","sentence":"I drew a picture in my new notebook."}
+{"level":"grade_01","word":"onion","sentence":"The onion made my eyes sting when I cut it."}
+{"level":"grade_01","word":"peanut","sentence":"I dropped a peanut on the floor."}
+{"level":"grade_01","word":"peeler","sentence":"Dad used a peeler to remove the potato skin."}
+{"level":"grade_01","word":"platter","sentence":"The platter held a big slice of pizza."}
+{"level":"grade_01","word":"shade","sentence":"The tree gave shade on a sunny day."}
+{"level":"grade_01","word":"squash","sentence":"I roasted the orange squash for dinner."}
+{"level":"grade_01","word":"vine","sentence":"A green vine climbed up the garden fence."}
+{"level":"grade_01","word":"astronaut","sentence":"The astronaut wore a helmet while walking on the moon."}
+{"level":"grade_01","word":"nursery","sentence":"The nursery had tiny baby plants."}
+{"level":"grade_01","word":"ache","sentence":"My tummy felt an ache after eating too many cookies."}
+{"level":"grade_01","word":"bandage","sentence":"Mom put a clean bandage on my scraped knee."}
+{"level":"grade_01","word":"barely","sentence":"I barely made it to the top of the slide."}
+{"level":"grade_01","word":"barrier","sentence":"A fence is a barrier to keep pets inside the yard."}
+{"level":"grade_01","word":"brake","sentence":"I pressed the brake so my bike would stop."}
+{"level":"grade_01","word":"bump","sentence":"I got a bump on my head when I fell."}
+{"level":"grade_01","word":"burrow","sentence":"The rabbit dug a soft burrow in the dirt."}
+{"level":"grade_01","word":"comfy","sentence":"This chair is comfy for sitting in."}
+{"level":"grade_01","word":"lunch","sentence":"Pack your lunch in a cool bag today."}
+{"level":"grade_01","word":"music","sentence":"The band plays fun music at the school play."}
+{"level":"grade_01","word":"net","sentence":"We toss the ball into the net."}
+{"level":"grade_01","word":"melon","sentence":"She cut the juicy melon into small pieces."}
+{"level":"grade_01","word":"mix","sentence":"Mix the flour and sugar for the cookie dough."}
+{"level":"grade_01","word":"mud","sentence":"The shoes got covered in brown mud."}
+{"level":"grade_01","word":"pineapple","sentence":"The pineapple sat on the kitchen table."}
+{"level":"grade_01","word":"potato","sentence":"We mashed the warm potato."}
+{"level":"grade_01","word":"quick","sentence":"The quick rabbit hopped past the fox."}
+{"level":"grade_01","word":"squirrel","sentence":"The squirrel buried acorns in the dirt."}
+{"level":"grade_01","word":"soil","sentence":"Plants grow best in soft soil."}
+{"level":"grade_01","word":"nectar","sentence":"Honeybees fly from flower to flower for sweet nectar."}
+{"level":"grade_01","word":"activity","sentence":"Dancing is a fun activity at recess."}
+{"level":"grade_01","word":"admire","sentence":"I admire how tall the sunflower grows."}
+{"level":"grade_01","word":"adventurous","sentence":"She feels adventurous climbing the big tree."}
+{"level":"grade_01","word":"advice","sentence":"My mom gives me good advice about sharing toys."}
+{"level":"grade_01","word":"afternoon","sentence":"We play outside in the warm afternoon."}
+{"level":"grade_01","word":"alive","sentence":"The butterfly is alive and fluttering in the sun."}
+{"level":"grade_01","word":"almond","sentence":"The cookie has a crunchy almond inside it."}
+{"level":"grade_01","word":"anchor","sentence":"The boat stays safe with an anchor in the water."}
+{"level":"grade_01","word":"armadillo","sentence":"The armadillo rolls into a tight ball to hide."}
+{"level":"grade_01","word":"assist","sentence":"Can you assist me by passing the crayons?"}
+{"level":"grade_01","word":"athlete","sentence":"The athlete runs fast in the track race."}
+{"level":"grade_01","word":"auntie","sentence":"Auntie waves at me from the window."}
+{"level":"grade_01","word":"awake","sentence":"The baby stays awake for its favorite song."}
+{"level":"grade_01","word":"event","sentence":"The big event was a balloon pop contest."}
+{"level":"grade_01","word":"eyebrow","sentence":"She raised her eyebrow when she saw the kite."}
+{"level":"grade_01","word":"finger","sentence":"She traced her finger on the glass door."}
+{"level":"grade_01","word":"firework","sentence":"The firework lit up the night sky with bright colors."}
+{"level":"grade_01","word":"fit","sentence":"The circle was small enough for her to fit inside."}
+{"level":"grade_01","word":"flame","sentence":"The candle’s flame danced in the dark room."}
+{"level":"grade_01","word":"flavor","sentence":"The lemonade had a tangy flavor."}
+{"level":"grade_01","word":"jacket","sentence":"He wore his warm jacket outside."}
+{"level":"grade_01","word":"jug","sentence":"The baker poured water into the big jug."}
+{"level":"grade_01","word":"kettle","sentence":"Steam rose from the kettle on the stove."}
+{"level":"grade_01","word":"lazy","sentence":"The lazy cat slept all afternoon."}
+{"level":"grade_01","word":"lid","sentence":"She lifted the lid off the pot."}
+{"level":"grade_01","word":"liquid","sentence":"Water is a clear liquid that fills my cup."}
+{"level":"grade_01","word":"bakery","sentence":"The bakery sells warm bread every morning."}
+{"level":"grade_01","word":"lock","sentence":"The key turned in the door lock."}
+{"level":"grade_01","word":"loose","sentence":"The button came off, making my shirt feel loose."}
+{"level":"grade_01","word":"magnet","sentence":"The fridge had a round magnet shaped like a cat."}
+{"level":"grade_01","word":"mail","sentence":"The mail truck delivered letters to our house."}
+{"level":"grade_01","word":"mountain","sentence":"The mountain was tall and covered in snow."}
+{"level":"grade_01","word":"park","sentence":"My family walks in the park after dinner."}
+{"level":"grade_01","word":"party","sentence":"She baked cookies for the birthday party tonight."}
+{"level":"grade_01","word":"pepper","sentence":"The chef sprinkled pepper on the noodles."}
+{"level":"grade_01","word":"basement","sentence":"We keep boxes and tools downstairs in the basement."}
+{"level":"grade_01","word":"sand","sentence":"My feet sank into the warm sand at the beach."}
+{"level":"grade_01","word":"spark","sentence":"A tiny spark flew from the fireworks in the sky."}
+{"level":"grade_01","word":"sprout","sentence":"The tiny plant sprout grew bigger each day with fresh water."}
+{"level":"grade_01","word":"storm","sentence":"We watched the dark clouds gather before the big storm arrived."}
+{"level":"grade_01","word":"thick","sentence":"The thick blanket kept me warm at night."}
+{"level":"grade_01","word":"tide","sentence":"The ocean tide pulled the sand into a new shape every afternoon."}
+{"level":"grade_01","word":"twig","sentence":"I picked a twig to build a little bridge over the stream."}
+{"level":"grade_01","word":"turtle","sentence":"The turtle carried its shell like a home on its back."}
+{"level":"grade_01","word":"twin","sentence":"The twin brothers shared the same birthday and birthday cake."}
+{"level":"grade_01","word":"vibrant","sentence":"The vibrant red apple looked juicy and sweet."}
+{"level":"grade_01","word":"wound","sentence":"The nurse put a bandage on the small wound."}
+{"level":"grade_01","word":"yesterday","sentence":"Yesterday, we built a sandcastle at the beach."}
+{"level":"grade_01","word":"eager","sentence":"The eager puppy wagged its tail when it saw its owner."}
+{"level":"grade_01","word":"fancy","sentence":"She wore a fancy hat to the party."}
+{"level":"grade_01","word":"fountain","sentence":"The fountain sprayed water high into the air."}
+{"level":"grade_01","word":"fringe","sentence":"The fringe on her dress fluttered in the breeze."}
+{"level":"grade_01","word":"graceful","sentence":"The graceful butterfly fluttered from flower to flower."}
+{"level":"grade_01","word":"grasp","sentence":"She tried to grasp the slippery ball but missed."}
+{"level":"grade_01","word":"mango","sentence":"The mango was sweet and juicy in my lunchbox."}
+{"level":"grade_01","word":"pass","sentence":"Can you pass me the crayon, please?"}
+{"level":"grade_01","word":"patch","sentence":"I sewed a patch on my favorite jeans."}
+{"level":"grade_01","word":"shelves","sentence":"The shelves held colorful books for reading."}
+{"level":"grade_01","word":"baseball","sentence":"We tossed the baseball across the grassy field."}
+{"level":"grade_01","word":"trap","sentence":"The spider made a trap for flies."}
+{"level":"grade_01","word":"beetle","sentence":"A black beetle crawled under the garden leaf."}
+{"level":"grade_01","word":"snowflakes","sentence":"Snowflakes danced in the cold air."}
+{"level":"grade_01","word":"terrific","sentence":"The terrific game made us all cheer."}
+{"level":"grade_01","word":"sturdy","sentence":"The sturdy table held all the heavy books."}
+{"level":"grade_01","word":"berry","sentence":"One red berry hung from the bush."}
+{"level":"grade_01","word":"squishy","sentence":"The squishy pillow felt soft under her head."}
+{"level":"grade_01","word":"washcloth","sentence":"She used a washcloth to clean her face."}
+{"level":"grade_01","word":"wobbly","sentence":"The wobbly chair almost tipped over."}
+{"level":"grade_01","word":"zero","sentence":"There were zero cookies left in the jar."}
+{"level":"grade_01","word":"army","sentence":"An army of soldiers marched in the parade."}
+{"level":"grade_01","word":"balcony","sentence":"They sat on the balcony to watch the sunset."}
+{"level":"grade_01","word":"barn","sentence":"The horses lived in the barn."}
+{"level":"grade_01","word":"bedtime","sentence":"My bedtime is eight o'clock on school nights."}
+{"level":"grade_01","word":"bicycle","sentence":"She rode her bicycle to the park."}
+{"level":"grade_01","word":"fabric","sentence":"The shirt was made of soft fabric."}
+{"level":"grade_01","word":"filter","sentence":"The water filter catches dirt before we drink."}
+{"level":"grade_01","word":"cello","sentence":"The musician played the large cello with a bow."}
+{"level":"grade_01","word":"fossil","sentence":"We saw a dinosaur fossil inside the museum."}
+{"level":"grade_01","word":"fudge","sentence":"Grandma made sweet fudge for the holiday party."}
+{"level":"grade_01","word":"funnel","sentence":"The funnel helped us pour water into the bottle."}
+{"level":"grade_01","word":"ink","sentence":"The teacher used a blue ink pen to write on the paper."}
+{"level":"grade_01","word":"bridge","sentence":"The wooden bridge crosses the narrow stream."}
+{"level":"grade_01","word":"broccoli","sentence":"Green broccoli grew in our school garden."}
+{"level":"grade_01","word":"itch","sentence":"The mosquito bite made my arm itch."}
+{"level":"grade_01","word":"knit","sentence":"Grandma knit a bright green scarf for her granddaughter."}
+{"level":"grade_01","word":"knob","sentence":"The little boy turned the round knob to open the cupboard door."}
+{"level":"grade_01","word":"law","sentence":"The law says we must wear seatbelts in cars."}
+{"level":"grade_01","word":"leash","sentence":"The dog wore a red leash while walking outside."}
+{"level":"grade_01","word":"mossy","sentence":"The mossy rocks looked green and slippery in the garden."}
+{"level":"grade_01","word":"meadow","sentence":"Butterflies fluttered over the bright green meadow."}
+{"level":"grade_01","word":"cocoon","sentence":"The caterpillar rested inside its silky cocoon."}
+{"level":"grade_01","word":"pine","sentence":"The tall pine tree had long, green needles."}
+{"level":"grade_01","word":"prickly","sentence":"The prickly rose bush hurt my hand."}
+{"level":"grade_01","word":"cactus","sentence":"The cactus stores water inside its thick stem."}
+{"level":"grade_01","word":"peach","sentence":"I ate a juicy peach with my lunch."}
+{"level":"grade_01","word":"reward","sentence":"I got a sticker for my good work as a reward."}
+{"level":"grade_01","word":"ribbon","sentence":"My hair had a shiny red ribbon in it."}
+{"level":"grade_01","word":"robe","sentence":"Mom wears a soft robe to feel cozy at home."}
+{"level":"grade_01","word":"art","sentence":"We made colorful art with paint and paper."}
+{"level":"grade_01","word":"beach","sentence":"We dig in the sand at the beach by the ocean."}
+{"level":"grade_01","word":"faucet","sentence":"Turn the faucet to wash your hands before lunch."}
+{"level":"grade_01","word":"garlic","sentence":"We add garlic to make the soup smell yummy."}
+{"level":"grade_01","word":"pond","sentence":"The pond has frogs and fish near the school."}
+{"level":"grade_01","word":"comet","sentence":"We saw a bright comet streak across the night sky."}
+{"level":"grade_01","word":"tight","sentence":"The tight lid was hard to open."}
+{"level":"grade_01","word":"laugh","sentence":"We all laugh when someone tells a funny joke."}
+{"level":"grade_01","word":"lime","sentence":"She squeezes juice from a bright lime."}
+{"level":"grade_01","word":"scrape","sentence":"Use the tool to scrape mud from your shoe."}
+{"level":"grade_01","word":"roof","sentence":"Birds perch on the edge of a brown roof."}
+{"level":"grade_01","word":"seeds","sentence":"Birds love to peck at sunflower seeds."}
+{"level":"grade_01","word":"slippery","sentence":"The riverbank feels slippery after the rain."}
+{"level":"grade_01","word":"spade","sentence":"He uses a spade to dig holes in the dirt."}
+{"level":"grade_01","word":"stump","sentence":"A big stump sits where the old tree once grew."}
+{"level":"grade_01","word":"tangle","sentence":"Vines create a green tangle near the fence."}
+{"level":"grade_01","word":"trunk","sentence":"Squirrels hide nuts inside a tree trunk."}
+{"level":"grade_01","word":"underground","sentence":"Earthworms live underground in the soil."}
+{"level":"grade_01","word":"uncle","sentence":"My uncle carries a backpack for our picnic."}
+{"level":"grade_01","word":"unhurt","sentence":"After the fall, the puppy felt unhurt and wagged its tail."}
+{"level":"grade_01","word":"useful","sentence":"A first aid kit is useful for small cuts."}
+{"level":"grade_01","word":"wastebasket","sentence":"She threw her crumpled paper into the wastebasket."}
+{"level":"grade_01","word":"wonderful","sentence":"The ice cream tasted wonderful and made us happy."}
+{"level":"grade_01","word":"yard","sentence":"We played tag in the sunny yard."}
+{"level":"grade_01","word":"baker","sentence":"The baker kneaded dough to make cookies."}
+{"level":"grade_01","word":"boom","sentence":"The thunder made a loud boom outside."}
+{"level":"grade_01","word":"brave","sentence":"She was brave when she climbed the tall slide."}
+{"level":"grade_01","word":"canoe","sentence":"We paddled the canoe across the quiet lake."}
+{"level":"grade_01","word":"buddy","sentence":"My buddy and I shared our crayons."}
+{"level":"grade_01","word":"elastic","sentence":"I tied my hair with an elastic band."}
+{"level":"grade_01","word":"envelope","sentence":"The teacher put a note inside the red envelope."}
+{"level":"grade_01","word":"eraser","sentence":"I used the pink eraser to fix my mistake on the paper."}
+{"level":"grade_01","word":"fan","sentence":"The fan made the room feel cooler on a warm day."}
+{"level":"grade_01","word":"fin","sentence":"The goldfish waved its shiny fin in the water."}
+{"level":"grade_01","word":"move","sentence":"Move the chair over so we can see the board better."}
+{"level":"grade_01","word":"pull","sentence":"Pull the drawer open to find your crayons."}
+{"level":"grade_01","word":"push","sentence":"Push the button to hear the fun sound."}
+{"level":"grade_01","word":"pebble","sentence":"We skipped the small pebble across the stream."}
+{"level":"grade_01","word":"carpet","sentence":"The soft carpet covered the playroom floor."}
+{"level":"grade_01","word":"respect","sentence":"She showed respect by listening when Grandma spoke."}
+{"level":"grade_01","word":"rocket","sentence":"The toy rocket zoomed up into the sky."}
+{"level":"grade_01","word":"rubber","sentence":"She wore rubber boots to play in the muddy puddle."}
+{"level":"grade_01","word":"safely","sentence":"Hold my hand so we can cross the street safely."}
+{"level":"grade_01","word":"morning","sentence":"Birds began singing early in the morning."}
+{"level":"grade_01","word":"mistake","sentence":"She fixed her mistake by writing the word again."}
+{"level":"grade_01","word":"mound","sentence":"Kids built a tall mound of leaves outside."}
+{"level":"grade_01","word":"ranger","sentence":"The park ranger showed us how to spot birds."}
+{"level":"grade_01","word":"seal","sentence":"The child drew a picture of a seal swimming in the water."}
+{"level":"grade_01","word":"shirt","sentence":"Mom helped him pick a clean shirt for school."}
+{"level":"grade_01","word":"shiver","sentence":"Outside, the cold made her shiver and wrap her arms."}
+{"level":"grade_01","word":"smooth","sentence":"The rock’s smooth surface felt nice to touch."}
+{"level":"grade_01","word":"wish","sentence":"I wish it were my birthday today."}
+{"level":"grade_01","word":"unpack","sentence":"Let’s unpack our backpacks and share our snacks."}
+{"level":"grade_01","word":"squeeze","sentence":"Squeeze the sponge to push out the water."}
+{"level":"grade_01","word":"sip","sentence":"Sip your juice slowly and enjoy it."}
+{"level":"grade_01","word":"share","sentence":"Let’s share our crayons so everyone can draw."}
+{"level":"grade_01","word":"playmate","sentence":"My new playmate loves climbing with me on the jungle gym."}
+{"level":"grade_01","word":"castle","sentence":"The stone castle had tall walls and towers."}
+{"level":"grade_01","word":"cereal","sentence":"I poured milk over my crunchy cereal."}
+{"level":"grade_01","word":"arrange","sentence":"Let’s arrange the cups by their sizes."}
+{"level":"grade_01","word":"flick","sentence":"A quick flick of the wrist sent the frisbee flying high."}
+{"level":"grade_01","word":"foam","sentence":"Waves crashed against the dock, creating frothy foam."}
+{"level":"grade_01","word":"funny","sentence":"His funny wiggle made everyone laugh during storytime."}
+{"level":"grade_01","word":"gently","sentence":"She placed the baby’s blanket gently over his small hands."}
+{"level":"grade_01","word":"leaves","sentence":"The wind blew the green leaves off the tree."}
+{"level":"grade_01","word":"pouch","sentence":"The backpack had a small pouch for her crayons."}
+{"level":"grade_01","word":"skirt","sentence":"Her skirt swished as she danced in the playground."}
+{"level":"grade_01","word":"treasure","sentence":"They dug for buried treasure in the sandbox."}
+{"level":"grade_01","word":"waves","sentence":"The waves rolled onto the sandy beach."}
+{"level":"grade_01","word":"chimney","sentence":"Gray smoke rose from the brick chimney."}
+{"level":"grade_01","word":"fold","sentence":"Fold the paper in half to make a boat."}
+{"level":"grade_01","word":"jam","sentence":"She spread jam on her toast for breakfast."}
+{"level":"grade_01","word":"jellyfish","sentence":"The jellyfish floated gently in the ocean water."}
+{"level":"grade_01","word":"shield","sentence":"The knight held up his shield to protect himself from the arrow."}
+{"level":"grade_01","word":"circus","sentence":"The circus had clowns, music, and bright lights."}
+{"level":"grade_01","word":"tidy","sentence":"The classroom looked tidy after the children put their books away."}
+{"level":"grade_01","word":"towel","sentence":"Mom handed me a fluffy towel to dry my hands."}
+{"level":"grade_01","word":"trash","sentence":"The dog sniffed the trash can before someone took it away."}
+{"level":"grade_01","word":"bench","sentence":"We sat on the park bench to watch the squirrels."}
+{"level":"grade_01","word":"batter","sentence":"The batter for cookies was thick and smooth."}
+{"level":"grade_01","word":"wild","sentence":"The wild animals ran fast in the forest."}
+{"level":"grade_01","word":"woods","sentence":"We walked through the woods and saw a squirrel."}
+{"level":"grade_01","word":"jeans","sentence":"Liam wore his blue jeans to play outside."}
+{"level":"grade_01","word":"load","sentence":"The truck carried a big load of rocks."}
+{"level":"grade_01","word":"muscle","sentence":"She flexed her arm to show her big muscle."}
+{"level":"grade_01","word":"note","sentence":"She wrote a note on the desk for her friend."}
+{"level":"grade_01","word":"raindrop","sentence":"A tiny raindrop sparkled on the leaf."}
+{"level":"grade_01","word":"rough","sentence":"The sandpaper felt rough on my fingers."}
+{"level":"grade_01","word":"robin","sentence":"A red-breasted robin hopped near the bird feeder."}
+{"level":"grade_01","word":"sparrow","sentence":"A small sparrow chirped outside my window."}
+{"level":"grade_01","word":"stem","sentence":"The flower’s green stem held up the petals."}
+{"level":"grade_01","word":"compass","sentence":"A compass helps hikers find which way to go."}
+{"level":"grade_01","word":"wax","sentence":"The candle wax melted near the warm flame."}
+{"level":"grade_01","word":"wrist","sentence":"My watch sits on my wrist."}
+{"level":"grade_01","word":"enjoy","sentence":"We enjoy reading books together."}
+{"level":"grade_01","word":"jelly","sentence":"The sandwich tasted sweet with a layer of jelly inside."}
+{"level":"grade_01","word":"loyal","sentence":"The dog stayed loyal to his family all day long."}
+{"level":"grade_01","word":"watchful","sentence":"The watchful dog barked when strangers approached."}
+{"level":"grade_01","word":"closet","sentence":"My coat hangs inside the hall closet."}
+{"level":"grade_01","word":"excite","sentence":"The surprise party will excite her on her birthday."}
+{"level":"grade_01","word":"eyes","sentence":"She closed her eyes and listened to the rain outside."}
+{"level":"grade_01","word":"face","sentence":"The clock’s face showed it was time to eat."}
+{"level":"grade_01","word":"fireplace","sentence":"We warmed our hands near the cozy fireplace."}
+{"level":"grade_01","word":"ignore","sentence":"I ignore the noise when I focus on drawing my picture."}
+{"level":"grade_01","word":"candy","sentence":"We share our candy after lunch on the bench."}
+{"level":"grade_01","word":"bagel","sentence":"She puts cream cheese on her bagel every morning."}
+{"level":"grade_01","word":"beak","sentence":"The bird uses its beak to crack open a seed."}
+{"level":"grade_01","word":"bloom","sentence":"The flower will bloom in the spring sun."}
+{"level":"grade_01","word":"cabin","sentence":"Our family stayed in a cozy cabin by the lake."}
+{"level":"grade_01","word":"cave","sentence":"A small cave hides behind the big rock."}
+{"level":"grade_01","word":"creek","sentence":"We played near the babbling creek."}
+{"level":"grade_01","word":"dawn","sentence":"The sky turns pink at dawn."}
+{"level":"grade_01","word":"deep","sentence":"The deep ocean is full of fish."}
+{"level":"grade_01","word":"feather","sentence":"The bird’s feather is soft and light."}
+{"level":"grade_01","word":"fern","sentence":"A fern grows in the shady garden."}
+{"level":"grade_01","word":"flock","sentence":"A flock of sheep grazes in the field."}
+{"level":"grade_01","word":"frame","sentence":"Mom put my picture inside a pretty frame."}
+{"level":"grade_01","word":"gravel","sentence":"The path was covered with small, rough gravel."}
+{"level":"grade_01","word":"handle","sentence":"Grab the handle to open the door."}
+{"level":"grade_01","word":"hatch","sentence":"Chicks pop out of their eggs when they hatch."}
+{"level":"grade_01","word":"helmet","sentence":"My helmet keeps my head safe on my bike."}
+{"level":"grade_01","word":"hike","sentence":"We walked along the trail for a fun hike."}
+{"level":"grade_01","word":"hive","sentence":"Bees fly to their hive to share honey."}
+{"level":"grade_01","word":"marble","sentence":"I rolled the shiny marble across the floor."}
+{"level":"grade_01","word":"ocean","sentence":"The big ocean has waves and boats."}
+{"level":"grade_01","word":"slope","sentence":"The hill has a steep slope for sliding."}
+{"level":"grade_01","word":"bounce","sentence":"The rubber ball can bounce across the floor."}
+{"level":"grade_01","word":"brick","sentence":"One red brick fell from the small wall."}
+{"level":"grade_01","word":"cheer","sentence":"Fans cheer when their team scores a goal."}
+{"level":"grade_01","word":"curl","sentence":"The ribbon will curl around the gift box."}
+{"level":"grade_01","word":"pedal","sentence":"Push each pedal to make the bicycle move."}
+{"level":"grade_01","word":"button","sentence":"Press the red button to ring the bell."}
+{"level":"grade_01","word":"cherry","sentence":"I love the sweet taste of a cherry."}
+{"level":"grade_01","word":"clap","sentence":"We clap our hands when we cheer for the team."}
+{"level":"grade_01","word":"coin","sentence":"I found a shiny coin under the table."}
+{"level":"grade_01","word":"corner","sentence":"The kitten hid in the quiet corner of the room."}
+{"level":"grade_01","word":"daisy","sentence":"A yellow daisy bloomed in the sunny garden."}
+{"level":"grade_01","word":"fork","sentence":"I use a fork to eat my spaghetti."}
+{"level":"grade_01","word":"float","sentence":"A dry leaf can float on water."}
+{"level":"grade_01","word":"glove","sentence":"The warm glove keeps my left hand dry."}

@@ -1,0 +1,18 @@
+MISS 2+2                                        want question   calculator got small_talk none
+MISS 2+3                                        want question   calculator got small_talk none
+MISS 12*7                                       want question   calculator got small_talk none
+ok   100 - 37 =                                 want question   calculator got question   calculator
+ok   48213+9977                                 want question   calculator got question   calculator
+ok   3.5 x 4                                    want question   calculator got question   calculator
+ok   (12 + 8) / 5                               want question   calculator got question   calculator
+ok   1850/3?                                    want question   calculator got question   calculator
+ok   9,999 + 1                                  want question   calculator got question   calculator
+ok   7 * 6 = ?                                  want question   calculator got question   calculator
+ok   whats 15*15                                want question   calculator got question   calculator
+MISS Reply direct → 2+3                         want question   calculator got question   file_read
+ok   It comes to  → 616.67 * 3                  want question   calculator got question   calculator
+MISS Here's a sho → 25-9                        want question   calculator got small_talk calculator
+ok   ok thanks                                  want small_talk none       got small_talk none
+MISS my flight is at 7:45 tomorrow              want statement  none       got task       none
+MISS we have 2 kids and 3 dogs                  want statement  none       got question   calculator
+smROUTER_01 before (v1) on bare arithmetic: 10/17 all three right

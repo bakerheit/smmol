@@ -1,0 +1,2 @@
+{"level":"grade_01","word":"float","sentence":"A dry leaf can float on water.","review_reason":"sentence does not contain the target word","proposed_sentence":"The rubber ducky floats on the water."}
+{"level":"grade_01","word":"glove","sentence":"I wear one glove on each hand.","review_reason":"The sentence is grammatically correct but does not clearly demonstrate the *normal* meaning of 'glove' (a single glove is not typically worn on 'each hand'—it's worn on one hand at a time).","proposed_sentence":"I wear one glove on each hand."}

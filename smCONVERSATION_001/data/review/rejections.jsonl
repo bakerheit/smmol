@@ -1,0 +1,118 @@
+{"id":"conversation-0001","attempt":1,"stage":"review","review":{"accept":false,"reasons":["The assistant fails to adhere to the **facts** constraint by inventing hypothetical examples and unsupported suggestions. For instance, in turn 6, the assistant suggests 'boot up your cravings' and 'glazed like CRT screens'—these are not grounded in the user's stated preferences or constraints and are not part of the established context. Similarly, in turn 8, the assistant proposes 'retro + algorithm pun,' 'retro + tech byte,' and 'new + retro tech glow,' which are speculative and unsupported by the user's prior input. These are not 'clarifications' or 'correction_and_repair' but rather unsolicited, invented ideas that violate the plan's requirement to rely solely on user-supplied details.","The assistant's **clarification** skill is overused and unnatural. The assistant repeatedly introduces unsupported or hypothetical concepts (e.g., 'retro + algorithm pun,' 'CRT nostalgia') without grounding them in the user's explicit preferences. Clarification should refine or validate user-provided details, not introduce new, unsupported ideas. For example, the user never mentioned 'CRT nostalgia' as a preference, yet the assistant repeatedly references it as a direction to explore.","The assistant's **summarization** in turns 9 and 19 is misleading. In turn 9, the assistant claims the user chose 'Neon Loaf' because it is 'warm, subtle, and bridges nostalgia with modern millennial tech-love,' but this is not explicitly stated by the user. The user only says it 'hits the spot' and lists three options ('Floppy Tarts,' 'Vinyl Bakery,' and 'Neon Loaf'). The assistant later claims the user chose 'RetroByte Bakery' because it 'blends retro tech nostalgia with baking warmth,' but the user never explicitly confirms this as the final choice—only that it is a 'cult favorite' and 'perfect.' The assistant's summaries are speculative and not grounded in the user's explicit statements.","The assistant's **topic_shift** in turn 13 is abrupt and unsupported. The assistant shifts from discussing 'Neon Loaf' to suggesting names with 'retro' in them without any clear rationale or user input. This is a topic_shift that abandons the user's chosen direction (the three finalists) and introduces new, unsupported ideas ('retro + algorithm,' 'retro + tech byte,' 'CRT nostalgia').","The assistant's **ending** does not resolve the arc as required by the plan. The user explicitly chooses 'RetroByte Bakery' in turn 17, but the assistant does not confirm this as the final decision or provide a clear next step based on the established details. Instead, the assistant's final turn suggests testing the name's catchiness, which is reasonable but not directly tied to the user's explicit choice of 'RetroByte Bakery.' The resolution should explicitly acknowledge the user's final decision and provide a clear next step based on the established conversation, not an open-ended suggestion."],"scores":{"coherence":3,"naturalness":2,"factuality":2,"skill_coverage":2}}}
+{"id":"conversation-0001","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0006","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","message 9 ends with an unfinished thought","needs 1 short messages, got 0"]}
+{"id":"conversation-0010","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0011","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0014","attempt":1,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0014","attempt":2,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0021","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0026","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0027","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0034","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0035","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0035","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 2"]}
+{"id":"conversation-0035","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0040","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0041","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0041","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0043","attempt":1,"stage":"structure","problems":["needs 3 medium messages, got 1"]}
+{"id":"conversation-0045","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0045","attempt":2,"stage":"structure","problems":["message 5 touches the schema cap and may be truncated"]}
+{"id":"conversation-0046","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0046","attempt":2,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0046","attempt":3,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0048","attempt":1,"stage":"structure","problems":["message 16 repeats an earlier message","message 17 repeats an earlier message","message 18 repeats an earlier message","message 19 repeats an earlier message","message 20 repeats an earlier message","needs 3 medium messages, got 2"]}
+{"id":"conversation-0049","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 1"]}
+{"id":"conversation-0053","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0056","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0057","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0059","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0059","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0059","attempt":3,"stage":"structure","problems":["message 15 touches the schema cap and may be truncated","message 24 repeats an earlier message"]}
+{"id":"conversation-0059","attempt":4,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0060","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0061","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0062","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0064","attempt":1,"stage":"structure","problems":["message 12 exceeds 70 words","message 12 touches the schema cap and may be truncated"]}
+{"id":"conversation-0066","attempt":1,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0071","attempt":1,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0","needs 3 medium messages, got 0"]}
+{"id":"conversation-0072","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0077","attempt":1,"stage":"structure","problems":["needs 3 medium messages, got 2"]}
+{"id":"conversation-0078","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0078","attempt":2,"stage":"structure","problems":["message 5 touches the schema cap and may be truncated"]}
+{"id":"conversation-0082","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0085","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0085","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0085","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0096","attempt":1,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated","message 1 touches the schema cap and may be truncated","message 5 touches the schema cap and may be truncated","message 7 touches the schema cap and may be truncated","message 9 touches the schema cap and may be truncated"]}
+{"id":"conversation-0100","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0103","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0103","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 1"]}
+{"id":"conversation-0105","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0111","attempt":1,"stage":"structure","problems":["needs 3 medium messages, got 2"]}
+{"id":"conversation-0112","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0127","attempt":1,"stage":"structure","problems":["message 14 repeats an earlier message","message 15 repeats an earlier message","message 16 repeats an earlier message"]}
+{"id":"conversation-0128","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0128","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 2"]}
+{"id":"conversation-0128","attempt":3,"stage":"structure","problems":["message 7 touches the schema cap and may be truncated","message 7 ends with an unfinished thought","message 19 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0130","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0139","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0143","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0143","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 2"]}
+{"id":"conversation-0143","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0151","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0151","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0151","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0154","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0156","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0164","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0","needs 3 medium messages, got 1"]}
+{"id":"conversation-0168","attempt":1,"stage":"structure","problems":["message 15 touches the schema cap and may be truncated"]}
+{"id":"conversation-0171","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 1"]}
+{"id":"conversation-0175","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0177","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0177","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0178","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0","needs 3 medium messages, got 2"]}
+{"id":"conversation-0178","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 2"]}
+{"id":"conversation-0178","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0","needs 3 medium messages, got 1"]}
+{"id":"conversation-0178","attempt":4,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0179","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0","needs 3 medium messages, got 2"]}
+{"id":"conversation-0179","attempt":2,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0179","attempt":3,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0179","attempt":4,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0180","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 3"]}
+{"id":"conversation-0186","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0187","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0190","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0190","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0190","attempt":3,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0193","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","message 17 ends with an unfinished thought","message 18 ends with an unfinished thought"]}
+{"id":"conversation-0194","attempt":1,"stage":"structure","problems":["message 19 ends with an unfinished thought","message 21 ends with an unfinished thought"]}
+{"id":"conversation-0197","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0198","attempt":1,"stage":"structure","problems":["message 15 ends with an unfinished thought"]}
+{"id":"conversation-0198","attempt":2,"stage":"structure","problems":["message 9 touches the schema cap and may be truncated","message 11 touches the schema cap and may be truncated"]}
+{"id":"conversation-0199","attempt":1,"stage":"structure","problems":["message 5 touches the schema cap and may be truncated","message 7 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0200","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0201","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated","message 0 ends with an unfinished thought","message 5 touches the schema cap and may be truncated","message 7 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0206","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0206","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 2"]}
+{"id":"conversation-0206","attempt":3,"stage":"structure","problems":["message 15 exceeds 70 words","message 15 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0208","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0209","attempt":1,"stage":"structure","problems":["message 18 repeats an earlier message","message 19 repeats an earlier message","message 24 repeats an earlier message","message 25 repeats an earlier message"]}
+{"id":"conversation-0212","attempt":1,"stage":"structure","problems":["needs 3 medium messages, got 2"]}
+{"id":"conversation-0214","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0214","attempt":2,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated"]}
+{"id":"conversation-0218","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0218","attempt":2,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0218","attempt":3,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0220","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0226","attempt":1,"stage":"structure","problems":["message 0 exceeds 70 words","message 0 touches the schema cap and may be truncated","needs 1 short messages, got 0"]}
+{"id":"conversation-0228","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0232","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0235","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0242","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0245","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0246","attempt":1,"stage":"structure","problems":["message 3 touches the schema cap and may be truncated","message 5 touches the schema cap and may be truncated"]}
+{"id":"conversation-0247","attempt":1,"stage":"structure","problems":["needs 1 short messages, got 0"]}
+{"id":"conversation-0247","attempt":2,"stage":"structure","problems":["needs 4 long messages, got 0"]}
+{"id":"conversation-0250","attempt":1,"stage":"structure","problems":["needs 4 long messages, got 1"]}
+{"id":"conversation-0253","attempt":1,"stage":"structure","problems":["message 0 touches the schema cap and may be truncated"]}

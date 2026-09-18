@@ -1,0 +1,33 @@
+{
+  "route": [
+    {"request": "I have a meeting this Friday to discuss an investment opportunity for our business", "calls": ["prediction", "planning"]},
+    {"request": "Draw a lighthouse on a cliff at sunset", "calls": ["draw"]},
+    {"request": "What's the weather in Tokyo right now?", "calls": ["lookup"]}
+  ],
+  "attention": [
+    {"input": "I have a meeting this Friday to discuss an investment opportunity for our business", "passes": true},
+    {"input": "Can you help me plan a birthday party?", "passes": true},
+    {"input": "lol ok", "passes": false},
+    {"input": "thanks!", "passes": false}
+  ],
+  "context": [
+    {"input": "I have a meeting this Friday to discuss an investment opportunity for our business", "contains": ["meeting", "friday", "investment"], "tokens": 4},
+    {"input": "Sam has a dentist appointment next Tuesday at 3pm", "contains": ["sam", "dentist", "tuesday"], "tokens": 3}
+  ],
+  "prediction": [
+    {"input": "I have a meeting this Friday to discuss an investment opportunity for our business", "contains_any": ["prepar", "question", "research", "remind", "advice"]}
+  ],
+  "planning": [
+    {"input": "I have a meeting this Friday to discuss an investment opportunity for our business", "contains_any": ["friday"], "numbered": true}
+  ],
+  "respond": [
+    {"input": "What is 12 times 12? Reply with just the number.", "contains": ["144"]},
+    {"input": "Which planet is closest to the sun? One word.", "contains": ["mercury"]}
+  ],
+  "lookup": [
+    {"input": "What is the capital city of Australia?", "contains": ["canberra"]}
+  ],
+  "draw": [
+    {"input": "a red apple on a wooden table, soft light", "image": true}
+  ]
+}

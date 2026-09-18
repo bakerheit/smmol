@@ -1,0 +1,29 @@
+smALLM_01: 4.8M params on mps, 8 gadgets, 24 experiments per episode, 20 min budget
+step     0 |    0.0k episodes |   0.0 min | loss nan | after 8 experiments: all 8 right 0%, effects caught 46% (lazy guess 62%)
+step   250 |   16.0k episodes |   1.3 min | loss 0.583 | after 8 experiments: all 8 right 39%, effects caught 20% (lazy guess 62%)
+step   500 |   32.0k episodes |   2.6 min | loss 0.307 | after 8 experiments: all 8 right 49%, effects caught 18% (lazy guess 62%)
+step   750 |   48.0k episodes |   3.9 min | loss 0.274 | after 8 experiments: all 8 right 47%, effects caught 22% (lazy guess 62%)
+step  1000 |   64.0k episodes |   5.2 min | loss 0.252 | after 8 experiments: all 8 right 49%, effects caught 18% (lazy guess 62%)
+step  1250 |   80.0k episodes |   6.5 min | loss 0.236 | after 8 experiments: all 8 right 53%, effects caught 25% (lazy guess 62%)
+step  1500 |   96.0k episodes |   7.8 min | loss 0.222 | after 8 experiments: all 8 right 53%, effects caught 32% (lazy guess 62%)
+step  1750 |  112.0k episodes |   9.1 min | loss 0.205 | after 8 experiments: all 8 right 56%, effects caught 36% (lazy guess 62%)
+step  2000 |  128.0k episodes |  10.3 min | loss 0.189 | after 8 experiments: all 8 right 58%, effects caught 41% (lazy guess 62%)
+step  2250 |  144.0k episodes |  11.6 min | loss 0.177 | after 8 experiments: all 8 right 59%, effects caught 45% (lazy guess 62%)
+step  2500 |  160.0k episodes |  12.9 min | loss 0.167 | after 8 experiments: all 8 right 62%, effects caught 48% (lazy guess 62%)
+step  2750 |  176.0k episodes |  14.2 min | loss 0.157 | after 8 experiments: all 8 right 63%, effects caught 53% (lazy guess 62%)
+step  3000 |  192.0k episodes |  15.5 min | loss 0.150 | after 8 experiments: all 8 right 64%, effects caught 54% (lazy guess 62%)
+step  3250 |  208.0k episodes |  16.8 min | loss 0.144 | after 8 experiments: all 8 right 65%, effects caught 54% (lazy guess 62%)
+step  3500 |  224.0k episodes |  18.1 min | loss 0.139 | after 8 experiments: all 8 right 66%, effects caught 56% (lazy guess 62%)
+step  3750 |  240.0k episodes |  19.4 min | loss 0.136 | after 8 experiments: all 8 right 68%, effects caught 57% (lazy guess 62%)
+step  3864 |  247.3k episodes |  20.0 min | loss 0.134 | after 8 experiments: all 8 right 66%, effects caught 55% (lazy guess 62%)
+done: 3864 steps, best checkpoint at step 3750
+| experiments | random flips: all 8 right | random: effects caught | curious flips: all 8 right | curious: effects caught | lazy guess: all 8 right |
+|---|---|---|---|---|---|
+| 0 | 61% | 0% | 61% | 0% | 61% |
+| 1 | 44% | 26% | 45% | 25% | 61% |
+| 2 | 48% | 35% | 45% | 36% | 61% |
+| 4 | 59% | 44% | 55% | 55% | 61% |
+| 8 | 70% | 58% | 74% | 72% | 61% |
+| 12 | 75% | 66% | 79% | 78% | 61% |
+| 16 | 80% | 75% | 80% | 82% | 62% |
+| 20 | 83% | 80% | 82% | 85% | 61% |

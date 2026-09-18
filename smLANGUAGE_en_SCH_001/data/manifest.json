@@ -1,0 +1,22 @@
+{
+  "name": "smLANGUAGE_en_SCH_001 school curriculum",
+  "items": 600,
+  "complete": false,
+  "sha256": "155fac684612a5b14bad43edc401015806cce3a6ff1be434d1ef34108e6804b1",
+  "levels": {
+    "preschool": 100,
+    "kindergarten": 200,
+    "grade_01": 300,
+    "grade_02": 0,
+    "grade_03": 0,
+    "grade_04": 0,
+    "grade_05": 0,
+    "grade_06": 0,
+    "grade_07": 0,
+    "grade_08": 0,
+    "grade_09": 0,
+    "grade_10": 0,
+    "grade_11": 0,
+    "grade_12": 0
+  }
+}

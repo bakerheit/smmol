@@ -1,0 +1,885 @@
+{
+ "when": "2026-09-15 14:38",
+ "params": 1869327,
+ "seconds": 949,
+ "args": {
+  "examples": 60000,
+  "epochs": 5,
+  "batch": 128,
+  "lr": 0.001,
+  "d": 192,
+  "layers": 4,
+  "heads": 6,
+  "max_len": 192,
+  "keep": 0.8,
+  "device": "mps",
+  "seed": 0,
+  "out": "smROUTER_01/out"
+ },
+ "generated": {
+  "intent": 0.993,
+  "tool": 0.989,
+  "ask_first": 0.996,
+  "for_me": 0.999,
+  "all": 0.983
+ },
+ "test": {
+  "intent": 0.871,
+  "tool": 0.817,
+  "ask_first": 0.925,
+  "for_me": 0.978,
+  "all": 0.731
+ },
+ "test_mistakes": [
+  {
+   "prev": "",
+   "text": "If rent is $1,850 and we're 3 roommates, how much does each person pay?",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "we need to split the check",
+   "want": [
+    "question",
+    "calculator",
+    true
+   ],
+   "got": [
+    "task",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Will I need an umbrella in Seattle this weekend?",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "how did the Warriors do last night?",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    true
+   ]
+  },
+  {
+   "prev": "",
+   "text": "how much is a Steam Deck these days",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "can you check https://shop.example.org/deals and see if the blender is still on sale",
+   "want": [
+    "question",
+    "web_browser",
+    false
+   ],
+   "got": [
+    "task",
+    "web_browser",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "which files have I saved so far",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "question",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what did I tell you about it?",
+   "want": [
+    "question",
+    "memory_recall",
+    true
+   ],
+   "got": [
+    "question",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "keep in mind that Jordan is vegan",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "my car's been making a weird clicking noise",
+   "want": [
+    "statement",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Why do cats purr?",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "memory_recall",
+    true
+   ]
+  },
+  {
+   "prev": "",
+   "text": "explain how a 401k works like I'm 12",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "calculator",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what's the difference between baking soda and baking powder",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "who painted the Mona Lisa",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "any tips for a toddler who won't sleep?",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "turn this into a nicer text: can't come, sorry",
+   "want": [
+    "task",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "cancel my appointment",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "haha that's great",
+   "want": [
+    "small_talk",
+    "none",
+    false
+   ],
+   "got": [
+    "task",
+    "none",
+    true
+   ]
+  },
+  {
+   "prev": "",
+   "text": "got it, thx",
+   "want": [
+    "small_talk",
+    "none",
+    false
+   ],
+   "got": [
+    "task",
+    "file_write",
+    true
+   ]
+  },
+  {
+   "prev": "Which city should I check the weather for?",
+   "text": "Albuquerque",
+   "want": [
+    "answer",
+    "web_search",
+    false
+   ],
+   "got": [
+    "statement",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "What should I name the file?",
+   "text": "just call it errands",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Want me to save that list to a file?",
+   "text": "yes please",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Would you like me to look that up online?",
+   "text": "yeah go for it",
+   "want": [
+    "answer",
+    "web_search",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Would you like help preparing for the meeting, or are you just letting me know about it for now?",
+   "text": "I'm the investor. A local bakery is pitching to me.",
+   "want": [
+    "answer",
+    "none",
+    false
+   ],
+   "got": [
+    "statement",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "The forecast for Denver is sunny and 75.",
+   "text": "what about Boulder",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  }
+ ],
+ "rules_test": {
+  "intent": 0.903,
+  "tool": 0.817,
+  "ask_first": 0.882,
+  "for_me": 1,
+  "all": 0.634
+ },
+ "rules_mistakes": [
+  {
+   "prev": "",
+   "text": "hey what is 48 times 365",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "statement",
+    "calculator",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "If rent is $1,850 and we're 3 roommates, how much does each person pay?",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Can you add up 129, 88 and 406 for me",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "we need to split the check",
+   "want": [
+    "question",
+    "calculator",
+    true
+   ],
+   "got": [
+    "statement",
+    "calculator",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Will I need an umbrella in Seattle this weekend?",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Is Costco open on Labor Day?",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "find a sushi place near downtown Minneapolis that's open late",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "statement",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "is it hot out today?",
+   "want": [
+    "question",
+    "web_search",
+    true
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "when do they close tonight?",
+   "want": [
+    "question",
+    "web_search",
+    true
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "write that down",
+   "want": [
+    "task",
+    "file_write",
+    true
+   ],
+   "got": [
+    "task",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "put it on the list",
+   "want": [
+    "task",
+    "file_write",
+    true
+   ],
+   "got": [
+    "task",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "read back my to do list",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "statement",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "did I already put batteries on the grocery list?",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "question",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "which files have I saved so far",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "statement",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "open my budget notes",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "statement",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what did I say my locker combo was",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "when is Priya's birthday again?",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "remind me what my car insurance company is",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "task",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what am I allergic to",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what did I tell you about it?",
+   "want": [
+    "question",
+    "memory_recall",
+    true
+   ],
+   "got": [
+    "question",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "explain how a 401k works like I'm 12",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "statement",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "book us a table for Saturday",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "remind me later",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "send it to him",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "go ahead and order it",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "cancel my appointment",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Which city should I check the weather for?",
+   "text": "Albuquerque",
+   "want": [
+    "answer",
+    "web_search",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "What should I name the file?",
+   "text": "just call it errands",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Want me to save that list to a file?",
+   "text": "yes please",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Would you like me to look that up online?",
+   "text": "yeah go for it",
+   "want": [
+    "answer",
+    "web_search",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "How much was the total bill?",
+   "text": "$212.40",
+   "want": [
+    "answer",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "How many people are splitting it?",
+   "text": "five of us",
+   "want": [
+    "answer",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Which city should I check the weather for?",
+   "text": "actually what's 15% of 80",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "calculator",
+    false
+   ]
+  },
+  {
+   "prev": "The forecast for Denver is sunny and 75.",
+   "text": "what about Boulder",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "question",
+    "none",
+    false
+   ]
+  }
+ ],
+ "test_web_off": {
+  "intent": 0.871,
+  "tool": 0.914,
+  "ask_first": 0.925,
+  "for_me": 0.978,
+  "all": 0.796
+ },
+ "ms_per_message_cpu": 2.0,
+ "llm_test": {
+  "intent": 0.796,
+  "tool": 0.806,
+  "ask_first": 0.946,
+  "for_me": 0.978,
+  "all": 0.581
+ }
+}

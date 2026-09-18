@@ -1,0 +1,85 @@
+{
+  "endpoint": "http://127.0.0.1:8081",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outline_rejections": "data/review/outline_rejections.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 7,
+  "report": {
+    "assistant_targets": 10,
+    "common_assistant_openings": [
+      {
+        "count": 1,
+        "opening": "that s a great"
+      },
+      {
+        "count": 1,
+        "opening": "here are a few"
+      },
+      {
+        "count": 1,
+        "opening": "digital pop-outs could work"
+      },
+      {
+        "count": 1,
+        "opening": "you could use a"
+      },
+      {
+        "count": 1,
+        "opening": "yes that s a"
+      },
+      {
+        "count": 1,
+        "opening": "for borders consider fixed-width"
+      },
+      {
+        "count": 1,
+        "opening": "keep transitions subtle use"
+      },
+      {
+        "count": 1,
+        "opening": "for blending place quotes"
+      },
+      {
+        "count": 1,
+        "opening": "yes your core is"
+      },
+      {
+        "count": 1,
+        "opening": "you re welcome your"
+      }
+    ],
+    "conversations": 1,
+    "domains": {
+      "creative_brainstorming": 1
+    },
+    "duplicate_conversations": 0,
+    "length_bands": {
+      "long": 20
+    },
+    "message_words": {
+      "max": 51,
+      "mean": 38.9,
+      "min": 22
+    },
+    "messages": 20,
+    "skills": {
+      "brainstorming": 1,
+      "clarification": 1,
+      "summarization": 1
+    },
+    "structural_failures": []
+  },
+  "sha256": "6abda0e93a296e3c237441abbc74a5a37a20cf5221860b45073bb73a5530fb4b",
+  "teacher": "ministral-8b"
+}

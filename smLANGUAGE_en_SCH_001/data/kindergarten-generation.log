@@ -1,0 +1,29 @@
+Kindergarten: 10/200 accepted
+attempt 1: asked 23, received 23, kept 11 -> 21/200
+attempt 2: asked 23, received 23, kept 13 -> 34/200
+attempt 3: asked 23, received 23, kept 19 -> 53/200
+attempt 4: asked 23, received 23, kept 11 -> 64/200
+attempt 5: asked 23, received 23, kept 20 -> 84/200
+attempt 6: asked 23, received 23, kept 20 -> 104/200
+attempt 7: asked 23, received 23, kept 5 -> 109/200
+attempt 8: asked 23, received 23, kept 13 -> 122/200
+attempt 9: asked 23, received 23, kept 2 -> 124/200
+attempt 10: asked 23, received 23, kept 0 -> 124/200
+Kindergarten: 124/200 accepted
+attempt 1: asked 23, received 23, kept 2 -> 126/200
+attempt 2: asked 23, received 23, kept 18 -> 144/200
+attempt 3: asked 23, received 23, kept 20 -> 164/200
+attempt 4: asked 23, received 23, kept 10 -> 174/200
+attempt 5: asked 23, received 23, kept 16 -> 190/200
+attempt 6: asked 13, received 13, kept 5 -> 195/200
+attempt 7: asked 8, received 8, kept 0 -> 195/200
+attempt 8: asked 8, received 8, kept 2 -> 197/200
+attempt 9: asked 6, received 6, kept 1 -> 198/200
+attempt 10: asked 5, received 5, kept 0 -> 198/200
+attempt 11: asked 5, received 5, kept 0 -> 198/200
+attempt 12: asked 5, received 5, kept 0 -> 198/200
+attempt 13: asked 5, received 5, kept 0 -> 198/200
+attempt 14: asked 5, received 5, kept 1 -> 199/200
+attempt 15: asked 4, received 4, kept 1 -> 200/200
+rejected: {'duplicate word': 79, 'sentence does not contain the target word': 21}
+complete: smLANGUAGE_en_SCH_001/data/levels/kindergarten.jsonl

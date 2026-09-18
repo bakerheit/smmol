@@ -1,0 +1,90 @@
+{
+  "router": [
+    {"message": "What's the weather in Chicago today?", "tool": "web_search"},
+    {"message": "What's 17.5% of 2,340?", "tool": "calculator"},
+    {"message": "Who's my dentist?", "tool": "memory_recall"},
+    {"message": "Save a shopping list with eggs, milk and bread.", "tool": "file_write"},
+    {"message": "lol ok", "intent": "small_talk"}
+  ],
+  "math": [
+    {"message": "48213 + 9977", "answer": "58190"},
+    {"message": "905 - 38", "answer": "867"},
+    {"message": "12.50 + 7.25", "answer": "19.75"},
+    {"message": "(250 - 48) + 1990", "answer": "2192"},
+    {"message": "123 * 45", "answer": "5535"},
+    {"message": "31415926 + 27182818", "answer": "58598744"}
+  ],
+  "math_language": [
+    {"message": "what is the volume of 322234ft x 21323ft x 212231ft?", "expected": ["322234*21323*212231"]},
+    {"message": "Volume of a 3ft x 4ft x 5ft box, and how many cubic yards is that?", "expected": ["3*4*5", "p1/27"]},
+    {"message": "what's 15% of 80 and 20% of 60?", "expected": ["80*15/100", "60*20/100"]},
+    {"message": "split a $212.40 check five ways", "expected": ["212.40/5"]},
+    {"message": "we have 2 kids and 3 dogs", "expected": []},
+    {"message": "final was 21-17, what a game", "expected": []}
+  ],
+  "perception": [
+    {"message": "I have a meeting this Friday to discuss an investment opportunity for our business", "kinds_any": ["event"], "when_filled": true},
+    {"message": "Remember that my dentist is Dr. Lee and my appointments are on Tuesdays.", "kinds_any": ["fact", "preference", "event"], "text_contains": "lee"}
+  ],
+  "attention": [
+    {"message": "lol ok", "goal": "", "observations": [{"kind": "small_talk", "text": "lol ok"}], "for_me": false},
+    {"message": "What's 17.5% of 2,340?", "goal": "work out 17.5% of 2,340", "observations": [{"kind": "question", "text": "User asks what 17.5% of 2,340 is"}], "for_me": true}
+  ],
+  "recall": [
+    {"message": "Who's my dentist?", "goal": "find out who the dentist is", "observations": [{"kind": "question", "text": "User asks who their dentist is"}],
+     "stored": ["User's dentist is Dr. Lee, appointments on Tuesdays", "User's shopping day is Sunday", "User likes hiking in the fall"], "top_contains": "lee"}
+  ],
+  "planner": [
+    {"message": "What's 17.5% of 2,340?", "goal": "work out 17.5% of 2,340", "observations": [{"kind": "question", "text": "User asks what 17.5% of 2,340 is"}], "tool": "calculator"},
+    {"message": "Save a shopping list with eggs, milk and bread.", "goal": "save a shopping list", "observations": [{"kind": "request", "text": "User wants a shopping list saved with eggs, milk and bread"}], "tool": "file_system"},
+    {"message": "write a function in javascript that takes firstNumber, operator, and secondNumber and then calculates based on those 3 arguments", "goal": "write a JavaScript calculate function", "observations": [{"kind": "request", "text": "User wants a JavaScript function that calculates from firstNumber, operator and secondNumber"}], "type": "make"}
+  ],
+  "predictor": [
+    {"message": "I have a meeting this Friday to discuss an investment opportunity for our business", "goal": "prepare for the Friday meeting",
+     "observations": [{"kind": "event", "text": "User has a meeting to discuss an investment opportunity", "when": "Friday"}],
+     "cycle": {"candidates": [
+       {"index": 1, "type": "answer", "summary": "Give tips for pitching the business to an investor", "tool": "none", "action": "none", "target": "", "content": ""},
+       {"index": 2, "type": "ask", "summary": "Ask whether they are pitching or being pitched", "tool": "none", "action": "none", "target": "", "content": ""}]},
+     "predicts_all": true}
+  ],
+  "critic": [
+    {"message": "I have a meeting this Friday to discuss an investment opportunity for our business", "goal": "prepare for the Friday meeting",
+     "observations": [{"kind": "event", "text": "User has a meeting to discuss an investment opportunity for their business", "when": "Friday"}],
+     "cycle": {"candidates": [
+       {"index": 1, "type": "answer", "summary": "Give tips for pitching the business to an investor", "tool": "none", "action": "none", "target": "", "content": ""}]},
+     "issue_kinds_any": ["assumption", "missing"]},
+    {"message": "write a function in javascript that takes firstNumber, operator, and secondNumber and then calculates based on those 3 arguments", "goal": "write a JavaScript calculate function",
+     "observations": [{"kind": "request", "text": "User wants a JavaScript function that calculates from firstNumber, operator and secondNumber"}],
+     "cycle": {"candidates": [{"index": 1, "type": "make", "summary": "Write the function with a usage example", "tool": "none", "action": "none", "target": "", "content": ""}]},
+     "no_high": true}
+  ],
+  "decision": [
+    {"message": "Book us a table for Saturday", "goal": "book a table",
+     "cycle": {"candidates": [
+       {"index": 1, "type": "answer", "summary": "Say the table is booked", "tool": "none", "action": "none", "target": "", "content": ""},
+       {"index": 2, "type": "ask", "summary": "Ask which restaurant and what time", "tool": "none", "action": "none", "target": "", "content": ""}],
+       "predictions": [
+         {"index": 1, "outcome": "The reply claims a booking that can't happen", "helpful": 0.2, "risk": "wrong information"},
+         {"index": 2, "outcome": "They say where and when", "helpful": 0.8, "risk": "one extra message"}],
+       "critique": {"issues": [{"kind": "missing", "text": "No restaurant or time was given", "severity": "high"}], "question": "Which restaurant, and what time on Saturday?"}},
+     "choice_type": "ask"}
+  ],
+  "language": [
+    {"message": "Book us a table for Saturday", "goal": "book a table",
+     "cycle": {"candidates": [{"index": 1, "type": "ask", "summary": "Ask which restaurant and what time", "tool": "none", "action": "none", "target": "", "content": ""}],
+       "critique": {"issues": [{"kind": "missing", "text": "No restaurant or time was given", "severity": "high"}], "question": "Which restaurant, and what time on Saturday?"},
+       "decision": {"choice": 1, "why": "the restaurant and time are missing", "by": "check"}},
+     "ends_with_question": true},
+    {"message": "What's 17.5% of 2,340?", "goal": "work out 17.5% of 2,340",
+     "cycle": {"candidates": [{"index": 1, "type": "answer", "summary": "Tell them the result", "tool": "none", "action": "none", "target": "", "content": ""}],
+       "critique": {"issues": [], "question": ""},
+       "decision": {"choice": 1, "why": "the calculator has the result", "by": "check"},
+       "action": {"tool": "calculator", "action": "none", "target": "0.175 * 2340", "ok": true, "result": "409.5", "status": "done"}},
+     "contains": ["409.5"]},
+    {"message": "write a function in javascript that takes firstNumber, operator, and secondNumber and then calculates based on those 3 arguments", "goal": "write a JavaScript calculate function",
+     "cycle": {"candidates": [{"index": 1, "type": "make", "summary": "Write the function with a usage example", "tool": "none", "action": "none", "target": "", "content": ""}],
+       "critique": {"issues": [{"kind": "missing", "text": "The supported operators aren't listed", "severity": "low"}], "question": ""},
+       "decision": {"choice": 1, "why": "a sensible version can be written now", "by": "check"}},
+     "contains": ["```", "firstNumber", "secondNumber"]}
+  ]
+}

@@ -1,0 +1,729 @@
+{
+  "corpus_sha256": "13b883001ed7fd9ba16fdccb6cfcc09a1b56739e0cc25a8f59a67a414fed5e4b",
+  "created_unix_seconds": 1789620592.287078,
+  "data": {
+    "assistant_targets": 300,
+    "conversations": 25,
+    "history_message_counts": {
+      "1": 25,
+      "3": 35,
+      "4": 14,
+      "5": 79,
+      "6": 32,
+      "7": 74,
+      "8": 25,
+      "9": 13,
+      "10": 2,
+      "11": 1
+    },
+    "max_dropped_messages": 9,
+    "max_history_turns": 6,
+    "school_replay_examples": 89,
+    "school_replay_fraction": 0.25,
+    "train_conversations": 22,
+    "train_examples": 354,
+    "validation_conversations": 3,
+    "validation_domains": [
+      "game_and_story_ideas",
+      "learning_reflection",
+      "writing_revision"
+    ],
+    "validation_examples": 35
+  },
+  "environment": {
+    "device": "mps",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "python": "3.9.6",
+    "pytorch": "2.8.0"
+  },
+  "experiment": "smCONVERSATION_001-muon",
+  "format_version": 1,
+  "runs": [
+    {
+      "best_bits_per_byte": 3.6143312091964486,
+      "best_step": 500,
+      "best_validation_loss": 2.5052634872643362,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.451592445373535,
+      "mean_gradient_norm_before_clip": 2.1584591126441954,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 4.2701479043026165,
+          "step": 25,
+          "train_loss": 2.8581595420837402,
+          "training_seconds_before_eval": 3.5478765,
+          "validation_loss": 2.9598409804413177
+        },
+        {
+          "bits_per_byte": 3.877976528079231,
+          "step": 50,
+          "train_loss": 2.5476949214935303,
+          "training_seconds_before_eval": 7.2656019999999994,
+          "validation_loss": 2.6880084967157645
+        },
+        {
+          "bits_per_byte": 3.746278545077318,
+          "step": 100,
+          "train_loss": 2.606496572494507,
+          "training_seconds_before_eval": 14.490766459,
+          "validation_loss": 2.596722411112557
+        },
+        {
+          "bits_per_byte": 3.6768702170374814,
+          "step": 200,
+          "train_loss": 2.4830119609832764,
+          "training_seconds_before_eval": 28.755116667,
+          "validation_loss": 2.5486122242243643
+        },
+        {
+          "bits_per_byte": 3.6306147330829077,
+          "step": 350,
+          "train_loss": 2.002094030380249,
+          "training_seconds_before_eval": 50.444269209,
+          "validation_loss": 2.516550365935816
+        },
+        {
+          "bits_per_byte": 3.6143312091964486,
+          "step": 500,
+          "train_loss": 2.451592445373535,
+          "training_seconds_before_eval": 71.914847375,
+          "validation_loss": 2.5052634872643362
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 6.933800350673139,
+      "training_seconds_including_eval": 72.110527375,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.6181208293532285,
+      "best_step": 500,
+      "best_validation_loss": 2.5078902517914012,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.4282562732696533,
+      "mean_gradient_norm_before_clip": 1.4077094126939773,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 3.9875573896063234,
+          "step": 25,
+          "train_loss": 2.6714861392974854,
+          "training_seconds_before_eval": 3.648597541000001,
+          "validation_loss": 2.7639641619265984
+        },
+        {
+          "bits_per_byte": 3.798025242783687,
+          "step": 50,
+          "train_loss": 2.594608783721924,
+          "training_seconds_before_eval": 7.470123999999998,
+          "validation_loss": 2.6325904887310143
+        },
+        {
+          "bits_per_byte": 3.7155105943609383,
+          "step": 100,
+          "train_loss": 2.5917088985443115,
+          "training_seconds_before_eval": 14.91541858299999,
+          "validation_loss": 2.575395692821891
+        },
+        {
+          "bits_per_byte": 3.6600838456531495,
+          "step": 200,
+          "train_loss": 2.47904634475708,
+          "training_seconds_before_eval": 29.952078625,
+          "validation_loss": 2.5369767982274825
+        },
+        {
+          "bits_per_byte": 3.6329411973131136,
+          "step": 350,
+          "train_loss": 2.2335026264190674,
+          "training_seconds_before_eval": 52.09028891599999,
+          "validation_loss": 2.5181629480576566
+        },
+        {
+          "bits_per_byte": 3.6181208293532285,
+          "step": 500,
+          "train_loss": 2.4282562732696533,
+          "training_seconds_before_eval": 74.073441041,
+          "validation_loss": 2.5078902517914012
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 6.732156082433429,
+      "training_seconds_including_eval": 74.27041112499998,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    },
+    {
+      "best_bits_per_byte": 3.6126756493153462,
+      "best_step": 500,
+      "best_validation_loss": 2.504115940600502,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.133188486099243,
+      "mean_gradient_norm_before_clip": 2.1871541962623597,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 4.263721822184574,
+          "step": 25,
+          "train_loss": 2.975412607192993,
+          "training_seconds_before_eval": 3.5080581670000015,
+          "validation_loss": 2.9553867597391497
+        },
+        {
+          "bits_per_byte": 3.9154115296454037,
+          "step": 50,
+          "train_loss": 2.7819666862487793,
+          "training_seconds_before_eval": 7.278232750000001,
+          "validation_loss": 2.7139564625056143
+        },
+        {
+          "bits_per_byte": 3.713042520014861,
+          "step": 100,
+          "train_loss": 2.6277945041656494,
+          "training_seconds_before_eval": 14.758484917000004,
+          "validation_loss": 2.5736849540474953
+        },
+        {
+          "bits_per_byte": 3.666760991994091,
+          "step": 200,
+          "train_loss": 2.3243727684020996,
+          "training_seconds_before_eval": 29.153811458999996,
+          "validation_loss": 2.541605043387892
+        },
+        {
+          "bits_per_byte": 3.62347352491308,
+          "step": 350,
+          "train_loss": 2.5549674034118652,
+          "training_seconds_before_eval": 50.591856834,
+          "validation_loss": 2.511600457627108
+        },
+        {
+          "bits_per_byte": 3.6126756493153462,
+          "step": 500,
+          "train_loss": 2.133188486099243,
+          "training_seconds_before_eval": 72.14917895900001,
+          "validation_loss": 2.504115940600502
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 6.911274080432326,
+      "training_seconds_including_eval": 72.345560917,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.6052089262706586,
+      "best_step": 500,
+      "best_validation_loss": 2.4989404025740547,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.34567928314209,
+      "mean_gradient_norm_before_clip": 1.4194471510648727,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 3.963441677266968,
+          "step": 25,
+          "train_loss": 2.7535400390625,
+          "training_seconds_before_eval": 3.677051750000004,
+          "validation_loss": 2.7472484239113792
+        },
+        {
+          "bits_per_byte": 3.8948326618959874,
+          "step": 50,
+          "train_loss": 2.850071430206299,
+          "training_seconds_before_eval": 7.594238166999986,
+          "validation_loss": 2.6996922783459905
+        },
+        {
+          "bits_per_byte": 3.694720929304887,
+          "step": 100,
+          "train_loss": 2.626845359802246,
+          "training_seconds_before_eval": 15.073268874999997,
+          "validation_loss": 2.5609853951035033
+        },
+        {
+          "bits_per_byte": 3.6547383406140597,
+          "step": 200,
+          "train_loss": 2.4096271991729736,
+          "training_seconds_before_eval": 29.849815457999995,
+          "validation_loss": 2.5332715764809683
+        },
+        {
+          "bits_per_byte": 3.6171472328421608,
+          "step": 350,
+          "train_loss": 2.5173232555389404,
+          "training_seconds_before_eval": 51.782660292,
+          "validation_loss": 2.5072154061147516
+        },
+        {
+          "bits_per_byte": 3.6052089262706586,
+          "step": 500,
+          "train_loss": 2.34567928314209,
+          "training_seconds_before_eval": 74.20223158300001,
+          "validation_loss": 2.4989404025740547
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 6.72064607079114,
+      "training_seconds_including_eval": 74.397609208,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    },
+    {
+      "best_bits_per_byte": 3.6143444541356913,
+      "best_step": 500,
+      "best_validation_loss": 2.505272667956629,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.335808515548706,
+      "mean_gradient_norm_before_clip": 2.1751732394695282,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 4.2636641254459855,
+          "step": 25,
+          "train_loss": 2.9803874492645264,
+          "training_seconds_before_eval": 3.5495713750000277,
+          "validation_loss": 2.9553467674074696
+        },
+        {
+          "bits_per_byte": 3.89054259587527,
+          "step": 50,
+          "train_loss": 2.606599807739258,
+          "training_seconds_before_eval": 7.273734208999997,
+          "validation_loss": 2.696718631179314
+        },
+        {
+          "bits_per_byte": 3.7695833680093918,
+          "step": 100,
+          "train_loss": 2.6026055812835693,
+          "training_seconds_before_eval": 14.631097000000011,
+          "validation_loss": 2.6128760834213725
+        },
+        {
+          "bits_per_byte": 3.6689909594356807,
+          "step": 200,
+          "train_loss": 2.4619462490081787,
+          "training_seconds_before_eval": 28.871715917000017,
+          "validation_loss": 2.543150739032771
+        },
+        {
+          "bits_per_byte": 3.620419264933507,
+          "step": 350,
+          "train_loss": 2.0043859481811523,
+          "training_seconds_before_eval": 50.516316750000044,
+          "validation_loss": 2.50948340593357
+        },
+        {
+          "bits_per_byte": 3.6143444541356913,
+          "step": 500,
+          "train_loss": 2.335808515548706,
+          "training_seconds_before_eval": 71.91635687500002,
+          "validation_loss": 2.505272667956629
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.933626638682917,
+      "training_seconds_including_eval": 72.11233400000003,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.609943495903793,
+      "best_step": 500,
+      "best_validation_loss": 2.5022221561664266,
+      "clipped_step_fraction": 0.0,
+      "final_train_loss": 2.339372396469116,
+      "mean_gradient_norm_before_clip": 1.4211931858062745,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 3.9846358522589616,
+          "step": 25,
+          "train_loss": 2.8118362426757812,
+          "training_seconds_before_eval": 3.6418167080000217,
+          "validation_loss": 2.761939106551374
+        },
+        {
+          "bits_per_byte": 3.8667284252145553,
+          "step": 50,
+          "train_loss": 2.5517454147338867,
+          "training_seconds_before_eval": 7.4625151250000386,
+          "validation_loss": 2.6802119059284664
+        },
+        {
+          "bits_per_byte": 3.7107342334211393,
+          "step": 100,
+          "train_loss": 2.6125831604003906,
+          "training_seconds_before_eval": 14.930023375000019,
+          "validation_loss": 2.5720849717031324
+        },
+        {
+          "bits_per_byte": 3.6366148775131397,
+          "step": 200,
+          "train_loss": 2.494105339050293,
+          "training_seconds_before_eval": 29.826077833,
+          "validation_loss": 2.5207093491305836
+        },
+        {
+          "bits_per_byte": 3.610645765304458,
+          "step": 350,
+          "train_loss": 2.330075740814209,
+          "training_seconds_before_eval": 52.068681583,
+          "validation_loss": 2.502708932221491
+        },
+        {
+          "bits_per_byte": 3.609943495903793,
+          "step": 500,
+          "train_loss": 2.339372396469116,
+          "training_seconds_before_eval": 74.20602570800003,
+          "validation_loss": 2.5022221561664266
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.720366392762843,
+      "training_seconds_including_eval": 74.40070537500003,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    }
+  ],
+  "selected_variants": [
+    "adamw",
+    "muon_original_20m"
+  ],
+  "settings": {
+    "adamw_learning_rate": 0.0002,
+    "batch_size": 4,
+    "corpus_conversations": 25,
+    "eval_steps": [
+      0,
+      25,
+      50,
+      100,
+      200,
+      350,
+      500
+    ],
+    "format_version": 1,
+    "gradient_clip": 1000000.0,
+    "seeds": [
+      16001,
+      16002,
+      16003
+    ],
+    "steps": 500,
+    "variants": {
+      "adamw": {
+        "optimizer": "adamw"
+      },
+      "muon_original_10m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.01,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_original_20m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.02,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_rms": {
+        "muon_adjustment": "match_rms_adamw",
+        "muon_learning_rate": 0.0002,
+        "optimizer": "hybrid_muon"
+      }
+    },
+    "warmup_steps": 50,
+    "weight_decay": 0.05
+  }
+}

@@ -1,0 +1,38 @@
+1st grade: 0/300 accepted
+attempt 1: asked 23, received 23, kept 14 -> 14/300
+attempt 2: asked 23, received 23, kept 6 -> 20/300
+attempt 3: asked 23, received 23, kept 6 -> 26/300
+attempt 4: asked 23, received 23, kept 17 -> 43/300
+attempt 5: asked 23, received 23, kept 11 -> 54/300
+attempt 6: asked 23, received 23, kept 19 -> 73/300
+attempt 7: asked 23, received 23, kept 1 -> 74/300
+attempt 8: asked 23, received 23, kept 12 -> 86/300
+attempt 9: asked 23, received 23, kept 12 -> 98/300
+attempt 10: asked 23, received 23, kept 4 -> 102/300
+attempt 11: asked 23, received 23, kept 8 -> 110/300
+attempt 12: asked 23, received 23, kept 4 -> 114/300
+attempt 13: asked 23, received 23, kept 9 -> 123/300
+attempt 14: asked 23, received 23, kept 16 -> 139/300
+attempt 15: asked 23, received 23, kept 9 -> 148/300
+attempt 16: asked 23, received 23, kept 16 -> 164/300
+attempt 17: asked 23, received 23, kept 6 -> 170/300
+attempt 18: asked 23, received 23, kept 13 -> 183/300
+attempt 19: asked 23, received 23, kept 5 -> 188/300
+attempt 20: asked 23, received 23, kept 12 -> 200/300
+attempt 21: asked 23, received 23, kept 5 -> 205/300
+attempt 22: asked 23, received 23, kept 8 -> 213/300
+attempt 23: asked 23, received 23, kept 11 -> 224/300
+attempt 24: asked 23, received 23, kept 4 -> 228/300
+attempt 25: asked 23, received 23, kept 8 -> 236/300
+attempt 26: asked 23, received 23, kept 13 -> 249/300
+attempt 27: asked 23, received 23, kept 10 -> 259/300
+attempt 28: asked 23, received 23, kept 10 -> 269/300
+attempt 29: asked 23, received 23, kept 14 -> 283/300
+attempt 30: asked 20, received 20, kept 5 -> 288/300
+attempt 31: asked 15, received 15, kept 7 -> 295/300
+attempt 32: asked 8, received 8, kept 0 -> 295/300
+attempt 33: asked 8, received 8, kept 1 -> 296/300
+attempt 34: asked 7, received 7, kept 3 -> 299/300
+attempt 35: asked 4, received 4, kept 1 -> 300/300
+rejected: {'duplicate word': 314, 'sentence does not contain the target word': 111, 'sentence has 15 words; 1st grade needs 5-13': 1, 'sentence has 14 words; 1st grade needs 5-13': 1, 'sentence needs ending punctuation': 1}
+complete: smLANGUAGE_en_SCH_001/data/levels/grade_01.jsonl

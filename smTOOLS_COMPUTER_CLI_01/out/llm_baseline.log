@@ -1,0 +1,56 @@
+  3.9s  ubuntu   something's already on port 3000, what is it   sudo ss -ltnp 'sport = :3000'
+  2.0s  ubuntu   get nginx onto this box                        sudo apt update && sudo apt install -y nginx
+  1.4s  ubuntu   nginx needs restarting                         sudo systemctl restart nginx
+  2.4s  ubuntu   how much room is left on the disk              df -h / | awk 'NR==2 {print $4}' | tr -d '%'
+  2.1s  ubuntu   show me the last 50 log lines for sshd         sudo tail -n 50 /var/log/auth.log | grep -i sshd
+  1.6s  ubuntu   which ip is this box on                        hostname -I | awk '{print $1}'
+  2.2s  ubuntu   make a local copy of https://github.com/user/r git clone https://github.com/user/repo.git ~/repo_copy
+  2.2s  ubuntu   nuke the ./build directory                     sudo rm -rf /path/to/your/project/build
+  2.4s  ubuntu   hunt down every *.log file under /var/log      sudo find /var/log -type f -name '*.log' -ls
+  2.7s  ubuntu   does anything in src say TODO                  grep -rl 'TODO' /usr/src/* /var/lib/dpkg/info/*/src/* /var/cache/apt/archives/*
+  1.9s  ubuntu   my machine is crawling, what's chewing the cpu top -o %CPU -n 1 | head -n 15
+  1.1s  ubuntu   pull in the newest package lists               sudo apt update
+  1.5s  fedora   put ripgrep on here                            sudo dnf install ripgrep -y
+  1.3s  fedora   is the docker service alive                    systemctl is-active docker
+  1.4s  fedora   give me the kernel build                       uname -r
+  1.7s  fedora   which accounts exist on this host              getent passwd | cut -d: -f1
+  1.4s  fedora   start postgresql when the box boots            sudo systemctl enable --now postgresql
+failed: how long since the last reboot (Expecting value: line 1 column 1 (char 0))
+ 12.4s  fedora   how long since the last reboot                 (nothing)
+  1.6s  fedora   unpack notes.txt.tar.gz here                   tar -xzf notes.txt.tar.gz
+  1.4s  fedora   drop the htop package                          sudo dnf remove htop
+  2.0s  arch     add jq                                         sudo pacman -S --needed jq
+  3.4s  arch     everything up to date please                   sudo pacman -Syu --noconfirm && sudo pacman -Rns $(pacman -Qdtq) --noconfirm
+  5.9s  arch     what's listening for connections               ss -tulnp | grep -E ':([0-9]{1,5}|[1-9][0-9]{1,4}|[1-5][0-9]{1,3}|6[0-4][0-9]{1,2}|65[0-4][0-9]|655[0-3])$'
+  1.8s  arch     kill pid 1337                                  sudo kill -9 1337
+  1.3s  arch     what release is this                           cat /etc/arch-release
+  2.4s  arch     is vim anywhere on this system                 pacman -Q | grep -q vim && echo "vim is installed" || echo "vim is not installed"
+  2.2s  arch     how much ram is spare                          free -h | awk '/^Mem:/ {print "Spare RAM: " $4}'
+  1.6s  macos    what's sitting on port 8771                    lsof -i :8771
+  1.2s  macos    brew me ffmpeg                                 brew install ffmpeg
+  1.3s  macos    what macos version is this                     sw_vers -productVersion
+  2.6s  macos    swap localhost for 127.0.0.1 inside /etc/hosts sudo sed -i '' 's/127.0.0.1/localhost/g' /etc/hosts
+  1.9s  macos    biggest stuff in this directory                du -hx * | sort -rh | head -n 10
+  1.5s  macos    pop this folder open in finder                 open -R /path/to/folder
+  1.4s  macos    stick the contents of ~/notes.txt on my clipbo pbcopy < ~/notes.txt
+  1.6s  macos    put a zip around ./dist                        zip -r ~/dist.zip ~/dist
+  1.8s  macos    what's the box called                          system_profiler SPSoftwareDataType | grep 'System Name'
+  1.6s  macos    trash the file /tmp/session.log                rm -f /tmp/session.log
+  2.1s  macos    serve this directory on 8000                   python3 -m http.server 8000
+  3.1s  macos    check github.com answers                       curl -s https://github.com | grep -o '<title>.*</title>' | sed 's/<title>//;s/<\/title>//'
+  3.4s  windows  what's holding port 5432                       Get-NetTCPConnection -LocalPort 5432 | Select-Object LocalAddress, LocalPort, OwningProcess, State | Format-Table -AutoSize
+  2.8s  windows  install Git.Git                                winget install --id Git.Git --silent --accept-package-agreements --accept-source-agreements
+  1.5s  windows  is the sshd service up                         Get-Service sshd | Select-Object Status
+  2.9s  windows  list what's in this folder including hidden on Get-ChildItem -Force -Recurse -File | Select-Object FullName, Name, LastWriteTime, Length | Format-Table -AutoSize
+  1.5s  windows  show me C:\temp\old.txt                        type "C:\temp\old.txt"
+  2.9s  windows  which processes are eating memory              Get-Process | Sort-Object -Property WS -Descending | Select-Object -First 10 Name, WS, CPU | Format-Table -AutoSize
+  2.0s  windows  stop the nginx process                         Stop-Service -Name 'nginx' -Force
+  2.6s  windows  unpack .\dist.zip into this folder             Expand-Archive -Path '.\dist.zip' -DestinationPath '.' -Force
+  2.6s  ubuntu   what's the weather in Denver tomorrow          curl -s 'wttr.in/Denver?format=%C+%t+%h'
+  4.7s  macos    remember my dentist is Dr. Lee                 echo 'Reminder: Call Dr. Lee (your dentist)' | pbcopy && osascript -e 'display notification "Reminder: Call Dr. Lee (your dentist)" with title "Dentist Appointment" sound name "Glass"'
+  2.4s  windows  what's 17.5% of 2,340                          ($2340 * 0.175) | Out-Host
+  1.0s  fedora   write me a poem about autumn                   (nothing)
+  1.2s  arch     lol ok                                         (nothing)
+  1.2s  macos    how does a mortgage work                       (nothing)
+
+ministral-8b: exact 15%, right program 79%, right risk 77%, quiet 50%, 1.9s median

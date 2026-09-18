@@ -1,0 +1,129 @@
+{
+ "when": "2026-09-15 22:55",
+ "params": 10726272,
+ "step": 250,
+ "seconds": 286.4,
+ "args": {
+  "pool": 30000,
+  "steps": 500,
+  "tokens": 8192,
+  "lr": 0.0006,
+  "d": 384,
+  "layers": 6,
+  "heads": 6,
+  "dropout": 0.1,
+  "max_len": 1024,
+  "eval_every": 250,
+  "seed": 0,
+    "out": "smLANGUAGE_RENDER_001/out",
+  "device": "mps"
+ },
+ "generated_teacher_exact": 0.0,
+ "dev": {
+  "exact": 0.0,
+  "grounded": 0.636
+ },
+ "test": {
+  "exact": 0.0,
+  "grounded": 0.636,
+  "rows": [
+   {
+    "kind": "math",
+    "reply": "1111111110 is is is is 10 is is is is is is is is 1 it 1 ith it.",
+    "expected": "7304 - 188 = 7116.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 1, 10, 1111111110"
+    ]
+   },
+   {
+    "kind": "math",
+    "reply": "10 of of of is is is is is is is is is it it itha it.",
+    "expected": "12.5% of 640 is 80.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 10"
+    ]
+   },
+   {
+    "kind": "memory",
+    "reply": "Yort is is is is c is is or ist da cthat cthathathath h dath h c ct.",
+    "expected": "Taylor Brooks handles the cabin insurance.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "ask",
+    "reply": "I dor dor da d cur ct ct cthatha dathat t thathathathathathathathathathathathavesthatathathavethavesthesthesth datheltherererererererestototheeeeeeeeerererert.t.t d thertherthe cothert.therthertothtttthththththttthtotththtototototototototototototototototothtotttotttttththththtothttotothtttthttttttot",
+    "expected": "I need the recipient. Who should receive the package?",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "ask reply needs exactly one question"
+    ]
+   },
+   {
+    "kind": "file",
+    "reply": "I doudont davesthant danthant.th dandandant.",
+    "expected": "`weekend.txt` contains: museum, lunch, and groceries.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "file_error",
+    "reply": "I doulot.veshave dave davest.t d d d cot d cothave cot.",
+    "expected": "I couldn't save `missing.txt`: file does not exist.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "web",
+    "reply": "I ot inotanot inothand cotot.tanthanthe coth and ind cortstortorth condy dave d d d d d t t.",
+    "expected": "It is 84°F and rainy in Miami.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "need",
+    "reply": "Itat is cothand cotortorerere indand indanoterest.",
+    "expected": "NEED: web_browser https://weather.example/phoenix/live",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "bad NEED line"
+    ]
+   },
+   {
+    "kind": "direct",
+    "reply": "Yourt or or dat daves int.",
+    "expected": "The train leaves Saturday at 7:45 AM.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "assumption",
+    "reply": "Itototonothertototonotonototononononononondndndndandontototothththtoththesudothtototothththththththtthththththtototoththtototototototothotothtototothandandndtotototototototoththththtototthtotothototototototototototototototototototototototototototototototototototototototototototototototototototototot",
+    "expected": "Assumption: 02108 means Boston, Massachusetts.\nThe current temperature is 57°F.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   },
+   {
+    "kind": "unavailable",
+    "reply": "I don't dor have dorrre da da t t t tha thathathathathe thathe thathathathathathathathathavesthavethavethathathath thethethetherrrrrrrthertothaverthaverthett.thtthththththththththththtttththtththtototttthttttttththtothtotototototototttotototototototototototototototototototothtothtttothtththttttototo",
+    "expected": "I don't have current data for that.",
+    "exact": false,
+    "grounded": true,
+    "problems": []
+   }
+  ]
+ },
+ "ms_per_output_byte_cpu": 1.562
+}

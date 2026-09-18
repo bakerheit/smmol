@@ -1,0 +1,761 @@
+outlines | asked 12 | kept 9 | 13/40
+outlines | asked 12 | kept 9 | 22/40
+outlines | asked 12 | kept 11 | 33/40
+outlines | asked 7 | kept 6 | 39/40
+outlines | asked 1 | kept 1 | 40/40
+accept conversation-0002 | 2/25 | 22 messages
+accept conversation-0003 | 3/25 | 24 messages
+accept conversation-0004 | 4/25 | 26 messages
+accept conversation-0005 | 5/25 | 28 messages
+reject conversation-0006 attempt 1 | structure | message 0 touches the schema cap and may be truncated; message 9 ends with an unfinished thought; needs 1 short messages, got 0
+accept conversation-0006 | 6/25 | 20 messages
+accept conversation-0007 | 7/25 | 22 messages
+accept conversation-0008 | 8/25 | 24 messages
+accept conversation-0009 | 9/25 | 26 messages
+reject conversation-0010 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0010 | 10/25 | 28 messages
+reject conversation-0011 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0011 | 11/25 | 20 messages
+accept conversation-0012 | 12/25 | 22 messages
+accept conversation-0013 | 13/25 | 24 messages
+reject conversation-0014 attempt 1 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated
+reject conversation-0014 attempt 2 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated
+accept conversation-0014 | 14/25 | 26 messages
+accept conversation-0015 | 15/25 | 28 messages
+accept conversation-0016 | 16/25 | 20 messages
+accept conversation-0017 | 17/25 | 22 messages
+accept conversation-0018 | 18/25 | 24 messages
+accept conversation-0019 | 19/25 | 26 messages
+accept conversation-0020 | 20/25 | 28 messages
+reject conversation-0021 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0021 | 21/25 | 20 messages
+accept conversation-0022 | 22/25 | 22 messages
+accept conversation-0023 | 23/25 | 24 messages
+accept conversation-0024 | 24/25 | 26 messages
+accept conversation-0025 | 25/25 | 28 messages
+done in 55.7 minutes
+{
+  "assistant_targets": 300,
+  "common_assistant_openings": [
+    {
+      "count": 3,
+      "opening": "that s a smart"
+    },
+    {
+      "count": 3,
+      "opening": "that s a solid"
+    },
+    {
+      "count": 3,
+      "opening": "here s your plan"
+    },
+    {
+      "count": 3,
+      "opening": "you re welcome your"
+    },
+    {
+      "count": 2,
+      "opening": "got it how about"
+    },
+    {
+      "count": 2,
+      "opening": "to summarize you d"
+    },
+    {
+      "count": 2,
+      "opening": "that s a strong"
+    },
+    {
+      "count": 2,
+      "opening": "that sounds like a"
+    },
+    {
+      "count": 2,
+      "opening": "that s a good"
+    },
+    {
+      "count": 2,
+      "opening": "you re welcome the"
+    },
+    {
+      "count": 2,
+      "opening": "that s your plan"
+    },
+    {
+      "count": 1,
+      "opening": "so you re blending"
+    },
+    {
+      "count": 1,
+      "opening": "do you want something"
+    },
+    {
+      "count": 1,
+      "opening": "fair point how about"
+    },
+    {
+      "count": 1,
+      "opening": "great choice pixel crust"
+    },
+    {
+      "count": 1,
+      "opening": "not necessarily pixel crust"
+    },
+    {
+      "count": 1,
+      "opening": "pixel crust is sleek"
+    },
+    {
+      "count": 1,
+      "opening": "with pixel crust picked"
+    },
+    {
+      "count": 1,
+      "opening": "pixel crust fits your"
+    },
+    {
+      "count": 1,
+      "opening": "you re welcome pixel"
+    }
+  ],
+  "conversations": 25,
+  "domains": {
+    "creative_brainstorming": 2,
+    "decision_making": 2,
+    "entertainment_discussion": 2,
+    "event_planning": 2,
+    "everyday_planning": 2,
+    "family_scheduling": 1,
+    "game_and_story_ideas": 1,
+    "hobby_projects": 1,
+    "home_organization": 1,
+    "learning_reflection": 1,
+    "personal_preferences": 1,
+    "shopping_comparisons": 1,
+    "social_communication": 1,
+    "software_project_planning": 1,
+    "study_habits": 1,
+    "time_management": 1,
+    "travel_preferences": 1,
+    "volunteer_coordination": 1,
+    "workplace_communication": 1,
+    "writing_revision": 1
+  },
+  "duplicate_conversations": 0,
+  "length_bands": {
+    "long": 265,
+    "medium": 244,
+    "short": 91
+  },
+  "message_words": {
+    "max": 65,
+    "mean": 22.26,
+    "min": 3
+  },
+  "messages": 600,
+  "skills": {
+    "brainstorming": 3,
+    "callback_to_earlier_detail": 8,
+    "clarification": 13,
+    "compare_options": 10,
+    "correction_and_repair": 1,
+    "emotional_attunement": 4,
+    "instruction_following": 3,
+    "multi_step_planning": 11,
+    "polite_disagreement": 2,
+    "question_answering": 1,
+    "summarization": 16,
+    "teaching": 1,
+    "troubleshooting": 2
+  },
+  "structural_failures": []
+}
+{
+  "assistant_targets": 300,
+  "common_assistant_openings": [
+    {
+      "count": 3,
+      "opening": "that s a smart"
+    },
+    {
+      "count": 3,
+      "opening": "that s a solid"
+    },
+    {
+      "count": 3,
+      "opening": "here s your plan"
+    },
+    {
+      "count": 3,
+      "opening": "you re welcome your"
+    },
+    {
+      "count": 2,
+      "opening": "got it how about"
+    },
+    {
+      "count": 2,
+      "opening": "to summarize you d"
+    },
+    {
+      "count": 2,
+      "opening": "that s a strong"
+    },
+    {
+      "count": 2,
+      "opening": "that sounds like a"
+    },
+    {
+      "count": 2,
+      "opening": "that s a good"
+    },
+    {
+      "count": 2,
+      "opening": "you re welcome the"
+    },
+    {
+      "count": 2,
+      "opening": "that s your plan"
+    },
+    {
+      "count": 1,
+      "opening": "so you re blending"
+    },
+    {
+      "count": 1,
+      "opening": "do you want something"
+    },
+    {
+      "count": 1,
+      "opening": "fair point how about"
+    },
+    {
+      "count": 1,
+      "opening": "great choice pixel crust"
+    },
+    {
+      "count": 1,
+      "opening": "not necessarily pixel crust"
+    },
+    {
+      "count": 1,
+      "opening": "pixel crust is sleek"
+    },
+    {
+      "count": 1,
+      "opening": "with pixel crust picked"
+    },
+    {
+      "count": 1,
+      "opening": "pixel crust fits your"
+    },
+    {
+      "count": 1,
+      "opening": "you re welcome pixel"
+    }
+  ],
+  "conversations": 25,
+  "domains": {
+    "creative_brainstorming": 2,
+    "decision_making": 2,
+    "entertainment_discussion": 2,
+    "event_planning": 2,
+    "everyday_planning": 2,
+    "family_scheduling": 1,
+    "game_and_story_ideas": 1,
+    "hobby_projects": 1,
+    "home_organization": 1,
+    "learning_reflection": 1,
+    "personal_preferences": 1,
+    "shopping_comparisons": 1,
+    "social_communication": 1,
+    "software_project_planning": 1,
+    "study_habits": 1,
+    "time_management": 1,
+    "travel_preferences": 1,
+    "volunteer_coordination": 1,
+    "workplace_communication": 1,
+    "writing_revision": 1
+  },
+  "duplicate_conversations": 0,
+  "length_bands": {
+    "long": 265,
+    "medium": 244,
+    "short": 91
+  },
+  "message_words": {
+    "max": 65,
+    "mean": 22.26,
+    "min": 3
+  },
+  "messages": 600,
+  "skills": {
+    "brainstorming": 3,
+    "callback_to_earlier_detail": 8,
+    "clarification": 13,
+    "compare_options": 10,
+    "correction_and_repair": 1,
+    "emotional_attunement": 4,
+    "instruction_following": 3,
+    "multi_step_planning": 11,
+    "polite_disagreement": 2,
+    "question_answering": 1,
+    "summarization": 16,
+    "teaching": 1,
+    "troubleshooting": 2
+  },
+  "structural_failures": []
+}
+valid
+outlines | asked 12 | kept 11 | 51/1200
+outlines | asked 12 | kept 10 | 61/1200
+outlines | asked 12 | kept 10 | 71/1200
+outlines | asked 12 | kept 9 | 80/1200
+outlines | asked 12 | kept 11 | 91/1200
+outlines | asked 12 | kept 10 | 101/1200
+outlines | asked 12 | kept 11 | 112/1200
+outlines | asked 12 | kept 9 | 121/1200
+outlines | asked 12 | kept 10 | 131/1200
+outlines | asked 12 | kept 11 | 142/1200
+outlines | asked 12 | kept 11 | 153/1200
+outlines | asked 12 | kept 10 | 163/1200
+outlines | asked 12 | kept 11 | 174/1200
+outlines | asked 12 | kept 10 | 184/1200
+outlines | asked 12 | kept 12 | 196/1200
+outlines | asked 12 | kept 12 | 208/1200
+outlines | asked 12 | kept 12 | 220/1200
+outlines | asked 12 | kept 10 | 230/1200
+outlines | asked 12 | kept 11 | 241/1200
+outlines | asked 12 | kept 9 | 250/1200
+outlines | asked 12 | kept 11 | 261/1200
+outlines | asked 12 | kept 10 | 271/1200
+outlines | asked 12 | kept 11 | 282/1200
+outlines | asked 12 | kept 12 | 294/1200
+outlines | asked 12 | kept 11 | 305/1200
+outlines | asked 12 | kept 11 | 316/1200
+outlines | asked 12 | kept 10 | 326/1200
+outlines | asked 12 | kept 12 | 338/1200
+outlines | asked 12 | kept 11 | 349/1200
+outlines | asked 12 | kept 11 | 360/1200
+outlines | asked 12 | kept 12 | 372/1200
+outlines | asked 12 | kept 11 | 383/1200
+outlines | asked 12 | kept 12 | 395/1200
+outlines | asked 12 | kept 10 | 405/1200
+outlines | asked 12 | kept 10 | 415/1200
+outlines | asked 12 | kept 11 | 426/1200
+outlines | asked 12 | kept 11 | 437/1200
+outlines | asked 12 | kept 10 | 447/1200
+outlines | asked 12 | kept 11 | 458/1200
+outlines | asked 12 | kept 9 | 467/1200
+outlines | asked 12 | kept 9 | 476/1200
+outlines | asked 12 | kept 11 | 487/1200
+outlines | asked 12 | kept 12 | 499/1200
+outlines | asked 12 | kept 11 | 510/1200
+outlines | asked 12 | kept 11 | 521/1200
+outlines | asked 12 | kept 12 | 533/1200
+outlines | asked 12 | kept 11 | 544/1200
+outlines | asked 12 | kept 11 | 555/1200
+outlines | asked 12 | kept 12 | 567/1200
+outlines | asked 12 | kept 10 | 577/1200
+outlines | asked 12 | kept 12 | 589/1200
+outlines | asked 12 | kept 12 | 601/1200
+outlines | asked 12 | kept 11 | 612/1200
+outlines | asked 12 | kept 4 | 616/1200
+outlines | asked 12 | kept 12 | 628/1200
+outlines | asked 12 | kept 12 | 640/1200
+outlines | asked 12 | kept 11 | 651/1200
+outlines | asked 12 | kept 11 | 662/1200
+outlines | asked 12 | kept 9 | 671/1200
+outlines | asked 12 | kept 10 | 681/1200
+outlines | asked 12 | kept 3 | 684/1200
+outlines | asked 12 | kept 9 | 693/1200
+outlines | asked 12 | kept 11 | 704/1200
+outlines | asked 12 | kept 10 | 714/1200
+outlines | asked 12 | kept 10 | 724/1200
+outlines | asked 12 | kept 12 | 736/1200
+outlines | asked 12 | kept 10 | 746/1200
+outlines | asked 12 | kept 10 | 756/1200
+outlines | asked 12 | kept 9 | 765/1200
+outlines | asked 12 | kept 12 | 777/1200
+outlines | asked 12 | kept 7 | 784/1200
+outlines | asked 12 | kept 9 | 793/1200
+outlines | asked 12 | kept 10 | 803/1200
+outlines | asked 12 | kept 6 | 809/1200
+outlines | asked 12 | kept 9 | 818/1200
+outlines | asked 12 | kept 10 | 828/1200
+outlines | asked 12 | kept 10 | 838/1200
+outlines | asked 12 | kept 12 | 850/1200
+outlines | asked 12 | kept 11 | 861/1200
+outlines | asked 12 | kept 9 | 870/1200
+outlines | asked 12 | kept 6 | 876/1200
+outlines | asked 12 | kept 11 | 887/1200
+outlines | asked 12 | kept 9 | 896/1200
+outlines | asked 12 | kept 9 | 905/1200
+outlines | asked 12 | kept 8 | 913/1200
+outlines | asked 12 | kept 9 | 922/1200
+outlines | asked 12 | kept 11 | 933/1200
+outlines | asked 12 | kept 11 | 944/1200
+outlines | asked 12 | kept 12 | 956/1200
+outlines | asked 12 | kept 11 | 967/1200
+outlines | asked 12 | kept 9 | 976/1200
+outlines | asked 12 | kept 12 | 988/1200
+outlines | asked 12 | kept 10 | 998/1200
+outlines | asked 12 | kept 12 | 1010/1200
+outlines | asked 12 | kept 12 | 1022/1200
+outlines | asked 12 | kept 12 | 1034/1200
+outlines | asked 12 | kept 11 | 1045/1200
+outlines | asked 12 | kept 11 | 1056/1200
+outlines | asked 12 | kept 10 | 1066/1200
+outlines | asked 12 | kept 12 | 1078/1200
+outlines | asked 12 | kept 11 | 1089/1200
+outlines | asked 12 | kept 12 | 1101/1200
+outlines | asked 12 | kept 11 | 1112/1200
+outlines | asked 12 | kept 9 | 1121/1200
+outlines | asked 12 | kept 11 | 1132/1200
+outlines | asked 12 | kept 11 | 1143/1200
+outlines | asked 12 | kept 11 | 1154/1200
+outlines | asked 12 | kept 9 | 1163/1200
+outlines | asked 12 | kept 1 | 1164/1200
+outlines | asked 12 | kept 9 | 1173/1200
+outlines | asked 12 | kept 10 | 1183/1200
+outlines | asked 12 | kept 9 | 1192/1200
+outlines | asked 8 | kept 7 | 1199/1200
+outlines | asked 1 | kept 1 | 1200/1200
+reject conversation-0026 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0026 | 26/1000 | 20 messages
+reject conversation-0027 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0027 | 27/1000 | 22 messages
+accept conversation-0028 | 28/1000 | 24 messages
+accept conversation-0029 | 29/1000 | 26 messages
+accept conversation-0030 | 30/1000 | 28 messages
+accept conversation-0031 | 31/1000 | 20 messages
+accept conversation-0032 | 32/1000 | 22 messages
+accept conversation-0033 | 33/1000 | 24 messages
+reject conversation-0034 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0034 | 34/1000 | 26 messages
+reject conversation-0035 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0035 attempt 2 | structure | needs 4 long messages, got 2
+reject conversation-0035 attempt 3 | structure | needs 1 short messages, got 0
+accept conversation-0035 | 35/1000 | 28 messages
+accept conversation-0036 | 36/1000 | 20 messages
+accept conversation-0037 | 37/1000 | 22 messages
+accept conversation-0038 | 38/1000 | 24 messages
+accept conversation-0039 | 39/1000 | 26 messages
+reject conversation-0040 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0040 | 40/1000 | 28 messages
+reject conversation-0041 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0041 attempt 2 | structure | needs 1 short messages, got 0
+accept conversation-0041 | 41/1000 | 20 messages
+accept conversation-0042 | 42/1000 | 22 messages
+reject conversation-0043 attempt 1 | structure | needs 3 medium messages, got 1
+accept conversation-0043 | 43/1000 | 24 messages
+accept conversation-0044 | 44/1000 | 26 messages
+reject conversation-0045 attempt 1 | structure | needs 4 long messages, got 0
+reject conversation-0045 attempt 2 | structure | message 5 touches the schema cap and may be truncated
+accept conversation-0045 | 45/1000 | 28 messages
+reject conversation-0046 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+reject conversation-0046 attempt 2 | structure | message 0 touches the schema cap and may be truncated
+reject conversation-0046 attempt 3 | structure | message 0 touches the schema cap and may be truncated
+accept conversation-0046 | 46/1000 | 20 messages
+accept conversation-0047 | 47/1000 | 22 messages
+reject conversation-0048 attempt 1 | structure | message 16 repeats an earlier message; message 17 repeats an earlier message; message 18 repeats an earlier message
+accept conversation-0048 | 48/1000 | 24 messages
+reject conversation-0049 attempt 1 | structure | needs 4 long messages, got 1
+accept conversation-0049 | 49/1000 | 26 messages
+accept conversation-0050 | 50/1000 | 28 messages
+accept conversation-0051 | 51/1000 | 20 messages
+accept conversation-0052 | 52/1000 | 22 messages
+reject conversation-0053 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0053 | 53/1000 | 24 messages
+accept conversation-0054 | 54/1000 | 26 messages
+accept conversation-0055 | 55/1000 | 28 messages
+reject conversation-0056 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0056 | 56/1000 | 20 messages
+reject conversation-0057 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0057 | 57/1000 | 22 messages
+accept conversation-0058 | 58/1000 | 24 messages
+reject conversation-0059 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0059 attempt 2 | structure | needs 4 long messages, got 3
+reject conversation-0059 attempt 3 | structure | message 15 touches the schema cap and may be truncated; message 24 repeats an earlier message
+reject conversation-0059 attempt 4 | structure | needs 1 short messages, got 0
+accept conversation-0059 | 59/1000 | 26 messages
+reject conversation-0060 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0060 | 60/1000 | 28 messages
+reject conversation-0061 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0061 | 61/1000 | 20 messages
+reject conversation-0062 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0062 | 62/1000 | 22 messages
+accept conversation-0063 | 63/1000 | 24 messages
+reject conversation-0064 attempt 1 | structure | message 12 exceeds 70 words; message 12 touches the schema cap and may be truncated
+accept conversation-0064 | 64/1000 | 26 messages
+accept conversation-0065 | 65/1000 | 28 messages
+reject conversation-0066 attempt 1 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0066 | 66/1000 | 20 messages
+accept conversation-0067 | 67/1000 | 22 messages
+accept conversation-0068 | 68/1000 | 24 messages
+accept conversation-0069 | 69/1000 | 26 messages
+accept conversation-0070 | 70/1000 | 28 messages
+reject conversation-0071 attempt 1 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0071 | 71/1000 | 20 messages
+reject conversation-0072 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0072 | 72/1000 | 22 messages
+accept conversation-0073 | 73/1000 | 24 messages
+accept conversation-0074 | 74/1000 | 26 messages
+accept conversation-0075 | 75/1000 | 28 messages
+accept conversation-0076 | 76/1000 | 20 messages
+reject conversation-0077 attempt 1 | structure | needs 3 medium messages, got 2
+accept conversation-0077 | 77/1000 | 22 messages
+reject conversation-0078 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0078 attempt 2 | structure | message 5 touches the schema cap and may be truncated
+accept conversation-0078 | 78/1000 | 24 messages
+accept conversation-0079 | 79/1000 | 26 messages
+accept conversation-0080 | 80/1000 | 28 messages
+accept conversation-0081 | 81/1000 | 20 messages
+reject conversation-0082 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0082 | 82/1000 | 22 messages
+accept conversation-0083 | 83/1000 | 24 messages
+accept conversation-0084 | 84/1000 | 26 messages
+reject conversation-0085 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0085 attempt 2 | structure | needs 4 long messages, got 0
+reject conversation-0085 attempt 3 | structure | needs 1 short messages, got 0
+accept conversation-0085 | 85/1000 | 28 messages
+accept conversation-0086 | 86/1000 | 20 messages
+accept conversation-0087 | 87/1000 | 22 messages
+accept conversation-0088 | 88/1000 | 24 messages
+accept conversation-0089 | 89/1000 | 26 messages
+accept conversation-0090 | 90/1000 | 28 messages
+accept conversation-0091 | 91/1000 | 20 messages
+accept conversation-0092 | 92/1000 | 22 messages
+accept conversation-0093 | 93/1000 | 24 messages
+accept conversation-0094 | 94/1000 | 26 messages
+accept conversation-0095 | 95/1000 | 28 messages
+reject conversation-0096 attempt 1 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated; message 1 touches the schema cap and may be truncated
+accept conversation-0096 | 96/1000 | 20 messages
+accept conversation-0097 | 97/1000 | 22 messages
+accept conversation-0098 | 98/1000 | 24 messages
+accept conversation-0099 | 99/1000 | 26 messages
+reject conversation-0100 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0100 | 100/1000 | 28 messages
+accept conversation-0101 | 101/1000 | 20 messages
+accept conversation-0102 | 102/1000 | 22 messages
+reject conversation-0103 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0103 attempt 2 | structure | needs 4 long messages, got 1
+accept conversation-0103 | 103/1000 | 24 messages
+accept conversation-0104 | 104/1000 | 26 messages
+reject conversation-0105 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0105 | 105/1000 | 28 messages
+accept conversation-0106 | 106/1000 | 20 messages
+accept conversation-0107 | 107/1000 | 22 messages
+accept conversation-0108 | 108/1000 | 24 messages
+accept conversation-0109 | 109/1000 | 26 messages
+accept conversation-0110 | 110/1000 | 28 messages
+reject conversation-0111 attempt 1 | structure | needs 3 medium messages, got 2
+accept conversation-0111 | 111/1000 | 20 messages
+reject conversation-0112 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0112 | 112/1000 | 22 messages
+accept conversation-0113 | 113/1000 | 24 messages
+accept conversation-0114 | 114/1000 | 26 messages
+accept conversation-0115 | 115/1000 | 28 messages
+accept conversation-0116 | 116/1000 | 20 messages
+accept conversation-0117 | 117/1000 | 22 messages
+accept conversation-0118 | 118/1000 | 24 messages
+accept conversation-0119 | 119/1000 | 26 messages
+accept conversation-0120 | 120/1000 | 28 messages
+accept conversation-0121 | 121/1000 | 20 messages
+accept conversation-0122 | 122/1000 | 22 messages
+accept conversation-0123 | 123/1000 | 24 messages
+accept conversation-0124 | 124/1000 | 26 messages
+accept conversation-0125 | 125/1000 | 28 messages
+accept conversation-0126 | 126/1000 | 20 messages
+reject conversation-0127 attempt 1 | structure | message 14 repeats an earlier message; message 15 repeats an earlier message; message 16 repeats an earlier message
+accept conversation-0127 | 127/1000 | 22 messages
+reject conversation-0128 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0128 attempt 2 | structure | needs 4 long messages, got 2
+reject conversation-0128 attempt 3 | structure | message 7 touches the schema cap and may be truncated; message 7 ends with an unfinished thought; message 19 touches the schema cap and may be truncated
+accept conversation-0128 | 128/1000 | 24 messages
+accept conversation-0129 | 129/1000 | 26 messages
+reject conversation-0130 attempt 1 | structure | needs 4 long messages, got 0
+accept conversation-0130 | 130/1000 | 28 messages
+accept conversation-0131 | 131/1000 | 20 messages
+accept conversation-0132 | 132/1000 | 22 messages
+accept conversation-0133 | 133/1000 | 24 messages
+accept conversation-0134 | 134/1000 | 26 messages
+accept conversation-0135 | 135/1000 | 28 messages
+accept conversation-0136 | 136/1000 | 20 messages
+accept conversation-0137 | 137/1000 | 22 messages
+accept conversation-0138 | 138/1000 | 24 messages
+reject conversation-0139 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0139 | 139/1000 | 26 messages
+accept conversation-0140 | 140/1000 | 28 messages
+accept conversation-0141 | 141/1000 | 20 messages
+accept conversation-0142 | 142/1000 | 22 messages
+reject conversation-0143 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0143 attempt 2 | structure | needs 4 long messages, got 2
+reject conversation-0143 attempt 3 | structure | needs 1 short messages, got 0
+accept conversation-0143 | 143/1000 | 24 messages
+accept conversation-0144 | 144/1000 | 26 messages
+accept conversation-0145 | 145/1000 | 28 messages
+accept conversation-0146 | 146/1000 | 20 messages
+accept conversation-0147 | 147/1000 | 22 messages
+accept conversation-0148 | 148/1000 | 24 messages
+accept conversation-0149 | 149/1000 | 26 messages
+accept conversation-0150 | 150/1000 | 28 messages
+reject conversation-0151 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0151 attempt 2 | structure | needs 1 short messages, got 0
+reject conversation-0151 attempt 3 | structure | needs 1 short messages, got 0
+accept conversation-0151 | 151/1000 | 20 messages
+accept conversation-0152 | 152/1000 | 22 messages
+accept conversation-0153 | 153/1000 | 24 messages
+reject conversation-0154 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0154 | 154/1000 | 26 messages
+accept conversation-0155 | 155/1000 | 28 messages
+reject conversation-0156 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0156 | 156/1000 | 20 messages
+accept conversation-0157 | 157/1000 | 22 messages
+accept conversation-0158 | 158/1000 | 24 messages
+accept conversation-0159 | 159/1000 | 26 messages
+accept conversation-0160 | 160/1000 | 28 messages
+accept conversation-0161 | 161/1000 | 20 messages
+accept conversation-0162 | 162/1000 | 22 messages
+accept conversation-0163 | 163/1000 | 24 messages
+reject conversation-0164 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0; needs 3 medium messages, got 1
+accept conversation-0164 | 164/1000 | 26 messages
+accept conversation-0165 | 165/1000 | 28 messages
+accept conversation-0166 | 166/1000 | 20 messages
+accept conversation-0167 | 167/1000 | 22 messages
+reject conversation-0168 attempt 1 | structure | message 15 touches the schema cap and may be truncated
+accept conversation-0168 | 168/1000 | 24 messages
+accept conversation-0169 | 169/1000 | 26 messages
+accept conversation-0170 | 170/1000 | 28 messages
+reject conversation-0171 attempt 1 | structure | needs 4 long messages, got 1
+accept conversation-0171 | 171/1000 | 20 messages
+accept conversation-0172 | 172/1000 | 22 messages
+accept conversation-0173 | 173/1000 | 24 messages
+accept conversation-0174 | 174/1000 | 26 messages
+reject conversation-0175 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0175 | 175/1000 | 28 messages
+accept conversation-0176 | 176/1000 | 20 messages
+reject conversation-0177 attempt 1 | structure | message 0 touches the schema cap and may be truncated
+reject conversation-0177 attempt 2 | structure | needs 1 short messages, got 0
+accept conversation-0177 | 177/1000 | 22 messages
+reject conversation-0178 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0; needs 3 medium messages, got 2
+reject conversation-0178 attempt 2 | structure | needs 4 long messages, got 2
+reject conversation-0178 attempt 3 | structure | needs 1 short messages, got 0; needs 3 medium messages, got 1
+reject conversation-0178 attempt 4 | structure | needs 1 short messages, got 0
+accept conversation-0178 | 178/1000 | 24 messages
+reject conversation-0179 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0; needs 3 medium messages, got 2
+reject conversation-0179 attempt 2 | structure | message 0 touches the schema cap and may be truncated
+reject conversation-0179 attempt 3 | structure | message 0 touches the schema cap and may be truncated
+reject conversation-0179 attempt 4 | structure | needs 1 short messages, got 0
+accept conversation-0179 | 179/1000 | 26 messages
+reject conversation-0180 attempt 1 | structure | needs 4 long messages, got 3
+accept conversation-0180 | 180/1000 | 28 messages
+accept conversation-0181 | 181/1000 | 20 messages
+accept conversation-0182 | 182/1000 | 22 messages
+accept conversation-0183 | 183/1000 | 24 messages
+accept conversation-0184 | 184/1000 | 26 messages
+accept conversation-0185 | 185/1000 | 28 messages
+reject conversation-0186 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0186 | 186/1000 | 20 messages
+reject conversation-0187 attempt 1 | structure | message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0187 | 187/1000 | 22 messages
+accept conversation-0188 | 188/1000 | 24 messages
+accept conversation-0189 | 189/1000 | 26 messages
+reject conversation-0190 attempt 1 | structure | needs 4 long messages, got 0
+reject conversation-0190 attempt 2 | structure | needs 1 short messages, got 0
+reject conversation-0190 attempt 3 | structure | needs 4 long messages, got 0
+accept conversation-0190 | 190/1000 | 28 messages
+accept conversation-0191 | 191/1000 | 20 messages
+accept conversation-0192 | 192/1000 | 22 messages
+reject conversation-0193 attempt 1 | structure | message 0 touches the schema cap and may be truncated; message 17 ends with an unfinished thought; message 18 ends with an unfinished thought
+accept conversation-0193 | 193/1000 | 24 messages
+reject conversation-0194 attempt 1 | structure | message 19 ends with an unfinished thought; message 21 ends with an unfinished thought
+accept conversation-0194 | 194/1000 | 26 messages
+accept conversation-0195 | 195/1000 | 28 messages
+accept conversation-0196 | 196/1000 | 20 messages
+reject conversation-0197 attempt 1 | structure | message 0 touches the schema cap and may be truncated
+accept conversation-0197 | 197/1000 | 22 messages
+reject conversation-0198 attempt 1 | structure | message 15 ends with an unfinished thought
+reject conversation-0198 attempt 2 | structure | message 9 touches the schema cap and may be truncated; message 11 touches the schema cap and may be truncated
+accept conversation-0198 | 198/1000 | 24 messages
+reject conversation-0199 attempt 1 | structure | message 5 touches the schema cap and may be truncated; message 7 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0199 | 199/1000 | 26 messages
+reject conversation-0200 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0200 | 200/1000 | 28 messages
+reject conversation-0201 attempt 1 | structure | message 0 touches the schema cap and may be truncated; message 0 ends with an unfinished thought; message 5 touches the schema cap and may be truncated
+accept conversation-0201 | 201/1000 | 20 messages
+accept conversation-0202 | 202/1000 | 22 messages
+accept conversation-0203 | 203/1000 | 24 messages
+accept conversation-0204 | 204/1000 | 26 messages
+accept conversation-0205 | 205/1000 | 28 messages
+reject conversation-0206 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0206 attempt 2 | structure | needs 4 long messages, got 2
+reject conversation-0206 attempt 3 | structure | message 15 exceeds 70 words; message 15 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0206 | 206/1000 | 20 messages
+accept conversation-0207 | 207/1000 | 22 messages
+reject conversation-0208 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0208 | 208/1000 | 24 messages
+reject conversation-0209 attempt 1 | structure | message 18 repeats an earlier message; message 19 repeats an earlier message; message 24 repeats an earlier message
+accept conversation-0209 | 209/1000 | 26 messages
+accept conversation-0210 | 210/1000 | 28 messages
+accept conversation-0211 | 211/1000 | 20 messages
+reject conversation-0212 attempt 1 | structure | needs 3 medium messages, got 2
+accept conversation-0212 | 212/1000 | 22 messages
+accept conversation-0213 | 213/1000 | 24 messages
+reject conversation-0214 attempt 1 | structure | message 0 touches the schema cap and may be truncated
+reject conversation-0214 attempt 2 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated
+accept conversation-0214 | 214/1000 | 26 messages
+accept conversation-0215 | 215/1000 | 28 messages
+accept conversation-0216 | 216/1000 | 20 messages
+accept conversation-0217 | 217/1000 | 22 messages
+reject conversation-0218 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0218 attempt 2 | structure | needs 1 short messages, got 0
+reject conversation-0218 attempt 3 | structure | needs 1 short messages, got 0
+accept conversation-0218 | 218/1000 | 24 messages
+accept conversation-0219 | 219/1000 | 26 messages
+reject conversation-0220 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0220 | 220/1000 | 28 messages
+accept conversation-0221 | 221/1000 | 20 messages
+accept conversation-0222 | 222/1000 | 22 messages
+accept conversation-0223 | 223/1000 | 24 messages
+accept conversation-0224 | 224/1000 | 26 messages
+accept conversation-0225 | 225/1000 | 28 messages
+reject conversation-0226 attempt 1 | structure | message 0 exceeds 70 words; message 0 touches the schema cap and may be truncated; needs 1 short messages, got 0
+accept conversation-0226 | 226/1000 | 20 messages
+accept conversation-0227 | 227/1000 | 22 messages
+reject conversation-0228 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0228 | 228/1000 | 24 messages
+accept conversation-0229 | 229/1000 | 26 messages
+accept conversation-0230 | 230/1000 | 28 messages
+accept conversation-0231 | 231/1000 | 20 messages
+reject conversation-0232 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0232 | 232/1000 | 22 messages
+accept conversation-0233 | 233/1000 | 24 messages
+accept conversation-0234 | 234/1000 | 26 messages
+reject conversation-0235 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0235 | 235/1000 | 28 messages
+accept conversation-0236 | 236/1000 | 20 messages
+accept conversation-0237 | 237/1000 | 22 messages
+accept conversation-0238 | 238/1000 | 24 messages
+accept conversation-0239 | 239/1000 | 26 messages
+accept conversation-0240 | 240/1000 | 28 messages
+accept conversation-0241 | 241/1000 | 20 messages
+reject conversation-0242 attempt 1 | structure | needs 1 short messages, got 0
+accept conversation-0242 | 242/1000 | 22 messages
+accept conversation-0243 | 243/1000 | 24 messages
+accept conversation-0244 | 244/1000 | 26 messages
+reject conversation-0245 attempt 1 | structure | needs 4 long messages, got 0
+accept conversation-0245 | 245/1000 | 28 messages
+reject conversation-0246 attempt 1 | structure | message 3 touches the schema cap and may be truncated; message 5 touches the schema cap and may be truncated
+accept conversation-0246 | 246/1000 | 20 messages
+reject conversation-0247 attempt 1 | structure | needs 1 short messages, got 0
+reject conversation-0247 attempt 2 | structure | needs 4 long messages, got 0
+accept conversation-0247 | 247/1000 | 22 messages
+accept conversation-0248 | 248/1000 | 24 messages
+accept conversation-0249 | 249/1000 | 26 messages
+reject conversation-0250 attempt 1 | structure | needs 4 long messages, got 1
+accept conversation-0250 | 250/1000 | 28 messages
+accept conversation-0251 | 251/1000 | 20 messages
+accept conversation-0252 | 252/1000 | 22 messages
+reject conversation-0253 attempt 1 | structure | message 0 touches the schema cap and may be truncated
+accept conversation-0253 | 253/1000 | 24 messages

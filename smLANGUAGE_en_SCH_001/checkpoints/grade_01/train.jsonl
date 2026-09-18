@@ -1,0 +1,13 @@
+{"stage": "grade_01", "step": 1, "train_loss": 1.077529, "validation_loss": 1.366163, "validation_bits_per_byte": 1.970956, "learning_rate": 9.999999999999999e-06, "elapsed_seconds": 0.519}
+{"stage": "grade_01", "step": 100, "train_loss": 1.047245, "validation_loss": 1.114027, "validation_bits_per_byte": 1.607201, "learning_rate": 0.0005984421166323611, "elapsed_seconds": 4.869}
+{"stage": "grade_01", "step": 200, "train_loss": 0.95315, "validation_loss": 1.05269, "validation_bits_per_byte": 1.518711, "learning_rate": 0.000580432445204088, "elapsed_seconds": 9.21}
+{"stage": "grade_01", "step": 300, "train_loss": 0.891074, "validation_loss": 0.998545, "validation_bits_per_byte": 1.440596, "learning_rate": 0.0005435241398858262, "elapsed_seconds": 13.543}
+{"stage": "grade_01", "step": 400, "train_loss": 0.79767, "validation_loss": 0.963203, "validation_bits_per_byte": 1.389608, "learning_rate": 0.0004905024490072854, "elapsed_seconds": 17.879}
+{"stage": "grade_01", "step": 500, "train_loss": 0.711411, "validation_loss": 0.913784, "validation_bits_per_byte": 1.318312, "learning_rate": 0.00042536860141612965, "elapsed_seconds": 22.357}
+{"stage": "grade_01", "step": 600, "train_loss": 0.606301, "validation_loss": 0.924207, "validation_bits_per_byte": 1.333349, "learning_rate": 0.00035303785774669263, "elapsed_seconds": 26.896}
+{"stage": "grade_01", "step": 700, "train_loss": 0.593958, "validation_loss": 0.906401, "validation_bits_per_byte": 1.307661, "learning_rate": 0.00027896858519450813, "elapsed_seconds": 31.204}
+{"stage": "grade_01", "step": 800, "train_loss": 0.521749, "validation_loss": 0.923827, "validation_bits_per_byte": 1.3328, "learning_rate": 0.00020875034729764226, "elapsed_seconds": 35.559}
+{"stage": "grade_01", "step": 900, "train_loss": 0.505486, "validation_loss": 0.933165, "validation_bits_per_byte": 1.346272, "learning_rate": 0.00014768209311731423, "elapsed_seconds": 39.873}
+{"stage": "grade_01", "step": 1000, "train_loss": 0.497416, "validation_loss": 0.926825, "validation_bits_per_byte": 1.337126, "learning_rate": 0.00010037227734921726, "elapsed_seconds": 44.219}
+{"stage": "grade_01", "step": 1100, "train_loss": 0.453169, "validation_loss": 0.944475, "validation_bits_per_byte": 1.362589, "learning_rate": 7.039108790121414e-05, "elapsed_seconds": 48.526}
+{"stage": "grade_01", "step": 1200, "train_loss": 0.4428, "validation_loss": 0.961364, "validation_bits_per_byte": 1.386955, "learning_rate": 6.00010252352654e-05, "elapsed_seconds": 52.834}

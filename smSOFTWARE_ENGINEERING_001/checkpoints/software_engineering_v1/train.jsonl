@@ -1,0 +1,13 @@
+{"stage": "software_engineering_v1", "step": 1, "train_loss": 5.109097, "validation_loss": 6.077276, "validation_bits_per_byte": 8.767656, "learning_rate": 3.3333333333333333e-06, "elapsed_seconds": 0.446}
+{"stage": "software_engineering_v1", "step": 100, "train_loss": 2.223486, "validation_loss": 2.466985, "validation_bits_per_byte": 3.559108, "learning_rate": 0.00019948070554412042, "elapsed_seconds": 6.864}
+{"stage": "software_engineering_v1", "step": 200, "train_loss": 1.769655, "validation_loss": 2.317483, "validation_bits_per_byte": 3.343421, "learning_rate": 0.00019347748173469603, "elapsed_seconds": 13.563}
+{"stage": "software_engineering_v1", "step": 300, "train_loss": 1.673318, "validation_loss": 2.208857, "validation_bits_per_byte": 3.186707, "learning_rate": 0.00018117471329527545, "elapsed_seconds": 20.279}
+{"stage": "software_engineering_v1", "step": 400, "train_loss": 1.557017, "validation_loss": 2.172419, "validation_bits_per_byte": 3.134137, "learning_rate": 0.0001635008163357618, "elapsed_seconds": 26.775}
+{"stage": "software_engineering_v1", "step": 500, "train_loss": 1.610523, "validation_loss": 2.119677, "validation_bits_per_byte": 3.058048, "learning_rate": 0.00014178953380537655, "elapsed_seconds": 33.321}
+{"stage": "software_engineering_v1", "step": 600, "train_loss": 1.639963, "validation_loss": 2.079981, "validation_bits_per_byte": 3.000778, "learning_rate": 0.00011767928591556422, "elapsed_seconds": 39.889}
+{"stage": "software_engineering_v1", "step": 700, "train_loss": 1.395878, "validation_loss": 2.084345, "validation_bits_per_byte": 3.007075, "learning_rate": 9.298952839816939e-05, "elapsed_seconds": 46.529}
+{"stage": "software_engineering_v1", "step": 800, "train_loss": 1.539959, "validation_loss": 2.055636, "validation_bits_per_byte": 2.965656, "learning_rate": 6.958344909921409e-05, "elapsed_seconds": 53.023}
+{"stage": "software_engineering_v1", "step": 900, "train_loss": 1.500975, "validation_loss": 2.026491, "validation_bits_per_byte": 2.923609, "learning_rate": 4.922736437243809e-05, "elapsed_seconds": 59.573}
+{"stage": "software_engineering_v1", "step": 1000, "train_loss": 1.23679, "validation_loss": 2.017472, "validation_bits_per_byte": 2.910596, "learning_rate": 3.345742578307243e-05, "elapsed_seconds": 66.109}
+{"stage": "software_engineering_v1", "step": 1100, "train_loss": 1.411343, "validation_loss": 2.012142, "validation_bits_per_byte": 2.902907, "learning_rate": 2.346369596707138e-05, "elapsed_seconds": 72.814}
+{"stage": "software_engineering_v1", "step": 1200, "train_loss": 1.445047, "validation_loss": 2.005099, "validation_bits_per_byte": 2.892747, "learning_rate": 2.0000341745088467e-05, "elapsed_seconds": 80.148}

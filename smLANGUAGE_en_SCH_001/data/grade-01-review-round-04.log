@@ -1,0 +1,12 @@
+reviewed 286/300 | accepted 276 | rejected 10 | rewrote 10
+reviewed 300/300 | accepted 286 | rejected 14 | rewrote 20
+{
+  "level": "grade_01",
+  "model": "ministral-8b",
+  "input": 34,
+  "carried_from_earlier_review": 266,
+  "accepted": 286,
+  "rejected": 14,
+  "rewritten": 20,
+  "round": 4
+}

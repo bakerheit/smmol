@@ -1,0 +1,15 @@
+{
+  "what": "The held-out words of smCLM_02 and the ideas a person says each one carries. Phase 0 creates the file empty; phase 1 fills it, by hand, once held_out.py has picked the words and the idea inventory is approved. The teacher never writes a row here, and the teacher's tags for these words are dropped from data/tags.jsonl.",
+  "written": "2026-09-17",
+  "written_by": "Claude (Opus 5) agent, phase 0 of docs/engineering/plans/smCLM_02.md; the rows themselves are for a person",
+  "ideas_from": "ideas.json",
+  "fields": {
+    "word": "the held-out word, as it appears in data/vocabulary.jsonl",
+    "pos": "noun, verb, adjective or other",
+    "ideas": "the ideas this word carries, every one a key of ideas.json; at least one",
+    "band": "which frequency band held_out.py drew it from",
+    "source": "human, or v1 where the tags come straight from smCLM_01/concepts.json",
+    "note": "only where a word needed a word of explanation"
+  },
+  "words": []
+}

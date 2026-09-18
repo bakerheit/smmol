@@ -1,0 +1,56 @@
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.432s
+
+OK
+dropped 1580 generated messages that matched the hand-written test set word for word
+smROUTER_01: 1.87M parameters on mps, 58420 generated examples, 93 hand-written test messages
+epoch 1  loss 1.1732  generated: all-right 0.91  |  hand-written: intent 0.85 tool 0.80 ask 0.89 all-right 0.63  (171s)
+epoch 2  loss 0.2894  generated: all-right 0.94  |  hand-written: intent 0.91 tool 0.81 ask 0.85 all-right 0.69  (342s)
+epoch 3  loss 0.1472  generated: all-right 0.97  |  hand-written: intent 0.85 tool 0.84 ask 0.91 all-right 0.70  (518s)
+epoch 4  loss 0.0620  generated: all-right 0.98  |  hand-written: intent 0.87 tool 0.84 ask 0.93 all-right 0.73  (691s)
+epoch 5  loss 0.0290  generated: all-right 0.98  |  hand-written: intent 0.85 tool 0.83 ask 0.90 all-right 0.71  (860s)
+
+hand-written test set (93 messages):
+| router | intent | tool | ask first | for me | all three right |
+|---|---|---|---|---|---|
+| smROUTER_01 | 85% | 83% | 90% | 99% | 71% |
+| keyword rules | 90% | 82% | 88% | 100% | 63% |
+| Ministral 8B prompt | 80% | 81% | 95% | 98% | 58% |
+| smROUTER_01, web tools off | 85% | 88% | 90% | 99% | 73% |
+
+bare arithmetic, hand-written (17 messages): all three right 82% (keyword rules 24%)
+  2+2                                      want ['question', 'calculator', False] got ['small_talk', 'calculator', False]
+  my flight is at 7:45 tomorrow            want ['statement', 'none', False]     got ['task', 'none', False]
+  we have 2 kids and 3 dogs                want ['statement', 'none', False]     got ['question', 'calculator', False]
+
+generated held-out: all three right 98%   |   2.03 ms per message on the CPU
+
+smROUTER_01 mistakes on the hand-written set:
+  If rent is $1,850 and we're 3 roommates,                     want ['question', 'calculator', False] got ['question', 'none', False]
+  we need to split the check                                   want ['question', 'calculator', True] got ['task', 'file_write', False]
+  What's the weather in Chicago today?                         want ['question', 'web_search', False] got ['question', 'web_search', True]
+  Will I need an umbrella in Seattle this                      want ['question', 'web_search', False] got ['question', 'none', False]
+  how did the Warriors do last night?                          want ['question', 'web_search', False] got ['question', 'none', True]
+  how much is a Steam Deck these days                          want ['question', 'web_search', False] got ['question', 'calculator', False]
+  can you check https://shop.example.org/d                     want ['question', 'web_browser', False] got ['task', 'web_browser', False]
+  read back my to do list                                      want ['question', 'file_read', False] got ['task', 'none', True]
+  which files have I saved so far                              want ['question', 'file_read', False] got ['question', 'none', False]
+  what did I tell you about it?                                want ['question', 'memory_recall', True] got ['question', 'memory_recall', False]
+  keep in mind that Jordan is vegan                            want ['remember', 'none', False]      got ['task', 'none', False]
+  we just booked a trip to Lisbon for Octo                     want ['statement', 'none', False]     got ['task', 'none', False]
+  my car's been making a weird clicking no                     want ['statement', 'none', False]     got ['remember', 'none', False]
+  Why do cats purr?                                            want ['question', 'none', False]      got ['question', 'memory_recall', True]
+  explain how a 401k works like I'm 12                         want ['question', 'none', False]      got ['question', 'calculator', False]
+  who painted the Mona Lisa                                    want ['question', 'none', False]      got ['question', 'web_search', False]
+  any tips for a toddler who won't sleep?                      want ['question', 'none', False]      got ['question', 'web_search', True]
+  turn this into a nicer text: can't come,                     want ['task', 'none', False]          got ['remember', 'none', False]
+  cancel my appointment                                        want ['task', 'none', True]           got ['question', 'none', False]
+  haha that's great                                            want ['small_talk', 'none', False]    got ['task', 'none', True]
+  Which city should I  → Albuquerque                           want ['answer', 'web_search', False]  got ['statement', 'web_search', False]
+  What should I name t → just call it errands                  want ['answer', 'file_write', False]  got ['task', 'none', False]
+  Want me to save that → yes please                            want ['answer', 'file_write', False]  got ['question', 'file_read', False]
+  Would you like me to → yeah go for it                        want ['answer', 'web_search', False]  got ['answer', 'none', False]
+  Would you like help  → I'm the investor. A local bakery is pitc want ['answer', 'none', False]        got ['statement', 'none', False]
+  Who should the email → my landlord                           want ['answer', 'none', False]        got ['answer', 'file_write', False]
+  The forecast for Den → what about Boulder                    want ['question', 'web_search', False] got ['task', 'none', False]

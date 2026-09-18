@@ -1,0 +1,330 @@
+{
+ "when": "2026-09-15 17:37",
+ "params": 4858624,
+ "steps": 6000,
+ "seconds": 1577,
+ "args": {
+  "examples": 300000,
+  "steps": 6000,
+  "batch": 64,
+  "lr": 0.0006,
+  "d": 256,
+  "layers": 6,
+  "heads": 8,
+  "eval_every": 1000,
+  "seed": 0,
+  "out": "smMATH_LANGUAGE_001/out",
+  "device": "mps"
+ },
+ "generated_exact": 0.9915,
+ "test": {
+  "every": 0.775,
+  "final": 0.8,
+  "found": 1.0,
+  "quiet": 0.778
+ },
+ "test_mistakes": [
+  {
+   "text": "If rent is $1,850 and we're 3 roommates, how much does each person pay?",
+   "want": [
+    "1850/3"
+   ],
+   "got": [
+    "1850/3",
+    "p1/3"
+   ]
+  },
+  {
+   "text": "Can you add up 129, 88 and 406 for me",
+   "want": [
+    "129+88+406"
+   ],
+   "got": [
+    "129+88",
+    "406-406"
+   ]
+  },
+  {
+   "text": "at 65 mph how long will a 340 mile drive take",
+   "want": [
+    "340/65"
+   ],
+   "got": [
+    "65*340"
+   ]
+  },
+  {
+   "text": "90000-1",
+   "want": [
+    "90000-1"
+   ],
+   "got": [
+    "9000-1"
+   ]
+  },
+  {
+   "text": "what's the mean score if I got 88, 92 and 79?",
+   "want": [
+    "(88+92+79)/3"
+   ],
+   "got": [
+    "88/892",
+    "79+79"
+   ]
+  },
+  {
+   "text": "what's 1000000 * 3.5",
+   "want": [
+    "1000000*3.5"
+   ],
+   "got": [
+    "100000*3.5"
+   ]
+  },
+  {
+   "text": "my garden is 5m by 8m, how much soil to fill it 2m deep",
+   "want": [
+    "5*8*2"
+   ],
+   "got": [
+    "5*8",
+    "p1*2"
+   ]
+  },
+  {
+   "text": "call me at 555-1234",
+   "want": [],
+   "got": [
+    "555-1234"
+   ]
+  },
+  {
+   "text": "what's the weather in Denver tomorrow",
+   "want": [],
+   "got": [
+    "10*10"
+   ]
+  }
+ ],
+ "ms_per_message_cpu": 28.9,
+ "regex_test": {
+  "every": 0.3,
+  "final": 0.325,
+  "found": 0.29,
+  "quiet": 0.667
+ },
+ "regex_mistakes": [
+  {
+   "text": "If rent is $1,850 and we're 3 roommates, how much does each person pay?",
+   "want": [
+    "1850/3"
+   ],
+   "got": []
+  },
+  {
+   "text": "tip for a $64 dinner at 18 percent?",
+   "want": [
+    "64*18/100"
+   ],
+   "got": []
+  },
+  {
+   "text": "Can you add up 129, 88 and 406 for me",
+   "want": [
+    "129+88+406"
+   ],
+   "got": []
+  },
+  {
+   "text": "hey what is 48 times 365",
+   "want": [
+    "48*365"
+   ],
+   "got": []
+  },
+  {
+   "text": "26.2 miles, what's that in kilometers?",
+   "want": [
+    "26.2*1.609344"
+   ],
+   "got": []
+  },
+  {
+   "text": "a room is 12ft by 15ft, what's the area",
+   "want": [
+    "12*15"
+   ],
+   "got": []
+  },
+  {
+   "text": "I bought 3 dozen eggs at $0.35 each, what did I spend?",
+   "want": [
+    "3*12*0.35"
+   ],
+   "got": []
+  },
+  {
+   "text": "what's 15% of 80 and 20% of 60?",
+   "want": [
+    "80*15/100",
+    "60*20/100"
+   ],
+   "got": [
+    "12"
+   ]
+  },
+  {
+   "text": "Volume of a 3ft x 4ft x 5ft box, and how many cubic yards is that?",
+   "want": [
+    "3*4*5",
+    "p1/27"
+   ],
+   "got": [
+    "60"
+   ]
+  },
+  {
+   "text": "at 65 mph how long will a 340 mile drive take",
+   "want": [
+    "340/65"
+   ],
+   "got": []
+  },
+  {
+   "text": "$120 sneakers are 30% off, what do they cost now",
+   "want": [
+    "120*(1-30/100)"
+   ],
+   "got": []
+  },
+  {
+   "text": "what is 7.25% tax on a $1,299 laptop",
+   "want": [
+    "1299*7.25/100"
+   ],
+   "got": []
+  },
+  {
+   "text": "what's the mean score if I got 88, 92 and 79?",
+   "want": [
+    "(88+92+79)/3"
+   ],
+   "got": []
+  },
+  {
+   "text": "what's the square root of 729 again?",
+   "want": [
+    "sqrt(729)"
+   ],
+   "got": []
+  },
+  {
+   "text": "how much is 12 squared",
+   "want": [
+    "12**2"
+   ],
+   "got": []
+  },
+  {
+   "text": "split a $212.40 check five ways",
+   "want": [
+    "212.40/5"
+   ],
+   "got": []
+  },
+  {
+   "text": "I save $40 every week, how much in a year?",
+   "want": [
+    "40*52"
+   ],
+   "got": []
+  },
+  {
+   "text": "my car does 32 mpg, how much gas for a 400 mile trip",
+   "want": [
+    "400/32"
+   ],
+   "got": []
+  },
+  {
+   "text": "convert 70 F to celsius",
+   "want": [
+    "(70-32)*5/9"
+   ],
+   "got": []
+  },
+  {
+   "text": "half of three dozen is how many?",
+   "want": [
+    "3*12/2"
+   ],
+   "got": []
+  },
+  {
+   "text": "cost of 4 concert tickets if they're $27.50 each and there's a $6 fee?",
+   "want": [
+    "4*27.50+6"
+   ],
+   "got": []
+  },
+  {
+   "text": "take 25% of 360 and then subtract 40",
+   "want": [
+    "360*25/100",
+    "p1-40"
+   ],
+   "got": [
+    "90"
+   ]
+  },
+  {
+   "text": "how many seconds in 3 days",
+   "want": [
+    "3*86400"
+   ],
+   "got": []
+  },
+  {
+   "text": "what's two + two?",
+   "want": [
+    "2+2"
+   ],
+   "got": []
+  },
+  {
+   "text": "my garden is 5m by 8m, how much soil to fill it 2m deep",
+   "want": [
+    "5*8*2"
+   ],
+   "got": []
+  },
+  {
+   "text": "call me at 555-1234",
+   "want": [],
+   "got": [
+    "-679"
+   ]
+  },
+  {
+   "text": "final was 21-17, what a game",
+   "want": [],
+   "got": [
+    "4"
+   ]
+  },
+  {
+   "text": "text me at 555-867-5309",
+   "want": [],
+   "got": [
+    "-5621"
+   ]
+  }
+ ],
+ "llm_test": {
+  "every": 0.825,
+  "final": 0.95,
+  "found": 1.0,
+  "quiet": 0.889
+ },
+ "llm_seconds": 3.13
+}

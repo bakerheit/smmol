@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "name": "smCONVERSATION_001-micro-1k",
+  "architecture": {
+    "vocab_size": 256,
+    "context_length": 1024,
+    "width": 192,
+    "layers": 4,
+    "heads": 6,
+    "dropout": 0.1,
+    "tie_embeddings": true
+  },
+  "tokenizer": {
+    "kind": "utf8_bytes",
+    "vocab_size": 256
+  },
+  "generation": {
+    "temperature": 0.55,
+    "top_k": 40,
+    "repetition_penalty": 1.08,
+    "max_tokens": 320
+  },
+  "training": {
+    "batch_size": 4,
+    "steps": 3000,
+    "learning_rate": 0.0002,
+    "warmup_steps": 100,
+    "eval_every": 100,
+    "eval_batches": 16,
+    "weight_decay": 0.05,
+    "school_replay_fraction": 0.25,
+    "max_history_turns": 6,
+    "seed": 16001
+  }
+}

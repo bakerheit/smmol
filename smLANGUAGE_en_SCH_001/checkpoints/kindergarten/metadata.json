@@ -1,0 +1,8 @@
+{
+  "corpus_sha256": "158d51b92f3bd73e9e9c2c8d00fc8e47236767455e19d0a40028f62199b3bbe3",
+  "format": "safetensors",
+  "items": 300,
+  "model": "smLANGUAGE_en_SCH_001",
+  "stage": "kindergarten",
+  "step": 500
+}

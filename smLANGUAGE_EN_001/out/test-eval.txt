@@ -1,0 +1,11 @@
+test: loss 0.6817 | 0.983 bits/byte | byte perplexity 1.98 | 819,200 bytes
+
+---
+Once upon a time, there was a little girl named Lily. One day, Lily went to the park with her mom to buy some yummy suit. She picked suit a big green stick and the snake was very strong.
+Lily said, "Mommy, I found a shiny bear!" Her mom
+
+---
+The little dog wanted to go on an adventure, but he couldn't find a way to get yet. So he got back to the meadow and began to feel the wind in his hair. The little dog became very excited and wanted to explore the world. The little do
+
+---
+She opened the door and saw a big box of cereal. It was so strong, she decided to stand in the sun. The box was so happy that he realised he could help her. The box was glad that they had to always try to rescue the other cereal and he was hap

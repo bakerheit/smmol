@@ -1,0 +1,22 @@
+{
+  "base": {
+    "code_bits_per_byte": 8.887905,
+    "code_loss": 6.160626,
+    "school_bits_per_byte": 0.755771,
+    "school_loss": 0.523861
+  },
+  "change": {
+    "code_loss_percent": -67.18,
+    "school_loss_percent": 0.42
+  },
+  "device": "mps",
+  "held_out_repositories": [
+    "dbader/schedule"
+  ],
+  "tuned": {
+    "code_bits_per_byte": 2.917138,
+    "code_loss": 2.022006,
+    "school_bits_per_byte": 0.75897,
+    "school_loss": 0.526078
+  }
+}

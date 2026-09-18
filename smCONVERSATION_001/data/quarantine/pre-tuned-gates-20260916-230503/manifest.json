@@ -1,0 +1,87 @@
+{
+  "endpoint": "http://127.0.0.1:8081",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outline_rejections": "data/review/outline_rejections.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 7,
+  "report": {
+    "assistant_targets": 10,
+    "common_assistant_openings": [
+      {
+        "count": 1,
+        "opening": "how many photos are"
+      },
+      {
+        "count": 1,
+        "opening": "understood for the digital"
+      },
+      {
+        "count": 1,
+        "opening": "for notes we could"
+      },
+      {
+        "count": 1,
+        "opening": "here s a thought"
+      },
+      {
+        "count": 1,
+        "opening": "we could integrate them"
+      },
+      {
+        "count": 1,
+        "opening": "should we use consistent"
+      },
+      {
+        "count": 1,
+        "opening": "then we could alternate"
+      },
+      {
+        "count": 1,
+        "opening": "would you like a"
+      },
+      {
+        "count": 1,
+        "opening": "for searchability we d"
+      },
+      {
+        "count": 1,
+        "opening": "you ll have a"
+      }
+    ],
+    "conversations": 1,
+    "domains": {
+      "creative_brainstorming": 1
+    },
+    "duplicate_conversations": 0,
+    "length_bands": {
+      "long": 12,
+      "medium": 7,
+      "short": 1
+    },
+    "message_words": {
+      "max": 43,
+      "mean": 23.45,
+      "min": 8
+    },
+    "messages": 20,
+    "skills": {
+      "brainstorming": 1,
+      "clarification": 1,
+      "summarization": 1
+    },
+    "structural_failures": []
+  },
+  "sha256": "228168690594b2bd678ade72b26534b9dd56411108f41255ffcd7edf7297ffc2",
+  "teacher": "ministral-8b"
+}

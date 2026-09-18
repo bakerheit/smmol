@@ -1,0 +1,11 @@
+#!/bin/sh
+# One module per shell-pipe stage. Working memory (JSON) flows through the pipe, so every
+# stage sees everything the earlier ones wrote.
+#   ./m perception "I have a meeting this Friday" | ./m attention | ./m planner | ./m critic | ./m show
+# Stages: perception attention recall planner predictor critic decision act language remember show
+stage="$1"
+shift
+if [ "$stage" = "show" ]; then
+  exec python3 "$(dirname "$0")/harness.py" --show
+fi
+exec python3 "$(dirname "$0")/harness.py" --module "$stage" "$@"

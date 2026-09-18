@@ -1,0 +1,112 @@
+
+smMATH01 plain: 4.75M params on mps, numbers of 1 to 6 digits, 20 steps of 256
+plain step     10 |  0.0 min |  0.00M problems | loss 2.5593 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+plain step     20 |  0.0 min |  0.01M problems | loss 2.3397 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+plain done: 20 steps, 0.01M problems in 0.0 min, saved /private/tmp/claude-501/-Users-andrewbaker-workspace/906aeadb-cea2-4885-a1c9-5f305496e348/scratchpad/smmath-steps-check/plain.pt
+
+next: python3 evaluate.py
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 1.648s
+
+OK
+
+smMATH01 plain: 4.75M params on mps, numbers of 1 to 6 digits, 8000 steps of 256
+plain step    500 |  0.8 min |  0.13M problems | loss 1.7299 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+plain step   1000 |  1.6 min |  0.26M problems | loss 1.3647 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+plain step   1500 |  2.3 min |  0.38M problems | loss 1.1379 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+plain step   2000 |  3.1 min |  0.51M problems | loss 0.7724 | 6 digits +  6% - 18% *  0% | 8 digits +  0% -  0% *  0%
+plain step   2500 |  3.9 min |  0.64M problems | loss 0.6328 | 6 digits + 18% - 36% *  0% | 8 digits +  0% -  0% *  0%
+plain step   3000 |  4.7 min |  0.77M problems | loss 0.5775 | 6 digits + 21% - 46% *  0% | 8 digits +  0% -  0% *  0%
+plain step   3500 |  5.4 min |  0.90M problems | loss 0.5407 | 6 digits + 31% - 51% *  0% | 8 digits +  0% -  0% *  0%
+plain step   4000 |  6.2 min |  1.02M problems | loss 0.5168 | 6 digits + 27% - 61% *  0% | 8 digits +  0% -  0% *  0%
+plain step   4500 |  7.0 min |  1.15M problems | loss 0.4876 | 6 digits + 32% - 67% *  0% | 8 digits +  0% -  0% *  0%
+plain step   5000 |  7.8 min |  1.28M problems | loss 0.4672 | 6 digits + 40% - 64% *  0% | 8 digits +  0% -  0% *  0%
+plain step   5500 |  8.6 min |  1.41M problems | loss 0.4486 | 6 digits + 73% - 70% *  0% | 8 digits +  0% -  0% *  0%
+plain step   6000 |  9.3 min |  1.54M problems | loss 0.4245 | 6 digits + 83% - 76% *  0% | 8 digits +  0% -  0% *  0%
+plain step   6500 | 10.1 min |  1.66M problems | loss 0.4103 | 6 digits + 86% - 80% *  0% | 8 digits +  0% -  0% *  0%
+plain step   7000 | 10.9 min |  1.79M problems | loss 0.3949 | 6 digits + 88% - 74% *  0% | 8 digits +  0% -  0% *  0%
+plain step   7500 | 11.7 min |  1.92M problems | loss 0.3893 | 6 digits + 90% - 82% *  0% | 8 digits +  0% -  0% *  0%
+plain step   8000 | 12.5 min |  2.05M problems | loss 0.3793 | 6 digits + 94% - 89% *  0% | 8 digits +  0% -  0% *  0%
+plain done: 8000 steps, 2.05M problems in 12.5 min, saved smMATH01/out/plain.pt
+
+smMATH01 reversed: 4.75M params on mps, numbers of 1 to 6 digits, 8000 steps of 256
+reversed step    500 |  0.8 min |  0.13M problems | loss 1.8272 | 6 digits +  0% -  0% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   1000 |  1.6 min |  0.26M problems | loss 1.0849 | 6 digits +  0% -  1% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   1500 |  2.3 min |  0.38M problems | loss 0.5954 | 6 digits + 25% - 26% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   2000 |  3.1 min |  0.51M problems | loss 0.5377 | 6 digits + 81% - 74% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   2500 |  3.9 min |  0.64M problems | loss 0.4895 | 6 digits + 91% - 82% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   3000 |  4.7 min |  0.77M problems | loss 0.4568 | 6 digits + 91% - 49% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   3500 |  5.5 min |  0.90M problems | loss 0.4294 | 6 digits + 98% - 94% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   4000 |  6.2 min |  1.02M problems | loss 0.4151 | 6 digits + 99% - 98% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   4500 |  7.0 min |  1.15M problems | loss 0.3997 | 6 digits + 99% - 90% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   5000 |  7.8 min |  1.28M problems | loss 0.3925 | 6 digits +100% - 96% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   5500 |  8.6 min |  1.41M problems | loss 0.3872 | 6 digits + 96% - 95% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   6000 |  9.4 min |  1.54M problems | loss 0.3771 | 6 digits + 99% - 98% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   6500 | 10.1 min |  1.66M problems | loss 0.3732 | 6 digits +100% - 96% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   7000 | 10.9 min |  1.79M problems | loss 0.3612 | 6 digits +100% - 98% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   7500 | 11.7 min |  1.92M problems | loss 0.3538 | 6 digits +100% - 97% *  0% | 8 digits +  0% -  0% *  0%
+reversed step   8000 | 12.5 min |  2.05M problems | loss 0.3420 | 6 digits +100% - 98% *  0% | 8 digits +  0% -  0% *  0%
+reversed done: 8000 steps, 2.05M problems in 12.5 min, saved smMATH01/out/reversed.pt
+
+smMATH01 abacus: 4.75M params on mps, numbers of 1 to 6 digits, 8000 steps of 256
+abacus step    500 |  0.8 min |  0.13M problems | loss 1.8593 | 6 digits +  7% -  0% *  0% | 8 digits +  3% -  0% *  0%
+abacus step   1000 |  1.6 min |  0.26M problems | loss 0.8760 | 6 digits + 77% - 71% *  0% | 8 digits + 79% - 18% *  0%
+abacus step   1500 |  2.3 min |  0.38M problems | loss 0.6964 | 6 digits + 97% - 81% *  0% | 8 digits + 97% - 40% *  0%
+abacus step   2000 |  3.1 min |  0.51M problems | loss 0.6327 | 6 digits + 96% - 92% *  0% | 8 digits + 99% - 55% *  0%
+abacus step   2500 |  3.9 min |  0.64M problems | loss 0.5910 | 6 digits + 96% - 96% *  0% | 8 digits + 77% - 22% *  0%
+abacus step   3000 |  4.7 min |  0.77M problems | loss 0.5620 | 6 digits + 98% - 91% *  0% | 8 digits + 85% - 46% *  0%
+abacus step   3500 |  5.4 min |  0.90M problems | loss 0.5004 | 6 digits +100% - 96% *  0% | 8 digits + 83% - 44% *  0%
+abacus step   4000 |  6.3 min |  1.02M problems | loss 0.4367 | 6 digits + 99% - 97% *  0% | 8 digits + 70% - 57% *  0%
+abacus step   4500 |  7.1 min |  1.15M problems | loss 0.4148 | 6 digits +100% - 99% *  0% | 8 digits + 84% - 58% *  0%
+abacus step   5000 |  7.9 min |  1.28M problems | loss 0.3983 | 6 digits +100% - 97% *  0% | 8 digits + 83% - 57% *  0%
+abacus step   5500 |  8.7 min |  1.41M problems | loss 0.3843 | 6 digits +100% - 98% *  0% | 8 digits + 98% - 74% *  0%
+abacus step   6000 |  9.5 min |  1.54M problems | loss 0.3691 | 6 digits +100% - 98% *  0% | 8 digits + 99% - 72% *  0%
+abacus step   6500 | 10.3 min |  1.66M problems | loss 0.3652 | 6 digits +100% - 99% *  0% | 8 digits +100% - 74% *  0%
+abacus step   7000 | 11.1 min |  1.79M problems | loss 0.3523 | 6 digits +100% - 98% *  0% | 8 digits +100% - 80% *  0%
+abacus step   7500 | 12.0 min |  1.92M problems | loss 0.3447 | 6 digits +100% - 99% *  0% | 8 digits +100% - 81% *  0%
+abacus step   8000 | 12.8 min |  2.05M problems | loss 0.3410 | 6 digits +100% - 99% *  0% | 8 digits +100% - 78% *  0%
+abacus done: 8000 steps, 2.05M problems in 12.8 min, saved smMATH01/out/abacus.pt
+
+next: python3 evaluate.py
+scored plain in 9s
+scored reversed in 6s
+scored abacus in 8s
+
+Addition: exactly right, out of 300 problems per length (trained on 1 to 6 digits)
+| variant | 1 | 2 | 3 | 4 | 5 | 6 | **7** | **8** | **9** | **10** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| plain | 100% | 100% | 97% | 97% | 93% | 92% | 0% | 0% | 0% | 0% |
+| reversed | 100% | 100% | 100% | 100% | 100% | 100% | 0% | 0% | 0% | 0% |
+| abacus | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 89% | 40% |
+
+Subtraction: exactly right, out of 300 problems per length (trained on 1 to 6 digits)
+| variant | 1 | 2 | 3 | 4 | 5 | 6 | **7** | **8** | **9** | **10** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| plain | 100% | 97% | 91% | 86% | 83% | 81% | 0% | 0% | 0% | 0% |
+| reversed | 100% | 100% | 98% | 97% | 99% | 97% | 0% | 0% | 0% | 0% |
+| abacus | 100% | 100% | 99% | 100% | 99% | 99% | 95% | 80% | 46% | 19% |
+
+Multiplication: exactly right, out of 300 problems per length (trained on 1 to 6 digits)
+| variant | 1 | 2 | 3 | 4 | 5 | 6 | **7** | **8** | **9** | **10** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| plain | 100% | 33% | 2% | 0% | 0% | 0% | 0% | 0% | 0% | 0% |
+| reversed | 100% | 35% | 2% | 0% | 0% | 0% | 0% | 0% | 0% | 0% |
+| abacus | 100% | 55% | 1% | 0% | 0% | 0% | 0% | 0% | 0% | 0% |
+
+Some misses (right answer, then what it wrote):
+  plain    +6   655428+734563 = 1389991, wrote 1390991
+  plain    +8   87537680+57437480 = 144975160, wrote 85767688577
+  plain    -6   769451-571106 = 198345, wrote 298345
+  plain    -8   90928876-88467634 = 2461242, wrote 8803451058
+  plain    *6   903081*283617 = 256129123977, wrote 252214627447
+  plain    *8   83499273*39707876 = 3315578778374148, wrote 125454544444444444
+  reversed +8   87537680+57437480 = 144975160, wrote 26
+  reversed -6   459232-456403 = 2829, wrote 02829
+  reversed -8   90928876-88467634 = 2461242, wrote 9649
+  reversed *6   903081*283617 = 256129123977, wrote 311121102177
+  reversed *8   83499273*39707876 = 3315578778374148, wrote 19222226
+  abacus   -6   757796-195441 = 562355, wrote 558355
+  abacus   -8   90928876-88467634 = 2461242, wrote 2441242
+  abacus   *6   903081*283617 = 256129123977, wrote 257711011077
+  abacus   *8   83499273*39707876 = 3315578778374148, wrote 107117177076048

@@ -1,0 +1,20 @@
+[
+  {"id": "meeting", "about": "an unclear message: is the person pitching, or being pitched?",
+   "messages": ["I have a meeting this Friday to discuss an investment opportunity for our business"],
+   "expect": {"asks_or_assumes": true}},
+  {"id": "percent", "about": "exact arithmetic",
+   "messages": ["What's 17.5% of 2,340?"],
+   "expect": {"reply_contains": ["409.5"]}},
+  {"id": "memory", "about": "remember something, then recall it in a new conversation",
+   "messages": ["Remember that my dentist is Dr. Lee and my appointments are on Tuesdays.", "Who's my dentist?"],
+   "expect": {"reply_contains": ["lee"]}},
+  {"id": "files", "about": "save a file, then read it back in a new conversation",
+   "messages": ["Save a shopping list with eggs, milk and bread.", "What's on my shopping list?"],
+   "expect": {"reply_contains": ["eggs", "milk", "bread"]}},
+  {"id": "small_talk", "about": "nothing to do",
+   "messages": ["lol ok"],
+   "expect": {"stopped": true}},
+  {"id": "web", "about": "a current fact from the web",
+   "messages": ["What's the weather in Chicago today?"],
+   "expect": {"uses_web": true, "reply_contains_any": ["°", "degrees", "temperature", "forecast"]}}
+]

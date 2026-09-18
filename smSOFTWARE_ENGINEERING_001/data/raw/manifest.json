@@ -1,0 +1,77 @@
+{
+  "bytes": 483255,
+  "format_version": 1,
+  "licenses": {
+    "Apache-2.0": 32,
+    "BSD-3-Clause": 36,
+    "MIT": 7
+  },
+  "records": 75,
+  "repositories": [
+    {
+      "commit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "default_branch": "main",
+      "license": "MIT",
+      "license_file": "licenses/pypa__sampleproject.txt",
+      "license_path": "LICENSE.txt",
+      "license_url": "https://github.com/pypa/sampleproject/blob/main/LICENSE.txt",
+      "repository": "pypa/sampleproject",
+      "repository_url": "https://github.com/pypa/sampleproject",
+      "tree": "c7d439931f56fa21023a7a0e615b91f5699c1827"
+    },
+    {
+      "commit": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+      "default_branch": "master",
+      "license": "MIT",
+      "license_file": "licenses/dbader__schedule.txt",
+      "license_path": "LICENSE.txt",
+      "license_url": "https://github.com/dbader/schedule/blob/master/LICENSE.txt",
+      "repository": "dbader/schedule",
+      "repository_url": "https://github.com/dbader/schedule",
+      "tree": "113c0a93af441e26f0d7736ff48c5f1e60e03762"
+    },
+    {
+      "commit": "6aabf099bfdd4c1e75fe8d0e0d4241372b988ab1",
+      "default_branch": "main",
+      "license": "BSD-3-Clause",
+      "license_file": "licenses/pallets__click.txt",
+      "license_path": "LICENSE.txt",
+      "license_url": "https://github.com/pallets/click/blob/main/LICENSE.txt",
+      "repository": "pallets/click",
+      "repository_url": "https://github.com/pallets/click",
+      "tree": "014c6c60967424c964e69a4517b1a310b38d9c54"
+    },
+    {
+      "commit": "dae7ef63b4df6eded86637f251fc4e3a06c3b479",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "license_file": "licenses/psf__requests.txt",
+      "license_path": "LICENSE",
+      "license_url": "https://github.com/psf/requests/blob/main/LICENSE",
+      "repository": "psf/requests",
+      "repository_url": "https://github.com/psf/requests",
+      "tree": "81ec85a18cfbe4186d431690423d0390952f451c"
+    }
+  ],
+  "settings": {
+    "allowed_licenses": [
+      "Apache-2.0",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "ISC",
+      "MIT",
+      "Unlicense"
+    ],
+    "extensions": [
+      ".py"
+    ],
+    "max_bytes_per_repository": 250000,
+    "max_file_bytes": 32768,
+    "max_files_per_repository": 80,
+    "max_total_bytes": 1000000,
+    "min_file_bytes": 80,
+    "selection_seed": 15001
+  },
+  "sha256": "6d5f4b4f57ad7b854c1c04e1230c6c7128aedf21d76cb1139ad7935cd0e8c330",
+  "source": "GitHub REST API"
+}

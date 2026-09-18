@@ -1,0 +1,35 @@
+{
+  "endpoint": "http://127.0.0.1:64201",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 6,
+  "report": {
+    "assistant_targets": 0,
+    "common_assistant_openings": [],
+    "conversations": 0,
+    "domains": {},
+    "duplicate_conversations": 0,
+    "length_bands": {},
+    "message_words": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "messages": 0,
+    "skills": {},
+    "structural_failures": []
+  },
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "teacher": "ministral-8b"
+}

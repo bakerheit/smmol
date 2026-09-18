@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paratroop Harness 02</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2433; --muted: #5f6b7d; --line: #1d2433; --border: #d9dee7; --hub: #eef2f7;
+  --red: #fbd3d3; --orange: #fde0c6; --yellow: #fdf0c2; --green: #d8f0da; --teal: #d3f0e6; --blue: #d6e7fd; --purple: #e6dbf8; --pink: #f8d9ea; --grey: #e8ebf0; --brown: #eedfd0; --lime: #e4f2cf;
+  --red-ink: #b42323; --orange-ink: #a24e0b; --yellow-ink: #8a6a00; --green-ink: #267a35; --teal-ink: #1d7a5e; --blue-ink: #1f5fb4; --purple-ink: #6a3fb4; --pink-ink: #a8326f; --grey-ink: #5f6b7d; --brown-ink: #86582f; --lime-ink: #4f7a14;
+  --ok: #267a35; --bad: #b42323; --warn: #8a6a00; --you: #e3ecfb;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151b; --panel: #1b2029; --ink: #e8ecf2; --muted: #9aa5b5; --line: #c9d1dd; --border: #2e3542; --hub: #232a35;
+    --red: #4a2527; --orange: #4a3121; --yellow: #45391a; --green: #213b27; --teal: #1d3d35; --blue: #1f3350; --purple: #35284d; --pink: #47263a; --grey: #262c36; --brown: #3f3024; --lime: #2d3a1d;
+    --red-ink: #ff9a9a; --orange-ink: #ffb67a; --yellow-ink: #f3d36b; --green-ink: #8fdc9c; --teal-ink: #7fdcbf; --blue-ink: #8cbcff; --purple-ink: #c7a8ff; --pink-ink: #ff9fcf; --grey-ink: #9aa5b5; --brown-ink: #e0b88f; --lime-ink: #b5dc7a;
+    --ok: #8fdc9c; --bad: #ff9a9a; --warn: #f3d36b; --you: #243552;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 13px 22px; border-bottom: 1px solid var(--border); }
+h1 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
+h1 small { color: var(--muted); font-weight: 500; margin-left: 4px; }
+#providers { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; background: var(--bad); }
+.dot.up { background: var(--ok); }
+main { display: grid; grid-template-columns: minmax(780px, 1.25fr) minmax(360px, 1fr); gap: 24px; padding: 20px 22px 40px; align-items: start; }
+@media (max-width: 1220px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+#brain { position: relative; width: 100%; height: 860px; }
+#wires { position: absolute; inset: 0; width: 100%; height: 100%; }
+#wires line { stroke: var(--line); stroke-width: 2; vector-effect: non-scaling-stroke; opacity: .6; }
+#wires line.live { stroke: var(--live, var(--line)); stroke-width: 3.5; opacity: 1; stroke-dasharray: 7 6; animation: flow .55s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -13; } }
+.node { position: absolute; transform: translate(-50%, -50%); transition: box-shadow .2s; }
+.card { width: 196px; background: var(--c); border: 2px solid var(--line); border-radius: 13px; padding: 8px 10px; }
+.card h2, .hub h2 { margin: 0; font-size: 15px; text-align: center; letter-spacing: -0.01em; }
+.does { font-size: 11.5px; color: var(--muted); text-align: center; margin: 1px 0 6px; }
+select { width: 100%; font: inherit; font-size: 12.5px; padding: 4px 6px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--ink); }
+.node footer { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 6px; font-size: 12px; }
+.badge { padding: 1px 8px; border-radius: 999px; background: var(--panel); border: 1px solid var(--border); white-space: nowrap; font-size: 12px; }
+.badge.good { color: var(--ok); } .badge.meh { color: var(--warn); } .badge.bad { color: var(--bad); }
+.timer { font-variant-numeric: tabular-nums; color: var(--c-ink, var(--muted)); font-weight: 600; }
+button { font: inherit; cursor: pointer; }
+button.small { font-size: 12px; padding: 2px 9px; border-radius: 7px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+dialog.settings { background: var(--panel); color: var(--ink); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; width: min(380px, 90vw); }
+dialog.settings::backdrop { background: rgba(0, 0, 0, .35); }
+.setting { display: grid; grid-template-columns: 1fr 90px; gap: 2px 10px; align-items: center; margin: 10px 0; font-size: 13px; }
+.setting .meta { grid-column: 1 / -1; font-size: 11px; }
+.setting input[type=number] { width: 90px; font: inherit; padding: 3px 6px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg); color: var(--ink); }
+button:disabled { opacity: .5; cursor: default; }
+.node.busy { box-shadow: 0 0 0 5px color-mix(in srgb, var(--c-ink, var(--blue-ink)) 40%, transparent); }
+.hub { width: 250px; height: 250px; border-radius: 50%; background: var(--hub); border: 2px dashed var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 22px; text-align: center; }
+.hub .tag { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); }
+.hub dl { display: grid; grid-template-columns: auto auto; gap: 1px 10px; margin: 8px 0 0; font-size: 12px; }
+.hub dt { color: var(--muted); text-align: right; } .hub dd { margin: 0; text-align: left; font-variant-numeric: tabular-nums; }
+.hub .goal { font-size: 12px; margin-top: 6px; max-width: 200px; }
+#below { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 18px; margin-top: 8px; }
+#below h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+.toolgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 10px; }
+.tool { position: relative; background: var(--c); border: 2px solid var(--line); border-radius: 13px; padding: 8px 10px; }
+.tool h2 { margin: 0; font-size: 15px; text-align: center; letter-spacing: -0.01em; }
+.tool .name { display: block; text-align: center; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); }
+.tool footer { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 6px; font-size: 12px; }
+.tool.off { opacity: .42; }
+.tool.unbuilt { border-style: dashed; opacity: .55; }
+.card.off { opacity: .42; }
+.switch { position: absolute; top: 5px; right: 8px; display: flex; gap: 3px; align-items: center; font-size: 11px; color: var(--muted); cursor: pointer; }
+.switch input { margin: 0; }
+#wires line.off { stroke-dasharray: 2 6; opacity: .2; }
+.tool.busy { box-shadow: 0 0 0 5px color-mix(in srgb, var(--c-ink, var(--blue-ink)) 40%, transparent); }
+.memlist { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow: auto; font-size: 12.5px; }
+.memlist li { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+@media (max-width: 820px) {
+  #brain { height: auto; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  #wires { display: none; }
+  #brain .node { position: static; transform: none; }
+  #brain .card { position: relative; }
+  .card { width: 100%; max-width: 440px; }
+  #below { grid-template-columns: 1fr; }
+}
+
+#chat { display: flex; flex-direction: column; gap: 10px; }
+.chathead { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.chathead .title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chathead .controls { display: flex; gap: 6px; align-items: center; }
+.chathead select { width: 190px; }
+#thread { display: flex; flex-direction: column; gap: 14px; }
+.turn { display: flex; flex-direction: column; gap: 6px; }
+.bubble { max-width: 88%; padding: 8px 12px; border-radius: 13px; }
+.bubble.you { align-self: flex-end; background: var(--you); white-space: pre-wrap; word-break: break-word; }
+.bubble.ai { align-self: flex-start; background: var(--panel); border: 1px solid var(--border); }
+.bubble.ai pre { margin: 0; }
+details.thinking { align-self: stretch; }
+details.thinking > summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+#ask { background: var(--panel); border: 1px solid var(--border); border-radius: 13px; padding: 12px; }
+textarea { width: 100%; min-height: 64px; resize: vertical; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--border); border-radius: 9px; padding: 8px 10px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 8px; }
+.hint { font-size: 12px; color: var(--muted); }
+button.go { font-weight: 600; padding: 7px 18px; border-radius: 9px; border: 0; background: var(--ink); color: var(--bg); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.chip { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); }
+.empty { color: var(--muted); }
+.sec { background: var(--panel); border: 1px solid var(--border); border-left: 5px solid var(--c-ink, var(--border)); border-radius: 10px; padding: 9px 12px; margin-top: 8px; }
+.sec h3 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.sec h3 span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+pre { white-space: pre-wrap; word-break: break-word; margin: 6px 0 0; font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+pre.mono { font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; max-height: 240px; overflow: auto; }
+.items { list-style: none; margin: 4px 0 0; padding: 0; }
+.items li { padding: 4px 0; border-top: 1px solid var(--border); font-size: 13px; }
+.items li:first-child { border-top: 0; }
+.kind { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; padding: 0 6px; border-radius: 5px; background: var(--c, var(--grey)); border: 1px solid var(--border); margin-right: 6px; }
+.meta { font-size: 12px; color: var(--muted); }
+.bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--c-ink, var(--blue-ink)); vertical-align: middle; margin-left: 6px; opacity: .8; }
+.pick { font-weight: 600; }
+.pick::before { content: "✓ "; color: var(--ok); }
+.sev-high { color: var(--bad); font-weight: 600; } .sev-medium { color: var(--warn); } .sev-low { color: var(--muted); }
+.bad { color: var(--bad); }
+table.trace { width: 100%; border-collapse: collapse; font-size: 12px; }
+table.trace td { padding: 2px 4px; border-top: 1px solid var(--border); }
+table.trace td.num { text-align: right; font-variant-numeric: tabular-nums; }
+#toast { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 9px; font-size: 13px; max-width: 90vw; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Paratroop Harness <small>02 · cognitive modules</small></h1>
+  <div id="providers" aria-label="Servers"></div>
+</header>
+<main>
+  <div>
+    <section id="brain" aria-label="Modules">
+      <svg id="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </section>
+    <section id="below">
+      <div>
+        <h3>Tools · what the modules can reach for · not models</h3>
+        <div id="tools" class="toolgrid"></div>
+      </div>
+      <div>
+        <h3 id="memtitle">Long-term memory</h3>
+        <ul id="memories" class="memlist"></ul>
+      </div>
+    </section>
+  </div>
+  <section id="chat" aria-label="Chat">
+    <div class="chathead">
+      <span class="title" id="chattitle">New chat</span>
+      <span class="controls">
+        <select id="recent" aria-label="Recent chats"></select>
+        <button id="newchat" class="small" type="button">New chat</button>
+      </span>
+    </div>
+    <div id="thread" aria-live="polite"></div>
+    <form id="ask">
+      <label for="message" class="hint">Message</label>
+      <textarea id="message" placeholder="Tell it something, ask something, or answer its question…" required></textarea>
+      <div class="row">
+        <span class="hint">⌘↩ to send · replies stay in this chat</span>
+        <button id="go" class="go" type="submit">Send</button>
+      </div>
+      <div id="examples" class="chips"></div>
+    </form>
+  </section>
+</main>
+<div id="toast" hidden></div>
+<script>
+"use strict";
+const STORE_KEY = "paratroop02.conversation";
+let state = null;           // /api/state
+let conversation = null;    // {id, turns} of the open chat
+let live = null;            // working memory of the turn being thought about right now
+let liveOpen = true;
+let source = null, ticker = null, testPoll = null;
+const runCache = new Map();
+const $ = (s) => document.querySelector(s);
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+// Models write **bold** and *italic*. Show those as real text styles, built from text nodes only.
+function rich(tag, cls, text) {
+  const box = el(tag, cls);
+  for (const part of String(text).split(/(\*\*[^*\n]+\*\*|\*[^*\s][^*\n]*\*)/)) {
+    if (/^\*\*[^*\n]+\*\*$/.test(part)) box.append(el("strong", null, part.slice(2, -2)));
+    else if (/^\*[^*\s][^*\n]*\*$/.test(part)) box.append(el("em", null, part.slice(1, -1)));
+    else if (part) box.append(document.createTextNode(part));
+  }
+  return box;
+}
+
+function saveChatId(id) { try { id ? localStorage.setItem(STORE_KEY, id) : localStorage.removeItem(STORE_KEY); } catch (e) { /* storage blocked */ } }
+function savedChatId() { try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; } }
+
+async function api(path, body) {
+  const opts = body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {};
+  const res = await fetch(path, opts);
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "HTTP " + res.status);
+  return data;
+}
+
+let toastTimer = null;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, 3500);
+}
+
+const moduleBy = (id) => state && state.modules.find((m) => m.id === id);
+const inkOf = (id) => `var(--${(moduleBy(id) || { color: "grey" }).color}-ink)`;
+const fillOf = (id) => `var(--${(moduleBy(id) || { color: "grey" }).color})`;
+
+async function loadState() {
+  try {
+    state = await api("/api/state");
+    renderSide();
+    const testing = state.modules.some((m) => m.testing);
+    if (testing && !testPoll) testPoll = setInterval(loadState, 3000);
+    if (!testing && testPoll) { clearInterval(testPoll); testPoll = null; }
+    for (const m of state.modules) if (m.test_error) toast(`${m.name} test: ${m.test_error}`);
+  } catch (e) { toast(e.message); }
+}
+
+// ----- the brain, tools and memory -----
+
+function renderSide() {
+  const pv = $("#providers");
+  pv.replaceChildren();
+  for (const p of Object.values(state.providers)) {
+    const item = el("span");
+    item.title = p.up ? "reachable" : (p.error || "not reachable");
+    item.append(el("i", "dot" + (p.up ? " up" : "")), document.createTextNode(p.label));
+    pv.append(item);
+  }
+
+  const brain = $("#brain"), wires = $("#wires");
+  brain.querySelectorAll(".node").forEach((n) => n.remove());
+  wires.replaceChildren();
+  state.modules.forEach((m, i) => {
+    const angle = (-90 + (360 / state.modules.length) * i) * Math.PI / 180;
+    const x = 50 + 38 * Math.cos(angle), y = 50 + 41 * Math.sin(angle);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 50); line.setAttribute("y1", 50);
+    line.setAttribute("x2", x.toFixed(2)); line.setAttribute("y2", y.toFixed(2));
+    line.dataset.module = m.id;
+    if (!m.on) line.classList.add("off");
+    wires.append(line);
+    brain.append(moduleCard(m, x, y));
+  });
+  brain.append(hubNode());
+
+  $("#tools").replaceChildren(...state.tools.map(toolCard));
+
+  $("#memtitle").textContent = `Long-term memory · ${state.memory.count}`;
+  const list = $("#memories");
+  list.replaceChildren();
+  if (!state.memory.recent.length) list.append(el("li", "meta", "Nothing remembered yet."));
+  for (const m of state.memory.recent) {
+    const li = el("li");
+    const forget = el("button", "small", "Forget");
+    forget.type = "button";
+    forget.addEventListener("click", async () => {
+      try { state = await api("/api/forget", { id: m.id }); renderSide(); } catch (e) { toast(e.message); }
+    });
+    li.append(el("span", null, m.text), forget);
+    list.append(li);
+  }
+
+  const recent = $("#recent");
+  recent.replaceChildren(el("option", null, "Recent chats…"));
+  recent.firstChild.value = "";
+  for (const c of state.conversations) {
+    const opt = el("option", null, `${c.first} (${c.turns})`);
+    opt.value = c.id;
+    recent.append(opt);
+  }
+  recent.value = "";
+
+  $("#examples").replaceChildren(...state.examples.map((ex) => {
+    const b = el("button", "chip", ex.label);
+    b.type = "button";
+    b.addEventListener("click", () => { $("#message").value = ex.message; $("#message").focus(); });
+    return b;
+  }));
+  paintBrain();
+}
+
+function toolCard(t) {
+  const node = el("div", "tool" + (t.on && t.built ? "" : " off") + (t.built ? "" : " unbuilt"));
+  node.dataset.tool = t.name;
+  node.style.setProperty("--c", `var(--${t.color})`);
+  node.style.setProperty("--c-ink", `var(--${t.color}-ink)`);
+  node.append(el("h2", null, t.label), el("span", "name", t.name), el("p", "does", t.does));
+
+  const sw = el("label", "switch");
+  sw.title = !t.built ? "Not built yet" : t.on ? "On: click to switch this tool off" : "Off: no module is told it exists";
+  const box = el("input");
+  box.type = "checkbox";
+  box.checked = t.on && t.built;
+  box.disabled = !t.built;
+  box.addEventListener("change", () => toggle("tool", t.name, box.checked));
+  sw.append(box, document.createTextNode(t.built ? (t.on ? "on" : "off") : "todo"));
+  node.append(sw);
+
+  const foot = el("footer");
+  foot.append(el("span", "badge", t.kind === "store" ? "store" : "tool"), el("span", "timer"));
+  node.append(foot);
+  return node;
+}
+
+function moduleCard(m, x, y) {
+  const node = el("div", "node card");
+  node.dataset.module = m.id;
+  node.style.left = x + "%"; node.style.top = y + "%";
+  node.style.setProperty("--c", `var(--${m.color})`);
+  node.style.setProperty("--c-ink", `var(--${m.color}-ink)`);
+  node.append(el("h2", null, m.name), el("div", "does", m.does));
+  if (!m.on) node.classList.add("off");
+  const sw = el("label", "switch");
+  sw.title = m.on ? "On: click to switch this module off" : "Off: the other modules don't know it exists";
+  const box = el("input");
+  box.type = "checkbox";
+  box.checked = m.on;
+  box.setAttribute("aria-label", `${m.name} on`);
+  box.addEventListener("change", () => toggle("module", m.id, box.checked));
+  sw.append(box, document.createTextNode(m.on ? "on" : "off"));
+  node.append(sw);
+
+  const sel = el("select");
+  sel.setAttribute("aria-label", `${m.name} model`);
+  const groups = new Map();
+  for (const o of m.options) {
+    if (!groups.has(o.provider)) {
+      const g = el("optgroup");
+      g.label = o.label + (o.up || o.note ? "" : " (offline)");
+      groups.set(o.provider, g);
+      sel.append(g);
+    }
+    const opt = el("option", null, o.model + (o.loaded ? "  ● loaded" : "") + (o.note ? ` (${o.note})` : ""));
+    opt.value = o.choice; opt.disabled = !o.up;
+    groups.get(o.provider).append(opt);
+  }
+  if (m.choice && !m.options.some((o) => o.choice === m.choice)) {
+    const opt = el("option", null, m.choice + " (not reachable)");
+    opt.value = m.choice; sel.prepend(opt);
+  }
+  sel.value = m.choice || "";
+  sel.addEventListener("change", async () => {
+    const want = sel.value;
+    sel.disabled = true;
+    try { state = await api("/api/choose", { module: m.id, choice: want }); toast(`${m.name} now uses ${want}`); renderSide(); }
+    catch (e) { sel.value = m.choice || ""; sel.disabled = false; toast(e.message); }
+  });
+  node.append(sel);
+
+  const foot = el("footer");
+  const badge = el("span", "badge");
+  if (m.score) {
+    const ratio = m.score.passed / m.score.total;
+    badge.textContent = `${m.score.passed}/${m.score.total} · ${m.score.avg_seconds}s`;
+    badge.classList.add(ratio === 1 ? "good" : ratio >= 0.5 ? "meh" : "bad");
+    badge.title = `Checked ${m.score.when}\n` + m.score.results.map((r) => `${r.ok ? "✓" : "✗"} ${r.input} — ${r.why}`).join("\n");
+  } else {
+    badge.textContent = m.has_checks ? "not tested" : "no checks";
+  }
+  const btn = el("button", "small", m.testing ? "testing…" : "Test");
+  btn.type = "button";
+  btn.disabled = m.testing || !m.has_checks;
+  btn.title = "Run this module's checks with the chosen model";
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; btn.textContent = "testing…";
+    try { await api("/api/test", { module: m.id }); loadState(); }
+    catch (e) { btn.disabled = false; btn.textContent = "Test"; toast(e.message); }
+  });
+  const gear = el("button", "small", "⚙");
+  gear.type = "button";
+  gear.title = `${m.name} settings`;
+  gear.setAttribute("aria-label", `${m.name} settings`);
+  gear.disabled = !(m.settings && m.settings.length);
+  gear.addEventListener("click", () => openSettings(m));
+  foot.append(badge, el("span", "timer"), gear, btn);
+  node.append(foot);
+  return node;
+}
+
+function openSettings(m) {
+  const dialog = el("dialog", "settings");
+  dialog.append(el("h3", null, `${m.name} settings`));
+  for (const s of m.settings) {
+    const row = el("label", "setting");
+    const input = el("input");
+    if (s.type === "bool") { input.type = "checkbox"; input.checked = s.value; }
+    else { input.type = "number"; input.min = s.min; input.max = s.max; input.step = s.step; input.value = s.value; }
+    const note = el("span", "meta", s.value === s.default ? "default" : `default: ${s.default}`);
+    input.addEventListener("change", async () => {
+      const value = s.type === "bool" ? input.checked : Number(input.value);
+      try {
+        state = await api("/api/settings", { module: m.id, key: s.key, value });
+        note.textContent = value === s.default ? "default" : `default: ${s.default}`;
+        toast(`${m.name}: ${s.label} → ${value}`);
+        renderSide();
+      } catch (e) {
+        toast(e.message);
+        if (s.type === "bool") input.checked = s.value; else input.value = s.value;
+      }
+    });
+    row.append(el("span", null, s.label), input, note);
+    dialog.append(row);
+  }
+  const close = el("button", "small", "Close");
+  close.type = "button";
+  close.addEventListener("click", () => dialog.close());
+  dialog.append(close);
+  dialog.addEventListener("close", () => dialog.remove());
+  document.body.append(dialog);
+  dialog.showModal();
+}
+
+async function toggle(kind, id, on) {
+  if (live) return toast("Wait for this reply first.");
+  try {
+    state = await api("/api/toggle", { kind, id, on });
+    renderSide();
+    toast(`${id} switched ${on ? "on" : "off"}`);
+  } catch (e) { toast(e.message); loadState(); }
+}
+
+function hubNode() {
+  const node = el("div", "node hub");
+  node.style.left = "50%"; node.style.top = "50%";
+  node.append(el("h2", null, "Working memory"), el("div", "tag", "structured state · not a model"));
+  node.append(el("div", "goal"), el("dl"));
+  return node;
+}
+
+function paintBrain() {
+  document.querySelectorAll(".busy").forEach((n) => n.classList.remove("busy"));
+  document.querySelectorAll(".timer").forEach((t) => { t.textContent = ""; });
+  document.querySelectorAll("#wires line.live").forEach((l) => l.classList.remove("live"));
+  clearInterval(ticker);
+
+  const hub = document.querySelector(".node.hub");
+  if (hub && state) {
+    const s = live && live.trace ? live : null;
+    hub.querySelector(".goal").textContent = s && s.goal ? `goal: ${s.goal}` : "";
+    const dl = hub.querySelector("dl");
+    dl.replaceChildren();
+    const rows = s ? [
+      ["turn", (s.history || []).length + 1], ["observations", s.observations.length], ["memories", s.memories.length],
+      ["cycles", s.cycles.length], ["model calls", s.trace.length],
+    ] : [["long-term", state.memory.count], ["cycle limit", state.max_cycles], ["chat turns", conversation ? conversation.turns.length : 0]];
+    for (const [k, v] of rows) dl.append(el("dt", null, k), el("dd", null, String(v)));
+  }
+  if (!live || !live.trace) return;
+  for (const c of live.cycles || []) {                      // what each tool did this turn, on its own card
+    if (!c.action || c.action.status !== "done") continue;
+    const card = document.querySelector(`.tool[data-tool="${c.action.tool}"] .timer`);
+    if (card) card.textContent = `${c.action.ok ? "ran" : "failed"} · ${c.action.seconds}s`;
+  }
+  if (live.status !== "running") return;
+  const active = [...live.trace].reverse().find((t) => t.status === "running");
+  const last = live.cycles.length ? live.cycles[live.cycles.length - 1] : null;
+  if (active) {
+    const node = document.querySelector(`.node[data-module="${active.module}"]`);
+    if (node) {
+      node.classList.add("busy");
+      const timer = node.querySelector(".timer");
+      const tick = () => { timer.textContent = (Date.now() / 1000 - active.started).toFixed(0) + "s"; };
+      tick(); ticker = setInterval(tick, 500);
+    }
+    const line = document.querySelector(`#wires line[data-module="${active.module}"]`);
+    if (line) { line.classList.add("live"); line.style.setProperty("--live", inkOf(active.module)); }
+  } else if (last && last.action && last.action.status === "running") {
+    const card = document.querySelector(`.tool[data-tool="${last.action.tool}"]`);
+    if (card) {
+      card.classList.add("busy");
+      const timer = card.querySelector(".timer");
+      const tick = () => { timer.textContent = (Date.now() / 1000 - last.action.started).toFixed(0) + "s"; };
+      tick(); ticker = setInterval(tick, 500);
+    }
+  }
+}
+
+// ----- the chat -----
+
+async function openConversation(id) {
+  conversation = null;
+  if (id) {
+    try { conversation = await api(`/api/conversations/${id}`); } catch (e) { conversation = null; }
+  }
+  saveChatId(conversation ? conversation.id : null);
+  renderThread();
+  paintBrain();
+}
+
+function renderThread() {
+  const thread = $("#thread");
+  thread.replaceChildren();
+  const turns = conversation ? conversation.turns : [];
+  $("#chattitle").textContent = turns.length ? turns[0].message : (live ? live.message : "New chat");
+  if (!turns.length && !live) {
+    thread.append(el("p", "empty", "Send a message and watch it move through the modules. Replies stay in this chat, so you can answer its questions."));
+  }
+  for (const t of turns) thread.append(turnEl(t));
+  if (live && !turns.some((t) => t.run === live.id)) thread.append(liveTurnEl());
+}
+
+function turnEl(t) {
+  const box = el("div", "turn");
+  box.append(el("div", "bubble you", t.message));
+  const ai = el("div", "bubble ai");
+  if (t.reply) ai.append(rich("pre", null, t.reply));
+  else if (t.status === "stopped") ai.append(el("div", "meta", "No reply needed. " + (t.note || "")));
+  else ai.append(el("div", t.status === "error" ? "bad" : "meta", t.note || t.status));
+  box.append(ai);
+  const d = el("details", "thinking");
+  d.append(el("summary", null, `How it got there · ${t.seconds == null ? "?" : t.seconds + "s"}`));
+  const body = el("div");
+  d.append(body);
+  d.addEventListener("toggle", async () => {
+    if (!d.open || body.childElementCount) return;
+    try {
+      const s = runCache.get(t.run) || await api(`/api/runs/${t.run}`);
+      runCache.set(t.run, s);
+      renderBoard(s, body);
+    } catch (e) { body.append(el("p", "bad", e.message)); }
+  });
+  box.append(d);
+  return box;
+}
+
+function liveTurnEl() {
+  const box = el("div", "turn");
+  box.append(el("div", "bubble you", live.message));
+  const ai = el("div", "bubble ai");
+  const active = live.trace ? [...live.trace].reverse().find((x) => x.status === "running") : null;
+  ai.append(el("div", "meta", active ? `thinking… ${active.name}${active.part ? " (" + active.part + ")" : ""}` : "thinking…"));
+  box.append(ai);
+  const d = el("details", "thinking");
+  d.open = liveOpen;
+  d.addEventListener("toggle", () => { liveOpen = d.open; });
+  d.append(el("summary", null, "Thinking live"));
+  const body = el("div");
+  d.append(body);
+  if (live.trace) renderBoard(live, body);
+  box.append(d);
+  return box;
+}
+
+$("#ask").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const message = $("#message").value.trim();
+  if (!message) return;
+  $("#go").disabled = true;
+  try {
+    const res = await api("/api/run", { message, conversation: conversation ? conversation.id : null });
+    if (!conversation || conversation.id !== res.conversation) conversation = { id: res.conversation, turns: [] };
+    saveChatId(res.conversation);
+    live = { id: res.id, message, status: "running" };
+    liveOpen = true;
+    $("#message").value = "";
+    renderThread();
+    follow(res.id);
+  } catch (e) { $("#go").disabled = false; toast(e.message); }
+});
+$("#message").addEventListener("keydown", (ev) => {
+  if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) $("#ask").requestSubmit();
+});
+$("#newchat").addEventListener("click", () => {
+  if (live) return toast("Wait for this reply first.");
+  openConversation(null);
+  $("#message").focus();
+});
+$("#recent").addEventListener("change", (ev) => {
+  if (live) { ev.target.value = ""; return toast("Wait for this reply first."); }
+  if (ev.target.value) openConversation(ev.target.value);
+});
+
+function follow(id) {
+  if (source) source.close();
+  source = new EventSource(`/api/runs/${id}/events`);
+  source.onmessage = async (msg) => {
+    live = JSON.parse(msg.data);
+    paintBrain();
+    renderThread();
+    if (live.status !== "running") {
+      source.close(); source = null;
+      runCache.set(live.id, live);
+      const cid = live.conversation;
+      live = null;
+      await openConversation(cid);
+      $("#go").disabled = false;
+      loadState();
+      $("#message").focus();
+    }
+  };
+  source.onerror = () => {
+    if (source) { source.close(); source = null; }
+    $("#go").disabled = false;
+    if (live && live.status === "running") toast("Lost the live view. It keeps thinking on the server; reopen the chat in a bit.");
+  };
+}
+
+// ----- how a turn got its reply -----
+
+function renderBoard(s, box) {
+  box.replaceChildren();
+  box.append(el("div", "meta", s.status === "running" ? "thinking…" : `${s.status} in ${s.seconds}s · ${s.trace.length} model calls`));
+  if (s.note) box.append(el("p", s.status === "error" ? "bad" : "meta", s.note));
+
+  if (s.observations.length) {
+    const sec = section("Perception", "perception", s.attention ? `attention: ${s.attention.for_me ? "for me" : "not for me"} — ${s.attention.why}` : "");
+    const ul = el("ul", "items");
+    for (const o of s.observations) {
+      const li = el("li");
+      li.append(el("span", "kind", o.kind), document.createTextNode(o.text));
+      if (o.when) li.append(el("span", "meta", `  ·  ${o.when}`));
+      if (o.relevance != null) {
+        const bar = el("span", "bar"); bar.style.width = Math.round(o.relevance * 40) + "px"; bar.title = `relevance ${o.relevance}`;
+        li.append(bar);
+      }
+      ul.append(li);
+    }
+    sec.append(ul);
+    box.append(sec);
+  }
+
+  if (s.math_language && !s.math_language.trusted) {
+    box.append(el("div", "meta", `Math Language: ${s.math_language.note}, so its problems were dropped`));
+  }
+
+  if (s.problems && s.problems.length) {
+    const how = s.math_language;
+    const sec = section("Math Language", "math_language", `${s.problems.length} problem${s.problems.length === 1 ? "" : "s"} found` +
+      (how ? ` · sure ${how.sure}, shakiest ${how.weakest}${how.note ? " · " + how.note : ""}` : ""));
+    const ul = el("ul", "items");
+    for (const p of s.problems) {
+      const li = el("li");
+      li.append(el("span", "kind", p.id), document.createTextNode(p.expression + (p.unit ? `  (${p.unit})` : "")));
+      if (p.answer != null) {
+        li.append(el("div", "meta", `= ${p.answer}${p.unit ? " " + p.unit : ""} · by ${p.by}` +
+          (p.math && p.math.misses ? ` · the calculator caught ${p.math.misses}` : "") + (p.worked && p.worked !== p.expression ? ` · worked as ${p.worked}` : "")));
+      }
+      if (p.unsure) li.append(el("div", "meta", "the reader wasn't certain about this one"));
+      if (p.error) li.append(el("div", "bad", p.error));
+      if (p.math) {
+        for (const step of p.math.steps) if (step.used !== "model") li.append(el("div", "meta", `${step.step} = ${step.value}  (calculator: ${step.why})`));
+        for (const line of p.math.work || []) li.append(el("div", "mono", line));
+      }
+      ul.append(li);
+    }
+    sec.append(ul);
+    box.append(sec);
+  }
+
+  if (s.recall) {
+    const sec = section("Recall", "recall", s.recall.note || `queries: ${s.recall.queries.join(" · ") || "none"} · ${s.recall.found} found`);
+    if (s.memories.length) {
+      const ul = el("ul", "items");
+      for (const m of s.memories) ul.append(el("li", null, `${m.text}  (${m.relevance})`));
+      sec.append(ul);
+    }
+    box.append(sec);
+  }
+
+  for (const c of s.cycles) box.append(cycleCard(c));
+
+  if (s.remembered && s.remembered.length) {
+    box.append(el("div", "meta", "Remembered: " + s.remembered.map((r) => r.text).join(" · ")));
+  }
+
+  if (s.trace.length) {
+    const sec = section("Model calls", null, "");
+    const table = el("table", "trace");
+    for (const t of s.trace) {
+      const tr = el("tr");
+      tr.append(el("td", null, t.name + (t.part ? ` (${t.part})` : "")), el("td", "meta", t.model || ""),
+        el("td", "num", t.status === "running" ? "…" : `${t.seconds}s`),
+        el("td", t.error ? "bad" : "meta", t.error || (t.retries ? "retried" : "")));
+      table.append(tr);
+    }
+    sec.append(table);
+    box.append(sec);
+  }
+}
+
+function section(title, moduleId, subtitle) {
+  const sec = el("article", "sec");
+  if (moduleId) { sec.style.setProperty("--c-ink", inkOf(moduleId)); sec.style.setProperty("--c", fillOf(moduleId)); }
+  const h = el("h3", null, title);
+  if (subtitle) h.append(el("span", null, "  " + subtitle));
+  sec.append(h);
+  return sec;
+}
+
+function cycleCard(c) {
+  const sec = section(`Cycle ${c.n}`, "planner", c.goal ? `goal: ${c.goal}` : "");
+  const ul = el("ul", "items");
+  for (const cand of c.candidates) {
+    const picked = c.decision && c.decision.choice === cand.index;
+    const li = el("li", picked ? "pick" : "");
+    li.append(el("span", "kind", cand.type), document.createTextNode(cand.summary));
+    if (cand.type === "tool") li.append(el("div", "meta", `${cand.tool}${cand.action !== "none" ? "." + cand.action : ""} ${cand.target}`));
+    const p = (c.predictions || []).find((x) => x.index === cand.index);
+    if (p && p.helpful != null) li.append(el("div", "meta", `predicted helpful ${p.helpful} · ${p.outcome}${p.risk && p.risk !== "none" ? " · risk: " + p.risk : ""}`));
+    ul.append(li);
+  }
+  sec.append(ul);
+  if (c.dropped && c.dropped.length) sec.append(el("div", "meta", "dropped by guards: " + c.dropped.join(" · ")));
+  if (c.changed && c.changed.length) sec.append(el("div", "meta", "changed by guards: " + c.changed.join(" · ")));
+  if (c.skipped && c.skipped.length) sec.append(el("div", "meta", "skipped: " + c.skipped.join(" · ")));
+  if (c.critique) {
+    const crit = el("div");
+    crit.style.marginTop = "6px";
+    crit.append(el("b", null, "Critic: "));
+    if (!c.critique.issues.length) crit.append(document.createTextNode("no problems found"));
+    for (const i of c.critique.issues) {
+      const row = el("div");
+      row.append(el("span", `sev-${i.severity}`, `${i.severity} ${i.kind}: `), document.createTextNode(i.text));
+      crit.append(row);
+    }
+    if (c.critique.question) crit.append(el("div", "meta", `question: ${c.critique.question}`));
+    sec.append(crit);
+  }
+  if (c.decision) sec.append(el("div", "meta", `Decision (${c.decision.by}): #${c.decision.choice} — ${c.decision.why}`));
+  if (c.action) {
+    const a = c.action;
+    sec.append(el("div", a.status === "done" && !a.ok ? "bad" : "meta",
+      `${a.tool}${a.action !== "none" ? "." + a.action : ""} ${a.target} — ${a.status === "running" ? "running…" : (a.ok ? "ok" : "failed") + ` in ${a.seconds}s`}`));
+    if (a.result) sec.append(el("pre", "mono", a.result.slice(0, 1500)));
+    if (a.math) {
+      const m = a.math, byModel = m.steps.filter((s) => s.used === "model").length;
+      const math = section("Math", "math", `${byModel} of ${m.steps.length} steps by ${m.model}` +
+        (m.checked ? `, ${m.misses} caught by the calculator` : ", unchecked (the calculator is off)"));
+      for (const s of m.steps) {
+        math.append(el("div", "meta", `${s.step} = ${s.value}` + (s.used === "model" ? `  (model wrote ${s.said})` : `  (calculator: ${s.why})`)));
+      }
+      for (const line of m.work || []) math.append(el("div", "mono", line));
+      if (m.error) math.append(el("div", "bad", m.error));
+      sec.append(math);
+    }
+  }
+  return sec;
+}
+
+loadState().then(() => openConversation(savedChatId()));
+setInterval(() => {
+  const busySelect = document.activeElement && document.activeElement.tagName === "SELECT";
+  if (!document.hidden && !busySelect && !live) loadState();
+}, 20000);
+</script>
+</body>
+</html>

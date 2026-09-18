@@ -1,0 +1,156 @@
+{
+  "endpoint": "http://127.0.0.1:8081",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outline_rejections": "data/review/outline_rejections.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 9,
+  "report": {
+    "assistant_targets": 300,
+    "common_assistant_openings": [
+      {
+        "count": 3,
+        "opening": "that s a smart"
+      },
+      {
+        "count": 3,
+        "opening": "that s a solid"
+      },
+      {
+        "count": 3,
+        "opening": "here s your plan"
+      },
+      {
+        "count": 3,
+        "opening": "you re welcome your"
+      },
+      {
+        "count": 2,
+        "opening": "got it how about"
+      },
+      {
+        "count": 2,
+        "opening": "to summarize you d"
+      },
+      {
+        "count": 2,
+        "opening": "that s a strong"
+      },
+      {
+        "count": 2,
+        "opening": "that sounds like a"
+      },
+      {
+        "count": 2,
+        "opening": "that s a good"
+      },
+      {
+        "count": 2,
+        "opening": "you re welcome the"
+      },
+      {
+        "count": 2,
+        "opening": "that s your plan"
+      },
+      {
+        "count": 1,
+        "opening": "so you re blending"
+      },
+      {
+        "count": 1,
+        "opening": "do you want something"
+      },
+      {
+        "count": 1,
+        "opening": "fair point how about"
+      },
+      {
+        "count": 1,
+        "opening": "great choice pixel crust"
+      },
+      {
+        "count": 1,
+        "opening": "not necessarily pixel crust"
+      },
+      {
+        "count": 1,
+        "opening": "pixel crust is sleek"
+      },
+      {
+        "count": 1,
+        "opening": "with pixel crust picked"
+      },
+      {
+        "count": 1,
+        "opening": "pixel crust fits your"
+      },
+      {
+        "count": 1,
+        "opening": "you re welcome pixel"
+      }
+    ],
+    "conversations": 25,
+    "domains": {
+      "creative_brainstorming": 2,
+      "decision_making": 2,
+      "entertainment_discussion": 2,
+      "event_planning": 2,
+      "everyday_planning": 2,
+      "family_scheduling": 1,
+      "game_and_story_ideas": 1,
+      "hobby_projects": 1,
+      "home_organization": 1,
+      "learning_reflection": 1,
+      "personal_preferences": 1,
+      "shopping_comparisons": 1,
+      "social_communication": 1,
+      "software_project_planning": 1,
+      "study_habits": 1,
+      "time_management": 1,
+      "travel_preferences": 1,
+      "volunteer_coordination": 1,
+      "workplace_communication": 1,
+      "writing_revision": 1
+    },
+    "duplicate_conversations": 0,
+    "length_bands": {
+      "long": 265,
+      "medium": 244,
+      "short": 91
+    },
+    "message_words": {
+      "max": 65,
+      "mean": 22.26,
+      "min": 3
+    },
+    "messages": 600,
+    "skills": {
+      "brainstorming": 3,
+      "callback_to_earlier_detail": 8,
+      "clarification": 13,
+      "compare_options": 10,
+      "correction_and_repair": 1,
+      "emotional_attunement": 4,
+      "instruction_following": 3,
+      "multi_step_planning": 11,
+      "polite_disagreement": 2,
+      "question_answering": 1,
+      "summarization": 16,
+      "teaching": 1,
+      "troubleshooting": 2
+    },
+    "structural_failures": []
+  },
+  "sha256": "13b883001ed7fd9ba16fdccb6cfcc09a1b56739e0cc25a8f59a67a414fed5e4b",
+  "teacher": "ministral-8b"
+}

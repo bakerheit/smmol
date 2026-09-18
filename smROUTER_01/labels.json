@@ -1,0 +1,20 @@
+{
+  "intents": ["question", "task", "remember", "answer", "statement", "small_talk"],
+  "tools": ["none", "calculator", "web_search", "web_browser", "file_read", "file_write", "memory_recall"],
+  "about": {
+    "question": "wants information",
+    "task": "wants something made or done",
+    "remember": "explicitly asks the assistant to remember something",
+    "answer": "answers the assistant's last question",
+    "statement": "tells the assistant something about their life without asking for anything",
+    "small_talk": "needs nothing back: ok, thanks, lol",
+    "none": "no tool: the reply can be written directly",
+    "calculator": "exact arithmetic",
+    "web_search": "current or local facts from the internet",
+    "web_browser": "reading a specific link in the message",
+    "file_read": "reading the person's saved lists, notes or files",
+    "file_write": "saving, adding to or changing a list, note or file",
+    "memory_recall": "something the person told the assistant before",
+    "ask_first": "true only when something needed is missing and has to be asked"
+  }
+}

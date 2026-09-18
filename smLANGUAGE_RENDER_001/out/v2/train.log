@@ -1,0 +1,12 @@
+smLANGUAGE_RENDER_001: 10.73M parameters on mps, steps 1000 to 6000 of about 8192 tokens
+step  1000 |   0.1 min | loss 0.0000 | generated exact 0.109 | dev exact 0.091 grounded 0.091
+step  1500 |   3.5 min | loss 0.8552 | generated exact 0.084 | dev exact 0.091 grounded 0.091
+step  2000 |   6.9 min | loss 0.5154 | generated exact 0.128 | dev exact 0.000 grounded 0.000
+step  2500 |  10.3 min | loss 0.3622 | generated exact 0.205 | dev exact 0.091 grounded 0.091
+step  3000 |  13.7 min | loss 0.2151 | generated exact 0.305 | dev exact 0.091 grounded 0.091
+step  3500 |  17.1 min | loss 0.1622 | generated exact 0.465 | dev exact 0.182 grounded 0.182
+step  4000 |  20.5 min | loss 0.1217 | generated exact 0.588 | dev exact 0.091 grounded 0.091
+step  4500 |  23.9 min | loss 0.0976 | generated exact 0.646 | dev exact 0.091 grounded 0.091
+step  5000 |  27.3 min | loss 0.0790 | generated exact 0.680 | dev exact 0.091 grounded 0.091
+step  5500 |  30.8 min | loss 0.0972 | generated exact 0.705 | dev exact 0.091 grounded 0.091
+step  6000 |  34.2 min | loss 0.0809 | generated exact 0.730 | dev exact 0.091 grounded 0.091

@@ -1,0 +1,87 @@
+{
+  "endpoint": "http://127.0.0.1:8081",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outline_rejections": "data/review/outline_rejections.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 9,
+  "report": {
+    "assistant_targets": 10,
+    "common_assistant_openings": [
+      {
+        "count": 1,
+        "opening": "so you re blending"
+      },
+      {
+        "count": 1,
+        "opening": "do you want something"
+      },
+      {
+        "count": 1,
+        "opening": "got it how about"
+      },
+      {
+        "count": 1,
+        "opening": "fair point how about"
+      },
+      {
+        "count": 1,
+        "opening": "great choice ties the"
+      },
+      {
+        "count": 1,
+        "opening": "not necessarily pixel crust"
+      },
+      {
+        "count": 1,
+        "opening": "is sleek and versatile"
+      },
+      {
+        "count": 1,
+        "opening": "with picked i d"
+      },
+      {
+        "count": 1,
+        "opening": "fits your goal nostalgic"
+      },
+      {
+        "count": 1,
+        "opening": "you re welcome pixel"
+      }
+    ],
+    "conversations": 1,
+    "domains": {
+      "creative_brainstorming": 1
+    },
+    "duplicate_conversations": 0,
+    "length_bands": {
+      "long": 7,
+      "medium": 9,
+      "short": 4
+    },
+    "message_words": {
+      "max": 37,
+      "mean": 17.9,
+      "min": 6
+    },
+    "messages": 20,
+    "skills": {
+      "brainstorming": 1,
+      "clarification": 1,
+      "summarization": 1
+    },
+    "structural_failures": []
+  },
+  "sha256": "43b9469ce73abed6cebaf174f80cde1f5a91c8b643e95bbf08e0c3ecc3c3521b",
+  "teacher": "ministral-8b"
+}

@@ -1,0 +1,285 @@
+{
+  "what": "Open-list idea proposals from the teacher, tallied. Candidates, not an inventory.",
+  "human_gate": "A person picks the new ideas from this tally and writes each one's one-line meaning into ideas.json. No script may do it. ideas.json currently holds smCLM_01's 51 approved ideas and nothing else.",
+  "seed": 15001,
+  "batch_size": 20,
+  "vocabulary_words": 2619,
+  "words_tagged": 40,
+  "batches_done": 2,
+  "distinct_ideas": 29,
+  "proposals": [
+    {
+      "idea": "action",
+      "words": 9,
+      "share_of_tagged": 0.225,
+      "examples": [
+        "abandon",
+        "accept",
+        "achieve",
+        "act",
+        "action",
+        "actionable",
+        "active",
+        "activity",
+        "add"
+      ]
+    },
+    {
+      "idea": "change",
+      "words": 8,
+      "share_of_tagged": 0.2,
+      "examples": [
+        "abrupt",
+        "adapt",
+        "adaptability",
+        "adaptable",
+        "adjust",
+        "adjustability",
+        "adjustable",
+        "adjustment"
+      ]
+    },
+    {
+      "idea": "communication",
+      "words": 6,
+      "share_of_tagged": 0.15,
+      "examples": [
+        "accent",
+        "accept",
+        "account",
+        "accuracy",
+        "acknowledge",
+        "address"
+      ]
+    },
+    {
+      "idea": "control",
+      "words": 6,
+      "share_of_tagged": 0.15,
+      "examples": [
+        "access",
+        "accountability",
+        "adjust",
+        "adjustability",
+        "adjustable",
+        "adjustment"
+      ]
+    },
+    {
+      "idea": "place",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "access",
+        "accessible",
+        "across",
+        "address"
+      ]
+    },
+    {
+      "idea": "work",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "able",
+        "accountability",
+        "achieve",
+        "actionable"
+      ]
+    },
+    {
+      "idea": "emotion",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "abandon",
+        "abandonment",
+        "admire"
+      ]
+    },
+    {
+      "idea": "learning",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "abstract",
+        "accuracy",
+        "acknowledge"
+      ]
+    },
+    {
+      "idea": "tool",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "accessory",
+        "adapter",
+        "adhesive"
+      ]
+    },
+    {
+      "idea": "access",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "accessibility",
+        "accessible"
+      ]
+    },
+    {
+      "idea": "health",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "able",
+        "ache"
+      ]
+    },
+    {
+      "idea": "play",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "act",
+        "activity"
+      ]
+    },
+    {
+      "idea": "truth",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "actual",
+        "actually"
+      ]
+    },
+    {
+      "idea": "art",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abstract"
+      ]
+    },
+    {
+      "idea": "body",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "ache"
+      ]
+    },
+    {
+      "idea": "certainty",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "absolutely"
+      ]
+    },
+    {
+      "idea": "clothing",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessory"
+      ]
+    },
+    {
+      "idea": "electricity",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adapter"
+      ]
+    },
+    {
+      "idea": "energy",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "active"
+      ]
+    },
+    {
+      "idea": "family",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abandonment"
+      ]
+    },
+    {
+      "idea": "food",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "judgment",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acceptable"
+      ]
+    },
+    {
+      "idea": "money",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "account"
+      ]
+    },
+    {
+      "idea": "number",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "add"
+      ]
+    },
+    {
+      "idea": "people",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessibility"
+      ]
+    },
+    {
+      "idea": "plant",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "social",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acceptable"
+      ]
+    },
+    {
+      "idea": "sound",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accent"
+      ]
+    },
+    {
+      "idea": "speed",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abrupt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "categories": {
+    "fact": 80,
+    "grounded": 30,
+    "instruction": 55,
+    "school_sentence": 600,
+    "social": 30,
+    "unknown": 40
+  },
+  "items": 835,
+  "model": "smLANGUAGE_en_GENERAL_001",
+  "sha256": "0bcfd7cafd334699025136edba632894e75f9872ad8312a0089e7e479e7d7c08"
+}

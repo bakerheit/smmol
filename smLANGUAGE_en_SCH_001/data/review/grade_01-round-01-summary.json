@@ -1,0 +1,10 @@
+{
+  "level": "grade_01",
+  "model": "ministral-8b",
+  "input": 300,
+  "carried_from_earlier_review": 0,
+  "accepted": 168,
+  "rejected": 132,
+  "rewritten": 137,
+  "round": 1
+}

@@ -1,0 +1,80 @@
+{
+  "flow": "attention | context | route | respond",
+  "providers": {
+    "pc": {"kind": "openai", "url": "http://127.0.0.1:8081", "label": "PC · RX 580", "vision_models": []},
+    "mac": {"kind": "openai", "url": "http://127.0.0.1:11435", "label": "Mac · UnlimitedStudio", "vision_models": []},
+    "browse": {"kind": "browse", "url": "http://127.0.0.1:8080", "label": "PC · browse server", "model": "browse"},
+    "sd": {"kind": "sd", "url": "http://127.0.0.1:8188", "label": "PC · Stable Diffusion", "model": "sd1.5"}
+  },
+  "functions": [
+    {
+      "id": "route", "name": "Route", "group": "router", "kind": "route",
+      "provider": "pc", "model": "ministral-8b", "max_calls": 4,
+      "aliases": ["hub", "router"],
+      "does": "Decides which @process and @tool calls to make",
+      "prompt": "You are the router in a harness of small local AI models. Read the request and the whiteboard (its context tokens), then decide which processes and tools should run before the reply is written.\n\nToday is {today}.\n\nAvailable calls:\n{menu}\n\nRules:\n- Use @process:prediction for almost every request, so the reply fits what the person expects.\n- Use @process:planning when the person has something to do or prepare, especially with a date.\n- Use @tool:lookup <search question> only when the reply needs specific facts from the internet (news, prices, weather, a named company or place). Not for general advice. Write a concrete search question with no placeholders.\n- Use @tool:draw <picture description> only when a picture is asked for.\n- Use @process:vision only when an image is attached.\n- One call per line, most useful first, at most 4, and nothing else.\n- If the reply needs nothing, answer NONE."
+    },
+    {
+      "id": "attention", "name": "Attention", "group": "stage", "kind": "gate", "color": "red",
+      "provider": "pc", "model": "ministral-8b",
+      "aliases": ["gate", "filter"],
+      "does": "Is this for me?",
+      "prompt": "You are the attention filter in a harness of small local AI models, working for one person. Decide if the message is meant for the assistant: a question, a request, or something the person is telling it about their life or plans. Answer NO only for noise, small talk that needs nothing (like 'ok', 'lol' or 'thanks'), or a message clearly meant for someone else. Answer YES or NO only."
+    },
+    {
+      "id": "context", "name": "Context", "group": "stage", "kind": "chat", "color": "blue",
+      "provider": "pc", "model": "ministral-8b", "parse": "tokens", "temperature": 0, "max_tokens": 200,
+      "aliases": ["tokens", "parse"],
+      "does": "What is the context of the input?",
+      "prompt": "You are the Context function in a harness of small local AI models. Break the message into context tokens: short bracketed chunks of meaning, in order, like [User][meeting][this Friday][investment opportunity][business]. Use [User] for the person speaking. Keep people, times, places and topics; drop filler words.\n\nToday is {today}.\n\nReply in exactly three lines:\nTOKENS: the bracketed tokens\nWHEN: the date or dates mentioned, as Weekday YYYY-MM-DD, or none\nINTENT: a few words on what the person is doing or wants"
+    },
+    {
+      "id": "prediction", "name": "Prediction", "group": "process", "call": "@process:prediction", "kind": "chat",
+      "color": "green", "provider": "pc", "model": "ministral-8b", "temperature": 0.2, "max_tokens": 200,
+      "aliases": ["predict", "expect"],
+      "does": "What is the most likely expected response?",
+      "prompt": "You are the Prediction function in a harness of small local AI models. Predict the response the person most likely expects from their assistant, before anyone writes it. Say what they probably want (for example help preparing, a reminder, information or reassurance) and what a good reply should contain. If the message could mean different things, say which reading is most likely and what's unclear. Three short lines at most. Don't write the reply itself.\n\nToday is {today}."
+    },
+    {
+      "id": "planning", "name": "Planning", "group": "process", "call": "@process:planning", "kind": "chat",
+      "color": "yellow", "provider": "pc", "model": "ministral-8b", "temperature": 0.3, "max_tokens": 400,
+      "aliases": ["plan"],
+      "does": "Lays out the steps, with dates",
+      "prompt": "You are the Planning function in a harness of small local AI models. Make a short, practical plan for what the person has to do. Numbered steps, each saying when to do it, counting from today ({today}). At most 6 steps. No introduction."
+    },
+    {
+      "id": "vision", "name": "Vision", "group": "process", "call": "@process:vision", "kind": "vision",
+      "color": "purple", "provider": null, "model": null,
+      "aliases": ["see", "look"],
+      "does": "Describes an attached image",
+      "prompt": "Describe the attached image in a few sentences, focusing on what matters for the request."
+    },
+    {
+      "id": "respond", "name": "Respond", "group": "stage", "kind": "chat", "color": "teal",
+      "provider": "pc", "model": "ministral-8b", "temperature": 0.4, "max_tokens": 900,
+      "aliases": ["reply", "talk", "answer"],
+      "does": "Writes the reply",
+      "prompt": "You are the Respond function in a harness of small local AI models. Write the reply the person reads: warm, clear and practical, under 250 words unless they ask for more. Use the whiteboard: match what Prediction expects, include the plan if there is one, and use looked-up facts only where they help. If something important is unclear, say in one short line what you're assuming. Don't invent numbers or facts that aren't on the whiteboard. Don't mention the whiteboard, tokens or other functions.\n\nToday is {today}."
+    },
+    {
+      "id": "lookup", "name": "Look it up", "group": "tool", "call": "@tool:lookup", "kind": "browse",
+      "provider": "browse", "model": "browse",
+      "aliases": ["search", "web", "browse"],
+      "does": "Searches the web for facts"
+    },
+    {
+      "id": "draw", "name": "Draw", "group": "tool", "call": "@tool:draw", "kind": "draw",
+      "provider": "sd", "model": "sd1.5",
+      "aliases": ["imagine", "picture"],
+      "does": "Draws a picture",
+      "only_if": "\\b(draw|drawing|picture|image|sketch|paint|painting|illustrat\\w*|photo|poster|logo|cartoon)\\b",
+      "negative": "blurry, low quality, deformed, watermark, text"
+    }
+  ],
+  "examples": [
+    {"label": "The Friday meeting", "pipe": "", "request": "I have a meeting this Friday to discuss an investment opportunity for our business"},
+    {"label": "Not for me", "pipe": "", "request": "lol ok"},
+    {"label": "context | planning", "pipe": "context | planning", "request": "Sam has a dentist appointment next Tuesday at 3pm and needs a ride"},
+    {"label": "lookup | draw", "pipe": "lookup | draw", "request": "What does the Chicago skyline look like at night?"}
+  ]
+}

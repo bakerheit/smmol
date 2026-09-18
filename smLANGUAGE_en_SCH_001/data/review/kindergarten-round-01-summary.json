@@ -1,0 +1,9 @@
+{
+  "level": "kindergarten",
+  "model": "ministral-8b",
+  "input": 200,
+  "accepted": 113,
+  "rejected": 87,
+  "rewritten": 96,
+  "round": 1
+}

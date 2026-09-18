@@ -1,0 +1,94 @@
+3.9s  What's 17.5% of 2,340?                             {'intent': 'question', 'tool': 'calculator', 'ask_first': False}
+2.0s  hey what is 48 times 365                           {'intent': 'question', 'tool': 'calculator', 'ask_first': False}
+2.1s  If rent is $1,850 and we're 3 roommates, how much  {'intent': 'question', 'tool': 'calculator', 'ask_first': False}
+2.1s  tip for a $64 dinner at 18 percent?                {'intent': 'question', 'tool': 'calculator', 'ask_first': False}
+2.0s  how many ounces in 2.5 liters                      {'intent': 'question', 'tool': 'calculator', 'ask_first': False}
+2.0s  Can you add up 129, 88 and 406 for me              {'intent': 'task', 'tool': 'calculator', 'ask_first': False}
+1.9s  we need to split the check                         {'intent': 'task', 'tool': 'none', 'ask_first': True}
+1.9s  What's the weather in Chicago today?               {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.1s  Will I need an umbrella in Seattle this weekend?   {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  any news on the Artemis mission                    {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+1.9s  how did the Warriors do last night?                {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  what's bitcoin at right now                        {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  Is Costco open on Labor Day?                       {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.1s  find a sushi place near downtown Minneapolis that' {'intent': 'task', 'tool': 'web_search', 'ask_first': False}
+2.1s  how much is a Steam Deck these days                {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+1.9s  is it hot out today?                               {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  when do they close tonight?                        {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.2s  Summarize https://www.theatlantic.com/technology/a {'intent': 'task', 'tool': 'web_browser', 'ask_first': False}
+2.1s  what's this link about https://arxiv.org/abs/2604. {'intent': 'question', 'tool': 'web_browser', 'ask_first': False}
+2.1s  can you check https://shop.example.org/deals and s {'intent': 'task', 'tool': 'web_browser', 'ask_first': False}
+1.9s  Save a shopping list with eggs, milk and bread.    {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  add oat milk and kitty litter to the grocery list  {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  jot down that the wifi guy is coming Wednesday     {'intent': 'remember', 'tool': 'file_write', 'ask_first': False}
+2.2s  make a packing list for camping: tent, headlamp, b {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  take cilantro off my shopping list                 {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.2s  create a file called gift-ideas with a lego set an {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  write that down                                    {'intent': 'task', 'tool': 'file_write', 'ask_first': True}
+2.6s  put it on the list                                 {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  What's on my shopping list?                        {'intent': 'question', 'tool': 'file_read', 'ask_first': False}
+1.9s  read back my to do list                            {'intent': 'task', 'tool': 'file_read', 'ask_first': False}
+2.0s  did I already put batteries on the grocery list?   {'intent': 'remember', 'tool': 'file_read', 'ask_first': False}
+2.4s  which files have I saved so far                    {'intent': 'question', 'tool': 'file_read', 'ask_first': False}
+2.3s  open my budget notes                               {'intent': 'task', 'tool': 'file_read', 'ask_first': False}
+2.0s  Who's my dentist?                                  {'intent': 'question', 'tool': 'memory_recall', 'ask_first': False}
+2.0s  what did I say my locker combo was                 {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.1s  when is Priya's birthday again?                    {'intent': 'question', 'tool': 'memory_recall', 'ask_first': False}
+2.1s  remind me what my car insurance company is         {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.0s  what am I allergic to                              {'intent': 'question', 'tool': 'memory_recall', 'ask_first': False}
+2.1s  where did I say I parked at the airport?           {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.0s  what did I tell you about it?                      {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.2s  Remember that my dentist is Dr. Lee and my appoint {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.1s  please remember I'm allergic to shellfish          {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.1s  don't forget my mom's flight lands at 4:15 on Sund {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.2s  keep in mind that Jordan is vegan                  {'intent': 'remember', 'tool': 'memory_recall', 'ask_first': False}
+2.0s  remember this: the storage unit code is 2291       {'intent': 'remember', 'tool': 'file_write', 'ask_first': False}
+2.0s  I have a meeting this Friday to discuss an investm {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  my sister is flying in next Thursday               {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  ugh I'm so tired today                             {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  we just booked a trip to Lisbon for October        {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.8s  I got the job!!                                    {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  my car's been making a weird clicking noise        {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  Why do cats purr?                                  {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  how do I get red wine out of a carpet              {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+1.9s  explain how a 401k works like I'm 12               {'intent': 'question', 'tool': 'none', 'ask_first': False}
+2.0s  what's the difference between baking soda and baki {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+1.9s  who painted the Mona Lisa                          {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.0s  any tips for a toddler who won't sleep?            {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.3s  what's a good name for a golden retriever          {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+2.1s  Write a short poem about Monday mornings           {'intent': 'task', 'tool': 'none', 'ask_first': False}
+2.1s  help me plan a surprise party for my wife          {'intent': 'task', 'tool': 'none', 'ask_first': False}
+2.0s  draft a polite email asking my landlord to fix the {'intent': 'task', 'tool': 'none', 'ask_first': False}
+2.1s  give me five easy dinner ideas with chicken        {'intent': 'task', 'tool': 'web_search', 'ask_first': False}
+2.0s  tell me a dad joke                                 {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.0s  make me a 20 minute beginner workout               {'intent': 'task', 'tool': 'none', 'ask_first': False}
+2.1s  turn this into a nicer text: can't come, sorry     {'intent': 'task', 'tool': 'none', 'ask_first': False}
+2.0s  book us a table for Saturday                       {'intent': 'task', 'tool': 'web_search', 'ask_first': True}
+1.8s  remind me later                                    {'intent': 'remember', 'tool': 'none', 'ask_first': False}
+1.8s  send it to him                                     {'intent': 'task', 'tool': 'none', 'ask_first': True}
+1.8s  go ahead and order it                              {'intent': 'task', 'tool': 'none', 'ask_first': True}
+1.8s  cancel my appointment                              {'intent': 'task', 'tool': 'none', 'ask_first': True}
+1.9s  lol ok                                             {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.1s  thanks!                                            {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.0s  cool cool                                          {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.0s  haha that's great                                  {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.0s  got it, thx                                        {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+1.9s  👍                                                  {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+1.9s  nevermind                                          {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.1s  thanks                                             {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+1.9s  Albuquerque                                        {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+2.0s  just call it errands                               {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+2.0s  yes please                                         {'intent': 'task', 'tool': 'file_write', 'ask_first': False}
+2.0s  yeah go for it                                     {'intent': 'answer', 'tool': 'web_search', 'ask_first': False}
+2.0s  $212.40                                            {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+1.9s  five of us                                         {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+2.3s  I'm the investor. A local bakery is pitching to me {'intent': 'statement', 'tool': 'none', 'ask_first': False}
+1.9s  they're pitching me                                {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+1.9s  around 7:30                                        {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+1.9s  my landlord                                        {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+1.9s  yes                                                {'intent': 'answer', 'tool': 'none', 'ask_first': False}
+1.9s  nah                                                {'intent': 'small_talk', 'tool': 'none', 'ask_first': False}
+2.0s  and when's my next cleaning?                       {'intent': 'answer', 'tool': 'memory_recall', 'ask_first': False}
+2.0s  actually what's 15% of 80                          {'intent': 'answer', 'tool': 'calculator', 'ask_first': False}
+2.0s  what about Boulder                                 {'intent': 'question', 'tool': 'web_search', 'ask_first': False}
+{'intent': 0.796, 'tool': 0.806, 'ask_first': 0.946, 'for_me': 0.978, 'all': 0.581} median 1.99s per message

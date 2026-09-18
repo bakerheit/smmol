@@ -1,0 +1,141 @@
+{
+  "math_language": {
+    "type": "object", "required": ["problems"],
+    "properties": {"problems": {"type": "array", "maxItems": 5, "items": {"type": "object", "required": ["id", "expression", "unit", "about"],
+      "properties": {"id": {"type": "string", "maxLength": 4}, "expression": {"type": "string", "maxLength": 200},
+                     "unit": {"type": "string", "maxLength": 40}, "about": {"type": "string", "maxLength": 60}}}}}
+  },
+  "perception": {
+    "type": "object",
+    "required": ["observations", "goal"],
+    "properties": {
+      "observations": {
+        "type": "array", "maxItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["kind", "text", "who", "what", "when", "where"],
+          "properties": {
+            "kind": {"type": "string", "enum": ["event", "fact", "request", "question", "feeling", "preference", "small_talk"]},
+            "text": {"type": "string", "maxLength": 160},
+            "who": {"type": "string", "maxLength": 60},
+            "what": {"type": "string", "maxLength": 80},
+            "when": {"type": "string", "maxLength": 40},
+            "where": {"type": "string", "maxLength": 60}
+          }
+        }
+      },
+      "goal": {"type": "string", "maxLength": 120}
+    }
+  },
+  "attention": {
+    "type": "object",
+    "required": ["for_me", "scores", "why"],
+    "properties": {
+      "for_me": {"type": "boolean"},
+      "scores": {
+        "type": "array", "maxItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["index", "relevance"],
+          "properties": {
+            "index": {"type": "integer", "minimum": 1},
+            "relevance": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        }
+      },
+      "why": {"type": "string", "maxLength": 160}
+    }
+  },
+  "recall_query": {
+    "type": "object",
+    "required": ["queries"],
+    "properties": {
+      "queries": {"type": "array", "maxItems": 3, "items": {"type": "string", "maxLength": 60}}
+    }
+  },
+  "recall_rank": {
+    "type": "object",
+    "required": ["ranked"],
+    "properties": {
+      "ranked": {
+        "type": "array", "maxItems": 8,
+        "items": {
+          "type": "object",
+          "required": ["id", "relevance"],
+          "properties": {
+            "id": {"type": "string", "maxLength": 12},
+            "relevance": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        }
+      }
+    }
+  },
+  "planner": {
+    "type": "object",
+    "required": ["goal", "candidates"],
+    "properties": {
+      "goal": {"type": "string", "maxLength": 120},
+      "candidates": {
+        "type": "array", "minItems": 1, "maxItems": 3,
+        "items": {
+          "type": "object",
+          "required": ["type", "summary", "tool", "action", "target", "content"],
+          "properties": {
+            "type": {"type": "string", "enum": ["answer", "make", "ask", "tool"]},
+            "summary": {"type": "string", "maxLength": 160},
+            "tool": {"type": "string", "enum": ["none", "calculator", "web_search", "web_browser", "file_system"]},
+            "action": {"type": "string", "enum": ["none", "create", "read", "update", "delete", "list"]},
+            "target": {"type": "string", "maxLength": 300},
+            "content": {"type": "string", "maxLength": 2000}
+          }
+        }
+      }
+    }
+  },
+  "predictor": {
+    "type": "object",
+    "required": ["predictions"],
+    "properties": {
+      "predictions": {
+        "type": "array", "maxItems": 3,
+        "items": {
+          "type": "object",
+          "required": ["index", "outcome", "helpful", "risk"],
+          "properties": {
+            "index": {"type": "integer", "minimum": 1},
+            "outcome": {"type": "string", "maxLength": 160},
+            "helpful": {"type": "number", "minimum": 0, "maximum": 1},
+            "risk": {"type": "string", "maxLength": 120}
+          }
+        }
+      }
+    }
+  },
+  "critic": {
+    "type": "object",
+    "required": ["issues", "question"],
+    "properties": {
+      "issues": {
+        "type": "array", "maxItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["kind", "text", "severity"],
+          "properties": {
+            "kind": {"type": "string", "enum": ["error", "contradiction", "assumption", "missing"]},
+            "text": {"type": "string", "maxLength": 200},
+            "severity": {"type": "string", "enum": ["low", "medium", "high"]}
+          }
+        }
+      },
+      "question": {"type": "string", "maxLength": 200}
+    }
+  },
+  "decision": {
+    "type": "object",
+    "required": ["choice", "why"],
+    "properties": {
+      "choice": {"type": "integer", "minimum": 1},
+      "why": {"type": "string", "maxLength": 160}
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "sources": {
+    "cells.py": "fa36e5333a87ed79af93d539f68ceff9bc397f413bdbe21953c808871ff0cf26",
+    "online.py": "6a303866637cd59ee07fce68d8260bca75c9cbd2a8042c08b8bc22cdde161c46",
+    "tbptt.py": "87ba704f3f80cc5d0cc1a3b68763e4b7a6c0a35b30ad110ac72ed0d152c4f33a",
+    "world.py": "a26b321f9929d43f8d827496912f153d5ea1002811fae516b85ed9e6125cc0f3",
+    "evaluate.py": "0d5f4b310643c6088bada9b7bcd61aebe2564bfb9cf778fb823949ab4848dd45",
+    "train_recall.py": "dae0012a5e7b118569a69c65dbfd26b4947d64f86c37091516d040c63a3bd134",
+    "predictions.md": "2a9fbcb6c5e8ee96ab43c56035a28536062e7ca4344f08362d03d0aa59858e3e"
+  },
+  "world": {
+    "keys": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    "values": "abcdefghijklmnopqrstuvwxyz!#$%&*+",
+    "filler": " \"'(),-./:<>@[\\]^_`{|}~",
+    "pair_counts": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "gaps": [
+      8,
+      32,
+      128,
+      512
+    ],
+    "eval_seed": 20260917,
+    "select_seed": 20260918,
+    "train_seed": 20260919,
+    "eval_trials": 1000,
+    "select_trials": 500
+  },
+  "other_training_loads": []
+}

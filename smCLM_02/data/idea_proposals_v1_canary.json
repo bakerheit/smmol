@@ -1,0 +1,536 @@
+{
+  "what": "Open-list idea proposals from the teacher, tallied. Candidates, not an inventory.",
+  "human_gate": "A person picks the new ideas from this tally and writes each one's one-line meaning into ideas.json. No script may do it. ideas.json currently holds smCLM_01's 51 approved ideas and nothing else.",
+  "seed": 15001,
+  "batch_size": 20,
+  "vocabulary_words": 2619,
+  "words_tagged": 40,
+  "batches_done": 2,
+  "distinct_ideas": 61,
+  "proposals": [
+    {
+      "idea": "change",
+      "words": 9,
+      "share_of_tagged": 0.225,
+      "examples": [
+        "abrupt",
+        "adapt",
+        "adaptability",
+        "adaptable",
+        "adapter",
+        "adjust",
+        "adjustability",
+        "adjustable",
+        "adjustment"
+      ]
+    },
+    {
+      "idea": "action",
+      "words": 7,
+      "share_of_tagged": 0.175,
+      "examples": [
+        "abandon",
+        "accept",
+        "achieve",
+        "act",
+        "actionable",
+        "activity",
+        "add"
+      ]
+    },
+    {
+      "idea": "control",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "adjust",
+        "adjustability",
+        "adjustable",
+        "adjustment"
+      ]
+    },
+    {
+      "idea": "flexibility",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "adaptability",
+        "adaptable",
+        "adjustability",
+        "adjustable"
+      ]
+    },
+    {
+      "idea": "availability",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "access",
+        "accessibility",
+        "accessible"
+      ]
+    },
+    {
+      "idea": "behavior",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "act",
+        "action",
+        "activity"
+      ]
+    },
+    {
+      "idea": "entry",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "access",
+        "accessibility",
+        "accessible"
+      ]
+    },
+    {
+      "idea": "movement",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "across",
+        "action",
+        "active"
+      ]
+    },
+    {
+      "idea": "adaptation",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "adaptability",
+        "adaptable"
+      ]
+    },
+    {
+      "idea": "alignment",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "adjust",
+        "adjustment"
+      ]
+    },
+    {
+      "idea": "connection",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "adapter",
+        "adhesive"
+      ]
+    },
+    {
+      "idea": "feeling",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "ache",
+        "admire"
+      ]
+    },
+    {
+      "idea": "leaving",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "abandon",
+        "abandonment"
+      ]
+    },
+    {
+      "idea": "place",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "across",
+        "address"
+      ]
+    },
+    {
+      "idea": "reality",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "actual",
+        "actually"
+      ]
+    },
+    {
+      "idea": "truth",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "actual",
+        "actually"
+      ]
+    },
+    {
+      "idea": "ability",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "able"
+      ]
+    },
+    {
+      "idea": "activity",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "active"
+      ]
+    },
+    {
+      "idea": "addition",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessory"
+      ]
+    },
+    {
+      "idea": "adjustment",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adapt"
+      ]
+    },
+    {
+      "idea": "agreement",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accept"
+      ]
+    },
+    {
+      "idea": "approval",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acceptable"
+      ]
+    },
+    {
+      "idea": "attachment",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adhesive"
+      ]
+    },
+    {
+      "idea": "capability",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "able"
+      ]
+    },
+    {
+      "idea": "certainty",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "absolutely"
+      ]
+    },
+    {
+      "idea": "combination",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "add"
+      ]
+    },
+    {
+      "idea": "communication",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "address"
+      ]
+    },
+    {
+      "idea": "correctness",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accuracy"
+      ]
+    },
+    {
+      "idea": "degree",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "absolutely"
+      ]
+    },
+    {
+      "idea": "difference",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accent"
+      ]
+    },
+    {
+      "idea": "direction",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "across"
+      ]
+    },
+    {
+      "idea": "duty",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accountability"
+      ]
+    },
+    {
+      "idea": "energy",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "active"
+      ]
+    },
+    {
+      "idea": "evaluation",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "admire"
+      ]
+    },
+    {
+      "idea": "existence",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "actual"
+      ]
+    },
+    {
+      "idea": "food",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "idea",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abstract"
+      ]
+    },
+    {
+      "idea": "identity",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "address"
+      ]
+    },
+    {
+      "idea": "increase",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "add"
+      ]
+    },
+    {
+      "idea": "knowledge",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acknowledge"
+      ]
+    },
+    {
+      "idea": "loss",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abandonment"
+      ]
+    },
+    {
+      "idea": "material",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adhesive"
+      ]
+    },
+    {
+      "idea": "measurement",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accuracy"
+      ]
+    },
+    {
+      "idea": "money",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "account"
+      ]
+    },
+    {
+      "idea": "object",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessory"
+      ]
+    },
+    {
+      "idea": "pain",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "ache"
+      ]
+    },
+    {
+      "idea": "performance",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "act"
+      ]
+    },
+    {
+      "idea": "plant",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "possibility",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "actionable"
+      ]
+    },
+    {
+      "idea": "quality",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acceptable"
+      ]
+    },
+    {
+      "idea": "recognition",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acknowledge"
+      ]
+    },
+    {
+      "idea": "record",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "account"
+      ]
+    },
+    {
+      "idea": "respect",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "admire"
+      ]
+    },
+    {
+      "idea": "responsibility",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accountability"
+      ]
+    },
+    {
+      "idea": "speech",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accent"
+      ]
+    },
+    {
+      "idea": "success",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "achieve"
+      ]
+    },
+    {
+      "idea": "suddenness",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abrupt"
+      ]
+    },
+    {
+      "idea": "survival",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adapt"
+      ]
+    },
+    {
+      "idea": "thought",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abstract"
+      ]
+    },
+    {
+      "idea": "tool",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "adapter"
+      ]
+    },
+    {
+      "idea": "usefulness",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "actionable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "initial": {
+    "per_layer": [
+      {
+        "layer": 0,
+        "count": 4,
+        "min": 8.000000953674316,
+        "median": 31.999923706054688,
+        "p90": 396.8109130859375,
+        "max": 512.0153198242188
+      }
+    ]
+  },
+  "final_from_best_checkpoint": {
+    "per_layer": [
+      {
+        "layer": 0,
+        "count": 4,
+        "min": 6.298557758331299,
+        "median": 52.16505432128906,
+        "p90": 77.96113586425781,
+        "max": 84.4463882446289
+      }
+    ]
+  },
+  "finalized_by": "finalize_interrupted.py"
+}

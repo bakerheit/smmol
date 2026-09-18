@@ -1,0 +1,90 @@
+smCLM_01: 51 ideas, 286 nouns (23 held out), 79 templates, 80000 sentences, 3 seed(s)
+seed 0
+  idea reader  epoch 1  loss 0.1684  held-out precision 0.83
+  idea reader  epoch 2  loss 0.1196  held-out precision 0.83
+  idea reader  epoch 3  loss 0.1168  held-out precision 0.84
+  idea reader  epoch 4  loss 0.1158  held-out precision 0.80
+  idea reader  epoch 5  loss 0.1152  held-out precision 0.80
+  idea reader  epoch 6  loss 0.1148  held-out precision 0.83
+  idea reader  epoch 7  loss 0.1146  held-out precision 0.80
+  idea reader  epoch 8  loss 0.1145  held-out precision 0.81
+  word reader  epoch 1  loss 3.0516
+  word reader  epoch 2  loss 2.6977
+  word reader  epoch 3  loss 2.6782
+  word reader  epoch 4  loss 2.6669
+  word reader  epoch 5  loss 2.6571
+  word reader  epoch 6  loss 2.6521
+  word reader  epoch 7  loss 2.6490
+  word reader  epoch 8  loss 2.6438
+  idea reader 0.81 | word reader: nearest words 0.12 | word reader: words that fit the same spots 0.80 | common ideas (no reading) 0.14
+seed 1
+  idea reader  epoch 1  loss 0.1710  held-out precision 0.79
+  idea reader  epoch 2  loss 0.1201  held-out precision 0.82
+  idea reader  epoch 3  loss 0.1172  held-out precision 0.84
+  idea reader  epoch 4  loss 0.1160  held-out precision 0.83
+  idea reader  epoch 5  loss 0.1150  held-out precision 0.80
+  idea reader  epoch 6  loss 0.1149  held-out precision 0.83
+  idea reader  epoch 7  loss 0.1146  held-out precision 0.80
+  idea reader  epoch 8  loss 0.1144  held-out precision 0.81
+  word reader  epoch 1  loss 3.0565
+  word reader  epoch 2  loss 2.6917
+  word reader  epoch 3  loss 2.6714
+  word reader  epoch 4  loss 2.6603
+  word reader  epoch 5  loss 2.6512
+  word reader  epoch 6  loss 2.6455
+  word reader  epoch 7  loss 2.6426
+  word reader  epoch 8  loss 2.6361
+  idea reader 0.81 | word reader: nearest words 0.11 | word reader: words that fit the same spots 0.82 | common ideas (no reading) 0.14
+seed 2
+  idea reader  epoch 1  loss 0.1696  held-out precision 0.83
+  idea reader  epoch 2  loss 0.1193  held-out precision 0.81
+  idea reader  epoch 3  loss 0.1167  held-out precision 0.83
+  idea reader  epoch 4  loss 0.1156  held-out precision 0.83
+  idea reader  epoch 5  loss 0.1150  held-out precision 0.82
+  idea reader  epoch 6  loss 0.1148  held-out precision 0.84
+  idea reader  epoch 7  loss 0.1144  held-out precision 0.83
+  idea reader  epoch 8  loss 0.1142  held-out precision 0.83
+  word reader  epoch 1  loss 3.0595
+  word reader  epoch 2  loss 2.6955
+  word reader  epoch 3  loss 2.6732
+  word reader  epoch 4  loss 2.6619
+  word reader  epoch 5  loss 2.6551
+  word reader  epoch 6  loss 2.6481
+  word reader  epoch 7  loss 2.6436
+  word reader  epoch 8  loss 2.6388
+  idea reader 0.83 | word reader: nearest words 0.15 | word reader: words that fit the same spots 0.84 | common ideas (no reading) 0.14
+
+| method | precision@k | average precision |
+|---|---|---|
+| idea reader | 0.82 ± 0.01 | 0.93 ± 0.01 |
+| word reader: nearest words | 0.13 ± 0.02 | 0.19 ± 0.01 |
+| word reader: words that fit the same spots | 0.82 ± 0.01 | 0.93 ± 0.01 |
+| common ideas (no reading) | 0.14 ± 0.00 | 0.21 ± 0.00 |
+
+seed 0, what the idea reader worked out for words it was never told about (✓ = right):
+  bakery       ✓place 1.00  ✓building 0.89  ✓work 0.67  ✓money 0.57  ✗people 0.44
+  bee          ✓living 0.61  ✓animal 0.53  ✓nature 0.52  ✓sky 0.50  ✓small 0.37  ✓danger 0.27
+  candle       ✓fire 0.52  ✓light 0.51  ✓hot 0.44  ✗danger 0.36  ✓home 0.27
+  canoe        ✓control 0.90  ✓transportation 0.88  ✓vehicle 0.84  ✓people 0.64  ✗metal 0.51  ✓water 0.49
+  car          ✓control 0.79  ✓transportation 0.78  ✓vehicle 0.76  ✓metal 0.72  ✓machine 0.67  ✓road 0.57  ✓people 0.50  ✗heavy 0.39
+  coin         ✓money 0.71  ✓small 0.59  ✓metal 0.39
+  drum         ✓sound 0.75  ✓music 0.52  ✗art 0.48  ✓wood 0.32
+  grandfather  ✓person 1.00  ✗work 0.50
+  hammer       ✓metal 0.69  ✓tool 0.65  ✗sharp 0.56
+  helmet       ✓clothing 1.00  ✗soft 0.93
+  jacket       ✓soft 0.89  ✓clothing 0.79
+  laptop       ✓communication 0.79  ✓electricity 0.66  ✓machine 0.64  ✓learning 0.40  ✓metal 0.36  ✗sound 0.24
+  lemonade     ✓drink 0.83  ✓cold 0.68
+  library      ✓place 0.98  ✓building 0.87  ✓people 0.84  ✓learning 0.65
+  mango        ✓food 0.73  ✓plant 0.69  ✗nature 0.30
+  nurse        ✓person 1.00  ✓work 0.62  ✗family 0.26
+  river        ✓place 1.00  ✓nature 0.79  ✓water 0.53
+  scooter      ✓transportation 0.79  ✓control 0.78  ✓vehicle 0.73  ✓road 0.70  ✗metal 0.69  ✗machine 0.57
+  soup         ✓food 0.85  ✗plant 0.38
+  storm        ✓weather 0.50  ✓sound 0.42  ✗sky 0.40  ✓danger 0.39
+  tram         ✓control 0.86  ✓transportation 0.82  ✓vehicle 0.78  ✓metal 0.74  ✓machine 0.73  ✓people 0.61  ✗road 0.42
+  violin       ✓sound 0.83  ✓music 0.57  ✓art 0.50  ✓wood 0.36
+  wolf         ✓living 0.60  ✓speed 0.57  ✓animal 0.55  ✓danger 0.50  ✓nature 0.47
+
+saved smCLM_01/out/models.pt and results.json in 1133s
+

@@ -1,0 +1,2820 @@
+{
+  "what": "Hand-written recall cases for smCLM_02 phase 0. Each case is a query, a pool of stored memories in the shape paratroop_harness_02 saves them, and the id of the one that should come back first. Written before any training data existed; nothing here may be trained on.",
+  "written": "2026-09-17",
+  "written_by": "Claude (Opus 5) agent, phase 0 of docs/engineering/plans/smCLM_02.md",
+  "groups": {
+    "A": "the query and the right memory share a content word; BM25 already wins these and the hybrid must not lose them",
+    "B": "the query and the right memory share no content word at all; same meaning, other words",
+    "C": "another memory in the pool shares words with the query but not its meaning"
+  },
+  "fields": {
+    "id": "case id, group letter plus the case number",
+    "group": "A, B or C",
+    "query": "what the person typed",
+    "pool": "the stored memories, each an id and its text; 8 to 12 of them",
+    "answer": "the pool id that must rank first",
+    "note": "only where a case needed a word of explanation"
+  },
+  "cases": [
+    {
+      "id": "a01",
+      "group": "A",
+      "query": "What is my dentist called?",
+      "answer": "m_dent_lee",
+      "pool": [
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_dog",
+          "text": "Biscuit is a collie and eats twice a day"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        }
+      ]
+    },
+    {
+      "id": "a02",
+      "group": "A",
+      "query": "When does my contract end?",
+      "answer": "m_contract",
+      "pool": [
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        }
+      ]
+    },
+    {
+      "id": "a03",
+      "group": "A",
+      "query": "Who is my manager?",
+      "answer": "m_manager",
+      "pool": [
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        }
+      ]
+    },
+    {
+      "id": "a04",
+      "group": "A",
+      "query": "What time is standup?",
+      "answer": "m_standup",
+      "pool": [
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        }
+      ]
+    },
+    {
+      "id": "a05",
+      "group": "A",
+      "query": "When does my passport run out?",
+      "answer": "m_passport",
+      "pool": [
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        }
+      ]
+    },
+    {
+      "id": "a06",
+      "group": "A",
+      "query": "What colour is my car?",
+      "answer": "m_car",
+      "pool": [
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_oat",
+          "text": "User buys oat milk, never dairy"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        }
+      ]
+    },
+    {
+      "id": "a07",
+      "group": "A",
+      "query": "Where is the spare key?",
+      "answer": "m_spare_key",
+      "pool": [
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_wifi_pw",
+          "text": "The wifi password is written inside the cupboard door"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        },
+        {
+          "id": "m_inhaler",
+          "text": "Theo keeps a spare inhaler in the kitchen drawer"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        }
+      ]
+    },
+    {
+      "id": "a08",
+      "group": "A",
+      "query": "When is the boiler serviced?",
+      "answer": "m_boiler",
+      "pool": [
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_leak_roof",
+          "text": "Rain gets in where the gutter leaks at the back"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        }
+      ]
+    },
+    {
+      "id": "a09",
+      "group": "A",
+      "query": "What day does the rent leave my account?",
+      "answer": "m_rent",
+      "pool": [
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_pension",
+          "text": "An extra fifty goes into User's pension each payday"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_roof",
+          "text": "User is putting money by for a new roof"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        }
+      ]
+    },
+    {
+      "id": "a10",
+      "group": "A",
+      "query": "When are my library books due?",
+      "answer": "m_library",
+      "pool": [
+        {
+          "id": "m_crime",
+          "text": "User gets through a lot of detective fiction"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        }
+      ]
+    },
+    {
+      "id": "a11",
+      "group": "A",
+      "query": "What is the wifi password?",
+      "answer": "m_wifi_pw",
+      "pool": [
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_wifi_pw",
+          "text": "The wifi password is written inside the cupboard door"
+        },
+        {
+          "id": "m_work_laptop",
+          "text": "User's work laptop is a battered ThinkPad"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        }
+      ]
+    },
+    {
+      "id": "a12",
+      "group": "A",
+      "query": "Which bank do I use?",
+      "answer": "m_bank",
+      "pool": [
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_pension",
+          "text": "An extra fifty goes into User's pension each payday"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_roof",
+          "text": "User is putting money by for a new roof"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        }
+      ]
+    },
+    {
+      "id": "a13",
+      "group": "A",
+      "query": "When does the car insurance renew?",
+      "answer": "m_insurance",
+      "pool": [
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        }
+      ]
+    },
+    {
+      "id": "a14",
+      "group": "A",
+      "query": "Can I take penicillin?",
+      "answer": "m_allergy",
+      "pool": [
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_inhaler",
+          "text": "Theo keeps a spare inhaler in the kitchen drawer"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_allergy",
+          "text": "User must not take penicillin"
+        },
+        {
+          "id": "m_coriander",
+          "text": "User cannot stand coriander"
+        },
+        {
+          "id": "m_bread",
+          "text": "User is trying to eat less bread"
+        }
+      ]
+    },
+    {
+      "id": "a15",
+      "group": "A",
+      "query": "When do Maya's swimming lessons start?",
+      "answer": "m_swim",
+      "pool": [
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_birthday_p",
+          "text": "Priya's birthday is the 2nd of June"
+        }
+      ]
+    },
+    {
+      "id": "a16",
+      "group": "A",
+      "query": "Where is my gym?",
+      "answer": "m_gym",
+      "pool": [
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        }
+      ]
+    },
+    {
+      "id": "a17",
+      "group": "A",
+      "query": "When is Priya's birthday?",
+      "answer": "m_birthday_p",
+      "pool": [
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_birthday_p",
+          "text": "Priya's birthday is the 2nd of June"
+        },
+        {
+          "id": "m_anniv",
+          "text": "The wedding anniversary is in August"
+        },
+        {
+          "id": "m_brother",
+          "text": "User's brother marries in September"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_gran",
+          "text": "User's grandmother is in a home near Stirling"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        }
+      ]
+    },
+    {
+      "id": "a18",
+      "group": "A",
+      "query": "What is growing on the allotment?",
+      "answer": "m_allot",
+      "pool": [
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_veg_box",
+          "text": "A veg box arrives every other Wednesday"
+        },
+        {
+          "id": "m_allot",
+          "text": "Tomatoes and beans are coming on at the allotment"
+        },
+        {
+          "id": "m_oat",
+          "text": "User buys oat milk, never dairy"
+        },
+        {
+          "id": "m_bread",
+          "text": "User is trying to eat less bread"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        }
+      ],
+      "note": "A: 'allotment' appears in the answer and nowhere else in the pool."
+    },
+    {
+      "id": "a19",
+      "group": "A",
+      "query": "When does the recycling go out?",
+      "answer": "m_bins",
+      "pool": [
+        {
+          "id": "m_veg_box",
+          "text": "A veg box arrives every other Wednesday"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        }
+      ]
+    },
+    {
+      "id": "a20",
+      "group": "A",
+      "query": "Who is the plumber?",
+      "answer": "m_plumber",
+      "pool": [
+        {
+          "id": "m_leak_roof",
+          "text": "Rain gets in where the gutter leaks at the back"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "group": "B",
+      "query": "Who looks after my teeth?",
+      "answer": "m_dent_lee",
+      "pool": [
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "group": "B",
+      "query": "Where do I go hiking?",
+      "answer": "m_hills",
+      "note": "B: m_peaks was in this pool and named an actual place, so 'where' had two defensible answers; it is dropped. m_hills is now the only walking memory.",
+      "pool": [
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "group": "B",
+      "query": "How old is my little girl?",
+      "answer": "m_daughter",
+      "pool": [
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_gran",
+          "text": "User's grandmother is in a home near Stirling"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_brother",
+          "text": "User's brother marries in September"
+        },
+        {
+          "id": "m_birthday_p",
+          "text": "Priya's birthday is the 2nd of June"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "group": "B",
+      "query": "Who cuts my hair?",
+      "answer": "m_hairdresser",
+      "pool": [
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        }
+      ]
+    },
+    {
+      "id": "b25",
+      "group": "B",
+      "query": "Which herb do I hate?",
+      "answer": "m_coriander",
+      "pool": [
+        {
+          "id": "m_oat",
+          "text": "User buys oat milk, never dairy"
+        },
+        {
+          "id": "m_bread",
+          "text": "User is trying to eat less bread"
+        },
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        },
+        {
+          "id": "m_veg_box",
+          "text": "A veg box arrives every other Wednesday"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_allot",
+          "text": "Tomatoes and beans are coming on at the allotment"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_coriander",
+          "text": "User cannot stand coriander"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_allergy",
+          "text": "User must not take penicillin"
+        }
+      ]
+    },
+    {
+      "id": "b26",
+      "group": "B",
+      "query": "Who is my four-legged friend?",
+      "answer": "m_dog",
+      "pool": [
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_gran",
+          "text": "User's grandmother is in a home near Stirling"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_dog",
+          "text": "Biscuit is a collie and eats twice a day"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        }
+      ]
+    },
+    {
+      "id": "b27",
+      "group": "B",
+      "query": "What happens to my retirement savings?",
+      "answer": "m_pension",
+      "pool": [
+        {
+          "id": "m_pension",
+          "text": "An extra fifty goes into User's pension each payday"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_roof",
+          "text": "User is putting money by for a new roof"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        }
+      ]
+    },
+    {
+      "id": "b28",
+      "group": "B",
+      "query": "Who repairs my vehicle?",
+      "answer": "m_mechanic",
+      "pool": [
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        }
+      ]
+    },
+    {
+      "id": "b29",
+      "group": "B",
+      "query": "When do I get my eyes checked?",
+      "answer": "m_optician",
+      "pool": [
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_dent_when",
+          "text": "The next check-up at the practice is Tuesday the 14th"
+        },
+        {
+          "id": "m_optician",
+          "text": "The optician appointment is booked for April"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        },
+        {
+          "id": "m_allergy",
+          "text": "User must not take penicillin"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        }
+      ]
+    },
+    {
+      "id": "b30",
+      "group": "B",
+      "query": "What do I read before sleep?",
+      "answer": "m_crime",
+      "pool": [
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_crime",
+          "text": "User gets through a lot of detective fiction"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_work_laptop",
+          "text": "User's work laptop is a battered ThinkPad"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        }
+      ]
+    },
+    {
+      "id": "b31",
+      "group": "B",
+      "query": "What instrument am I learning?",
+      "answer": "m_piano",
+      "pool": [
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_crime",
+          "text": "User gets through a lot of detective fiction"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_allot",
+          "text": "Tomatoes and beans are coming on at the allotment"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        }
+      ]
+    },
+    {
+      "id": "b32",
+      "group": "B",
+      "query": "Who owns the flat I rent?",
+      "answer": "m_landlord",
+      "pool": [
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        }
+      ]
+    },
+    {
+      "id": "b33",
+      "group": "B",
+      "query": "When am I away from work in the summer?",
+      "answer": "m_holiday_book",
+      "pool": [
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        }
+      ]
+    },
+    {
+      "id": "b34",
+      "group": "B",
+      "query": "How do I usually travel to work?",
+      "answer": "m_cycle",
+      "pool": [
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        }
+      ]
+    },
+    {
+      "id": "b35",
+      "group": "B",
+      "query": "What needs replacing on the house?",
+      "answer": "m_roof",
+      "pool": [
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_wifi_pw",
+          "text": "The wifi password is written inside the cupboard door"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_roof",
+          "text": "User is putting money by for a new roof"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        }
+      ]
+    },
+    {
+      "id": "b36",
+      "group": "B",
+      "query": "What do I drink in the morning?",
+      "answer": "m_coffee",
+      "pool": [
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_oat",
+          "text": "User buys oat milk, never dairy"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_bread",
+          "text": "User is trying to eat less bread"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        }
+      ]
+    },
+    {
+      "id": "b37",
+      "group": "B",
+      "query": "When do I buy the week's food?",
+      "answer": "m_shop_sun",
+      "pool": [
+        {
+          "id": "m_thai",
+          "text": "The Thai place on Mill Road is User's favourite takeaway"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_bread",
+          "text": "User is trying to eat less bread"
+        },
+        {
+          "id": "m_oat",
+          "text": "User buys oat milk, never dairy"
+        },
+        {
+          "id": "m_coriander",
+          "text": "User cannot stand coriander"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        },
+        {
+          "id": "m_allot",
+          "text": "Tomatoes and beans are coming on at the allotment"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        }
+      ]
+    },
+    {
+      "id": "b38",
+      "group": "B",
+      "query": "Who do I report to?",
+      "answer": "m_manager",
+      "pool": [
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_work_laptop",
+          "text": "User's work laptop is a battered ThinkPad"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        }
+      ]
+    },
+    {
+      "id": "b39",
+      "group": "B",
+      "query": "Where do I lift weights?",
+      "answer": "m_gym",
+      "pool": [
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        }
+      ]
+    },
+    {
+      "id": "b40",
+      "group": "B",
+      "query": "Where does the dog go for its jabs?",
+      "answer": "m_vet",
+      "pool": [
+        {
+          "id": "m_dog",
+          "text": "Biscuit is a collie and eats twice a day"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_vet",
+          "text": "Elm Row is where Biscuit goes for injections"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        }
+      ]
+    },
+    {
+      "id": "b41",
+      "group": "B",
+      "query": "When is the tax paperwork due?",
+      "answer": "m_accountant",
+      "pool": [
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_pension",
+          "text": "An extra fifty goes into User's pension each payday"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        }
+      ]
+    },
+    {
+      "id": "b42",
+      "group": "B",
+      "query": "What makes rail travel cheaper for me?",
+      "answer": "m_train",
+      "pool": [
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        }
+      ]
+    },
+    {
+      "id": "b43",
+      "group": "B",
+      "query": "Who is noisy in the flat above?",
+      "answer": "m_neighbour_noise",
+      "pool": [
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        }
+      ]
+    },
+    {
+      "id": "b44",
+      "group": "B",
+      "query": "Where do my grandparents stay?",
+      "answer": "m_gran",
+      "pool": [
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_brother",
+          "text": "User's brother marries in September"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_anniv",
+          "text": "The wedding anniversary is in August"
+        },
+        {
+          "id": "m_gran",
+          "text": "User's grandmother is in a home near Stirling"
+        },
+        {
+          "id": "m_charity",
+          "text": "User gives ten a month to a cat rescue"
+        }
+      ]
+    },
+    {
+      "id": "b45",
+      "group": "B",
+      "query": "When is my salary looked at?",
+      "answer": "m_review",
+      "pool": [
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_pension",
+          "text": "An extra fifty goes into User's pension each payday"
+        },
+        {
+          "id": "m_accountant",
+          "text": "Receipts have to reach the accountant by the end of January"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        }
+      ],
+      "note": "B: same answer as case a03, asked with no shared word, so the two can be compared."
+    },
+    {
+      "id": "c46",
+      "group": "C",
+      "query": "Who do I ring about the tooth that is hurting?",
+      "answer": "m_dent_lee",
+      "pool": [
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_allergy",
+          "text": "User must not take penicillin"
+        }
+      ]
+    },
+    {
+      "id": "c47",
+      "group": "C",
+      "query": "When am I seeing the dentist?",
+      "answer": "m_dent_when",
+      "pool": [
+        {
+          "id": "m_dent_lee",
+          "text": "User's dentist is Dr Lee at the Bridge Street practice"
+        },
+        {
+          "id": "m_optician",
+          "text": "The optician appointment is booked for April"
+        },
+        {
+          "id": "m_dent_when",
+          "text": "The next check-up at the practice is Tuesday the 14th"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_physio",
+          "text": "User sees someone about their bad knee once a fortnight"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        }
+      ]
+    },
+    {
+      "id": "c48",
+      "group": "C",
+      "query": "Where is the spare inhaler kept?",
+      "answer": "m_inhaler",
+      "pool": [
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_spare_room",
+          "text": "The box room has a bed in it for visitors"
+        },
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_inhaler",
+          "text": "Theo keeps a spare inhaler in the kitchen drawer"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_allergy",
+          "text": "User must not take penicillin"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        },
+        {
+          "id": "m_wifi_pw",
+          "text": "The wifi password is written inside the cupboard door"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        }
+      ]
+    },
+    {
+      "id": "c49",
+      "group": "C",
+      "query": "What time am I up on a weekday?",
+      "answer": "m_alarm",
+      "pool": [
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        }
+      ]
+    },
+    {
+      "id": "c50",
+      "group": "C",
+      "query": "What is booked for July?",
+      "answer": "m_holiday_book",
+      "pool": [
+        {
+          "id": "m_optician",
+          "text": "The optician appointment is booked for April"
+        },
+        {
+          "id": "m_dent_when",
+          "text": "The next check-up at the practice is Tuesday the 14th"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_brother",
+          "text": "User's brother marries in September"
+        },
+        {
+          "id": "m_review",
+          "text": "The pay review happens in October"
+        },
+        {
+          "id": "m_holiday_book",
+          "text": "Two weeks off are booked from the 12th of July"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_anniv",
+          "text": "The wedding anniversary is in August"
+        }
+      ]
+    },
+    {
+      "id": "c51",
+      "group": "C",
+      "query": "Who came about the leak?",
+      "answer": "m_plumber",
+      "pool": [
+        {
+          "id": "m_leak_roof",
+          "text": "Rain gets in where the gutter leaks at the back"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_spare_key",
+          "text": "The spare key is with the neighbour at number 14"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_roof",
+          "text": "User is putting money by for a new roof"
+        },
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        }
+      ]
+    },
+    {
+      "id": "c52",
+      "group": "C",
+      "query": "What goes out on Wednesday night?",
+      "answer": "m_bins",
+      "pool": [
+        {
+          "id": "m_veg_box",
+          "text": "A veg box arrives every other Wednesday"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        }
+      ]
+    },
+    {
+      "id": "c53",
+      "group": "C",
+      "query": "What happens on Sunday mornings?",
+      "answer": "m_shop_sun",
+      "pool": [
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_pills",
+          "text": "User takes tablets for blood pressure every morning"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_coffee",
+          "text": "Two cups of black coffee before noon, never after"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_shop_sun",
+          "text": "Sunday morning is the big shop"
+        },
+        {
+          "id": "m_bins",
+          "text": "Recycling goes out on Wednesday night"
+        }
+      ]
+    },
+    {
+      "id": "c54",
+      "group": "C",
+      "query": "Who do I call when the heating is off?",
+      "answer": "m_boiler",
+      "pool": [
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_landlord",
+          "text": "User's landlord is slow about repairs"
+        },
+        {
+          "id": "m_leak_roof",
+          "text": "Rain gets in where the gutter leaks at the back"
+        },
+        {
+          "id": "m_paint",
+          "text": "The back bedroom is still only half painted"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        }
+      ]
+    },
+    {
+      "id": "c55",
+      "group": "C",
+      "query": "What does my mobile number end with?",
+      "answer": "m_phone",
+      "pool": [
+        {
+          "id": "m_broadband",
+          "text": "Broadband is with Zen, the account ends 4471"
+        },
+        {
+          "id": "m_phone",
+          "text": "User's mobile number ends 0142"
+        },
+        {
+          "id": "m_wifi_pw",
+          "text": "The wifi password is written inside the cupboard door"
+        },
+        {
+          "id": "m_work_laptop",
+          "text": "User's work laptop is a battered ThinkPad"
+        },
+        {
+          "id": "m_bank",
+          "text": "User banks with Nationwide"
+        },
+        {
+          "id": "m_contract",
+          "text": "User's contract ends in March"
+        },
+        {
+          "id": "m_library",
+          "text": "User's library books are due back on the 20th"
+        },
+        {
+          "id": "m_rent",
+          "text": "Rent leaves the account on the 3rd"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_glasses",
+          "text": "User's reading glasses live by the kettle"
+        }
+      ]
+    },
+    {
+      "id": "c56",
+      "group": "C",
+      "query": "Who looks after the car?",
+      "answer": "m_mechanic",
+      "pool": [
+        {
+          "id": "m_insurance",
+          "text": "The car insurance renews in November"
+        },
+        {
+          "id": "m_car",
+          "text": "User's car is a blue estate with a dented rear door"
+        },
+        {
+          "id": "m_mechanic",
+          "text": "Prospect Motors look after the car"
+        },
+        {
+          "id": "m_driving",
+          "text": "User passed their test in 2011"
+        },
+        {
+          "id": "m_cycle",
+          "text": "User cycles to the office when it is dry"
+        },
+        {
+          "id": "m_train",
+          "text": "User has a railcard that takes a third off"
+        },
+        {
+          "id": "m_plumber",
+          "text": "Kelly the plumber came about the leak under the sink"
+        },
+        {
+          "id": "m_boiler",
+          "text": "Hargreaves services the boiler every October"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        },
+        {
+          "id": "m_passport",
+          "text": "User's passport runs out in 2027"
+        }
+      ]
+    },
+    {
+      "id": "c57",
+      "group": "C",
+      "query": "When is Maya in the water?",
+      "answer": "m_swim",
+      "pool": [
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_school_run",
+          "text": "Maya has to be at the school gate by half eight"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_plants",
+          "text": "The houseplants get watered on Saturdays"
+        },
+        {
+          "id": "m_peaks",
+          "text": "Easter weekends are usually spent in the Peak District"
+        }
+      ]
+    },
+    {
+      "id": "c58",
+      "group": "C",
+      "query": "Who is Priya?",
+      "answer": "m_partner",
+      "pool": [
+        {
+          "id": "m_birthday_p",
+          "text": "Priya's birthday is the 2nd of June"
+        },
+        {
+          "id": "m_anniv",
+          "text": "The wedding anniversary is in August"
+        },
+        {
+          "id": "m_mum",
+          "text": "User's mother lives in Perth and rings on Sundays"
+        },
+        {
+          "id": "m_gran",
+          "text": "User's grandmother is in a home near Stirling"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_brother",
+          "text": "User's brother marries in September"
+        },
+        {
+          "id": "m_daughter",
+          "text": "User's daughter Maya turned seven in May"
+        },
+        {
+          "id": "m_son",
+          "text": "User's son Theo has asthma"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        },
+        {
+          "id": "m_hairdresser",
+          "text": "Tonia at Green Street is User's hairdresser"
+        }
+      ],
+      "note": "C: 'Who is Priya?' names her; the partner memory says who she is, the birthday one does not."
+    },
+    {
+      "id": "c59",
+      "group": "C",
+      "query": "Who works nights?",
+      "answer": "m_partner",
+      "pool": [
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        },
+        {
+          "id": "m_oncall",
+          "text": "User is on call the first week of every month"
+        },
+        {
+          "id": "m_standup",
+          "text": "Standup is at 9:15 every weekday"
+        },
+        {
+          "id": "m_fridays",
+          "text": "Fridays are kept clear for deep work"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_partner",
+          "text": "User's partner Priya works nights at the hospital"
+        },
+        {
+          "id": "m_alarm",
+          "text": "User gets up at six on weekdays"
+        },
+        {
+          "id": "m_sleep_late",
+          "text": "User cannot sleep if they eat late"
+        },
+        {
+          "id": "m_gp",
+          "text": "User's doctor is at the Marsh Lane surgery"
+        },
+        {
+          "id": "m_manager",
+          "text": "User's manager is Sam Okonkwo"
+        }
+      ]
+    },
+    {
+      "id": "c60",
+      "group": "C",
+      "query": "What do I play on Thursday evenings?",
+      "answer": "m_football",
+      "pool": [
+        {
+          "id": "m_dance",
+          "text": "Maya has dance on Thursday after school"
+        },
+        {
+          "id": "m_piano",
+          "text": "User has had piano lessons for two years"
+        },
+        {
+          "id": "m_neighbour_noise",
+          "text": "The neighbours upstairs play music late"
+        },
+        {
+          "id": "m_swim",
+          "text": "Maya's swimming lessons start in June"
+        },
+        {
+          "id": "m_gym",
+          "text": "User's gym membership is at the leisure centre on Foundry Road"
+        },
+        {
+          "id": "m_running",
+          "text": "User runs three times a week before work"
+        },
+        {
+          "id": "m_football",
+          "text": "Five-a-side is on Thursday evenings"
+        },
+        {
+          "id": "m_hills",
+          "text": "User walks in the hills most weekends when the weather holds"
+        },
+        {
+          "id": "m_crime",
+          "text": "User gets through a lot of detective fiction"
+        },
+        {
+          "id": "m_corner_shop",
+          "text": "The corner shop stays open late at night"
+        }
+      ]
+    }
+  ]
+}

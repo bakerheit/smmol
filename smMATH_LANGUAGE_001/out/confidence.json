@@ -1,0 +1,245 @@
+{
+ "rows": [
+  {
+   "text": "what is the volume of 322234ft x 21323ft x 212231ft?",
+   "sure": 0.9862,
+   "weakest": 0.7494,
+   "right": true
+  },
+  {
+   "text": "2+2",
+   "sure": 0.9997,
+   "weakest": 0.9996,
+   "right": true
+  },
+  {
+   "text": "whats 17.5% of 2,340",
+   "sure": 1.0,
+   "weakest": 0.9998,
+   "right": true
+  },
+  {
+   "text": "If rent is $1,850 and we're 3 roommates, how much does each person pay?",
+   "sure": 0.9881,
+   "weakest": 0.8133,
+   "right": false
+  },
+  {
+   "text": "tip for a $64 dinner at 18 percent?",
+   "sure": 0.9972,
+   "weakest": 0.9446,
+   "right": true
+  },
+  {
+   "text": "Can you add up 129, 88 and 406 for me",
+   "sure": 0.9954,
+   "weakest": 0.9354,
+   "right": false
+  },
+  {
+   "text": "hey what is 48 times 365",
+   "sure": 1.0,
+   "weakest": 0.9999,
+   "right": true
+  },
+  {
+   "text": "26.2 miles, what's that in kilometers?",
+   "sure": 0.9996,
+   "weakest": 0.9958,
+   "right": true
+  },
+  {
+   "text": "a room is 12ft by 15ft, what's the area",
+   "sure": 0.9999,
+   "weakest": 0.9989,
+   "right": true
+  },
+  {
+   "text": "I bought 3 dozen eggs at $0.35 each, what did I spend?",
+   "sure": 0.9971,
+   "weakest": 0.9348,
+   "right": true
+  },
+  {
+   "text": "what's 15% of 80 and 20% of 60?",
+   "sure": 1.0,
+   "weakest": 0.9998,
+   "right": true
+  },
+  {
+   "text": "Volume of a 3ft x 4ft x 5ft box, and how many cubic yards is that?",
+   "sure": 0.9999,
+   "weakest": 0.9998,
+   "right": true
+  },
+  {
+   "text": "at 65 mph how long will a 340 mile drive take",
+   "sure": 0.9992,
+   "weakest": 0.9865,
+   "right": false
+  },
+  {
+   "text": "90000-1",
+   "sure": 0.979,
+   "weakest": 0.8266,
+   "right": false
+  },
+  {
+   "text": "(12 + 8) / 5",
+   "sure": 0.9999,
+   "weakest": 0.9998,
+   "right": true
+  },
+  {
+   "text": "$120 sneakers are 30% off, what do they cost now",
+   "sure": 0.9997,
+   "weakest": 0.9964,
+   "right": true
+  },
+  {
+   "text": "what is 7.25% tax on a $1,299 laptop",
+   "sure": 0.9981,
+   "weakest": 0.955,
+   "right": true
+  },
+  {
+   "text": "what's the mean score if I got 88, 92 and 79?",
+   "sure": 0.9475,
+   "weakest": 0.695,
+   "right": false
+  },
+  {
+   "text": "what's the square root of 729 again?",
+   "sure": 0.9988,
+   "weakest": 0.9891,
+   "right": true
+  },
+  {
+   "text": "how much is 12 squared",
+   "sure": 0.9999,
+   "weakest": 0.9997,
+   "right": true
+  },
+  {
+   "text": "split a $212.40 check five ways",
+   "sure": 0.9911,
+   "weakest": 0.8224,
+   "right": true
+  },
+  {
+   "text": "I save $40 every week, how much in a year?",
+   "sure": 1.0,
+   "weakest": 0.9999,
+   "right": true
+  },
+  {
+   "text": "my car does 32 mpg, how much gas for a 400 mile trip",
+   "sure": 0.986,
+   "weakest": 0.7824,
+   "right": true
+  },
+  {
+   "text": "convert 70 F to celsius",
+   "sure": 0.9998,
+   "weakest": 0.9976,
+   "right": true
+  },
+  {
+   "text": "half of three dozen is how many?",
+   "sure": 0.9849,
+   "weakest": 0.8727,
+   "right": true
+  },
+  {
+   "text": "cost of 4 concert tickets if they're $27.50 each and there's a $6 fee?",
+   "sure": 0.9992,
+   "weakest": 0.9833,
+   "right": true
+  },
+  {
+   "text": "take 25% of 360 and then subtract 40",
+   "sure": 0.9999,
+   "weakest": 0.9995,
+   "right": true
+  },
+  {
+   "text": "how many seconds in 3 days",
+   "sure": 0.9998,
+   "weakest": 0.9975,
+   "right": true
+  },
+  {
+   "text": "what's 1000000 * 3.5",
+   "sure": 0.9661,
+   "weakest": 0.64,
+   "right": false
+  },
+  {
+   "text": "what's two + two?",
+   "sure": 0.985,
+   "weakest": 0.915,
+   "right": true
+  },
+  {
+   "text": "my garden is 5m by 8m, how much soil to fill it 2m deep",
+   "sure": 0.9993,
+   "weakest": 0.9772,
+   "right": false
+  },
+  {
+   "text": "we have 2 kids and 3 dogs",
+   "sure": 0.9938,
+   "weakest": 0.9938,
+   "right": true
+  },
+  {
+   "text": "my flight is at 7:45 tomorrow",
+   "sure": 0.9961,
+   "weakest": 0.9961,
+   "right": true
+  },
+  {
+   "text": "call me at 555-1234",
+   "sure": 0.9996,
+   "weakest": 0.9983,
+   "right": false
+  },
+  {
+   "text": "lol ok",
+   "sure": 0.9987,
+   "weakest": 0.9987,
+   "right": true
+  },
+  {
+   "text": "I was born in 1990",
+   "sure": 0.9992,
+   "weakest": 0.9992,
+   "right": true
+  },
+  {
+   "text": "remember my gate code is 4417",
+   "sure": 1.0,
+   "weakest": 1.0,
+   "right": true
+  },
+  {
+   "text": "what's the weather in Denver tomorrow",
+   "sure": 0.9194,
+   "weakest": 0.5296,
+   "right": false
+  },
+  {
+   "text": "final was 21-17, what a game",
+   "sure": 0.9189,
+   "weakest": 0.9189,
+   "right": true
+  },
+  {
+   "text": "text me at 555-867-5309",
+   "sure": 0.9993,
+   "weakest": 0.9993,
+   "right": true
+  }
+ ],
+ "floor": 0.99
+}

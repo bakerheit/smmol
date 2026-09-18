@@ -1,0 +1,25 @@
+{
+  "dataset": "roneneldan/TinyStories",
+  "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+  "license": "CDLA-Sharing-1.0",
+  "paper": "https://arxiv.org/abs/2305.07759",
+  "sources": {
+    "train": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStories-train.txt",
+    "validation": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStories-valid.txt"
+  },
+  "splits": {
+    "train": {
+      "bytes": 132586165,
+      "sha256": "53550bbb1d6627e807af3878be92965b001c19e6730b9ce51fff3a9e9a512dab"
+    },
+    "val": {
+      "bytes": 4045672,
+      "sha256": "70a26df432423b16fd2aecf38773b0c03314e65871c7f0a15c5e7e993c1b143d"
+    },
+    "test": {
+      "bytes": 4207151,
+      "sha256": "48dc0f3de65c88b65af4f371222de7d5eb9dff32262f211708529c45101be7b2"
+    }
+  },
+  "note": "Validation and test are disjoint story halves of the upstream validation split."
+}

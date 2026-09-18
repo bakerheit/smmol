@@ -1,0 +1,8 @@
+#!/bin/sh
+# One shell-pipe stage of the paratroop harness. The first word is a function or a pipe;
+# anything else is the message, and text piped in is added after it.
+#   ./pt lookup "tallest building in Chicago" | ./pt respond "say it in one sentence"
+#   ./pt "attention | context" "I have a meeting this Friday"
+spec="$1"
+shift
+exec python3 "$(dirname "$0")/harness.py" --pipe "$spec" "$@"

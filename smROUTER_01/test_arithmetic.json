@@ -1,0 +1,19 @@
+[
+ {"prev": "", "text": "2+2", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "2+3", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "12*7", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "100 - 37 =", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "48213+9977", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "3.5 x 4", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "(12 + 8) / 5", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "1850/3?", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "9,999 + 1", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "7 * 6 = ?", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "whats 15*15", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "Reply directly to the message", "text": "2+3", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "It comes to $616.67.", "text": "616.67 * 3", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "Here's a short poem about autumn.", "text": "25-9", "intent": "question", "tool": "calculator", "ask_first": false},
+ {"prev": "", "text": "ok thanks", "intent": "small_talk", "tool": "none", "ask_first": false},
+ {"prev": "", "text": "my flight is at 7:45 tomorrow", "intent": "statement", "tool": "none", "ask_first": false},
+ {"prev": "", "text": "we have 2 kids and 3 dogs", "intent": "statement", "tool": "none", "ask_first": false}
+]

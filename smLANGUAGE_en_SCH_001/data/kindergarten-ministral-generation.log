@@ -1,0 +1,43 @@
+Kindergarten: 0/200 accepted
+attempt 1: asked 23, received 23, kept 22 -> 22/200
+attempt 2: asked 23, received 23, kept 10 -> 32/200
+attempt 3: asked 23, received 23, kept 15 -> 47/200
+attempt 4: asked 23, received 23, kept 20 -> 67/200
+attempt 5: asked 23, received 23, kept 20 -> 87/200
+attempt 6: asked 23, received 23, kept 16 -> 103/200
+attempt 7: asked 23, received 23, kept 18 -> 121/200
+attempt 8: asked 23, received 23, kept 17 -> 138/200
+attempt 9: asked 23, received 23, kept 16 -> 154/200
+attempt 10: asked 23, received 23, kept 16 -> 170/200
+attempt 11: asked 23, received 23, kept 9 -> 179/200
+attempt 12: asked 23, received 23, kept 20 -> 199/200
+attempt 13: asked 4, received 4, kept 1 -> 200/200
+rejected: {'sentence does not contain the target word': 44, 'duplicate word': 33}
+complete: smLANGUAGE_en_SCH_001/data/levels/kindergarten.jsonl
+Kindergarten: 113/200 accepted
+attempt 1: asked 23, received 23, kept 20 -> 133/200
+attempt 2: asked 23, received 23, kept 8 -> 141/200
+attempt 3: asked 23, received 23, kept 17 -> 158/200
+attempt 4: asked 23, received 23, kept 12 -> 170/200
+attempt 5: asked 23, received 23, kept 18 -> 188/200
+attempt 6: asked 15, received 15, kept 12 -> 200/200
+rejected: {'duplicate word': 26, 'sentence does not contain the target word': 16, 'target word must be one lowercase word': 1}
+complete: smLANGUAGE_en_SCH_001/data/levels/kindergarten.jsonl
+Kindergarten: 168/200 accepted
+attempt 1: asked 23, received 23, kept 16 -> 184/200
+attempt 2: asked 19, received 19, kept 3 -> 187/200
+attempt 3: asked 16, received 16, kept 0 -> 187/200
+attempt 4: asked 16, received 16, kept 11 -> 198/200
+attempt 5: asked 5, received 5, kept 2 -> 200/200
+rejected: {'sentence does not contain the target word': 14, 'duplicate word': 31}
+complete: smLANGUAGE_en_SCH_001/data/levels/kindergarten.jsonl
+Kindergarten: 188/200 accepted
+attempt 1: asked 15, received 15, kept 2 -> 190/200
+attempt 2: asked 13, received 13, kept 4 -> 194/200
+attempt 3: asked 9, received 9, kept 2 -> 196/200
+attempt 4: asked 7, received 7, kept 0 -> 196/200
+attempt 5: asked 7, received 7, kept 1 -> 197/200
+attempt 6: asked 6, received 6, kept 0 -> 197/200
+attempt 7: asked 6, received 6, kept 3 -> 200/200
+rejected: {'duplicate word': 40, 'sentence does not contain the target word': 10}
+complete: smLANGUAGE_en_SCH_001/data/levels/kindergarten.jsonl

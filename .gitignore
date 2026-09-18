@@ -1,0 +1,96 @@
+# SMMOL — what stays out of the repo.
+#
+# Three rules:
+#   1. Nothing personal. The harness is software Andrew actually uses; its run logs and
+#      conversations are real usage, not test data.
+#   2. No weights or corpora. Two checkpoints exceed GitHub's 100 MB hard limit and git-lfs
+#      is not in play. Every README says how to retrain from scratch.
+#   3. Nothing a rerun regenerates.
+
+# ---- Trained weights ----------------------------------------------------------------
+# ~1.2 GB across the projects. Retrain with each project's documented command.
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.onnx
+*.gguf
+*.bin
+
+# ---- Corpora and derived splits -----------------------------------------------------
+# Targeted by name, not by a blanket data/raw/ rule: smSOFTWARE_ENGINEERING_001/data/raw/
+# holds a provenance manifest with pinned commits and upstream license files, which is
+# exactly the kind of thing a public repo should carry. Fetch scripts stay tracked too.
+#
+# TinyStories is not ours to redistribute; Tiny Shakespeare is small but still a download.
+smLANGUAGE_EN_001/data/raw/
+smLANGUAGE_EN_001/data/train.txt
+smLANGUAGE_EN_001/data/val.txt
+smLANGUAGE_EN_001/data/test.txt
+smLLM_01/data/input.txt
+
+# 483 KB of verbatim source from 75 other people's repositories. Permissively licensed
+# (MIT/Apache-2.0/BSD-3-Clause) and properly attributed, so redistributing it would be
+# legal — but smSOFTWARE_ENGINEERING_001/README.md says "review the manifest and original
+# repositories before publishing a corpus or weights", and not shipping someone else's
+# code under our own repo's licence is the cleaner call. github_corpus.py rebuilds it
+# byte-for-byte from the pinned commits and blob SHAs in the manifest, which IS tracked,
+# along with every upstream licence text.
+smSOFTWARE_ENGINEERING_001/data/raw/records.jsonl
+
+# ---- Live harness state -------------------------------------------------------------
+# Real conversations, real memory, real run transcripts. Every one is read through
+# `read_json(path, default)`, and `module_on()` falls back to each module's own `enabled`
+# flag in harness.json — which IS tracked. So a fresh clone starts with the intended
+# defaults and writes its own state on first run. Nothing here needs a committed example.
+paratroop_harness_*/conversations/
+paratroop_harness_*/memory/
+paratroop_harness_*/runs/
+paratroop_harness_*/scores.json
+paratroop_harness_*/settings.json
+paratroop_harness_*/switches.json
+paratroop_harness_*/choices.json
+
+# ---- Training output ----------------------------------------------------------------
+# Results and logs ARE the experimental record and are deliberately tracked — the research
+# log cites them. Only scratch and intermediate artifacts are ignored.
+**/out/**/tmp/
+**/out/**/scratch/
+**/checkpoints/**/optimizer.pt
+
+# ---- Python -------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Editors and OS -----------------------------------------------------------------
+.obsidian/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# ---- Local secrets ------------------------------------------------------------------
+# Nothing here today. The line exists so it stays that way.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netrc

@@ -1,0 +1,33 @@
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.515s
+
+OK
+generated 300000 messages in 4s; dropped 0 that matched a hand-written test message word for word
+smMATH_LANGUAGE_001: 4.86M parameters on mps, 6000 steps of 64 messages, 40 hand-written test messages
+step  1000 |  3.8 min | loss 0.8222 | generated: exact 0.62 | hand-written: every 0.45 final 0.47 found 1.00 quiet 0.44
+step  2000 |  8.4 min | loss 0.0783 | generated: exact 0.86 | hand-written: every 0.62 final 0.65 found 0.97 quiet 0.89
+step  3000 | 12.2 min | loss 0.0337 | generated: exact 0.91 | hand-written: every 0.70 final 0.72 found 1.00 quiet 0.56
+step  4000 | 16.2 min | loss 0.0160 | generated: exact 0.96 | hand-written: every 0.65 final 0.65 found 1.00 quiet 0.56
+step  5000 | 20.6 min | loss 0.0067 | generated: exact 0.98 | hand-written: every 0.78 final 0.80 found 1.00 quiet 0.56
+step  6000 | 26.3 min | loss 0.0030 | generated: exact 0.99 | hand-written: every 0.78 final 0.80 found 1.00 quiet 0.78
+
+hand-written test set (40 messages: 31 with math, 9 without):
+| reader | every problem right | final answer right | found the math | quiet when there's none |
+|---|---|---|---|---|
+| smMATH_LANGUAGE_001 | 78% | 80% | 100% | 78% |
+| harness regex stopgap (no model) | 30% | 32% | 29% | 67% |
+| Ministral 8B, prompted | 82% | 95% | 100% | 89% |
+
+generated held-out: whole target exactly right 99%   |   29 ms per message on the CPU
+
+smMATH_LANGUAGE_001 mistakes on the hand-written set:
+  If rent is $1,850 and we're 3 roommates, how much does each  want ['1850/3'] got ['1850/3', 'p1/3']
+  Can you add up 129, 88 and 406 for me                        want ['129+88+406'] got ['129+88', '406-406']
+  at 65 mph how long will a 340 mile drive take                want ['340/65'] got ['65*340']
+  90000-1                                                      want ['90000-1'] got ['9000-1']
+  what's the mean score if I got 88, 92 and 79?                want ['(88+92+79)/3'] got ['88/892', '79+79']
+  what's 1000000 * 3.5                                         want ['1000000*3.5'] got ['100000*3.5']
+  my garden is 5m by 8m, how much soil to fill it 2m deep      want ['5*8*2'] got ['5*8', 'p1*2']
+  call me at 555-1234                                          want [] got ['555-1234']
+  what's the weather in Denver tomorrow                        want [] got ['10*10']

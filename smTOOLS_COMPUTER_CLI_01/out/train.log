@@ -1,0 +1,50 @@
+........
+----------------------------------------------------------------------
+Ran 8 tests in 2.836s
+
+OK
+made 200000 requests in 5s; dropped 1266 that matched a hand-written one
+smTOOLS_COMPUTER_CLI_01: 4.89M parameters on mps, 6000 steps of 64 requests, 79 tasks across 5 platforms
+step  1000 | 16.4 min | loss 0.9452 | generated exact 0.55 | hand-written: exact 0.06 program 0.38 risk 0.70 quiet 1.00
+step  2000 | 38.9 min | loss 0.0524 | generated exact 0.78 | hand-written: exact 0.21 program 0.51 risk 0.72 quiet 1.00
+step  3000 | 59.0 min | loss 0.0185 | generated exact 0.94 | hand-written: exact 0.32 program 0.55 risk 0.72 quiet 1.00
+step  4000 | 82.1 min | loss 0.0071 | generated exact 0.96 | hand-written: exact 0.43 program 0.62 risk 0.68 quiet 1.00
+step  5000 | 108.6 min | loss 0.0026 | generated exact 0.99 | hand-written: exact 0.53 program 0.64 risk 0.77 quiet 1.00
+step  6000 | 145.6 min | loss 0.0010 | generated exact 0.99 | hand-written: exact 0.47 program 0.64 risk 0.81 quiet 1.00
+
+hand-written test set (53 requests: 47 with a command, 6 without):
+| model | exact command | right program | right risk | quiet when there's nothing to run |
+|---|---|---|---|---|
+| smTOOLS_COMPUTER_CLI_01 | 47% | 64% | 81% | 100% |
+| catalog lookup, no model | 40% | 60% | 0% | 33% |
+| Ministral 8B, prompted | 15% | 79% | 77% | 50% |
+
+by platform (exact): ubuntu 25%, fedora 38%, arch 43%, macos 75%, windows 50%
+generated held-out exact 99%   |   47 ms per request on the CPU
+
+mistakes:
+  ubuntu   something's already on port 3000, what is it   want sudo ss -ltnp 'sport = :3000'              got sudo -i 's/old/300/g' src
+  ubuntu   how much room is left on the disk              want df -h                                      got whoami
+  ubuntu   show me the last 50 log lines for sshd         want journalctl -u sshd -n 50 --no-pager        got journalctl -u src -n 5080'
+  ubuntu   which ip is this box on                        want ip -4 addr show                            got xdg-open .
+  ubuntu   make a local copy of https://github.com/user/r want git clone https://github.com/user/repo.git got curl -LO https://github.com/user/repo.git
+  ubuntu   nuke the ./build directory                     want rm -rf ./build                             got grep -rn 'deprecated' ./build
+  ubuntu   hunt down every *.log file under /var/log      want find /var/log -name '*.log'                got sed -i 's/old/*.log' /varewolog
+  ubuntu   my machine is crawling, what's chewing the cpu want ps aux --sort=-%cpu | head -10             got cat /etc/os-release
+  ubuntu   pull in the newest package lists               want sudo apt update                            got sudo apt upgrade -y
+  fedora   put ripgrep on here                            want sudo dnf install -y ripgrep                got sudo dnf remove -y ripgrep
+  fedora   give me the kernel build                       want uname -a                                   got sudo dnf remove -y htop
+  fedora   how long since the last reboot                 want uptime                                     got sudo systemctl enable bluetooth
+  fedora   unpack notes.txt.tar.gz here                   want tar -xzf notes.txt.tar.gz                  got tar -xzf notes.txt
+  fedora   drop the htop package                          want sudo dnf remove -y htop                    got sudo dnf install -y htop
+  arch     add jq                                         want sudo pacman -S --noconfirm jq              got (nothing)
+  arch     what release is this                           want cat /etc/os-release                        got whoami
+  arch     is vim anywhere on this system                 want command -v vim                             got curl -s https://ifconfig.me
+  arch     how much ram is spare                          want free -h                                    got whoami
+  macos    brew me ffmpeg                                 want brew install ffmpeg                        got brew uninstall ffmpeg
+  macos    what's the box called                          want hostname                                   got command -v git
+  macos    trash the file /tmp/session.log                want rm /tmp/session.log                        got cat /tmp/session.log
+  windows  list what's in this folder including hidden on want Get-ChildItem -Force                       got Get-ChildItem -Directory | ForEach-Object { [PSCustomObject]
+  windows  which processes are eating memory              want Get-Process | Sort-Object WorkingSet -Desc got Get-Process | Sort-Object CPU -Descending | Select-Object -F
+  windows  stop the nginx process                         want Stop-Process -Name nginx                   got Stop-Service nginx
+  windows  unpack .\dist.zip into this folder             want Expand-Archive -Path .\dist.zip -Destinati got Copy-Item -Recurse .\dist C:\Users\sam\Documents

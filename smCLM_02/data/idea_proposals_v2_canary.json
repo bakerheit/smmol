@@ -1,0 +1,310 @@
+{
+  "what": "Open-list idea proposals from the teacher, tallied. Candidates, not an inventory.",
+  "human_gate": "A person picks the new ideas from this tally and writes each one's one-line meaning into ideas.json. No script may do it. ideas.json currently holds smCLM_01's 51 approved ideas and nothing else.",
+  "seed": 15001,
+  "batch_size": 20,
+  "vocabulary_words": 2619,
+  "words_tagged": 40,
+  "batches_done": 2,
+  "distinct_ideas": 32,
+  "proposals": [
+    {
+      "idea": "communication",
+      "words": 8,
+      "share_of_tagged": 0.2,
+      "examples": [
+        "accent",
+        "accept",
+        "acceptable",
+        "account",
+        "acknowledge",
+        "advice",
+        "agree",
+        "alarm"
+      ]
+    },
+    {
+      "idea": "emotion",
+      "words": 7,
+      "share_of_tagged": 0.175,
+      "examples": [
+        "abandon",
+        "abandonment",
+        "absolutely",
+        "acceptable",
+        "acknowledge",
+        "adventurous",
+        "affect"
+      ]
+    },
+    {
+      "idea": "time",
+      "words": 6,
+      "share_of_tagged": 0.15,
+      "examples": [
+        "abrupt",
+        "afternoon",
+        "afterward",
+        "age",
+        "ago",
+        "ahead"
+      ]
+    },
+    {
+      "idea": "place",
+      "words": 5,
+      "share_of_tagged": 0.125,
+      "examples": [
+        "access",
+        "accessibility",
+        "accessible",
+        "ahead",
+        "airport"
+      ]
+    },
+    {
+      "idea": "action",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "abandon",
+        "accept",
+        "access",
+        "achieve"
+      ]
+    },
+    {
+      "idea": "health",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "able",
+        "ache",
+        "aid",
+        "alert"
+      ]
+    },
+    {
+      "idea": "learning",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "abstract",
+        "accuracy",
+        "advice",
+        "algebra"
+      ]
+    },
+    {
+      "idea": "work",
+      "words": 4,
+      "share_of_tagged": 0.1,
+      "examples": [
+        "able",
+        "accountability",
+        "accuracy",
+        "achieve"
+      ]
+    },
+    {
+      "idea": "control",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "accountability",
+        "agitator",
+        "aim"
+      ]
+    },
+    {
+      "idea": "danger",
+      "words": 3,
+      "share_of_tagged": 0.075,
+      "examples": [
+        "adventurous",
+        "alarm",
+        "alert"
+      ]
+    },
+    {
+      "idea": "art",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "abstract",
+        "aesthetic"
+      ]
+    },
+    {
+      "idea": "nature",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "air",
+        "airflow"
+      ]
+    },
+    {
+      "idea": "people",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "accessibility",
+        "accessible"
+      ]
+    },
+    {
+      "idea": "sound",
+      "words": 2,
+      "share_of_tagged": 0.05,
+      "examples": [
+        "accent",
+        "alarm"
+      ]
+    },
+    {
+      "idea": "air",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "airflow"
+      ]
+    },
+    {
+      "idea": "body",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "ache"
+      ]
+    },
+    {
+      "idea": "building",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "airport"
+      ]
+    },
+    {
+      "idea": "clothing",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessory"
+      ]
+    },
+    {
+      "idea": "family",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abandonment"
+      ]
+    },
+    {
+      "idea": "food",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "help",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "aid"
+      ]
+    },
+    {
+      "idea": "living",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "age"
+      ]
+    },
+    {
+      "idea": "machine",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "agitator"
+      ]
+    },
+    {
+      "idea": "money",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "account"
+      ]
+    },
+    {
+      "idea": "movement",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "advance"
+      ]
+    },
+    {
+      "idea": "plant",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "acorn"
+      ]
+    },
+    {
+      "idea": "progress",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "advance"
+      ]
+    },
+    {
+      "idea": "sky",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "air"
+      ]
+    },
+    {
+      "idea": "speed",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "abrupt"
+      ]
+    },
+    {
+      "idea": "sport",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "aim"
+      ]
+    },
+    {
+      "idea": "tool",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "accessory"
+      ]
+    },
+    {
+      "idea": "transportation",
+      "words": 1,
+      "share_of_tagged": 0.025,
+      "examples": [
+        "airport"
+      ]
+    }
+  ]
+}

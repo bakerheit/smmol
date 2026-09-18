@@ -1,0 +1,79 @@
+{
+ "when": "2026-09-15 17:13",
+ "model": "ministral-8b",
+ "score": {
+  "every": 0.825,
+  "final": 0.95,
+  "found": 1.0,
+  "quiet": 0.889
+ },
+ "median_seconds": 3.13,
+ "mistakes": [
+  {
+   "text": "26.2 miles, what's that in kilometers?",
+   "want": [
+    "26.2*1.609344"
+   ],
+   "got": [
+    "26.2 * 1.60934"
+   ]
+  },
+  {
+   "text": "I bought 3 dozen eggs at $0.35 each, what did I spend?",
+   "want": [
+    "3*12*0.35"
+   ],
+   "got": [
+    "3*12",
+    "p1*0.35"
+   ]
+  },
+  {
+   "text": "$120 sneakers are 30% off, what do they cost now",
+   "want": [
+    "120*(1-30/100)"
+   ],
+   "got": [
+    "120*30/100",
+    "120-p1"
+   ]
+  },
+  {
+   "text": "convert 70 F to celsius",
+   "want": [
+    "(70-32)*5/9"
+   ],
+   "got": [
+    "70 - 32",
+    "p1 * 5/9"
+   ]
+  },
+  {
+   "text": "half of three dozen is how many?",
+   "want": [
+    "3*12/2"
+   ],
+   "got": [
+    "3*12",
+    "p1/2"
+   ]
+  },
+  {
+   "text": "cost of 4 concert tickets if they're $27.50 each and there's a $6 fee?",
+   "want": [
+    "4*27.50+6"
+   ],
+   "got": [
+    "4*27.50",
+    "p1+6"
+   ]
+  },
+  {
+   "text": "final was 21-17, what a game",
+   "want": [],
+   "got": [
+    "21 - 17"
+   ]
+  }
+ ]
+}

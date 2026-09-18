@@ -1,0 +1,13 @@
+step=1  wall_s=1.193  bytes_seen=16384  bytes_per_s=13733.5  train_nll=5.55887  select_acc=0.008  select_nll=5.59299
+step=711  wall_s=121.333  bytes_seen=11649024  bytes_per_s=96008.5  train_nll=2.85523  select_acc=0.022  select_nll=3.52965
+step=1469  wall_s=241.393  bytes_seen=24068096  bytes_per_s=99705.0  train_nll=2.6733  select_acc=0.024  select_nll=3.61939
+step=2257  wall_s=361.535  bytes_seen=36978688  bytes_per_s=102282.5  train_nll=2.66049  select_acc=0.088  select_nll=3.62758
+step=3044  wall_s=481.658  bytes_seen=49872896  bytes_per_s=103544.2  train_nll=2.65346  select_acc=0.086  select_nll=3.33952
+step=3846  wall_s=601.765  bytes_seen=63012864  bytes_per_s=104713.4  train_nll=2.64829  select_acc=0.084  select_nll=3.24931
+step=4649  wall_s=721.808  bytes_seen=76169216  bytes_per_s=105525.6  train_nll=2.64409  select_acc=0.084  select_nll=3.24322
+step=5452  wall_s=841.914  bytes_seen=89325568  bytes_per_s=106098.2  train_nll=2.64464  select_acc=0.084  select_nll=3.25093
+step=6251  wall_s=962.046  bytes_seen=102416384  bytes_per_s=106456.8  train_nll=2.64192  select_acc=0.094  select_nll=3.26635
+step=7051  wall_s=1082.175  bytes_seen=115523584  bytes_per_s=106751.3  train_nll=2.64189  select_acc=0.092  select_nll=3.30283
+step=7851  wall_s=1202.288  bytes_seen=128630784  bytes_per_s=106988.4  train_nll=2.63909  select_acc=0.08  select_nll=3.34057
+step=8650  wall_s=1322.418  bytes_seen=141721600  bytes_per_s=107168.5  train_nll=2.6372  select_acc=0.078  select_nll=3.32709
+step=9439  wall_s=1442.515  bytes_seen=154648576  bytes_per_s=107207.6  train_nll=2.63846  select_acc=0.078  select_nll=3.36423

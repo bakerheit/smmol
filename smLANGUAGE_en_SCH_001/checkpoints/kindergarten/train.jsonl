@@ -1,0 +1,15 @@
+{"stage": "kindergarten", "step": 1, "train_loss": 5.508532, "validation_loss": 5.453454, "validation_bits_per_byte": 7.867671, "learning_rate": 9.999999999999999e-06, "elapsed_seconds": 0.736}
+{"stage": "kindergarten", "step": 5, "train_loss": 5.131579, "validation_loss": 4.95036, "validation_bits_per_byte": 7.14186, "learning_rate": 4.9999999999999996e-05, "elapsed_seconds": 1.112}
+{"stage": "kindergarten", "step": 10, "train_loss": 4.62898, "validation_loss": 4.555358, "validation_bits_per_byte": 6.571993, "learning_rate": 9.999999999999999e-05, "elapsed_seconds": 1.525}
+{"stage": "kindergarten", "step": 100, "train_loss": 1.771049, "validation_loss": 1.764647, "validation_bits_per_byte": 2.545847, "learning_rate": 0.0005984421166323611, "elapsed_seconds": 4.982}
+{"stage": "kindergarten", "step": 200, "train_loss": 1.136962, "validation_loss": 1.224925, "validation_bits_per_byte": 1.767193, "learning_rate": 0.000580432445204088, "elapsed_seconds": 10.081}
+{"stage": "kindergarten", "step": 300, "train_loss": 0.982166, "validation_loss": 1.126299, "validation_bits_per_byte": 1.624905, "learning_rate": 0.0005435241398858262, "elapsed_seconds": 15.206}
+{"stage": "kindergarten", "step": 400, "train_loss": 0.950912, "validation_loss": 1.110568, "validation_bits_per_byte": 1.602212, "learning_rate": 0.0004905024490072854, "elapsed_seconds": 20.329}
+{"stage": "kindergarten", "step": 500, "train_loss": 0.819358, "validation_loss": 1.084022, "validation_bits_per_byte": 1.563913, "learning_rate": 0.00042536860141612965, "elapsed_seconds": 25.479}
+{"stage": "kindergarten", "step": 600, "train_loss": 0.721634, "validation_loss": 1.085873, "validation_bits_per_byte": 1.566583, "learning_rate": 0.00035303785774669263, "elapsed_seconds": 30.619}
+{"stage": "kindergarten", "step": 700, "train_loss": 0.617336, "validation_loss": 1.106131, "validation_bits_per_byte": 1.59581, "learning_rate": 0.00027896858519450813, "elapsed_seconds": 35.704}
+{"stage": "kindergarten", "step": 800, "train_loss": 0.580905, "validation_loss": 1.125259, "validation_bits_per_byte": 1.623406, "learning_rate": 0.00020875034729764226, "elapsed_seconds": 40.874}
+{"stage": "kindergarten", "step": 900, "train_loss": 0.522073, "validation_loss": 1.157423, "validation_bits_per_byte": 1.669808, "learning_rate": 0.00014768209311731423, "elapsed_seconds": 45.953}
+{"stage": "kindergarten", "step": 1000, "train_loss": 0.433632, "validation_loss": 1.212446, "validation_bits_per_byte": 1.74919, "learning_rate": 0.00010037227734921726, "elapsed_seconds": 51.076}
+{"stage": "kindergarten", "step": 1100, "train_loss": 0.416154, "validation_loss": 1.235313, "validation_bits_per_byte": 1.78218, "learning_rate": 7.039108790121414e-05, "elapsed_seconds": 56.175}
+{"stage": "kindergarten", "step": 1200, "train_loss": 0.361255, "validation_loss": 1.257502, "validation_bits_per_byte": 1.814192, "learning_rate": 6.00010252352654e-05, "elapsed_seconds": 61.523}

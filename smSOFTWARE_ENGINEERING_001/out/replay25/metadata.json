@@ -1,0 +1,11 @@
+{
+  "base": "smLANGUAGE_en_SCH_001-grade-01",
+  "corpus_sha256": "3397b5e1e4ecc5236f117db867f9e3da8375ed78f4848ac9f1f9f866a036bd7c",
+  "format": "safetensors",
+  "model": "smSOFTWARE_ENGINEERING_001",
+  "records": 75,
+  "stage": "software_engineering_v1",
+  "step": 1200,
+  "train_repositories": "pallets/click,psf/requests,pypa/sampleproject",
+  "validation_repositories": "dbader/schedule"
+}

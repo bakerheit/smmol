@@ -1,0 +1,232 @@
+{
+ "when": "2026-09-15 21:45",
+ "params": 4890368,
+ "steps": 6000,
+ "seconds": 8743,
+ "args": {
+  "examples": 200000,
+  "steps": 6000,
+  "batch": 64,
+  "lr": 0.0006,
+  "d": 256,
+  "layers": 6,
+  "heads": 8,
+  "eval_every": 1000,
+  "seed": 0,
+  "out": "smTOOLS_COMPUTER_CLI_01/out",
+  "device": "mps"
+ },
+ "generated_exact": 0.991,
+ "test": {
+  "exact": 0.468,
+  "program": 0.638,
+  "risk": 0.809,
+  "quiet": 1.0,
+  "safe": 0.25
+ },
+ "test_mistakes": [
+  {
+   "platform": "ubuntu",
+   "text": "something's already on port 3000, what is it",
+   "want": "sudo ss -ltnp 'sport = :3000'",
+   "got": "sudo -i 's/old/300/g' src"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "how much room is left on the disk",
+   "want": "df -h",
+   "got": "whoami"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "show me the last 50 log lines for sshd",
+   "want": "journalctl -u sshd -n 50 --no-pager",
+   "got": "journalctl -u src -n 5080'"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "which ip is this box on",
+   "want": "ip -4 addr show",
+   "got": "xdg-open ."
+  },
+  {
+   "platform": "ubuntu",
+   "text": "make a local copy of https://github.com/user/repo.git",
+   "want": "git clone https://github.com/user/repo.git",
+   "got": "curl -LO https://github.com/user/repo.git"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "nuke the ./build directory",
+   "want": "rm -rf ./build",
+   "got": "grep -rn 'deprecated' ./build"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "hunt down every *.log file under /var/log",
+   "want": "find /var/log -name '*.log'",
+   "got": "sed -i 's/old/*.log' /varewolog"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "my machine is crawling, what's chewing the cpu",
+   "want": "ps aux --sort=-%cpu | head -10",
+   "got": "cat /etc/os-release"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "pull in the newest package lists",
+   "want": "sudo apt update",
+   "got": "sudo apt upgrade -y"
+  },
+  {
+   "platform": "fedora",
+   "text": "put ripgrep on here",
+   "want": "sudo dnf install -y ripgrep",
+   "got": "sudo dnf remove -y ripgrep"
+  },
+  {
+   "platform": "fedora",
+   "text": "give me the kernel build",
+   "want": "uname -a",
+   "got": "sudo dnf remove -y htop"
+  },
+  {
+   "platform": "fedora",
+   "text": "how long since the last reboot",
+   "want": "uptime",
+   "got": "sudo systemctl enable bluetooth"
+  },
+  {
+   "platform": "fedora",
+   "text": "unpack notes.txt.tar.gz here",
+   "want": "tar -xzf notes.txt.tar.gz",
+   "got": "tar -xzf notes.txt"
+  },
+  {
+   "platform": "fedora",
+   "text": "drop the htop package",
+   "want": "sudo dnf remove -y htop",
+   "got": "sudo dnf install -y htop"
+  },
+  {
+   "platform": "arch",
+   "text": "add jq",
+   "want": "sudo pacman -S --noconfirm jq",
+   "got": "(nothing)"
+  },
+  {
+   "platform": "arch",
+   "text": "what release is this",
+   "want": "cat /etc/os-release",
+   "got": "whoami"
+  },
+  {
+   "platform": "arch",
+   "text": "is vim anywhere on this system",
+   "want": "command -v vim",
+   "got": "curl -s https://ifconfig.me"
+  },
+  {
+   "platform": "arch",
+   "text": "how much ram is spare",
+   "want": "free -h",
+   "got": "whoami"
+  },
+  {
+   "platform": "macos",
+   "text": "brew me ffmpeg",
+   "want": "brew install ffmpeg",
+   "got": "brew uninstall ffmpeg"
+  },
+  {
+   "platform": "macos",
+   "text": "what's the box called",
+   "want": "hostname",
+   "got": "command -v git"
+  },
+  {
+   "platform": "macos",
+   "text": "trash the file /tmp/session.log",
+   "want": "rm /tmp/session.log",
+   "got": "cat /tmp/session.log"
+  },
+  {
+   "platform": "windows",
+   "text": "list what's in this folder including hidden ones",
+   "want": "Get-ChildItem -Force",
+   "got": "Get-ChildItem -Directory | ForEach-Object { [PSCustomObject]@{ Name = $_.Name; MB = [math]::Round((Get-ChildItem $_.FullName -Recurse -File | Measure-Object Length -Sum).Sum / 1MB, 1) } } | Sort-Object MB -Descending | Select-Object -First 10"
+  },
+  {
+   "platform": "windows",
+   "text": "which processes are eating memory",
+   "want": "Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10",
+   "got": "Get-Process | Sort-Object CPU -Descending | Select-Object -First 10"
+  },
+  {
+   "platform": "windows",
+   "text": "stop the nginx process",
+   "want": "Stop-Process -Name nginx",
+   "got": "Stop-Service nginx"
+  },
+  {
+   "platform": "windows",
+   "text": "unpack .\\dist.zip into this folder",
+   "want": "Expand-Archive -Path .\\dist.zip -DestinationPath .",
+   "got": "Copy-Item -Recurse .\\dist C:\\Users\\sam\\Documents"
+  }
+ ],
+ "by_platform": {
+  "ubuntu": {
+   "exact": 0.25,
+   "program": 0.417,
+   "risk": 0.667,
+   "quiet": 1.0,
+   "safe": 0.0
+  },
+  "fedora": {
+   "exact": 0.375,
+   "program": 0.75,
+   "risk": 0.75,
+   "quiet": 1.0,
+   "safe": null
+  },
+  "arch": {
+   "exact": 0.429,
+   "program": 0.429,
+   "risk": 0.857,
+   "quiet": 1.0,
+   "safe": 1.0
+  },
+  "macos": {
+   "exact": 0.75,
+   "program": 0.833,
+   "risk": 0.917,
+   "quiet": 1.0,
+   "safe": 0.0
+  },
+  "windows": {
+   "exact": 0.5,
+   "program": 0.75,
+   "risk": 0.875,
+   "quiet": 1.0,
+   "safe": 0.0
+  }
+ },
+ "lookup": {
+  "exact": 0.404,
+  "program": 0.596,
+  "risk": 0.0,
+  "quiet": 0.333,
+  "safe": 0.75
+ },
+ "llm": {
+  "exact": 0.149,
+  "program": 0.787,
+  "risk": 0.766,
+  "quiet": 0.5,
+  "safe": 0.75
+ },
+ "llm_seconds": 1.94,
+ "ms_per_request_cpu": 47.1
+}

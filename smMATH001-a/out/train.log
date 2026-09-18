@@ -1,0 +1,55 @@
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.135s
+
+OK
+made 292689 worked solutions in 5s (dropped 7311 that matched a check question); average 129 tokens, longest 452
+smMATH001-a: 4.75M parameters on mps, 10000 steps of about 8192 tokens each
+step   1000 |   3.1 min | loss 1.0340 | add 0.20 decimals 0.04 divide 0.06 harness-like 0.00 mixed 0.00 multiply 0.01 subtract 0.10
+step   2000 |   6.3 min | loss 0.3871 | add 0.84 decimals 0.09 divide 0.08 harness-like 0.00 mixed 0.00 multiply 0.03 subtract 0.22
+step   3000 |   9.4 min | loss 0.2165 | add 0.99 decimals 0.18 divide 0.08 harness-like 0.02 mixed 0.07 multiply 0.09 subtract 0.62
+step   4000 |  12.5 min | loss 0.1282 | add 0.99 decimals 0.23 divide 0.09 harness-like 0.00 mixed 0.12 multiply 0.12 subtract 0.90
+step   5000 |  15.6 min | loss 0.0861 | add 1.00 decimals 0.33 divide 0.16 harness-like 0.14 mixed 0.27 multiply 0.14 subtract 0.96
+step   6000 |  18.9 min | loss 0.0526 | add 0.99 decimals 0.41 divide 0.15 harness-like 0.31 mixed 0.34 multiply 0.28 subtract 0.91
+step   7000 |  22.1 min | loss 0.0278 | add 1.00 decimals 0.65 divide 0.18 harness-like 0.63 mixed 0.68 multiply 0.66 subtract 0.98
+step   8000 |  25.3 min | loss 0.0142 | add 1.00 decimals 0.75 divide 0.26 harness-like 0.80 mixed 0.80 multiply 0.89 subtract 0.99
+step   9000 |  28.6 min | loss 0.0087 | add 1.00 decimals 0.78 divide 0.35 harness-like 0.87 mixed 0.88 multiply 0.97 subtract 0.98
+step  10000 |  31.9 min | loss 0.0061 | add 1.00 decimals 0.79 divide 0.36 harness-like 0.85 mixed 0.88 multiply 0.94 subtract 0.98
+
+worked solutions written exactly right (every step), training sizes:
+| kind | right |
+|---|---|
+| add (300) | 100% |
+| decimals (300) | 82% |
+| divide (300) | 38% |
+| harness-like (300) | 85% |
+| mixed (300) | 84% |
+| multiply (300) | 97% |
+| subtract (300) | 99% |
+
+beyond the training sizes:
+| kind | right |
+|---|---|
+| add, 8-10 digit numbers (150) | 7% |
+| subtract, 8-10 digit numbers (150) | 0% |
+| multiply, 4-digit multiplier (150) | 21% |
+| multiply, 5-6 digit multiplier (150) | 0% |
+| divide, 8-9 digit dividend (150) | 0% |
+| divide, 5-digit divisor (150) | 0% |
+
+greedy writing, spot check (answer right / whole work exact / of):
+  mixed                            14 / 14 / 15
+  decimals                         14 / 14 / 15
+  harness-like                     13 / 13 / 15
+  add                              15 / 15 / 15
+  multiply                         14 / 14 / 15
+  divide                            7 /  7 / 15
+  subtract                         14 / 14 / 15
+  add, 8-10 digit numbers           1 /  1 / 15
+  subtract, 8-10 digit numbers      0 /  0 / 15
+  multiply, 4-digit multiplier      4 /  4 / 15
+  multiply, 5-6 digit multiplier    0 /  0 / 15
+  divide, 8-9 digit dividend        0 /  0 / 15
+  divide, 5-digit divisor           0 /  0 / 15
+
+322234*21323*212231: wrote 1145340042, right is 1458238263363442 (0.3s, 388 characters of work); 0.84 ms per token on the CPU

@@ -1,0 +1,29 @@
+1st grade: 240/300 accepted
+attempt 1: asked 23, received 23, kept 0 -> 240/300
+attempt 2: asked 23, received 23, kept 2 -> 242/300
+attempt 3: asked 23, received 23, kept 6 -> 248/300
+attempt 4: asked 23, received 23, kept 4 -> 252/300
+attempt 5: asked 23, received 23, kept 2 -> 254/300
+attempt 6: asked 23, received 23, kept 3 -> 257/300
+attempt 7: asked 23, received 23, kept 3 -> 260/300
+attempt 8: asked 23, received 23, kept 8 -> 268/300
+attempt 9: asked 23, received 23, kept 5 -> 273/300
+attempt 10: asked 23, received 23, kept 6 -> 279/300
+attempt 11: asked 23, received 23, kept 7 -> 286/300
+attempt 12: asked 17, received 17, kept 1 -> 287/300
+attempt 13: asked 16, received 16, kept 0 -> 287/300
+attempt 14: asked 16, received 16, kept 4 -> 291/300
+attempt 15: asked 12, received 12, kept 0 -> 291/300
+attempt 16: asked 12, received 12, kept 5 -> 296/300
+attempt 17: asked 7, received 7, kept 1 -> 297/300
+attempt 18: asked 6, received 6, kept 0 -> 297/300
+attempt 19: asked 6, received 6, kept 0 -> 297/300
+attempt 20: asked 6, received 6, kept 1 -> 298/300
+attempt 21: asked 5, received 5, kept 0 -> 298/300
+attempt 22: asked 5, received 5, kept 0 -> 298/300
+attempt 23: asked 5, received 5, kept 0 -> 298/300
+attempt 24: asked 5, received 5, kept 1 -> 299/300
+attempt 25: asked 4, received 4, kept 0 -> 299/300
+attempt 26: asked 4, received 4, kept 1 -> 300/300
+rejected: {'duplicate word': 294, 'sentence does not contain the target word': 23}
+complete: smLANGUAGE_en_SCH_001/data/levels/grade_01.jsonl

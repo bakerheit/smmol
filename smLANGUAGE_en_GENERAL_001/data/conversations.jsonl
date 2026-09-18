@@ -1,0 +1,835 @@
+{"id":"school_sentence-0001","category":"school_sentence","user":"Use the word mom in a sentence.","assistant":"My mom gives me a hug."}
+{"id":"school_sentence-0002","category":"school_sentence","user":"Use the word dad in a sentence.","assistant":"My dad reads with me."}
+{"id":"school_sentence-0003","category":"school_sentence","user":"Use the word baby in a sentence.","assistant":"The baby claps both hands."}
+{"id":"school_sentence-0004","category":"school_sentence","user":"Use the word friend in a sentence.","assistant":"My friend shares a toy."}
+{"id":"school_sentence-0005","category":"school_sentence","user":"Use the word cat in a sentence.","assistant":"The cat naps by me."}
+{"id":"school_sentence-0006","category":"school_sentence","user":"Use the word dog in a sentence.","assistant":"The dog wags its tail."}
+{"id":"school_sentence-0007","category":"school_sentence","user":"Use the word bird in a sentence.","assistant":"A bird sings in the tree."}
+{"id":"school_sentence-0008","category":"school_sentence","user":"Use the word fish in a sentence.","assistant":"The fish swims in water."}
+{"id":"school_sentence-0009","category":"school_sentence","user":"Use the word bear in a sentence.","assistant":"The bear walks through grass."}
+{"id":"school_sentence-0010","category":"school_sentence","user":"Use the word duck in a sentence.","assistant":"A duck splashes in the pond."}
+{"id":"school_sentence-0011","category":"school_sentence","user":"Use the word cow in a sentence.","assistant":"The cow eats green grass."}
+{"id":"school_sentence-0012","category":"school_sentence","user":"Use the word pig in a sentence.","assistant":"The pig rolls in mud."}
+{"id":"school_sentence-0013","category":"school_sentence","user":"Use the word frog in a sentence.","assistant":"A frog jumps off a rock."}
+{"id":"school_sentence-0014","category":"school_sentence","user":"Use the word bug in a sentence.","assistant":"The little bug crawls away."}
+{"id":"school_sentence-0015","category":"school_sentence","user":"Use the word eye in a sentence.","assistant":"I close one eye."}
+{"id":"school_sentence-0016","category":"school_sentence","user":"Use the word ear in a sentence.","assistant":"My ear can hear music."}
+{"id":"school_sentence-0017","category":"school_sentence","user":"Use the word nose in a sentence.","assistant":"My nose smells warm bread."}
+{"id":"school_sentence-0018","category":"school_sentence","user":"Use the word mouth in a sentence.","assistant":"I open my mouth wide."}
+{"id":"school_sentence-0019","category":"school_sentence","user":"Use the word hand in a sentence.","assistant":"I wave my hand."}
+{"id":"school_sentence-0020","category":"school_sentence","user":"Use the word foot in a sentence.","assistant":"My foot fits this shoe."}
+{"id":"school_sentence-0021","category":"school_sentence","user":"Use the word ball in a sentence.","assistant":"I roll the blue ball."}
+{"id":"school_sentence-0022","category":"school_sentence","user":"Use the word book in a sentence.","assistant":"We look at a book."}
+{"id":"school_sentence-0023","category":"school_sentence","user":"Use the word cup in a sentence.","assistant":"The red cup holds milk."}
+{"id":"school_sentence-0024","category":"school_sentence","user":"Use the word hat in a sentence.","assistant":"My hat keeps me warm."}
+{"id":"school_sentence-0025","category":"school_sentence","user":"Use the word shoe in a sentence.","assistant":"I tie my shoe."}
+{"id":"school_sentence-0026","category":"school_sentence","user":"Use the word bed in a sentence.","assistant":"I sleep in my bed."}
+{"id":"school_sentence-0027","category":"school_sentence","user":"Use the word chair in a sentence.","assistant":"I sit on the chair."}
+{"id":"school_sentence-0028","category":"school_sentence","user":"Use the word table in a sentence.","assistant":"The plates are on the table."}
+{"id":"school_sentence-0029","category":"school_sentence","user":"Use the word door in a sentence.","assistant":"Please close the door."}
+{"id":"school_sentence-0030","category":"school_sentence","user":"Use the word box in a sentence.","assistant":"The toy is in the box."}
+{"id":"school_sentence-0031","category":"school_sentence","user":"Use the word toy in a sentence.","assistant":"This toy makes a sound."}
+{"id":"school_sentence-0032","category":"school_sentence","user":"Use the word sun in a sentence.","assistant":"The sun shines on us."}
+{"id":"school_sentence-0033","category":"school_sentence","user":"Use the word moon in a sentence.","assistant":"The moon glows at night."}
+{"id":"school_sentence-0034","category":"school_sentence","user":"Use the word star in a sentence.","assistant":"One star twinkles above us."}
+{"id":"school_sentence-0035","category":"school_sentence","user":"Use the word sky in a sentence.","assistant":"The sky looks blue today."}
+{"id":"school_sentence-0036","category":"school_sentence","user":"Use the word tree in a sentence.","assistant":"A bird sits in the tree."}
+{"id":"school_sentence-0037","category":"school_sentence","user":"Use the word flower in a sentence.","assistant":"The flower smells sweet."}
+{"id":"school_sentence-0038","category":"school_sentence","user":"Use the word grass in a sentence.","assistant":"The soft grass feels cool."}
+{"id":"school_sentence-0039","category":"school_sentence","user":"Use the word rain in a sentence.","assistant":"Rain taps on the window."}
+{"id":"school_sentence-0040","category":"school_sentence","user":"Use the word snow in a sentence.","assistant":"The white snow feels cold."}
+{"id":"school_sentence-0041","category":"school_sentence","user":"Use the word water in a sentence.","assistant":"I drink clean water."}
+{"id":"school_sentence-0042","category":"school_sentence","user":"Use the word apple in a sentence.","assistant":"I eat a red apple."}
+{"id":"school_sentence-0043","category":"school_sentence","user":"Use the word banana in a sentence.","assistant":"The banana has a yellow peel."}
+{"id":"school_sentence-0044","category":"school_sentence","user":"Use the word milk in a sentence.","assistant":"I pour milk in my cup."}
+{"id":"school_sentence-0045","category":"school_sentence","user":"Use the word bread in a sentence.","assistant":"We slice the warm bread."}
+{"id":"school_sentence-0046","category":"school_sentence","user":"Use the word egg in a sentence.","assistant":"The egg is round and white."}
+{"id":"school_sentence-0047","category":"school_sentence","user":"Use the word cake in a sentence.","assistant":"We share a small cake."}
+{"id":"school_sentence-0048","category":"school_sentence","user":"Use the word soup in a sentence.","assistant":"The hot soup smells good."}
+{"id":"school_sentence-0049","category":"school_sentence","user":"Use the word juice in a sentence.","assistant":"I drink apple juice."}
+{"id":"school_sentence-0050","category":"school_sentence","user":"Use the word run in a sentence.","assistant":"I can run fast."}
+{"id":"school_sentence-0051","category":"school_sentence","user":"Use the word walk in a sentence.","assistant":"We walk to the park."}
+{"id":"school_sentence-0052","category":"school_sentence","user":"Use the word jump in a sentence.","assistant":"I jump over the line."}
+{"id":"school_sentence-0053","category":"school_sentence","user":"Use the word sit in a sentence.","assistant":"Please sit beside me."}
+{"id":"school_sentence-0054","category":"school_sentence","user":"Use the word stand in a sentence.","assistant":"We stand in a row."}
+{"id":"school_sentence-0055","category":"school_sentence","user":"Use the word eat in a sentence.","assistant":"We eat lunch together."}
+{"id":"school_sentence-0056","category":"school_sentence","user":"Use the word drink in a sentence.","assistant":"I drink when I am thirsty."}
+{"id":"school_sentence-0057","category":"school_sentence","user":"Use the word sleep in a sentence.","assistant":"I sleep when night comes."}
+{"id":"school_sentence-0058","category":"school_sentence","user":"Use the word play in a sentence.","assistant":"We play with the ball."}
+{"id":"school_sentence-0059","category":"school_sentence","user":"Use the word read in a sentence.","assistant":"I read with my teacher."}
+{"id":"school_sentence-0060","category":"school_sentence","user":"Use the word look in a sentence.","assistant":"Look at the bright moon."}
+{"id":"school_sentence-0061","category":"school_sentence","user":"Use the word see in a sentence.","assistant":"I see a little bird."}
+{"id":"school_sentence-0062","category":"school_sentence","user":"Use the word hear in a sentence.","assistant":"I hear the dog bark."}
+{"id":"school_sentence-0063","category":"school_sentence","user":"Use the word talk in a sentence.","assistant":"We talk about our day."}
+{"id":"school_sentence-0064","category":"school_sentence","user":"Use the word help in a sentence.","assistant":"I help my friend stand."}
+{"id":"school_sentence-0065","category":"school_sentence","user":"Use the word wash in a sentence.","assistant":"I wash my hands."}
+{"id":"school_sentence-0066","category":"school_sentence","user":"Use the word big in a sentence.","assistant":"The big bus stops here."}
+{"id":"school_sentence-0067","category":"school_sentence","user":"Use the word small in a sentence.","assistant":"A small bug sits there."}
+{"id":"school_sentence-0068","category":"school_sentence","user":"Use the word red in a sentence.","assistant":"The red car goes fast."}
+{"id":"school_sentence-0069","category":"school_sentence","user":"Use the word blue in a sentence.","assistant":"My cup is blue."}
+{"id":"school_sentence-0070","category":"school_sentence","user":"Use the word green in a sentence.","assistant":"The green frog can jump."}
+{"id":"school_sentence-0071","category":"school_sentence","user":"Use the word hot in a sentence.","assistant":"The soup is hot."}
+{"id":"school_sentence-0072","category":"school_sentence","user":"Use the word cold in a sentence.","assistant":"The snow feels cold."}
+{"id":"school_sentence-0073","category":"school_sentence","user":"Use the word happy in a sentence.","assistant":"I feel happy with my friend."}
+{"id":"school_sentence-0074","category":"school_sentence","user":"Use the word sad in a sentence.","assistant":"The boy feels sad today."}
+{"id":"school_sentence-0075","category":"school_sentence","user":"Use the word soft in a sentence.","assistant":"The soft sock feels nice."}
+{"id":"school_sentence-0076","category":"school_sentence","user":"Use the word hard in a sentence.","assistant":"This rock feels hard."}
+{"id":"school_sentence-0077","category":"school_sentence","user":"Use the word fast in a sentence.","assistant":"The red car is fast."}
+{"id":"school_sentence-0078","category":"school_sentence","user":"Use the word slow in a sentence.","assistant":"The little bug moves slow."}
+{"id":"school_sentence-0079","category":"school_sentence","user":"Use the word one in a sentence.","assistant":"I have one blue cup."}
+{"id":"school_sentence-0080","category":"school_sentence","user":"Use the word two in a sentence.","assistant":"I see two yellow ducks."}
+{"id":"school_sentence-0081","category":"school_sentence","user":"Use the word up in a sentence.","assistant":"The bird flies up."}
+{"id":"school_sentence-0082","category":"school_sentence","user":"Use the word down in a sentence.","assistant":"The ball rolls down."}
+{"id":"school_sentence-0083","category":"school_sentence","user":"Use the word in in a sentence.","assistant":"The apple is in the box."}
+{"id":"school_sentence-0084","category":"school_sentence","user":"Use the word out in a sentence.","assistant":"The cat runs out."}
+{"id":"school_sentence-0085","category":"school_sentence","user":"Use the word on in a sentence.","assistant":"My hat is on."}
+{"id":"school_sentence-0086","category":"school_sentence","user":"Use the word off in a sentence.","assistant":"I take my coat off."}
+{"id":"school_sentence-0087","category":"school_sentence","user":"Use the word yes in a sentence.","assistant":"I say yes with a smile."}
+{"id":"school_sentence-0088","category":"school_sentence","user":"Use the word no in a sentence.","assistant":"I say no when I need to."}
+{"id":"school_sentence-0089","category":"school_sentence","user":"Use the word day in a sentence.","assistant":"We play outside each day."}
+{"id":"school_sentence-0090","category":"school_sentence","user":"Use the word night in a sentence.","assistant":"The moon comes out at night."}
+{"id":"school_sentence-0091","category":"school_sentence","user":"Use the word home in a sentence.","assistant":"We go home after school."}
+{"id":"school_sentence-0092","category":"school_sentence","user":"Use the word school in a sentence.","assistant":"I learn and play at school."}
+{"id":"school_sentence-0093","category":"school_sentence","user":"Use the word boy in a sentence.","assistant":"The boy kicks the ball."}
+{"id":"school_sentence-0094","category":"school_sentence","user":"Use the word girl in a sentence.","assistant":"The girl reads a book."}
+{"id":"school_sentence-0095","category":"school_sentence","user":"Use the word car in a sentence.","assistant":"The blue car stops."}
+{"id":"school_sentence-0096","category":"school_sentence","user":"Use the word bus in a sentence.","assistant":"The big bus has many seats."}
+{"id":"school_sentence-0097","category":"school_sentence","user":"Use the word bike in a sentence.","assistant":"I ride my bike slowly."}
+{"id":"school_sentence-0098","category":"school_sentence","user":"Use the word house in a sentence.","assistant":"My house has a red door."}
+{"id":"school_sentence-0099","category":"school_sentence","user":"Use the word sock in a sentence.","assistant":"I put on one sock."}
+{"id":"school_sentence-0100","category":"school_sentence","user":"Use the word coat in a sentence.","assistant":"My coat keeps me warm."}
+{"id":"school_sentence-0101","category":"school_sentence","user":"Use the word basket in a sentence.","assistant":"The basket holds three strawberries."}
+{"id":"school_sentence-0102","category":"school_sentence","user":"Use the word bell in a sentence.","assistant":"Ring the bell to call everyone inside."}
+{"id":"school_sentence-0103","category":"school_sentence","user":"Use the word blanket in a sentence.","assistant":"Wrap yourself in a warm blanket."}
+{"id":"school_sentence-0104","category":"school_sentence","user":"Use the word bubble in a sentence.","assistant":"The bubble floats in the air."}
+{"id":"school_sentence-0105","category":"school_sentence","user":"Use the word butter in a sentence.","assistant":"Butter is yellow and spreads on bread."}
+{"id":"school_sentence-0106","category":"school_sentence","user":"Use the word crack in a sentence.","assistant":"The egg makes a crack when it breaks."}
+{"id":"school_sentence-0107","category":"school_sentence","user":"Use the word cream in a sentence.","assistant":"Sweet cream is on top of the cake."}
+{"id":"school_sentence-0108","category":"school_sentence","user":"Use the word dinner in a sentence.","assistant":"Dinner is on the table tonight."}
+{"id":"school_sentence-0109","category":"school_sentence","user":"Use the word dress in a sentence.","assistant":"The dress is red and blue."}
+{"id":"school_sentence-0110","category":"school_sentence","user":"Use the word dust in a sentence.","assistant":"Wipe the dust off the table."}
+{"id":"school_sentence-0111","category":"school_sentence","user":"Use the word easy in a sentence.","assistant":"Peeling bananas feels easy and fun."}
+{"id":"school_sentence-0112","category":"school_sentence","user":"Use the word grow in a sentence.","assistant":"The tiny seed will grow into a big plant soon."}
+{"id":"school_sentence-0113","category":"school_sentence","user":"Use the word hold in a sentence.","assistant":"Can you hold the door for me?"}
+{"id":"school_sentence-0114","category":"school_sentence","user":"Use the word hug in a sentence.","assistant":"The cat gave the girl a warm hug."}
+{"id":"school_sentence-0115","category":"school_sentence","user":"Use the word hush in a sentence.","assistant":"We whisper hush when the baby sleeps."}
+{"id":"school_sentence-0116","category":"school_sentence","user":"Use the word hurt in a sentence.","assistant":"The sharp rock hurt his foot."}
+{"id":"school_sentence-0117","category":"school_sentence","user":"Use the word hopscotch in a sentence.","assistant":"They played hopscotch on the sidewalk chalk."}
+{"id":"school_sentence-0118","category":"school_sentence","user":"Use the word honey in a sentence.","assistant":"The bee made honey for the little bees."}
+{"id":"school_sentence-0119","category":"school_sentence","user":"Use the word ice in a sentence.","assistant":"The ice feels cold and slippery."}
+{"id":"school_sentence-0120","category":"school_sentence","user":"Use the word island in a sentence.","assistant":"A boat sailed to a small island in the lake."}
+{"id":"school_sentence-0121","category":"school_sentence","user":"Use the word leaf in a sentence.","assistant":"A bright leaf fell from the tree."}
+{"id":"school_sentence-0122","category":"school_sentence","user":"Use the word light in a sentence.","assistant":"The light from the lamp shone on the wall."}
+{"id":"school_sentence-0123","category":"school_sentence","user":"Use the word lily in a sentence.","assistant":"A pretty lily bloomed in the garden."}
+{"id":"school_sentence-0124","category":"school_sentence","user":"Use the word ladder in a sentence.","assistant":"A ladder helps us reach high shelves."}
+{"id":"school_sentence-0125","category":"school_sentence","user":"Use the word lake in a sentence.","assistant":"Ducks swim in the calm lake."}
+{"id":"school_sentence-0126","category":"school_sentence","user":"Use the word medicine in a sentence.","assistant":"The nurse gives medicine when you feel sick."}
+{"id":"school_sentence-0127","category":"school_sentence","user":"Use the word mask in a sentence.","assistant":"Wear a mask to stay safe and healthy."}
+{"id":"school_sentence-0128","category":"school_sentence","user":"Use the word mealtime in a sentence.","assistant":"We eat our lunch at mealtime every day."}
+{"id":"school_sentence-0129","category":"school_sentence","user":"Use the word mist in a sentence.","assistant":"The morning mist makes the garden look soft."}
+{"id":"school_sentence-0130","category":"school_sentence","user":"Use the word mirror in a sentence.","assistant":"Check your face in the mirror every morning."}
+{"id":"school_sentence-0131","category":"school_sentence","user":"Use the word medal in a sentence.","assistant":"You get a medal for doing something great."}
+{"id":"school_sentence-0132","category":"school_sentence","user":"Use the word mop in a sentence.","assistant":"Dad uses a mop to clean the floor."}
+{"id":"school_sentence-0133","category":"school_sentence","user":"Use the word milkshake in a sentence.","assistant":"I love drinking a sweet milkshake with a straw."}
+{"id":"school_sentence-0134","category":"school_sentence","user":"Use the word monkey in a sentence.","assistant":"The monkey swings on a vine in the jungle."}
+{"id":"school_sentence-0135","category":"school_sentence","user":"Use the word mug in a sentence.","assistant":"I drink hot chocolate from my favorite mug."}
+{"id":"school_sentence-0136","category":"school_sentence","user":"Use the word pillow in a sentence.","assistant":"I snuggle into my fluffy pillow at bedtime."}
+{"id":"school_sentence-0137","category":"school_sentence","user":"Use the word quiet in a sentence.","assistant":"Please be quiet during story time."}
+{"id":"school_sentence-0138","category":"school_sentence","user":"Use the word raincoat in a sentence.","assistant":"I wear my raincoat when it rains outside."}
+{"id":"school_sentence-0139","category":"school_sentence","user":"Use the word rainbow in a sentence.","assistant":"Look at the colorful rainbow after the rain."}
+{"id":"school_sentence-0140","category":"school_sentence","user":"Use the word roar in a sentence.","assistant":"The big lion makes a loud roar."}
+{"id":"school_sentence-0141","category":"school_sentence","user":"Use the word ride in a sentence.","assistant":"I enjoy my bike ride in the park."}
+{"id":"school_sentence-0142","category":"school_sentence","user":"Use the word rock in a sentence.","assistant":"I find a smooth rock by the stream."}
+{"id":"school_sentence-0143","category":"school_sentence","user":"Use the word ruler in a sentence.","assistant":"I use the ruler to measure my crayon."}
+{"id":"school_sentence-0144","category":"school_sentence","user":"Use the word shovel in a sentence.","assistant":"I dig with my shovel in the sandbox."}
+{"id":"school_sentence-0145","category":"school_sentence","user":"Use the word shout in a sentence.","assistant":"I shout happily when I see my friend."}
+{"id":"school_sentence-0146","category":"school_sentence","user":"Use the word skip in a sentence.","assistant":"I skip over the puddles after the rain."}
+{"id":"school_sentence-0147","category":"school_sentence","user":"Use the word slide in a sentence.","assistant":"I slide down the red slide at the park."}
+{"id":"school_sentence-0148","category":"school_sentence","user":"Use the word swing in a sentence.","assistant":"I swing high on the swing at recess."}
+{"id":"school_sentence-0149","category":"school_sentence","user":"Use the word team in a sentence.","assistant":"We play together on our team at school."}
+{"id":"school_sentence-0150","category":"school_sentence","user":"Use the word taste in a sentence.","assistant":"I taste the sweet cookie with my mouth."}
+{"id":"school_sentence-0151","category":"school_sentence","user":"Use the word tug in a sentence.","assistant":"I tug hard on the rope with my friend."}
+{"id":"school_sentence-0152","category":"school_sentence","user":"Use the word umbrella in a sentence.","assistant":"I hold my umbrella when it rains."}
+{"id":"school_sentence-0153","category":"school_sentence","user":"Use the word wagon in a sentence.","assistant":"Grandma pushes the wagon with toys inside."}
+{"id":"school_sentence-0154","category":"school_sentence","user":"Use the word zipper in a sentence.","assistant":"I pull the zipper up on my jacket."}
+{"id":"school_sentence-0155","category":"school_sentence","user":"Use the word zoo in a sentence.","assistant":"We visit the zoo to see animals."}
+{"id":"school_sentence-0156","category":"school_sentence","user":"Use the word zebra in a sentence.","assistant":"The zebra has black and white stripes."}
+{"id":"school_sentence-0157","category":"school_sentence","user":"Use the word yarn in a sentence.","assistant":"I pull the yarn from my colorful ball."}
+{"id":"school_sentence-0158","category":"school_sentence","user":"Use the word yogurt in a sentence.","assistant":"I eat yogurt for breakfast."}
+{"id":"school_sentence-0159","category":"school_sentence","user":"Use the word yellow in a sentence.","assistant":"The banana is yellow and sweet."}
+{"id":"school_sentence-0160","category":"school_sentence","user":"Use the word yoga in a sentence.","assistant":"I do yoga poses with my teacher."}
+{"id":"school_sentence-0161","category":"school_sentence","user":"Use the word angel in a sentence.","assistant":"He folded his paper into an angel shape."}
+{"id":"school_sentence-0162","category":"school_sentence","user":"Use the word apron in a sentence.","assistant":"The chef wore a clean apron to work."}
+{"id":"school_sentence-0163","category":"school_sentence","user":"Use the word autumn in a sentence.","assistant":"The leaves turn red in autumn."}
+{"id":"school_sentence-0164","category":"school_sentence","user":"Use the word chick in a sentence.","assistant":"The chick chirped in its nest."}
+{"id":"school_sentence-0165","category":"school_sentence","user":"Use the word backpack in a sentence.","assistant":"I put my lunch in my backpack."}
+{"id":"school_sentence-0166","category":"school_sentence","user":"Use the word bamboo in a sentence.","assistant":"The bamboo plant grows tall and straight."}
+{"id":"school_sentence-0167","category":"school_sentence","user":"Use the word barrel in a sentence.","assistant":"The barrel rolled down the hill."}
+{"id":"school_sentence-0168","category":"school_sentence","user":"Use the word bucket in a sentence.","assistant":"We filled the bucket with sand."}
+{"id":"school_sentence-0169","category":"school_sentence","user":"Use the word beehive in a sentence.","assistant":"The bees live in the beehive."}
+{"id":"school_sentence-0170","category":"school_sentence","user":"Use the word behind in a sentence.","assistant":"The cat hid behind the door."}
+{"id":"school_sentence-0171","category":"school_sentence","user":"Use the word beside in a sentence.","assistant":"Sit beside me at the lunch table."}
+{"id":"school_sentence-0172","category":"school_sentence","user":"Use the word evening in a sentence.","assistant":"We eat dinner in the evening."}
+{"id":"school_sentence-0173","category":"school_sentence","user":"Use the word farm in a sentence.","assistant":"Cows live happily on the farm."}
+{"id":"school_sentence-0174","category":"school_sentence","user":"Use the word fence in a sentence.","assistant":"She climbed over the fence."}
+{"id":"school_sentence-0175","category":"school_sentence","user":"Use the word frost in a sentence.","assistant":"Frost makes pretty patterns on the window."}
+{"id":"school_sentence-0176","category":"school_sentence","user":"Use the word fruit in a sentence.","assistant":"The tree has juicy red fruit."}
+{"id":"school_sentence-0177","category":"school_sentence","user":"Use the word garden in a sentence.","assistant":"We plant flowers in the garden."}
+{"id":"school_sentence-0178","category":"school_sentence","user":"Use the word grasshopper in a sentence.","assistant":"A grasshopper jumps high on the grass."}
+{"id":"school_sentence-0179","category":"school_sentence","user":"Use the word heavy in a sentence.","assistant":"The wet towel feels heavy to lift."}
+{"id":"school_sentence-0180","category":"school_sentence","user":"Use the word hill in a sentence.","assistant":"We slide down the hill."}
+{"id":"school_sentence-0181","category":"school_sentence","user":"Use the word kiss in a sentence.","assistant":"Grandma gave me a warm kiss."}
+{"id":"school_sentence-0182","category":"school_sentence","user":"Use the word lift in a sentence.","assistant":"Can you lift the small box for me?"}
+{"id":"school_sentence-0183","category":"school_sentence","user":"Use the word listen in a sentence.","assistant":"Listen to the teacher’s story."}
+{"id":"school_sentence-0184","category":"school_sentence","user":"Use the word low in a sentence.","assistant":"The little table is low to the ground."}
+{"id":"school_sentence-0185","category":"school_sentence","user":"Use the word nurse in a sentence.","assistant":"The nurse smiled at me in the hospital."}
+{"id":"school_sentence-0186","category":"school_sentence","user":"Use the word near in a sentence.","assistant":"The book is near the window."}
+{"id":"school_sentence-0187","category":"school_sentence","user":"Use the word nest in a sentence.","assistant":"The bird made a nest in the tree."}
+{"id":"school_sentence-0188","category":"school_sentence","user":"Use the word over in a sentence.","assistant":"The kite flew over the hill."}
+{"id":"school_sentence-0189","category":"school_sentence","user":"Use the word pack in a sentence.","assistant":"Pack your toys in the box."}
+{"id":"school_sentence-0190","category":"school_sentence","user":"Use the word paw in a sentence.","assistant":"The dog hurt its paw."}
+{"id":"school_sentence-0191","category":"school_sentence","user":"Use the word peel in a sentence.","assistant":"Peel the banana carefully."}
+{"id":"school_sentence-0192","category":"school_sentence","user":"Use the word rub in a sentence.","assistant":"Rub your hands together to warm them up."}
+{"id":"school_sentence-0193","category":"school_sentence","user":"Use the word rabbit in a sentence.","assistant":"The rabbit hopped in the field."}
+{"id":"school_sentence-0194","category":"school_sentence","user":"Use the word rattle in a sentence.","assistant":"The baby shook the rattle."}
+{"id":"school_sentence-0195","category":"school_sentence","user":"Use the word recess in a sentence.","assistant":"We play outside at recess."}
+{"id":"school_sentence-0196","category":"school_sentence","user":"Use the word rope in a sentence.","assistant":"We jump over the rope at recess."}
+{"id":"school_sentence-0197","category":"school_sentence","user":"Use the word sandwich in a sentence.","assistant":"I love my sandwich with cheese and turkey."}
+{"id":"school_sentence-0198","category":"school_sentence","user":"Use the word scarecrow in a sentence.","assistant":"The scarecrow stands in the garden to keep birds away."}
+{"id":"school_sentence-0199","category":"school_sentence","user":"Use the word scoop in a sentence.","assistant":"The scoop holds one ball of ice cream."}
+{"id":"school_sentence-0200","category":"school_sentence","user":"Use the word shy in a sentence.","assistant":"The shy puppy hid behind his owner’s legs."}
+{"id":"school_sentence-0201","category":"school_sentence","user":"Use the word splash in a sentence.","assistant":"The stone made a big splash."}
+{"id":"school_sentence-0202","category":"school_sentence","user":"Use the word van in a sentence.","assistant":"We rode in the van to the park."}
+{"id":"school_sentence-0203","category":"school_sentence","user":"Use the word watch in a sentence.","assistant":"My watch tells me when it’s time to play outside."}
+{"id":"school_sentence-0204","category":"school_sentence","user":"Use the word winter in a sentence.","assistant":"Snow falls on the ground in winter."}
+{"id":"school_sentence-0205","category":"school_sentence","user":"Use the word zip in a sentence.","assistant":"I zip my jacket to keep warm outside."}
+{"id":"school_sentence-0206","category":"school_sentence","user":"Use the word wrap in a sentence.","assistant":"I wrap my sandwich in foil for lunch."}
+{"id":"school_sentence-0207","category":"school_sentence","user":"Use the word ant in a sentence.","assistant":"A tiny ant climbs up the crack."}
+{"id":"school_sentence-0208","category":"school_sentence","user":"Use the word aunt in a sentence.","assistant":"My aunt waves goodbye with a big smile."}
+{"id":"school_sentence-0209","category":"school_sentence","user":"Use the word backyard in a sentence.","assistant":"We play and run in the backyard."}
+{"id":"school_sentence-0210","category":"school_sentence","user":"Use the word badge in a sentence.","assistant":"She wears a badge on her shirt pocket."}
+{"id":"school_sentence-0211","category":"school_sentence","user":"Use the word bacon in a sentence.","assistant":"The bacon sizzles and smells good."}
+{"id":"school_sentence-0212","category":"school_sentence","user":"Use the word badger in a sentence.","assistant":"The badger digs under the bush."}
+{"id":"school_sentence-0213","category":"school_sentence","user":"Use the word earthworm in a sentence.","assistant":"The earthworm moves in the garden soil."}
+{"id":"school_sentence-0214","category":"school_sentence","user":"Use the word racecar in a sentence.","assistant":"The racecar zooms fast around the track."}
+{"id":"school_sentence-0215","category":"school_sentence","user":"Use the word radio in a sentence.","assistant":"Grandpa listens to music on the radio."}
+{"id":"school_sentence-0216","category":"school_sentence","user":"Use the word rack in a sentence.","assistant":"Coats hang on the coat rack."}
+{"id":"school_sentence-0217","category":"school_sentence","user":"Use the word refrigerator in a sentence.","assistant":"Mom puts snacks in the refrigerator to keep them cold."}
+{"id":"school_sentence-0218","category":"school_sentence","user":"Use the word rooster in a sentence.","assistant":"The rooster crows loudly in the morning."}
+{"id":"school_sentence-0219","category":"school_sentence","user":"Use the word saucepan in a sentence.","assistant":"We cook soup in a big saucepan."}
+{"id":"school_sentence-0220","category":"school_sentence","user":"Use the word saucer in a sentence.","assistant":"The saucer holds the cup steady."}
+{"id":"school_sentence-0221","category":"school_sentence","user":"Use the word scarf in a sentence.","assistant":"Dad wears a scarf around his neck."}
+{"id":"school_sentence-0222","category":"school_sentence","user":"Use the word scissors in a sentence.","assistant":"She cuts paper with scissors."}
+{"id":"school_sentence-0223","category":"school_sentence","user":"Use the word scooter in a sentence.","assistant":"He rides his scooter on the sidewalk."}
+{"id":"school_sentence-0224","category":"school_sentence","user":"Use the word shower in a sentence.","assistant":"I take a shower to wash my body."}
+{"id":"school_sentence-0225","category":"school_sentence","user":"Use the word sink in a sentence.","assistant":"We wash our hands in the sink."}
+{"id":"school_sentence-0226","category":"school_sentence","user":"Use the word skillet in a sentence.","assistant":"She cooks eggs in a skillet."}
+{"id":"school_sentence-0227","category":"school_sentence","user":"Use the word tickle in a sentence.","assistant":"A feather can tickle my hand."}
+{"id":"school_sentence-0228","category":"school_sentence","user":"Use the word stretch in a sentence.","assistant":"I stretch my arms up high like a cat."}
+{"id":"school_sentence-0229","category":"school_sentence","user":"Use the word pour in a sentence.","assistant":"I pour water into my cup at snack time."}
+{"id":"school_sentence-0230","category":"school_sentence","user":"Use the word giggle in a sentence.","assistant":"We giggle when someone tells a silly joke."}
+{"id":"school_sentence-0231","category":"school_sentence","user":"Use the word drum in a sentence.","assistant":"I tap the drum with two sticks."}
+{"id":"school_sentence-0232","category":"school_sentence","user":"Use the word crawl in a sentence.","assistant":"I crawl under the picnic table to play hide-and-seek."}
+{"id":"school_sentence-0233","category":"school_sentence","user":"Use the word branch in a sentence.","assistant":"A bird sits on the tree branch."}
+{"id":"school_sentence-0234","category":"school_sentence","user":"Use the word breeze in a sentence.","assistant":"The leaves move in a soft breeze."}
+{"id":"school_sentence-0235","category":"school_sentence","user":"Use the word bud in a sentence.","assistant":"The pink bud will open into a flower."}
+{"id":"school_sentence-0236","category":"school_sentence","user":"Use the word clover in a sentence.","assistant":"I look for clover in the green grass."}
+{"id":"school_sentence-0237","category":"school_sentence","user":"Use the word cloud in a sentence.","assistant":"A big white cloud floats in the sky."}
+{"id":"school_sentence-0238","category":"school_sentence","user":"Use the word clump in a sentence.","assistant":"A clump of mud sticks to my shoe."}
+{"id":"school_sentence-0239","category":"school_sentence","user":"Use the word damp in a sentence.","assistant":"The towel feels damp after washing."}
+{"id":"school_sentence-0240","category":"school_sentence","user":"Use the word dirt in a sentence.","assistant":"I play in a pile of fresh dirt."}
+{"id":"school_sentence-0241","category":"school_sentence","user":"Use the word dusk in a sentence.","assistant":"Fireflies shine at dusk outside."}
+{"id":"school_sentence-0242","category":"school_sentence","user":"Use the word dusty in a sentence.","assistant":"The bookshelf has dusty books on it."}
+{"id":"school_sentence-0243","category":"school_sentence","user":"Use the word moss in a sentence.","assistant":"Green moss grows on the tree trunk."}
+{"id":"school_sentence-0244","category":"school_sentence","user":"Use the word puddle in a sentence.","assistant":"Rain made a puddle on the sidewalk."}
+{"id":"school_sentence-0245","category":"school_sentence","user":"Use the word shelter in a sentence.","assistant":"The roof gives us shelter from rain."}
+{"id":"school_sentence-0246","category":"school_sentence","user":"Use the word snowy in a sentence.","assistant":"The snowy mountain sparkled in the sun."}
+{"id":"school_sentence-0247","category":"school_sentence","user":"Use the word elbow in a sentence.","assistant":"She bumped her elbow on the table."}
+{"id":"school_sentence-0248","category":"school_sentence","user":"Use the word fairy in a sentence.","assistant":"The fairy flew with a tiny wand."}
+{"id":"school_sentence-0249","category":"school_sentence","user":"Use the word fluffy in a sentence.","assistant":"The fluffy pillow is soft and white."}
+{"id":"school_sentence-0250","category":"school_sentence","user":"Use the word fresh in a sentence.","assistant":"The fresh apple smells sweet."}
+{"id":"school_sentence-0251","category":"school_sentence","user":"Use the word itchy in a sentence.","assistant":"The wool hat feels itchy on my head."}
+{"id":"school_sentence-0252","category":"school_sentence","user":"Use the word kite in a sentence.","assistant":"The kite soars high in the sky."}
+{"id":"school_sentence-0253","category":"school_sentence","user":"Use the word lovely in a sentence.","assistant":"The lovely song made everyone smile."}
+{"id":"school_sentence-0254","category":"school_sentence","user":"Use the word magic in a sentence.","assistant":"The magic wand made the toy dance."}
+{"id":"school_sentence-0255","category":"school_sentence","user":"Use the word meet in a sentence.","assistant":"We all meet here for recess games."}
+{"id":"school_sentence-0256","category":"school_sentence","user":"Use the word paintbrush in a sentence.","assistant":"Use the paintbrush to paint blue clouds."}
+{"id":"school_sentence-0257","category":"school_sentence","user":"Use the word parade in a sentence.","assistant":"The parade has floats and marching bands."}
+{"id":"school_sentence-0258","category":"school_sentence","user":"Use the word pencil in a sentence.","assistant":"Hold the pencil tight to draw a line."}
+{"id":"school_sentence-0259","category":"school_sentence","user":"Use the word popcorn in a sentence.","assistant":"The popcorn tastes crunchy and buttery."}
+{"id":"school_sentence-0260","category":"school_sentence","user":"Use the word pretend in a sentence.","assistant":"Let’s pretend the stick is a sword."}
+{"id":"school_sentence-0261","category":"school_sentence","user":"Use the word skateboard in a sentence.","assistant":"He glides on a skateboard outside."}
+{"id":"school_sentence-0262","category":"school_sentence","user":"Use the word maple in a sentence.","assistant":"The syrup comes from a maple tree."}
+{"id":"school_sentence-0263","category":"school_sentence","user":"Use the word matchstick in a sentence.","assistant":"An adult uses a matchstick to light candles."}
+{"id":"school_sentence-0264","category":"school_sentence","user":"Use the word mustard in a sentence.","assistant":"The sandwich had yellow mustard on top."}
+{"id":"school_sentence-0265","category":"school_sentence","user":"Use the word mushroom in a sentence.","assistant":"The child found a small mushroom in the yard."}
+{"id":"school_sentence-0266","category":"school_sentence","user":"Use the word needle in a sentence.","assistant":"The sewing needle can prick your finger."}
+{"id":"school_sentence-0267","category":"school_sentence","user":"Use the word oatmeal in a sentence.","assistant":"Dad made oatmeal for breakfast."}
+{"id":"school_sentence-0268","category":"school_sentence","user":"Use the word oven in a sentence.","assistant":"The cake baked in the oven."}
+{"id":"school_sentence-0269","category":"school_sentence","user":"Use the word kitchen in a sentence.","assistant":"The kids set the table in the kitchen."}
+{"id":"school_sentence-0270","category":"school_sentence","user":"Use the word label in a sentence.","assistant":"Mom wrote a label on the milk carton."}
+{"id":"school_sentence-0271","category":"school_sentence","user":"Use the word lamp in a sentence.","assistant":"The lamp on the shelf lights up the room at night."}
+{"id":"school_sentence-0272","category":"school_sentence","user":"Use the word lemon in a sentence.","assistant":"Squeeze a little lemon into your water."}
+{"id":"school_sentence-0273","category":"school_sentence","user":"Use the word lemonade in a sentence.","assistant":"She poured lemonade into her glass."}
+{"id":"school_sentence-0274","category":"school_sentence","user":"Use the word line in a sentence.","assistant":"Draw a straight line with your crayon."}
+{"id":"school_sentence-0275","category":"school_sentence","user":"Use the word log in a sentence.","assistant":"The fire needs another log to keep burning."}
+{"id":"school_sentence-0276","category":"school_sentence","user":"Use the word oak in a sentence.","assistant":"The big oak tree has strong branches."}
+{"id":"school_sentence-0277","category":"school_sentence","user":"Use the word paint in a sentence.","assistant":"We spread fresh paint with a brush."}
+{"id":"school_sentence-0278","category":"school_sentence","user":"Use the word pan in a sentence.","assistant":"The cook stirred batter in the metal pan."}
+{"id":"school_sentence-0279","category":"school_sentence","user":"Use the word pile in a sentence.","assistant":"Kids pile leaves in a big heap outside."}
+{"id":"school_sentence-0280","category":"school_sentence","user":"Use the word wait in a sentence.","assistant":"Please wait until the light turns green."}
+{"id":"school_sentence-0281","category":"school_sentence","user":"Use the word warm in a sentence.","assistant":"The sun makes my hands feel warm."}
+{"id":"school_sentence-0282","category":"school_sentence","user":"Use the word waterfall in a sentence.","assistant":"The waterfall splashes over rocks in the forest."}
+{"id":"school_sentence-0283","category":"school_sentence","user":"Use the word whisper in a sentence.","assistant":"I can whisper a secret to my friend."}
+{"id":"school_sentence-0284","category":"school_sentence","user":"Use the word wildflower in a sentence.","assistant":"A wildflower grows beside the path."}
+{"id":"school_sentence-0285","category":"school_sentence","user":"Use the word wobble in a sentence.","assistant":"My legs wobble when I run too fast."}
+{"id":"school_sentence-0286","category":"school_sentence","user":"Use the word zigzag in a sentence.","assistant":"The snake’s path makes a zigzag line."}
+{"id":"school_sentence-0287","category":"school_sentence","user":"Use the word balloon in a sentence.","assistant":"The little girl blew up a red balloon."}
+{"id":"school_sentence-0288","category":"school_sentence","user":"Use the word braid in a sentence.","assistant":"She made a pretty braid in her hair."}
+{"id":"school_sentence-0289","category":"school_sentence","user":"Use the word circle in a sentence.","assistant":"A circle is round with no corners."}
+{"id":"school_sentence-0290","category":"school_sentence","user":"Use the word edge in a sentence.","assistant":"The table’s edge is sharp."}
+{"id":"school_sentence-0291","category":"school_sentence","user":"Use the word honeybee in a sentence.","assistant":"The honeybee flies to the flowers."}
+{"id":"school_sentence-0292","category":"school_sentence","user":"Use the word land in a sentence.","assistant":"The land is covered in grass."}
+{"id":"school_sentence-0293","category":"school_sentence","user":"Use the word lump in a sentence.","assistant":"She found a lump of clay."}
+{"id":"school_sentence-0294","category":"school_sentence","user":"Use the word toss in a sentence.","assistant":"I toss the ball to my friend."}
+{"id":"school_sentence-0295","category":"school_sentence","user":"Use the word dance in a sentence.","assistant":"The children dance to the music."}
+{"id":"school_sentence-0296","category":"school_sentence","user":"Use the word dig in a sentence.","assistant":"I dig in the dirt."}
+{"id":"school_sentence-0297","category":"school_sentence","user":"Use the word square in a sentence.","assistant":"A square has four equal sides."}
+{"id":"school_sentence-0298","category":"school_sentence","user":"Use the word triangle in a sentence.","assistant":"A triangle has three straight sides."}
+{"id":"school_sentence-0299","category":"school_sentence","user":"Use the word count in a sentence.","assistant":"We count five ducks in the pond."}
+{"id":"school_sentence-0300","category":"school_sentence","user":"Use the word build in a sentence.","assistant":"We build a tall tower with blocks."}
+{"id":"school_sentence-0301","category":"school_sentence","user":"Use the word arrow in a sentence.","assistant":"The red arrow points toward the library door."}
+{"id":"school_sentence-0302","category":"school_sentence","user":"Use the word raft in a sentence.","assistant":"The kids built a raft for their toy boats to float."}
+{"id":"school_sentence-0303","category":"school_sentence","user":"Use the word reach in a sentence.","assistant":"Can you reach the tall shelf to get the book?"}
+{"id":"school_sentence-0304","category":"school_sentence","user":"Use the word refill in a sentence.","assistant":"Mom helped me refill my water bottle after I drank it."}
+{"id":"school_sentence-0305","category":"school_sentence","user":"Use the word remote in a sentence.","assistant":"We used the remote to change the TV channel."}
+{"id":"school_sentence-0306","category":"school_sentence","user":"Use the word warmth in a sentence.","assistant":"The cat snuggled near the heater for warmth."}
+{"id":"school_sentence-0307","category":"school_sentence","user":"Use the word artist in a sentence.","assistant":"The artist paints bright pictures for our classroom."}
+{"id":"school_sentence-0308","category":"school_sentence","user":"Use the word acorn in a sentence.","assistant":"A squirrel climbed up to gather an acorn from the oak tree."}
+{"id":"school_sentence-0309","category":"school_sentence","user":"Use the word climb in a sentence.","assistant":"The little monkey loved to climb up the tall tree."}
+{"id":"school_sentence-0310","category":"school_sentence","user":"Use the word fall in a sentence.","assistant":"The red leaves began to fall from the tree in autumn."}
+{"id":"school_sentence-0311","category":"school_sentence","user":"Use the word muddy in a sentence.","assistant":"The children laughed as they splashed in the muddy water."}
+{"id":"school_sentence-0312","category":"school_sentence","user":"Use the word shadow in a sentence.","assistant":"The sun made a long shadow on the ground."}
+{"id":"school_sentence-0313","category":"school_sentence","user":"Use the word equal in a sentence.","assistant":"The two friends got equal turns playing with the toy car."}
+{"id":"school_sentence-0314","category":"school_sentence","user":"Use the word escape in a sentence.","assistant":"The bunny hopped under the fence to escape the cat."}
+{"id":"school_sentence-0315","category":"school_sentence","user":"Use the word extra in a sentence.","assistant":"Mom gave me an extra cookie for sharing my toys."}
+{"id":"school_sentence-0316","category":"school_sentence","user":"Use the word favorite in a sentence.","assistant":"My favorite game is hide-and-seek at recess."}
+{"id":"school_sentence-0317","category":"school_sentence","user":"Use the word firm in a sentence.","assistant":"The ground felt firm after the rain stopped."}
+{"id":"school_sentence-0318","category":"school_sentence","user":"Use the word flour in a sentence.","assistant":"Mama sprinkled flour on the table to make cookies."}
+{"id":"school_sentence-0319","category":"school_sentence","user":"Use the word imagine in a sentence.","assistant":"Can you imagine how fun it would be to fly like a bird?"}
+{"id":"school_sentence-0320","category":"school_sentence","user":"Use the word improve in a sentence.","assistant":"Practicing helped me improve my drawing skills."}
+{"id":"school_sentence-0321","category":"school_sentence","user":"Use the word insect in a sentence.","assistant":"A tiny bug crawled on the flower—it was an insect!"}
+{"id":"school_sentence-0322","category":"school_sentence","user":"Use the word invite in a sentence.","assistant":"She wrote an invite for her birthday party."}
+{"id":"school_sentence-0323","category":"school_sentence","user":"Use the word joy in a sentence.","assistant":"Her face lit up with joy when she saw the puppy."}
+{"id":"school_sentence-0324","category":"school_sentence","user":"Use the word kind in a sentence.","assistant":"A kind friend shared her crayons with me."}
+{"id":"school_sentence-0325","category":"school_sentence","user":"Use the word knot in a sentence.","assistant":"He tied a knot in the rope to hold it tight."}
+{"id":"school_sentence-0326","category":"school_sentence","user":"Use the word lunchbox in a sentence.","assistant":"Her lunchbox had a picture of a cat on it."}
+{"id":"school_sentence-0327","category":"school_sentence","user":"Use the word playground in a sentence.","assistant":"We ran to the playground for recess."}
+{"id":"school_sentence-0328","category":"school_sentence","user":"Use the word pumpkin in a sentence.","assistant":"The pumpkin rolled down the hill in the yard."}
+{"id":"school_sentence-0329","category":"school_sentence","user":"Use the word mailbox in a sentence.","assistant":"Dad puts letters in the blue mailbox every day."}
+{"id":"school_sentence-0330","category":"school_sentence","user":"Use the word muffin in a sentence.","assistant":"The blueberry muffin smelled sweet and warm."}
+{"id":"school_sentence-0331","category":"school_sentence","user":"Use the word napkin in a sentence.","assistant":"I wiped my mouth with my paper napkin."}
+{"id":"school_sentence-0332","category":"school_sentence","user":"Use the word noodles in a sentence.","assistant":"The noodles swirled in the bubbling pasta water."}
+{"id":"school_sentence-0333","category":"school_sentence","user":"Use the word notebook in a sentence.","assistant":"I drew a picture in my new notebook."}
+{"id":"school_sentence-0334","category":"school_sentence","user":"Use the word onion in a sentence.","assistant":"The onion made my eyes sting when I cut it."}
+{"id":"school_sentence-0335","category":"school_sentence","user":"Use the word peanut in a sentence.","assistant":"I dropped a peanut on the floor."}
+{"id":"school_sentence-0336","category":"school_sentence","user":"Use the word peeler in a sentence.","assistant":"Dad used a peeler to remove the potato skin."}
+{"id":"school_sentence-0337","category":"school_sentence","user":"Use the word platter in a sentence.","assistant":"The platter held a big slice of pizza."}
+{"id":"school_sentence-0338","category":"school_sentence","user":"Use the word shade in a sentence.","assistant":"The tree gave shade on a sunny day."}
+{"id":"school_sentence-0339","category":"school_sentence","user":"Use the word squash in a sentence.","assistant":"I roasted the orange squash for dinner."}
+{"id":"school_sentence-0340","category":"school_sentence","user":"Use the word vine in a sentence.","assistant":"A green vine climbed up the garden fence."}
+{"id":"school_sentence-0341","category":"school_sentence","user":"Use the word astronaut in a sentence.","assistant":"The astronaut wore a helmet while walking on the moon."}
+{"id":"school_sentence-0342","category":"school_sentence","user":"Use the word nursery in a sentence.","assistant":"The nursery had tiny baby plants."}
+{"id":"school_sentence-0343","category":"school_sentence","user":"Use the word ache in a sentence.","assistant":"My tummy felt an ache after eating too many cookies."}
+{"id":"school_sentence-0344","category":"school_sentence","user":"Use the word bandage in a sentence.","assistant":"Mom put a clean bandage on my scraped knee."}
+{"id":"school_sentence-0345","category":"school_sentence","user":"Use the word barely in a sentence.","assistant":"I barely made it to the top of the slide."}
+{"id":"school_sentence-0346","category":"school_sentence","user":"Use the word barrier in a sentence.","assistant":"A fence is a barrier to keep pets inside the yard."}
+{"id":"school_sentence-0347","category":"school_sentence","user":"Use the word brake in a sentence.","assistant":"I pressed the brake so my bike would stop."}
+{"id":"school_sentence-0348","category":"school_sentence","user":"Use the word bump in a sentence.","assistant":"I got a bump on my head when I fell."}
+{"id":"school_sentence-0349","category":"school_sentence","user":"Use the word burrow in a sentence.","assistant":"The rabbit dug a soft burrow in the dirt."}
+{"id":"school_sentence-0350","category":"school_sentence","user":"Use the word comfy in a sentence.","assistant":"This chair is comfy for sitting in."}
+{"id":"school_sentence-0351","category":"school_sentence","user":"Use the word lunch in a sentence.","assistant":"Pack your lunch in a cool bag today."}
+{"id":"school_sentence-0352","category":"school_sentence","user":"Use the word music in a sentence.","assistant":"The band plays fun music at the school play."}
+{"id":"school_sentence-0353","category":"school_sentence","user":"Use the word net in a sentence.","assistant":"We toss the ball into the net."}
+{"id":"school_sentence-0354","category":"school_sentence","user":"Use the word melon in a sentence.","assistant":"She cut the juicy melon into small pieces."}
+{"id":"school_sentence-0355","category":"school_sentence","user":"Use the word mix in a sentence.","assistant":"Mix the flour and sugar for the cookie dough."}
+{"id":"school_sentence-0356","category":"school_sentence","user":"Use the word mud in a sentence.","assistant":"The shoes got covered in brown mud."}
+{"id":"school_sentence-0357","category":"school_sentence","user":"Use the word pineapple in a sentence.","assistant":"The pineapple sat on the kitchen table."}
+{"id":"school_sentence-0358","category":"school_sentence","user":"Use the word potato in a sentence.","assistant":"We mashed the warm potato."}
+{"id":"school_sentence-0359","category":"school_sentence","user":"Use the word quick in a sentence.","assistant":"The quick rabbit hopped past the fox."}
+{"id":"school_sentence-0360","category":"school_sentence","user":"Use the word squirrel in a sentence.","assistant":"The squirrel buried acorns in the dirt."}
+{"id":"school_sentence-0361","category":"school_sentence","user":"Use the word soil in a sentence.","assistant":"Plants grow best in soft soil."}
+{"id":"school_sentence-0362","category":"school_sentence","user":"Use the word nectar in a sentence.","assistant":"Honeybees fly from flower to flower for sweet nectar."}
+{"id":"school_sentence-0363","category":"school_sentence","user":"Use the word activity in a sentence.","assistant":"Dancing is a fun activity at recess."}
+{"id":"school_sentence-0364","category":"school_sentence","user":"Use the word admire in a sentence.","assistant":"I admire how tall the sunflower grows."}
+{"id":"school_sentence-0365","category":"school_sentence","user":"Use the word adventurous in a sentence.","assistant":"She feels adventurous climbing the big tree."}
+{"id":"school_sentence-0366","category":"school_sentence","user":"Use the word advice in a sentence.","assistant":"My mom gives me good advice about sharing toys."}
+{"id":"school_sentence-0367","category":"school_sentence","user":"Use the word afternoon in a sentence.","assistant":"We play outside in the warm afternoon."}
+{"id":"school_sentence-0368","category":"school_sentence","user":"Use the word alive in a sentence.","assistant":"The butterfly is alive and fluttering in the sun."}
+{"id":"school_sentence-0369","category":"school_sentence","user":"Use the word almond in a sentence.","assistant":"The cookie has a crunchy almond inside it."}
+{"id":"school_sentence-0370","category":"school_sentence","user":"Use the word anchor in a sentence.","assistant":"The boat stays safe with an anchor in the water."}
+{"id":"school_sentence-0371","category":"school_sentence","user":"Use the word armadillo in a sentence.","assistant":"The armadillo rolls into a tight ball to hide."}
+{"id":"school_sentence-0372","category":"school_sentence","user":"Use the word assist in a sentence.","assistant":"Can you assist me by passing the crayons?"}
+{"id":"school_sentence-0373","category":"school_sentence","user":"Use the word athlete in a sentence.","assistant":"The athlete runs fast in the track race."}
+{"id":"school_sentence-0374","category":"school_sentence","user":"Use the word auntie in a sentence.","assistant":"Auntie waves at me from the window."}
+{"id":"school_sentence-0375","category":"school_sentence","user":"Use the word awake in a sentence.","assistant":"The baby stays awake for its favorite song."}
+{"id":"school_sentence-0376","category":"school_sentence","user":"Use the word event in a sentence.","assistant":"The big event was a balloon pop contest."}
+{"id":"school_sentence-0377","category":"school_sentence","user":"Use the word eyebrow in a sentence.","assistant":"She raised her eyebrow when she saw the kite."}
+{"id":"school_sentence-0378","category":"school_sentence","user":"Use the word finger in a sentence.","assistant":"She traced her finger on the glass door."}
+{"id":"school_sentence-0379","category":"school_sentence","user":"Use the word firework in a sentence.","assistant":"The firework lit up the night sky with bright colors."}
+{"id":"school_sentence-0380","category":"school_sentence","user":"Use the word fit in a sentence.","assistant":"The circle was small enough for her to fit inside."}
+{"id":"school_sentence-0381","category":"school_sentence","user":"Use the word flame in a sentence.","assistant":"The candle’s flame danced in the dark room."}
+{"id":"school_sentence-0382","category":"school_sentence","user":"Use the word flavor in a sentence.","assistant":"The lemonade had a tangy flavor."}
+{"id":"school_sentence-0383","category":"school_sentence","user":"Use the word jacket in a sentence.","assistant":"He wore his warm jacket outside."}
+{"id":"school_sentence-0384","category":"school_sentence","user":"Use the word jug in a sentence.","assistant":"The baker poured water into the big jug."}
+{"id":"school_sentence-0385","category":"school_sentence","user":"Use the word kettle in a sentence.","assistant":"Steam rose from the kettle on the stove."}
+{"id":"school_sentence-0386","category":"school_sentence","user":"Use the word lazy in a sentence.","assistant":"The lazy cat slept all afternoon."}
+{"id":"school_sentence-0387","category":"school_sentence","user":"Use the word lid in a sentence.","assistant":"She lifted the lid off the pot."}
+{"id":"school_sentence-0388","category":"school_sentence","user":"Use the word liquid in a sentence.","assistant":"Water is a clear liquid that fills my cup."}
+{"id":"school_sentence-0389","category":"school_sentence","user":"Use the word bakery in a sentence.","assistant":"The bakery sells warm bread every morning."}
+{"id":"school_sentence-0390","category":"school_sentence","user":"Use the word lock in a sentence.","assistant":"The key turned in the door lock."}
+{"id":"school_sentence-0391","category":"school_sentence","user":"Use the word loose in a sentence.","assistant":"The button came off, making my shirt feel loose."}
+{"id":"school_sentence-0392","category":"school_sentence","user":"Use the word magnet in a sentence.","assistant":"The fridge had a round magnet shaped like a cat."}
+{"id":"school_sentence-0393","category":"school_sentence","user":"Use the word mail in a sentence.","assistant":"The mail truck delivered letters to our house."}
+{"id":"school_sentence-0394","category":"school_sentence","user":"Use the word mountain in a sentence.","assistant":"The mountain was tall and covered in snow."}
+{"id":"school_sentence-0395","category":"school_sentence","user":"Use the word park in a sentence.","assistant":"My family walks in the park after dinner."}
+{"id":"school_sentence-0396","category":"school_sentence","user":"Use the word party in a sentence.","assistant":"She baked cookies for the birthday party tonight."}
+{"id":"school_sentence-0397","category":"school_sentence","user":"Use the word pepper in a sentence.","assistant":"The chef sprinkled pepper on the noodles."}
+{"id":"school_sentence-0398","category":"school_sentence","user":"Use the word basement in a sentence.","assistant":"We keep boxes and tools downstairs in the basement."}
+{"id":"school_sentence-0399","category":"school_sentence","user":"Use the word sand in a sentence.","assistant":"My feet sank into the warm sand at the beach."}
+{"id":"school_sentence-0400","category":"school_sentence","user":"Use the word spark in a sentence.","assistant":"A tiny spark flew from the fireworks in the sky."}
+{"id":"school_sentence-0401","category":"school_sentence","user":"Use the word sprout in a sentence.","assistant":"The tiny plant sprout grew bigger each day with fresh water."}
+{"id":"school_sentence-0402","category":"school_sentence","user":"Use the word storm in a sentence.","assistant":"We watched the dark clouds gather before the big storm arrived."}
+{"id":"school_sentence-0403","category":"school_sentence","user":"Use the word thick in a sentence.","assistant":"The thick blanket kept me warm at night."}
+{"id":"school_sentence-0404","category":"school_sentence","user":"Use the word tide in a sentence.","assistant":"The ocean tide pulled the sand into a new shape every afternoon."}
+{"id":"school_sentence-0405","category":"school_sentence","user":"Use the word twig in a sentence.","assistant":"I picked a twig to build a little bridge over the stream."}
+{"id":"school_sentence-0406","category":"school_sentence","user":"Use the word turtle in a sentence.","assistant":"The turtle carried its shell like a home on its back."}
+{"id":"school_sentence-0407","category":"school_sentence","user":"Use the word twin in a sentence.","assistant":"The twin brothers shared the same birthday and birthday cake."}
+{"id":"school_sentence-0408","category":"school_sentence","user":"Use the word vibrant in a sentence.","assistant":"The vibrant red apple looked juicy and sweet."}
+{"id":"school_sentence-0409","category":"school_sentence","user":"Use the word wound in a sentence.","assistant":"The nurse put a bandage on the small wound."}
+{"id":"school_sentence-0410","category":"school_sentence","user":"Use the word yesterday in a sentence.","assistant":"Yesterday, we built a sandcastle at the beach."}
+{"id":"school_sentence-0411","category":"school_sentence","user":"Use the word eager in a sentence.","assistant":"The eager puppy wagged its tail when it saw its owner."}
+{"id":"school_sentence-0412","category":"school_sentence","user":"Use the word fancy in a sentence.","assistant":"She wore a fancy hat to the party."}
+{"id":"school_sentence-0413","category":"school_sentence","user":"Use the word fountain in a sentence.","assistant":"The fountain sprayed water high into the air."}
+{"id":"school_sentence-0414","category":"school_sentence","user":"Use the word fringe in a sentence.","assistant":"The fringe on her dress fluttered in the breeze."}
+{"id":"school_sentence-0415","category":"school_sentence","user":"Use the word graceful in a sentence.","assistant":"The graceful butterfly fluttered from flower to flower."}
+{"id":"school_sentence-0416","category":"school_sentence","user":"Use the word grasp in a sentence.","assistant":"She tried to grasp the slippery ball but missed."}
+{"id":"school_sentence-0417","category":"school_sentence","user":"Use the word mango in a sentence.","assistant":"The mango was sweet and juicy in my lunchbox."}
+{"id":"school_sentence-0418","category":"school_sentence","user":"Use the word pass in a sentence.","assistant":"Can you pass me the crayon, please?"}
+{"id":"school_sentence-0419","category":"school_sentence","user":"Use the word patch in a sentence.","assistant":"I sewed a patch on my favorite jeans."}
+{"id":"school_sentence-0420","category":"school_sentence","user":"Use the word shelves in a sentence.","assistant":"The shelves held colorful books for reading."}
+{"id":"school_sentence-0421","category":"school_sentence","user":"Use the word baseball in a sentence.","assistant":"We tossed the baseball across the grassy field."}
+{"id":"school_sentence-0422","category":"school_sentence","user":"Use the word trap in a sentence.","assistant":"The spider made a trap for flies."}
+{"id":"school_sentence-0423","category":"school_sentence","user":"Use the word beetle in a sentence.","assistant":"A black beetle crawled under the garden leaf."}
+{"id":"school_sentence-0424","category":"school_sentence","user":"Use the word snowflakes in a sentence.","assistant":"Snowflakes danced in the cold air."}
+{"id":"school_sentence-0425","category":"school_sentence","user":"Use the word terrific in a sentence.","assistant":"The terrific game made us all cheer."}
+{"id":"school_sentence-0426","category":"school_sentence","user":"Use the word sturdy in a sentence.","assistant":"The sturdy table held all the heavy books."}
+{"id":"school_sentence-0427","category":"school_sentence","user":"Use the word berry in a sentence.","assistant":"One red berry hung from the bush."}
+{"id":"school_sentence-0428","category":"school_sentence","user":"Use the word squishy in a sentence.","assistant":"The squishy pillow felt soft under her head."}
+{"id":"school_sentence-0429","category":"school_sentence","user":"Use the word washcloth in a sentence.","assistant":"She used a washcloth to clean her face."}
+{"id":"school_sentence-0430","category":"school_sentence","user":"Use the word wobbly in a sentence.","assistant":"The wobbly chair almost tipped over."}
+{"id":"school_sentence-0431","category":"school_sentence","user":"Use the word zero in a sentence.","assistant":"There were zero cookies left in the jar."}
+{"id":"school_sentence-0432","category":"school_sentence","user":"Use the word army in a sentence.","assistant":"An army of soldiers marched in the parade."}
+{"id":"school_sentence-0433","category":"school_sentence","user":"Use the word balcony in a sentence.","assistant":"They sat on the balcony to watch the sunset."}
+{"id":"school_sentence-0434","category":"school_sentence","user":"Use the word barn in a sentence.","assistant":"The horses lived in the barn."}
+{"id":"school_sentence-0435","category":"school_sentence","user":"Use the word bedtime in a sentence.","assistant":"My bedtime is eight o'clock on school nights."}
+{"id":"school_sentence-0436","category":"school_sentence","user":"Use the word bicycle in a sentence.","assistant":"She rode her bicycle to the park."}
+{"id":"school_sentence-0437","category":"school_sentence","user":"Use the word fabric in a sentence.","assistant":"The shirt was made of soft fabric."}
+{"id":"school_sentence-0438","category":"school_sentence","user":"Use the word filter in a sentence.","assistant":"The water filter catches dirt before we drink."}
+{"id":"school_sentence-0439","category":"school_sentence","user":"Use the word cello in a sentence.","assistant":"The musician played the large cello with a bow."}
+{"id":"school_sentence-0440","category":"school_sentence","user":"Use the word fossil in a sentence.","assistant":"We saw a dinosaur fossil inside the museum."}
+{"id":"school_sentence-0441","category":"school_sentence","user":"Use the word fudge in a sentence.","assistant":"Grandma made sweet fudge for the holiday party."}
+{"id":"school_sentence-0442","category":"school_sentence","user":"Use the word funnel in a sentence.","assistant":"The funnel helped us pour water into the bottle."}
+{"id":"school_sentence-0443","category":"school_sentence","user":"Use the word ink in a sentence.","assistant":"The teacher used a blue ink pen to write on the paper."}
+{"id":"school_sentence-0444","category":"school_sentence","user":"Use the word bridge in a sentence.","assistant":"The wooden bridge crosses the narrow stream."}
+{"id":"school_sentence-0445","category":"school_sentence","user":"Use the word broccoli in a sentence.","assistant":"Green broccoli grew in our school garden."}
+{"id":"school_sentence-0446","category":"school_sentence","user":"Use the word itch in a sentence.","assistant":"The mosquito bite made my arm itch."}
+{"id":"school_sentence-0447","category":"school_sentence","user":"Use the word knit in a sentence.","assistant":"Grandma knit a bright green scarf for her granddaughter."}
+{"id":"school_sentence-0448","category":"school_sentence","user":"Use the word knob in a sentence.","assistant":"The little boy turned the round knob to open the cupboard door."}
+{"id":"school_sentence-0449","category":"school_sentence","user":"Use the word law in a sentence.","assistant":"The law says we must wear seatbelts in cars."}
+{"id":"school_sentence-0450","category":"school_sentence","user":"Use the word leash in a sentence.","assistant":"The dog wore a red leash while walking outside."}
+{"id":"school_sentence-0451","category":"school_sentence","user":"Use the word mossy in a sentence.","assistant":"The mossy rocks looked green and slippery in the garden."}
+{"id":"school_sentence-0452","category":"school_sentence","user":"Use the word meadow in a sentence.","assistant":"Butterflies fluttered over the bright green meadow."}
+{"id":"school_sentence-0453","category":"school_sentence","user":"Use the word cocoon in a sentence.","assistant":"The caterpillar rested inside its silky cocoon."}
+{"id":"school_sentence-0454","category":"school_sentence","user":"Use the word pine in a sentence.","assistant":"The tall pine tree had long, green needles."}
+{"id":"school_sentence-0455","category":"school_sentence","user":"Use the word prickly in a sentence.","assistant":"The prickly rose bush hurt my hand."}
+{"id":"school_sentence-0456","category":"school_sentence","user":"Use the word cactus in a sentence.","assistant":"The cactus stores water inside its thick stem."}
+{"id":"school_sentence-0457","category":"school_sentence","user":"Use the word peach in a sentence.","assistant":"I ate a juicy peach with my lunch."}
+{"id":"school_sentence-0458","category":"school_sentence","user":"Use the word reward in a sentence.","assistant":"I got a sticker for my good work as a reward."}
+{"id":"school_sentence-0459","category":"school_sentence","user":"Use the word ribbon in a sentence.","assistant":"My hair had a shiny red ribbon in it."}
+{"id":"school_sentence-0460","category":"school_sentence","user":"Use the word robe in a sentence.","assistant":"Mom wears a soft robe to feel cozy at home."}
+{"id":"school_sentence-0461","category":"school_sentence","user":"Use the word art in a sentence.","assistant":"We made colorful art with paint and paper."}
+{"id":"school_sentence-0462","category":"school_sentence","user":"Use the word beach in a sentence.","assistant":"We dig in the sand at the beach by the ocean."}
+{"id":"school_sentence-0463","category":"school_sentence","user":"Use the word faucet in a sentence.","assistant":"Turn the faucet to wash your hands before lunch."}
+{"id":"school_sentence-0464","category":"school_sentence","user":"Use the word garlic in a sentence.","assistant":"We add garlic to make the soup smell yummy."}
+{"id":"school_sentence-0465","category":"school_sentence","user":"Use the word pond in a sentence.","assistant":"The pond has frogs and fish near the school."}
+{"id":"school_sentence-0466","category":"school_sentence","user":"Use the word comet in a sentence.","assistant":"We saw a bright comet streak across the night sky."}
+{"id":"school_sentence-0467","category":"school_sentence","user":"Use the word tight in a sentence.","assistant":"The tight lid was hard to open."}
+{"id":"school_sentence-0468","category":"school_sentence","user":"Use the word laugh in a sentence.","assistant":"We all laugh when someone tells a funny joke."}
+{"id":"school_sentence-0469","category":"school_sentence","user":"Use the word lime in a sentence.","assistant":"She squeezes juice from a bright lime."}
+{"id":"school_sentence-0470","category":"school_sentence","user":"Use the word scrape in a sentence.","assistant":"Use the tool to scrape mud from your shoe."}
+{"id":"school_sentence-0471","category":"school_sentence","user":"Use the word roof in a sentence.","assistant":"Birds perch on the edge of a brown roof."}
+{"id":"school_sentence-0472","category":"school_sentence","user":"Use the word seeds in a sentence.","assistant":"Birds love to peck at sunflower seeds."}
+{"id":"school_sentence-0473","category":"school_sentence","user":"Use the word slippery in a sentence.","assistant":"The riverbank feels slippery after the rain."}
+{"id":"school_sentence-0474","category":"school_sentence","user":"Use the word spade in a sentence.","assistant":"He uses a spade to dig holes in the dirt."}
+{"id":"school_sentence-0475","category":"school_sentence","user":"Use the word stump in a sentence.","assistant":"A big stump sits where the old tree once grew."}
+{"id":"school_sentence-0476","category":"school_sentence","user":"Use the word tangle in a sentence.","assistant":"Vines create a green tangle near the fence."}
+{"id":"school_sentence-0477","category":"school_sentence","user":"Use the word trunk in a sentence.","assistant":"Squirrels hide nuts inside a tree trunk."}
+{"id":"school_sentence-0478","category":"school_sentence","user":"Use the word underground in a sentence.","assistant":"Earthworms live underground in the soil."}
+{"id":"school_sentence-0479","category":"school_sentence","user":"Use the word uncle in a sentence.","assistant":"My uncle carries a backpack for our picnic."}
+{"id":"school_sentence-0480","category":"school_sentence","user":"Use the word unhurt in a sentence.","assistant":"After the fall, the puppy felt unhurt and wagged its tail."}
+{"id":"school_sentence-0481","category":"school_sentence","user":"Use the word useful in a sentence.","assistant":"A first aid kit is useful for small cuts."}
+{"id":"school_sentence-0482","category":"school_sentence","user":"Use the word wastebasket in a sentence.","assistant":"She threw her crumpled paper into the wastebasket."}
+{"id":"school_sentence-0483","category":"school_sentence","user":"Use the word wonderful in a sentence.","assistant":"The ice cream tasted wonderful and made us happy."}
+{"id":"school_sentence-0484","category":"school_sentence","user":"Use the word yard in a sentence.","assistant":"We played tag in the sunny yard."}
+{"id":"school_sentence-0485","category":"school_sentence","user":"Use the word baker in a sentence.","assistant":"The baker kneaded dough to make cookies."}
+{"id":"school_sentence-0486","category":"school_sentence","user":"Use the word boom in a sentence.","assistant":"The thunder made a loud boom outside."}
+{"id":"school_sentence-0487","category":"school_sentence","user":"Use the word brave in a sentence.","assistant":"She was brave when she climbed the tall slide."}
+{"id":"school_sentence-0488","category":"school_sentence","user":"Use the word canoe in a sentence.","assistant":"We paddled the canoe across the quiet lake."}
+{"id":"school_sentence-0489","category":"school_sentence","user":"Use the word buddy in a sentence.","assistant":"My buddy and I shared our crayons."}
+{"id":"school_sentence-0490","category":"school_sentence","user":"Use the word elastic in a sentence.","assistant":"I tied my hair with an elastic band."}
+{"id":"school_sentence-0491","category":"school_sentence","user":"Use the word envelope in a sentence.","assistant":"The teacher put a note inside the red envelope."}
+{"id":"school_sentence-0492","category":"school_sentence","user":"Use the word eraser in a sentence.","assistant":"I used the pink eraser to fix my mistake on the paper."}
+{"id":"school_sentence-0493","category":"school_sentence","user":"Use the word fan in a sentence.","assistant":"The fan made the room feel cooler on a warm day."}
+{"id":"school_sentence-0494","category":"school_sentence","user":"Use the word fin in a sentence.","assistant":"The goldfish waved its shiny fin in the water."}
+{"id":"school_sentence-0495","category":"school_sentence","user":"Use the word move in a sentence.","assistant":"Move the chair over so we can see the board better."}
+{"id":"school_sentence-0496","category":"school_sentence","user":"Use the word pull in a sentence.","assistant":"Pull the drawer open to find your crayons."}
+{"id":"school_sentence-0497","category":"school_sentence","user":"Use the word push in a sentence.","assistant":"Push the button to hear the fun sound."}
+{"id":"school_sentence-0498","category":"school_sentence","user":"Use the word pebble in a sentence.","assistant":"We skipped the small pebble across the stream."}
+{"id":"school_sentence-0499","category":"school_sentence","user":"Use the word carpet in a sentence.","assistant":"The soft carpet covered the playroom floor."}
+{"id":"school_sentence-0500","category":"school_sentence","user":"Use the word respect in a sentence.","assistant":"She showed respect by listening when Grandma spoke."}
+{"id":"school_sentence-0501","category":"school_sentence","user":"Use the word rocket in a sentence.","assistant":"The toy rocket zoomed up into the sky."}
+{"id":"school_sentence-0502","category":"school_sentence","user":"Use the word rubber in a sentence.","assistant":"She wore rubber boots to play in the muddy puddle."}
+{"id":"school_sentence-0503","category":"school_sentence","user":"Use the word safely in a sentence.","assistant":"Hold my hand so we can cross the street safely."}
+{"id":"school_sentence-0504","category":"school_sentence","user":"Use the word morning in a sentence.","assistant":"Birds began singing early in the morning."}
+{"id":"school_sentence-0505","category":"school_sentence","user":"Use the word mistake in a sentence.","assistant":"She fixed her mistake by writing the word again."}
+{"id":"school_sentence-0506","category":"school_sentence","user":"Use the word mound in a sentence.","assistant":"Kids built a tall mound of leaves outside."}
+{"id":"school_sentence-0507","category":"school_sentence","user":"Use the word ranger in a sentence.","assistant":"The park ranger showed us how to spot birds."}
+{"id":"school_sentence-0508","category":"school_sentence","user":"Use the word seal in a sentence.","assistant":"The child drew a picture of a seal swimming in the water."}
+{"id":"school_sentence-0509","category":"school_sentence","user":"Use the word shirt in a sentence.","assistant":"Mom helped him pick a clean shirt for school."}
+{"id":"school_sentence-0510","category":"school_sentence","user":"Use the word shiver in a sentence.","assistant":"Outside, the cold made her shiver and wrap her arms."}
+{"id":"school_sentence-0511","category":"school_sentence","user":"Use the word smooth in a sentence.","assistant":"The rock’s smooth surface felt nice to touch."}
+{"id":"school_sentence-0512","category":"school_sentence","user":"Use the word wish in a sentence.","assistant":"I wish it were my birthday today."}
+{"id":"school_sentence-0513","category":"school_sentence","user":"Use the word unpack in a sentence.","assistant":"Let’s unpack our backpacks and share our snacks."}
+{"id":"school_sentence-0514","category":"school_sentence","user":"Use the word squeeze in a sentence.","assistant":"Squeeze the sponge to push out the water."}
+{"id":"school_sentence-0515","category":"school_sentence","user":"Use the word sip in a sentence.","assistant":"Sip your juice slowly and enjoy it."}
+{"id":"school_sentence-0516","category":"school_sentence","user":"Use the word share in a sentence.","assistant":"Let’s share our crayons so everyone can draw."}
+{"id":"school_sentence-0517","category":"school_sentence","user":"Use the word playmate in a sentence.","assistant":"My new playmate loves climbing with me on the jungle gym."}
+{"id":"school_sentence-0518","category":"school_sentence","user":"Use the word castle in a sentence.","assistant":"The stone castle had tall walls and towers."}
+{"id":"school_sentence-0519","category":"school_sentence","user":"Use the word cereal in a sentence.","assistant":"I poured milk over my crunchy cereal."}
+{"id":"school_sentence-0520","category":"school_sentence","user":"Use the word arrange in a sentence.","assistant":"Let’s arrange the cups by their sizes."}
+{"id":"school_sentence-0521","category":"school_sentence","user":"Use the word flick in a sentence.","assistant":"A quick flick of the wrist sent the frisbee flying high."}
+{"id":"school_sentence-0522","category":"school_sentence","user":"Use the word foam in a sentence.","assistant":"Waves crashed against the dock, creating frothy foam."}
+{"id":"school_sentence-0523","category":"school_sentence","user":"Use the word funny in a sentence.","assistant":"His funny wiggle made everyone laugh during storytime."}
+{"id":"school_sentence-0524","category":"school_sentence","user":"Use the word gently in a sentence.","assistant":"She placed the baby’s blanket gently over his small hands."}
+{"id":"school_sentence-0525","category":"school_sentence","user":"Use the word leaves in a sentence.","assistant":"The wind blew the green leaves off the tree."}
+{"id":"school_sentence-0526","category":"school_sentence","user":"Use the word pouch in a sentence.","assistant":"The backpack had a small pouch for her crayons."}
+{"id":"school_sentence-0527","category":"school_sentence","user":"Use the word skirt in a sentence.","assistant":"Her skirt swished as she danced in the playground."}
+{"id":"school_sentence-0528","category":"school_sentence","user":"Use the word treasure in a sentence.","assistant":"They dug for buried treasure in the sandbox."}
+{"id":"school_sentence-0529","category":"school_sentence","user":"Use the word waves in a sentence.","assistant":"The waves rolled onto the sandy beach."}
+{"id":"school_sentence-0530","category":"school_sentence","user":"Use the word chimney in a sentence.","assistant":"Gray smoke rose from the brick chimney."}
+{"id":"school_sentence-0531","category":"school_sentence","user":"Use the word fold in a sentence.","assistant":"Fold the paper in half to make a boat."}
+{"id":"school_sentence-0532","category":"school_sentence","user":"Use the word jam in a sentence.","assistant":"She spread jam on her toast for breakfast."}
+{"id":"school_sentence-0533","category":"school_sentence","user":"Use the word jellyfish in a sentence.","assistant":"The jellyfish floated gently in the ocean water."}
+{"id":"school_sentence-0534","category":"school_sentence","user":"Use the word shield in a sentence.","assistant":"The knight held up his shield to protect himself from the arrow."}
+{"id":"school_sentence-0535","category":"school_sentence","user":"Use the word circus in a sentence.","assistant":"The circus had clowns, music, and bright lights."}
+{"id":"school_sentence-0536","category":"school_sentence","user":"Use the word tidy in a sentence.","assistant":"The classroom looked tidy after the children put their books away."}
+{"id":"school_sentence-0537","category":"school_sentence","user":"Use the word towel in a sentence.","assistant":"Mom handed me a fluffy towel to dry my hands."}
+{"id":"school_sentence-0538","category":"school_sentence","user":"Use the word trash in a sentence.","assistant":"The dog sniffed the trash can before someone took it away."}
+{"id":"school_sentence-0539","category":"school_sentence","user":"Use the word bench in a sentence.","assistant":"We sat on the park bench to watch the squirrels."}
+{"id":"school_sentence-0540","category":"school_sentence","user":"Use the word batter in a sentence.","assistant":"The batter for cookies was thick and smooth."}
+{"id":"school_sentence-0541","category":"school_sentence","user":"Use the word wild in a sentence.","assistant":"The wild animals ran fast in the forest."}
+{"id":"school_sentence-0542","category":"school_sentence","user":"Use the word woods in a sentence.","assistant":"We walked through the woods and saw a squirrel."}
+{"id":"school_sentence-0543","category":"school_sentence","user":"Use the word jeans in a sentence.","assistant":"Liam wore his blue jeans to play outside."}
+{"id":"school_sentence-0544","category":"school_sentence","user":"Use the word load in a sentence.","assistant":"The truck carried a big load of rocks."}
+{"id":"school_sentence-0545","category":"school_sentence","user":"Use the word muscle in a sentence.","assistant":"She flexed her arm to show her big muscle."}
+{"id":"school_sentence-0546","category":"school_sentence","user":"Use the word note in a sentence.","assistant":"She wrote a note on the desk for her friend."}
+{"id":"school_sentence-0547","category":"school_sentence","user":"Use the word raindrop in a sentence.","assistant":"A tiny raindrop sparkled on the leaf."}
+{"id":"school_sentence-0548","category":"school_sentence","user":"Use the word rough in a sentence.","assistant":"The sandpaper felt rough on my fingers."}
+{"id":"school_sentence-0549","category":"school_sentence","user":"Use the word robin in a sentence.","assistant":"A red-breasted robin hopped near the bird feeder."}
+{"id":"school_sentence-0550","category":"school_sentence","user":"Use the word sparrow in a sentence.","assistant":"A small sparrow chirped outside my window."}
+{"id":"school_sentence-0551","category":"school_sentence","user":"Use the word stem in a sentence.","assistant":"The flower’s green stem held up the petals."}
+{"id":"school_sentence-0552","category":"school_sentence","user":"Use the word compass in a sentence.","assistant":"A compass helps hikers find which way to go."}
+{"id":"school_sentence-0553","category":"school_sentence","user":"Use the word wax in a sentence.","assistant":"The candle wax melted near the warm flame."}
+{"id":"school_sentence-0554","category":"school_sentence","user":"Use the word wrist in a sentence.","assistant":"My watch sits on my wrist."}
+{"id":"school_sentence-0555","category":"school_sentence","user":"Use the word enjoy in a sentence.","assistant":"We enjoy reading books together."}
+{"id":"school_sentence-0556","category":"school_sentence","user":"Use the word jelly in a sentence.","assistant":"The sandwich tasted sweet with a layer of jelly inside."}
+{"id":"school_sentence-0557","category":"school_sentence","user":"Use the word loyal in a sentence.","assistant":"The dog stayed loyal to his family all day long."}
+{"id":"school_sentence-0558","category":"school_sentence","user":"Use the word watchful in a sentence.","assistant":"The watchful dog barked when strangers approached."}
+{"id":"school_sentence-0559","category":"school_sentence","user":"Use the word closet in a sentence.","assistant":"My coat hangs inside the hall closet."}
+{"id":"school_sentence-0560","category":"school_sentence","user":"Use the word excite in a sentence.","assistant":"The surprise party will excite her on her birthday."}
+{"id":"school_sentence-0561","category":"school_sentence","user":"Use the word eyes in a sentence.","assistant":"She closed her eyes and listened to the rain outside."}
+{"id":"school_sentence-0562","category":"school_sentence","user":"Use the word face in a sentence.","assistant":"The clock’s face showed it was time to eat."}
+{"id":"school_sentence-0563","category":"school_sentence","user":"Use the word fireplace in a sentence.","assistant":"We warmed our hands near the cozy fireplace."}
+{"id":"school_sentence-0564","category":"school_sentence","user":"Use the word ignore in a sentence.","assistant":"I ignore the noise when I focus on drawing my picture."}
+{"id":"school_sentence-0565","category":"school_sentence","user":"Use the word candy in a sentence.","assistant":"We share our candy after lunch on the bench."}
+{"id":"school_sentence-0566","category":"school_sentence","user":"Use the word bagel in a sentence.","assistant":"She puts cream cheese on her bagel every morning."}
+{"id":"school_sentence-0567","category":"school_sentence","user":"Use the word beak in a sentence.","assistant":"The bird uses its beak to crack open a seed."}
+{"id":"school_sentence-0568","category":"school_sentence","user":"Use the word bloom in a sentence.","assistant":"The flower will bloom in the spring sun."}
+{"id":"school_sentence-0569","category":"school_sentence","user":"Use the word cabin in a sentence.","assistant":"Our family stayed in a cozy cabin by the lake."}
+{"id":"school_sentence-0570","category":"school_sentence","user":"Use the word cave in a sentence.","assistant":"A small cave hides behind the big rock."}
+{"id":"school_sentence-0571","category":"school_sentence","user":"Use the word creek in a sentence.","assistant":"We played near the babbling creek."}
+{"id":"school_sentence-0572","category":"school_sentence","user":"Use the word dawn in a sentence.","assistant":"The sky turns pink at dawn."}
+{"id":"school_sentence-0573","category":"school_sentence","user":"Use the word deep in a sentence.","assistant":"The deep ocean is full of fish."}
+{"id":"school_sentence-0574","category":"school_sentence","user":"Use the word feather in a sentence.","assistant":"The bird’s feather is soft and light."}
+{"id":"school_sentence-0575","category":"school_sentence","user":"Use the word fern in a sentence.","assistant":"A fern grows in the shady garden."}
+{"id":"school_sentence-0576","category":"school_sentence","user":"Use the word flock in a sentence.","assistant":"A flock of sheep grazes in the field."}
+{"id":"school_sentence-0577","category":"school_sentence","user":"Use the word frame in a sentence.","assistant":"Mom put my picture inside a pretty frame."}
+{"id":"school_sentence-0578","category":"school_sentence","user":"Use the word gravel in a sentence.","assistant":"The path was covered with small, rough gravel."}
+{"id":"school_sentence-0579","category":"school_sentence","user":"Use the word handle in a sentence.","assistant":"Grab the handle to open the door."}
+{"id":"school_sentence-0580","category":"school_sentence","user":"Use the word hatch in a sentence.","assistant":"Chicks pop out of their eggs when they hatch."}
+{"id":"school_sentence-0581","category":"school_sentence","user":"Use the word helmet in a sentence.","assistant":"My helmet keeps my head safe on my bike."}
+{"id":"school_sentence-0582","category":"school_sentence","user":"Use the word hike in a sentence.","assistant":"We walked along the trail for a fun hike."}
+{"id":"school_sentence-0583","category":"school_sentence","user":"Use the word hive in a sentence.","assistant":"Bees fly to their hive to share honey."}
+{"id":"school_sentence-0584","category":"school_sentence","user":"Use the word marble in a sentence.","assistant":"I rolled the shiny marble across the floor."}
+{"id":"school_sentence-0585","category":"school_sentence","user":"Use the word ocean in a sentence.","assistant":"The big ocean has waves and boats."}
+{"id":"school_sentence-0586","category":"school_sentence","user":"Use the word slope in a sentence.","assistant":"The hill has a steep slope for sliding."}
+{"id":"school_sentence-0587","category":"school_sentence","user":"Use the word bounce in a sentence.","assistant":"The rubber ball can bounce across the floor."}
+{"id":"school_sentence-0588","category":"school_sentence","user":"Use the word brick in a sentence.","assistant":"One red brick fell from the small wall."}
+{"id":"school_sentence-0589","category":"school_sentence","user":"Use the word cheer in a sentence.","assistant":"Fans cheer when their team scores a goal."}
+{"id":"school_sentence-0590","category":"school_sentence","user":"Use the word curl in a sentence.","assistant":"The ribbon will curl around the gift box."}
+{"id":"school_sentence-0591","category":"school_sentence","user":"Use the word pedal in a sentence.","assistant":"Push each pedal to make the bicycle move."}
+{"id":"school_sentence-0592","category":"school_sentence","user":"Use the word button in a sentence.","assistant":"Press the red button to ring the bell."}
+{"id":"school_sentence-0593","category":"school_sentence","user":"Use the word cherry in a sentence.","assistant":"I love the sweet taste of a cherry."}
+{"id":"school_sentence-0594","category":"school_sentence","user":"Use the word clap in a sentence.","assistant":"We clap our hands when we cheer for the team."}
+{"id":"school_sentence-0595","category":"school_sentence","user":"Use the word coin in a sentence.","assistant":"I found a shiny coin under the table."}
+{"id":"school_sentence-0596","category":"school_sentence","user":"Use the word corner in a sentence.","assistant":"The kitten hid in the quiet corner of the room."}
+{"id":"school_sentence-0597","category":"school_sentence","user":"Use the word daisy in a sentence.","assistant":"A yellow daisy bloomed in the sunny garden."}
+{"id":"school_sentence-0598","category":"school_sentence","user":"Use the word fork in a sentence.","assistant":"I use a fork to eat my spaghetti."}
+{"id":"school_sentence-0599","category":"school_sentence","user":"Use the word float in a sentence.","assistant":"A dry leaf can float on water."}
+{"id":"school_sentence-0600","category":"school_sentence","user":"Use the word glove in a sentence.","assistant":"The warm glove keeps my left hand dry."}
+{"id":"fact-0001","category":"fact","user":"What color is the sky on a clear day?","assistant":"A clear daytime sky looks blue."}
+{"id":"fact-0002","category":"fact","user":"What color does a clear daytime sky look?","assistant":"A clear daytime sky looks blue."}
+{"id":"fact-0003","category":"fact","user":"How many days are in a week?","assistant":"There are seven days in a week."}
+{"id":"fact-0004","category":"fact","user":"How long is one week in days?","assistant":"There are seven days in a week."}
+{"id":"fact-0005","category":"fact","user":"How many months are in a year?","assistant":"There are twelve months in a year."}
+{"id":"fact-0006","category":"fact","user":"How long is one year in months?","assistant":"There are twelve months in a year."}
+{"id":"fact-0007","category":"fact","user":"What do bees make?","assistant":"Bees make honey."}
+{"id":"fact-0008","category":"fact","user":"What sweet food comes from bees?","assistant":"Bees make honey."}
+{"id":"fact-0009","category":"fact","user":"Where do fish live?","assistant":"Fish live in water."}
+{"id":"fact-0010","category":"fact","user":"What is a fish's usual home?","assistant":"Fish live in water."}
+{"id":"fact-0011","category":"fact","user":"What do plants need to grow?","assistant":"Plants need water, light, air, and nutrients to grow."}
+{"id":"fact-0012","category":"fact","user":"What helps a plant grow?","assistant":"Plants need water, light, air, and nutrients to grow."}
+{"id":"fact-0013","category":"fact","user":"What does a thermometer measure?","assistant":"A thermometer measures temperature."}
+{"id":"fact-0014","category":"fact","user":"What can a thermometer tell us?","assistant":"A thermometer measures temperature."}
+{"id":"fact-0015","category":"fact","user":"What is frozen water called?","assistant":"Frozen water is called ice."}
+{"id":"fact-0016","category":"fact","user":"What do we call water after it freezes?","assistant":"Frozen water is called ice."}
+{"id":"fact-0017","category":"fact","user":"What happens when ice gets warm?","assistant":"Ice melts into liquid water when it gets warm."}
+{"id":"fact-0018","category":"fact","user":"What does warm ice turn into?","assistant":"Ice melts into liquid water when it gets warm."}
+{"id":"fact-0019","category":"fact","user":"Why do people wear coats in winter?","assistant":"A coat helps keep a person warm in cold weather."}
+{"id":"fact-0020","category":"fact","user":"How does a winter coat help?","assistant":"A coat helps keep a person warm in cold weather."}
+{"id":"fact-0021","category":"fact","user":"What do we use an umbrella for?","assistant":"An umbrella helps keep rain off you."}
+{"id":"fact-0022","category":"fact","user":"How can an umbrella help in rain?","assistant":"An umbrella helps keep rain off you."}
+{"id":"fact-0023","category":"fact","user":"What do birds use wings for?","assistant":"Birds use their wings to fly and balance."}
+{"id":"fact-0024","category":"fact","user":"How do wings help a bird?","assistant":"Birds use their wings to fly and balance."}
+{"id":"fact-0025","category":"fact","user":"What does a clock show?","assistant":"A clock shows the time."}
+{"id":"fact-0026","category":"fact","user":"What can you learn from a clock?","assistant":"A clock shows the time."}
+{"id":"fact-0027","category":"fact","user":"What does a map show?","assistant":"A map shows places and helps people find their way."}
+{"id":"fact-0028","category":"fact","user":"How does a map help someone?","assistant":"A map shows places and helps people find their way."}
+{"id":"fact-0029","category":"fact","user":"What is a baby dog called?","assistant":"A baby dog is called a puppy."}
+{"id":"fact-0030","category":"fact","user":"What do you call a young dog?","assistant":"A baby dog is called a puppy."}
+{"id":"fact-0031","category":"fact","user":"What is a baby cat called?","assistant":"A baby cat is called a kitten."}
+{"id":"fact-0032","category":"fact","user":"What do you call a young cat?","assistant":"A baby cat is called a kitten."}
+{"id":"fact-0033","category":"fact","user":"What shape has three sides?","assistant":"A triangle has three sides."}
+{"id":"fact-0034","category":"fact","user":"Which shape has exactly three sides?","assistant":"A triangle has three sides."}
+{"id":"fact-0035","category":"fact","user":"What shape has four equal sides?","assistant":"A square has four equal sides."}
+{"id":"fact-0036","category":"fact","user":"Which shape has four sides of equal length?","assistant":"A square has four equal sides."}
+{"id":"fact-0037","category":"fact","user":"Which planet do people live on?","assistant":"People live on Earth."}
+{"id":"fact-0038","category":"fact","user":"What is the name of our home planet?","assistant":"People live on Earth."}
+{"id":"fact-0039","category":"fact","user":"What gives Earth light during the day?","assistant":"The Sun gives Earth light during the day."}
+{"id":"fact-0040","category":"fact","user":"What shines on Earth in daytime?","assistant":"The Sun gives Earth light during the day."}
+{"id":"fact-0041","category":"fact","user":"What do roots do for a plant?","assistant":"Roots hold a plant in place and take in water."}
+{"id":"fact-0042","category":"fact","user":"How do roots help a plant?","assistant":"Roots hold a plant in place and take in water."}
+{"id":"fact-0043","category":"fact","user":"Why do we wash our hands?","assistant":"Washing our hands removes dirt and helps stop germs from spreading."}
+{"id":"fact-0044","category":"fact","user":"How does handwashing help?","assistant":"Washing our hands removes dirt and helps stop germs from spreading."}
+{"id":"fact-0045","category":"fact","user":"What should you do before crossing a street?","assistant":"Stop and look both ways before crossing a street."}
+{"id":"fact-0046","category":"fact","user":"How should you check a street before crossing?","assistant":"Stop and look both ways before crossing a street."}
+{"id":"fact-0047","category":"fact","user":"What does a librarian do?","assistant":"A librarian helps people find and borrow books."}
+{"id":"fact-0048","category":"fact","user":"Who helps people find books in a library?","assistant":"A librarian helps people find and borrow books."}
+{"id":"fact-0049","category":"fact","user":"What does a firefighter do?","assistant":"A firefighter puts out fires and helps keep people safe."}
+{"id":"fact-0050","category":"fact","user":"How does a firefighter help people?","assistant":"A firefighter puts out fires and helps keep people safe."}
+{"id":"fact-0051","category":"fact","user":"What does a doctor do?","assistant":"A doctor helps care for people who are sick or hurt."}
+{"id":"fact-0052","category":"fact","user":"How does a doctor help?","assistant":"A doctor helps care for people who are sick or hurt."}
+{"id":"fact-0053","category":"fact","user":"What does a farmer grow?","assistant":"Farmers can grow crops and care for animals."}
+{"id":"fact-0054","category":"fact","user":"What can farmers produce on a farm?","assistant":"Farmers can grow crops and care for animals."}
+{"id":"fact-0055","category":"fact","user":"What can you use to cut paper?","assistant":"You can use scissors to cut paper."}
+{"id":"fact-0056","category":"fact","user":"Which tool is used for cutting paper?","assistant":"You can use scissors to cut paper."}
+{"id":"fact-0057","category":"fact","user":"What can you use to write on paper?","assistant":"You can write on paper with a pencil or pen."}
+{"id":"fact-0058","category":"fact","user":"Name a tool used for writing on paper.","assistant":"You can write on paper with a pencil or pen."}
+{"id":"fact-0059","category":"fact","user":"What does a refrigerator do?","assistant":"A refrigerator keeps food cold."}
+{"id":"fact-0060","category":"fact","user":"Why is food kept in a refrigerator?","assistant":"A refrigerator keeps food cold."}
+{"id":"fact-0061","category":"fact","user":"Why do we sleep?","assistant":"Sleep gives the body and brain time to rest."}
+{"id":"fact-0062","category":"fact","user":"How does sleep help the body?","assistant":"Sleep gives the body and brain time to rest."}
+{"id":"fact-0063","category":"fact","user":"What is rain?","assistant":"Rain is water that falls from clouds."}
+{"id":"fact-0064","category":"fact","user":"Where does rain come from?","assistant":"Rain is water that falls from clouds."}
+{"id":"fact-0065","category":"fact","user":"What is snow?","assistant":"Snow is made of ice crystals that fall from clouds."}
+{"id":"fact-0066","category":"fact","user":"What falls as snow in cold weather?","assistant":"Snow is made of ice crystals that fall from clouds."}
+{"id":"fact-0067","category":"fact","user":"What makes a shadow?","assistant":"A shadow forms when an object blocks light."}
+{"id":"fact-0068","category":"fact","user":"How is a shadow formed?","assistant":"A shadow forms when an object blocks light."}
+{"id":"fact-0069","category":"fact","user":"What is a sentence?","assistant":"A sentence is a group of words that expresses a complete thought."}
+{"id":"fact-0070","category":"fact","user":"How can you describe a sentence?","assistant":"A sentence is a group of words that expresses a complete thought."}
+{"id":"fact-0071","category":"fact","user":"What is a question?","assistant":"A question asks for information."}
+{"id":"fact-0072","category":"fact","user":"What does a question do?","assistant":"A question asks for information."}
+{"id":"fact-0073","category":"fact","user":"What is an answer?","assistant":"An answer responds to a question."}
+{"id":"fact-0074","category":"fact","user":"What does an answer provide?","assistant":"An answer responds to a question."}
+{"id":"fact-0075","category":"fact","user":"What does fragile mean?","assistant":"Fragile means easily broken, so handle it gently."}
+{"id":"fact-0076","category":"fact","user":"How should you treat something fragile?","assistant":"Fragile means easily broken, so handle it gently."}
+{"id":"fact-0077","category":"fact","user":"What does enormous mean?","assistant":"Enormous means very large."}
+{"id":"fact-0078","category":"fact","user":"Is something enormous big or small?","assistant":"Enormous means very large."}
+{"id":"fact-0079","category":"fact","user":"What does ancient mean?","assistant":"Ancient means very old."}
+{"id":"fact-0080","category":"fact","user":"How old is something described as ancient?","assistant":"Ancient means very old."}
+{"id":"social-0001","category":"social","user":"Hello!","assistant":"Hello! How can I help?"}
+{"id":"social-0002","category":"social","user":"Good morning.","assistant":"Good morning!"}
+{"id":"social-0003","category":"social","user":"Good night.","assistant":"Good night! Sleep well."}
+{"id":"social-0004","category":"social","user":"How are you?","assistant":"I'm ready to help. How are you?"}
+{"id":"social-0005","category":"social","user":"Thank you.","assistant":"You're welcome!"}
+{"id":"social-0006","category":"social","user":"Thanks for helping me.","assistant":"You're welcome. I'm glad I could help."}
+{"id":"social-0007","category":"social","user":"I'm sorry.","assistant":"Thank you for saying that."}
+{"id":"social-0008","category":"social","user":"I made a mistake.","assistant":"That's okay. Mistakes can help us learn."}
+{"id":"social-0009","category":"social","user":"I feel sad.","assistant":"I'm sorry you're feeling sad. Do you want to talk about it?"}
+{"id":"social-0010","category":"social","user":"I feel nervous.","assistant":"It's okay to feel nervous. Taking a slow breath may help."}
+{"id":"social-0011","category":"social","user":"I am excited!","assistant":"That sounds exciting!"}
+{"id":"social-0012","category":"social","user":"I did it!","assistant":"Nice work!"}
+{"id":"social-0013","category":"social","user":"Can you help me?","assistant":"Yes. Tell me what you need help with."}
+{"id":"social-0014","category":"social","user":"I do not understand.","assistant":"That's okay. Tell me which part is confusing."}
+{"id":"social-0015","category":"social","user":"Please say that again.","assistant":"Sure. What would you like me to repeat?"}
+{"id":"social-0016","category":"social","user":"Can you make that shorter?","assistant":"Yes. Send me the text you want shortened."}
+{"id":"social-0017","category":"social","user":"Can you explain it simply?","assistant":"Yes. Tell me what you want explained."}
+{"id":"social-0018","category":"social","user":"What should we talk about?","assistant":"We can talk about something you enjoy or a question you have."}
+{"id":"social-0019","category":"social","user":"Tell me a joke.","assistant":"Why did the pencil cross the page? To get to the other side!"}
+{"id":"social-0020","category":"social","user":"Goodbye.","assistant":"Goodbye!"}
+{"id":"social-0021","category":"social","user":"See you later.","assistant":"See you later!"}
+{"id":"social-0022","category":"social","user":"Are you listening?","assistant":"Yes. I'm listening."}
+{"id":"social-0023","category":"social","user":"That answer was wrong.","assistant":"Thanks for telling me. Let's correct it."}
+{"id":"social-0024","category":"social","user":"Stay on topic.","assistant":"Okay. I will answer the question directly."}
+{"id":"social-0025","category":"social","user":"Answer in one sentence.","assistant":"Okay. I will use one sentence."}
+{"id":"social-0026","category":"social","user":"Do not guess.","assistant":"Okay. If I do not know, I will say so."}
+{"id":"social-0027","category":"social","user":"Be clear.","assistant":"Okay. I will use clear, direct words."}
+{"id":"social-0028","category":"social","user":"Can we start over?","assistant":"Yes. What would you like to start with?"}
+{"id":"social-0029","category":"social","user":"Wait a moment.","assistant":"Okay."}
+{"id":"social-0030","category":"social","user":"Ready?","assistant":"Ready."}
+{"id":"unknown-0001","category":"unknown","user":"What is my teacher's name?","assistant":"I don't know your teacher's name."}
+{"id":"unknown-0002","category":"unknown","user":"Do you know my teacher's name?","assistant":"No. You have not told me your teacher's name."}
+{"id":"unknown-0003","category":"unknown","user":"What is my home address?","assistant":"I don't know your home address."}
+{"id":"unknown-0004","category":"unknown","user":"Do you know my home address?","assistant":"No. You have not told me your home address."}
+{"id":"unknown-0005","category":"unknown","user":"What is my phone number?","assistant":"I don't know your phone number."}
+{"id":"unknown-0006","category":"unknown","user":"Do you know my phone number?","assistant":"No. You have not told me your phone number."}
+{"id":"unknown-0007","category":"unknown","user":"What is my favorite movie?","assistant":"I don't know your favorite movie."}
+{"id":"unknown-0008","category":"unknown","user":"Do you know my favorite movie?","assistant":"No. You have not told me your favorite movie."}
+{"id":"unknown-0009","category":"unknown","user":"What is my favorite song?","assistant":"I don't know your favorite song."}
+{"id":"unknown-0010","category":"unknown","user":"Do you know my favorite song?","assistant":"No. You have not told me your favorite song."}
+{"id":"unknown-0011","category":"unknown","user":"What is my birthday?","assistant":"I don't know your birthday."}
+{"id":"unknown-0012","category":"unknown","user":"Do you know my birthday?","assistant":"No. You have not told me your birthday."}
+{"id":"unknown-0013","category":"unknown","user":"What is my middle name?","assistant":"I don't know your middle name."}
+{"id":"unknown-0014","category":"unknown","user":"Do you know my middle name?","assistant":"No. You have not told me your middle name."}
+{"id":"unknown-0015","category":"unknown","user":"What is my pet's name?","assistant":"I don't know your pet's name."}
+{"id":"unknown-0016","category":"unknown","user":"Do you know my pet's name?","assistant":"No. You have not told me your pet's name."}
+{"id":"unknown-0017","category":"unknown","user":"What is my school name?","assistant":"I don't know your school name."}
+{"id":"unknown-0018","category":"unknown","user":"Do you know my school name?","assistant":"No. You have not told me your school name."}
+{"id":"unknown-0019","category":"unknown","user":"What is my best friend's name?","assistant":"I don't know your best friend's name."}
+{"id":"unknown-0020","category":"unknown","user":"Do you know my best friend's name?","assistant":"No. You have not told me your best friend's name."}
+{"id":"unknown-0021","category":"unknown","user":"What is my dentist's name?","assistant":"I don't know your dentist's name."}
+{"id":"unknown-0022","category":"unknown","user":"Do you know my dentist's name?","assistant":"No. You have not told me your dentist's name."}
+{"id":"unknown-0023","category":"unknown","user":"What is my doctor's name?","assistant":"I don't know your doctor's name."}
+{"id":"unknown-0024","category":"unknown","user":"Do you know my doctor's name?","assistant":"No. You have not told me your doctor's name."}
+{"id":"unknown-0025","category":"unknown","user":"What is my email address?","assistant":"I don't know your email address."}
+{"id":"unknown-0026","category":"unknown","user":"Do you know my email address?","assistant":"No. You have not told me your email address."}
+{"id":"unknown-0027","category":"unknown","user":"What is my password?","assistant":"I don't know your password."}
+{"id":"unknown-0028","category":"unknown","user":"Do you know my password?","assistant":"No. You have not told me your password."}
+{"id":"unknown-0029","category":"unknown","user":"What is my plans for tomorrow?","assistant":"I don't know your plans for tomorrow."}
+{"id":"unknown-0030","category":"unknown","user":"Do you know my plans for tomorrow?","assistant":"No. You have not told me your plans for tomorrow."}
+{"id":"unknown-0031","category":"unknown","user":"What is my favorite food?","assistant":"I don't know your favorite food."}
+{"id":"unknown-0032","category":"unknown","user":"Do you know my favorite food?","assistant":"No. You have not told me your favorite food."}
+{"id":"unknown-0033","category":"unknown","user":"What is my shoe size?","assistant":"I don't know your shoe size."}
+{"id":"unknown-0034","category":"unknown","user":"Do you know my shoe size?","assistant":"No. You have not told me your shoe size."}
+{"id":"unknown-0035","category":"unknown","user":"What is my bedtime?","assistant":"I don't know your bedtime."}
+{"id":"unknown-0036","category":"unknown","user":"Do you know my bedtime?","assistant":"No. You have not told me your bedtime."}
+{"id":"unknown-0037","category":"unknown","user":"What is my classroom number?","assistant":"I don't know your classroom number."}
+{"id":"unknown-0038","category":"unknown","user":"Do you know my classroom number?","assistant":"No. You have not told me your classroom number."}
+{"id":"unknown-0039","category":"unknown","user":"What is my bus number?","assistant":"I don't know your bus number."}
+{"id":"unknown-0040","category":"unknown","user":"Do you know my bus number?","assistant":"No. You have not told me your bus number."}
+{"id":"grounded-0001","category":"grounded","user":"What is Ava's favorite color?","assistant":"Ava's favorite color is red.","known":["Ava's favorite color is red"]}
+{"id":"grounded-0002","category":"grounded","user":"How many marbles does Ava have?","assistant":"Ava has 6 marbles.","known":["Ava has 6 marbles"]}
+{"id":"grounded-0003","category":"grounded","user":"What pet does Ava have?","assistant":"Ava has a dog.","known":["Ava has a dog"]}
+{"id":"grounded-0004","category":"grounded","user":"What is Ben's favorite color?","assistant":"Ben's favorite color is blue.","known":["Ben's favorite color is blue"]}
+{"id":"grounded-0005","category":"grounded","user":"How many marbles does Ben have?","assistant":"Ben has 9 marbles.","known":["Ben has 9 marbles"]}
+{"id":"grounded-0006","category":"grounded","user":"What pet does Ben have?","assistant":"Ben has a cat.","known":["Ben has a cat"]}
+{"id":"grounded-0007","category":"grounded","user":"What is Cora's favorite color?","assistant":"Cora's favorite color is green.","known":["Cora's favorite color is green"]}
+{"id":"grounded-0008","category":"grounded","user":"How many marbles does Cora have?","assistant":"Cora has 12 marbles.","known":["Cora has 12 marbles"]}
+{"id":"grounded-0009","category":"grounded","user":"What pet does Cora have?","assistant":"Cora has a fish.","known":["Cora has a fish"]}
+{"id":"grounded-0010","category":"grounded","user":"What is Diego's favorite color?","assistant":"Diego's favorite color is yellow.","known":["Diego's favorite color is yellow"]}
+{"id":"grounded-0011","category":"grounded","user":"How many marbles does Diego have?","assistant":"Diego has 15 marbles.","known":["Diego has 15 marbles"]}
+{"id":"grounded-0012","category":"grounded","user":"What pet does Diego have?","assistant":"Diego has a rabbit.","known":["Diego has a rabbit"]}
+{"id":"grounded-0013","category":"grounded","user":"What is Emma's favorite color?","assistant":"Emma's favorite color is purple.","known":["Emma's favorite color is purple"]}
+{"id":"grounded-0014","category":"grounded","user":"How many marbles does Emma have?","assistant":"Emma has 18 marbles.","known":["Emma has 18 marbles"]}
+{"id":"grounded-0015","category":"grounded","user":"What pet does Emma have?","assistant":"Emma has a bird.","known":["Emma has a bird"]}
+{"id":"grounded-0016","category":"grounded","user":"What is Finn's favorite color?","assistant":"Finn's favorite color is orange.","known":["Finn's favorite color is orange"]}
+{"id":"grounded-0017","category":"grounded","user":"How many marbles does Finn have?","assistant":"Finn has 21 marbles.","known":["Finn has 21 marbles"]}
+{"id":"grounded-0018","category":"grounded","user":"What pet does Finn have?","assistant":"Finn has a dog.","known":["Finn has a dog"]}
+{"id":"grounded-0019","category":"grounded","user":"What is Gia's favorite color?","assistant":"Gia's favorite color is silver.","known":["Gia's favorite color is silver"]}
+{"id":"grounded-0020","category":"grounded","user":"How many marbles does Gia have?","assistant":"Gia has 24 marbles.","known":["Gia has 24 marbles"]}
+{"id":"grounded-0021","category":"grounded","user":"What pet does Gia have?","assistant":"Gia has a cat.","known":["Gia has a cat"]}
+{"id":"grounded-0022","category":"grounded","user":"What is Hugo's favorite color?","assistant":"Hugo's favorite color is gold.","known":["Hugo's favorite color is gold"]}
+{"id":"grounded-0023","category":"grounded","user":"How many marbles does Hugo have?","assistant":"Hugo has 27 marbles.","known":["Hugo has 27 marbles"]}
+{"id":"grounded-0024","category":"grounded","user":"What pet does Hugo have?","assistant":"Hugo has a fish.","known":["Hugo has a fish"]}
+{"id":"grounded-0025","category":"grounded","user":"What is Ivy's favorite color?","assistant":"Ivy's favorite color is black.","known":["Ivy's favorite color is black"]}
+{"id":"grounded-0026","category":"grounded","user":"How many marbles does Ivy have?","assistant":"Ivy has 30 marbles.","known":["Ivy has 30 marbles"]}
+{"id":"grounded-0027","category":"grounded","user":"What pet does Ivy have?","assistant":"Ivy has a rabbit.","known":["Ivy has a rabbit"]}
+{"id":"grounded-0028","category":"grounded","user":"What is Jamal's favorite color?","assistant":"Jamal's favorite color is white.","known":["Jamal's favorite color is white"]}
+{"id":"grounded-0029","category":"grounded","user":"How many marbles does Jamal have?","assistant":"Jamal has 33 marbles.","known":["Jamal has 33 marbles"]}
+{"id":"grounded-0030","category":"grounded","user":"What pet does Jamal have?","assistant":"Jamal has a bird.","known":["Jamal has a bird"]}
+{"id":"instruction-0001","category":"instruction","user":"Say the opposite of hot.","assistant":"Cold."}
+{"id":"instruction-0002","category":"instruction","user":"Say the opposite of big.","assistant":"Small."}
+{"id":"instruction-0003","category":"instruction","user":"Say the opposite of fast.","assistant":"Slow."}
+{"id":"instruction-0004","category":"instruction","user":"Say the opposite of up.","assistant":"Down."}
+{"id":"instruction-0005","category":"instruction","user":"Say the opposite of open.","assistant":"Closed."}
+{"id":"instruction-0006","category":"instruction","user":"Say the opposite of light.","assistant":"Dark."}
+{"id":"instruction-0007","category":"instruction","user":"Say the opposite of wet.","assistant":"Dry."}
+{"id":"instruction-0008","category":"instruction","user":"Say the opposite of full.","assistant":"Empty."}
+{"id":"instruction-0009","category":"instruction","user":"Say the opposite of happy.","assistant":"Sad."}
+{"id":"instruction-0010","category":"instruction","user":"Say the opposite of early.","assistant":"Late."}
+{"id":"instruction-0011","category":"instruction","user":"Say the opposite of near.","assistant":"Far."}
+{"id":"instruction-0012","category":"instruction","user":"Say the opposite of soft.","assistant":"Hard."}
+{"id":"instruction-0013","category":"instruction","user":"Say the opposite of loud.","assistant":"Quiet."}
+{"id":"instruction-0014","category":"instruction","user":"Say the opposite of clean.","assistant":"Dirty."}
+{"id":"instruction-0015","category":"instruction","user":"Say the opposite of young.","assistant":"Old."}
+{"id":"instruction-0016","category":"instruction","user":"Say the opposite of inside.","assistant":"Outside."}
+{"id":"instruction-0017","category":"instruction","user":"Say the opposite of begin.","assistant":"End."}
+{"id":"instruction-0018","category":"instruction","user":"Say the opposite of push.","assistant":"Pull."}
+{"id":"instruction-0019","category":"instruction","user":"Say the opposite of give.","assistant":"Take."}
+{"id":"instruction-0020","category":"instruction","user":"Say the opposite of above.","assistant":"Below."}
+{"id":"instruction-0021","category":"instruction","user":"What kind of thing is apple?","assistant":"Apple is a fruit."}
+{"id":"instruction-0022","category":"instruction","user":"What kind of thing is carrot?","assistant":"Carrot is a vegetable."}
+{"id":"instruction-0023","category":"instruction","user":"What kind of thing is dog?","assistant":"Dog is a animal."}
+{"id":"instruction-0024","category":"instruction","user":"What kind of thing is robin?","assistant":"Robin is a bird."}
+{"id":"instruction-0025","category":"instruction","user":"What kind of thing is salmon?","assistant":"Salmon is a fish."}
+{"id":"instruction-0026","category":"instruction","user":"What kind of thing is shirt?","assistant":"Shirt is a clothing."}
+{"id":"instruction-0027","category":"instruction","user":"What kind of thing is hammer?","assistant":"Hammer is a tool."}
+{"id":"instruction-0028","category":"instruction","user":"What kind of thing is bus?","assistant":"Bus is a vehicle."}
+{"id":"instruction-0029","category":"instruction","user":"What kind of thing is chair?","assistant":"Chair is a furniture."}
+{"id":"instruction-0030","category":"instruction","user":"What kind of thing is violin?","assistant":"Violin is a instrument."}
+{"id":"instruction-0031","category":"instruction","user":"What kind of thing is oak?","assistant":"Oak is a tree."}
+{"id":"instruction-0032","category":"instruction","user":"What kind of thing is rose?","assistant":"Rose is a flower."}
+{"id":"instruction-0033","category":"instruction","user":"What kind of thing is circle?","assistant":"Circle is a shape."}
+{"id":"instruction-0034","category":"instruction","user":"What kind of thing is January?","assistant":"January is a month."}
+{"id":"instruction-0035","category":"instruction","user":"What kind of thing is Monday?","assistant":"Monday is a day of the week."}
+{"id":"instruction-0036","category":"instruction","user":"What kind of thing is blue?","assistant":"Blue is a color."}
+{"id":"instruction-0037","category":"instruction","user":"What kind of thing is baseball?","assistant":"Baseball is a sport."}
+{"id":"instruction-0038","category":"instruction","user":"What kind of thing is bread?","assistant":"Bread is a food."}
+{"id":"instruction-0039","category":"instruction","user":"What kind of thing is kitchen?","assistant":"Kitchen is a room."}
+{"id":"instruction-0040","category":"instruction","user":"What kind of thing is rain?","assistant":"Rain is a weather."}
+{"id":"instruction-0041","category":"instruction","user":"What is the plural of cat?","assistant":"The plural of cat is cats."}
+{"id":"instruction-0042","category":"instruction","user":"What is the plural of dog?","assistant":"The plural of dog is dogs."}
+{"id":"instruction-0043","category":"instruction","user":"What is the plural of book?","assistant":"The plural of book is books."}
+{"id":"instruction-0044","category":"instruction","user":"What is the plural of tree?","assistant":"The plural of tree is trees."}
+{"id":"instruction-0045","category":"instruction","user":"What is the plural of bus?","assistant":"The plural of bus is buses."}
+{"id":"instruction-0046","category":"instruction","user":"What is the plural of box?","assistant":"The plural of box is boxes."}
+{"id":"instruction-0047","category":"instruction","user":"What is the plural of dish?","assistant":"The plural of dish is dishes."}
+{"id":"instruction-0048","category":"instruction","user":"What is the plural of baby?","assistant":"The plural of baby is babies."}
+{"id":"instruction-0049","category":"instruction","user":"What is the plural of berry?","assistant":"The plural of berry is berries."}
+{"id":"instruction-0050","category":"instruction","user":"What is the plural of leaf?","assistant":"The plural of leaf is leaves."}
+{"id":"instruction-0051","category":"instruction","user":"What is the plural of mouse?","assistant":"The plural of mouse is mice."}
+{"id":"instruction-0052","category":"instruction","user":"What is the plural of child?","assistant":"The plural of child is children."}
+{"id":"instruction-0053","category":"instruction","user":"What is the plural of foot?","assistant":"The plural of foot is feet."}
+{"id":"instruction-0054","category":"instruction","user":"What is the plural of tooth?","assistant":"The plural of tooth is teeth."}
+{"id":"instruction-0055","category":"instruction","user":"What is the plural of person?","assistant":"The plural of person is people."}

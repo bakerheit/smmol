@@ -1,0 +1,135 @@
+{
+  "endpoint": "http://127.0.0.1:64201",
+  "files": {
+    "accepted": "data/accepted/conversations.jsonl",
+    "generated": "data/raw/generated.jsonl",
+    "outline_rejections": "data/review/outline_rejections.jsonl",
+    "outlines": "data/raw/outlines.jsonl",
+    "rejections": "data/review/rejections.jsonl",
+    "teacher_calls": "data/logs/teacher_calls.jsonl"
+  },
+  "format_version": 1,
+  "model": "smCONVERSATION_001",
+  "normalization": {
+    "strip_stage_directions": true,
+    "version": 1
+  },
+  "prompt_version": 9,
+  "report": {
+    "assistant_targets": 60,
+    "common_assistant_openings": [
+      {
+        "count": 1,
+        "opening": "got it you re"
+      },
+      {
+        "count": 1,
+        "opening": "that s a great"
+      },
+      {
+        "count": 1,
+        "opening": "pixel parlor keeps it"
+      },
+      {
+        "count": 1,
+        "opening": "perfect speaker lounge or"
+      },
+      {
+        "count": 1,
+        "opening": "hush hex"
+      },
+      {
+        "count": 1,
+        "opening": "speaker lounge works well"
+      },
+      {
+        "count": 1,
+        "opening": "then static social bridges"
+      },
+      {
+        "count": 1,
+        "opening": "static social captures it"
+      },
+      {
+        "count": 1,
+        "opening": "perfect static social is"
+      },
+      {
+        "count": 1,
+        "opening": "excellent static social s"
+      },
+      {
+        "count": 1,
+        "opening": "got it are there"
+      },
+      {
+        "count": 1,
+        "opening": "that makes sense are"
+      },
+      {
+        "count": 1,
+        "opening": "so you re weighing"
+      },
+      {
+        "count": 1,
+        "opening": "that s a key"
+      },
+      {
+        "count": 1,
+        "opening": "then the farmhouse set"
+      },
+      {
+        "count": 1,
+        "opening": "that s a smart"
+      },
+      {
+        "count": 1,
+        "opening": "matte gray works beautifully"
+      },
+      {
+        "count": 1,
+        "opening": "farmhouse sets with solid"
+      },
+      {
+        "count": 1,
+        "opening": "it aligns with your"
+      },
+      {
+        "count": 1,
+        "opening": "farmhouse isn t dated"
+      }
+    ],
+    "conversations": 5,
+    "domains": {
+      "creative_brainstorming": 1,
+      "decision_making": 1,
+      "entertainment_discussion": 1,
+      "everyday_planning": 1,
+      "family_scheduling": 1
+    },
+    "duplicate_conversations": 0,
+    "length_bands": {
+      "long": 39,
+      "medium": 58,
+      "short": 23
+    },
+    "message_words": {
+      "max": 46,
+      "mean": 19.12,
+      "min": 1
+    },
+    "messages": 120,
+    "skills": {
+      "brainstorming": 1,
+      "callback_to_earlier_detail": 2,
+      "clarification": 4,
+      "compare_options": 2,
+      "emotional_attunement": 1,
+      "multi_step_planning": 2,
+      "summarization": 3
+    },
+    "structural_failures": []
+  },
+  "sha256": "87ed68635300be772fcb31ae3de663ecb044af14dbda7d35e1c2faaac79fb4da",
+  "teacher": "ministral-8b"
+}

@@ -1,0 +1,7 @@
+{"word":"bounce","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as bounces, which failed the whole-word target gate."}
+{"word":"brick","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as bricks, which failed the whole-word target gate."}
+{"word":"cheer","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as cheers, which failed the whole-word target gate."}
+{"word":"curl","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as curls, which failed the whole-word target gate."}
+{"word":"pedal","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as pedals, which failed the whole-word target gate."}
+{"word":"float","decision":"accept original","reason":"Reviewer accepted the concept but rewrote the exact target as floats, which failed the whole-word target gate."}
+{"word":"glove","decision":"accept repaired","reason":"Changed the ambiguous each-hand sentence to a concrete singular example: The warm glove keeps my left hand dry."}

@@ -1,0 +1,272 @@
+{
+ "when": "2026-09-15 19:22",
+ "model": "ministral-8b",
+ "score": {
+  "exact": 0.149,
+  "program": 0.787,
+  "risk": 0.766,
+  "quiet": 0.5,
+  "safe": 0.75
+ },
+ "median_seconds": 1.94,
+ "mistakes": [
+  {
+   "platform": "ubuntu",
+   "text": "get nginx onto this box",
+   "want": "sudo apt install -y nginx",
+   "got": "sudo apt update && sudo apt install -y nginx"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "how much room is left on the disk",
+   "want": "df -h",
+   "got": "df -h / | awk 'NR==2 {print $4}' | tr -d '%'"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "show me the last 50 log lines for sshd",
+   "want": "journalctl -u sshd -n 50 --no-pager",
+   "got": "sudo tail -n 50 /var/log/auth.log | grep -i sshd"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "which ip is this box on",
+   "want": "ip -4 addr show",
+   "got": "hostname -I | awk '{print $1}'"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "make a local copy of https://github.com/user/repo.git",
+   "want": "git clone https://github.com/user/repo.git",
+   "got": "git clone https://github.com/user/repo.git ~/repo_copy"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "nuke the ./build directory",
+   "want": "rm -rf ./build",
+   "got": "sudo rm -rf /path/to/your/project/build"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "hunt down every *.log file under /var/log",
+   "want": "find /var/log -name '*.log'",
+   "got": "sudo find /var/log -type f -name '*.log' -ls"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "does anything in src say TODO",
+   "want": "grep -rn 'TODO' src",
+   "got": "grep -rl 'TODO' /usr/src/* /var/lib/dpkg/info/*/src/* /var/cache/apt/archives/*"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "my machine is crawling, what's chewing the cpu",
+   "want": "ps aux --sort=-%cpu | head -10",
+   "got": "top -o %CPU -n 1 | head -n 15"
+  },
+  {
+   "platform": "fedora",
+   "text": "put ripgrep on here",
+   "want": "sudo dnf install -y ripgrep",
+   "got": "sudo dnf install ripgrep -y"
+  },
+  {
+   "platform": "fedora",
+   "text": "is the docker service alive",
+   "want": "systemctl status docker",
+   "got": "systemctl is-active docker"
+  },
+  {
+   "platform": "fedora",
+   "text": "give me the kernel build",
+   "want": "uname -a",
+   "got": "uname -r"
+  },
+  {
+   "platform": "fedora",
+   "text": "which accounts exist on this host",
+   "want": "cut -d: -f1 /etc/passwd",
+   "got": "getent passwd | cut -d: -f1"
+  },
+  {
+   "platform": "fedora",
+   "text": "start postgresql when the box boots",
+   "want": "sudo systemctl enable postgresql",
+   "got": "sudo systemctl enable --now postgresql"
+  },
+  {
+   "platform": "fedora",
+   "text": "how long since the last reboot",
+   "want": "uptime",
+   "got": "(nothing)"
+  },
+  {
+   "platform": "fedora",
+   "text": "drop the htop package",
+   "want": "sudo dnf remove -y htop",
+   "got": "sudo dnf remove htop"
+  },
+  {
+   "platform": "arch",
+   "text": "add jq",
+   "want": "sudo pacman -S --noconfirm jq",
+   "got": "sudo pacman -S --needed jq"
+  },
+  {
+   "platform": "arch",
+   "text": "everything up to date please",
+   "want": "sudo pacman -Syu --noconfirm",
+   "got": "sudo pacman -Syu --noconfirm && sudo pacman -Rns $(pacman -Qdtq) --noconfirm"
+  },
+  {
+   "platform": "arch",
+   "text": "what's listening for connections",
+   "want": "sudo ss -ltnp",
+   "got": "ss -tulnp | grep -E ':([0-9]{1,5}|[1-9][0-9]{1,4}|[1-5][0-9]{1,3}|6[0-4][0-9]{1,2}|65[0-4][0-9]|655[0-3])$'"
+  },
+  {
+   "platform": "arch",
+   "text": "kill pid 1337",
+   "want": "kill 1337",
+   "got": "sudo kill -9 1337"
+  },
+  {
+   "platform": "arch",
+   "text": "what release is this",
+   "want": "cat /etc/os-release",
+   "got": "cat /etc/arch-release"
+  },
+  {
+   "platform": "arch",
+   "text": "is vim anywhere on this system",
+   "want": "command -v vim",
+   "got": "pacman -Q | grep -q vim && echo \"vim is installed\" || echo \"vim is not installed\""
+  },
+  {
+   "platform": "arch",
+   "text": "how much ram is spare",
+   "want": "free -h",
+   "got": "free -h | awk '/^Mem:/ {print \"Spare RAM: \" $4}'"
+  },
+  {
+   "platform": "macos",
+   "text": "what's sitting on port 8771",
+   "want": "lsof -nP -iTCP:8771 -sTCP:LISTEN",
+   "got": "lsof -i :8771"
+  },
+  {
+   "platform": "macos",
+   "text": "what macos version is this",
+   "want": "sw_vers",
+   "got": "sw_vers -productVersion"
+  },
+  {
+   "platform": "macos",
+   "text": "swap localhost for 127.0.0.1 inside /etc/hosts",
+   "want": "sed -i '' 's/localhost/127.0.0.1/g' /etc/hosts",
+   "got": "sudo sed -i '' 's/127.0.0.1/localhost/g' /etc/hosts"
+  },
+  {
+   "platform": "macos",
+   "text": "biggest stuff in this directory",
+   "want": "du -h -d 1 . | sort -rh | head -10",
+   "got": "du -hx * | sort -rh | head -n 10"
+  },
+  {
+   "platform": "macos",
+   "text": "pop this folder open in finder",
+   "want": "open .",
+   "got": "open -R /path/to/folder"
+  },
+  {
+   "platform": "macos",
+   "text": "put a zip around ./dist",
+   "want": "zip -r ./dist.zip ./dist",
+   "got": "zip -r ~/dist.zip ~/dist"
+  },
+  {
+   "platform": "macos",
+   "text": "what's the box called",
+   "want": "hostname",
+   "got": "system_profiler SPSoftwareDataType | grep 'System Name'"
+  },
+  {
+   "platform": "macos",
+   "text": "trash the file /tmp/session.log",
+   "want": "rm /tmp/session.log",
+   "got": "rm -f /tmp/session.log"
+  },
+  {
+   "platform": "macos",
+   "text": "check github.com answers",
+   "want": "ping -c 4 github.com",
+   "got": "curl -s https://github.com | grep -o '<title>.*</title>' | sed 's/<title>//;s/<\\/title>//'"
+  },
+  {
+   "platform": "windows",
+   "text": "what's holding port 5432",
+   "want": "Get-NetTCPConnection -LocalPort 5432 -State Listen",
+   "got": "Get-NetTCPConnection -LocalPort 5432 | Select-Object LocalAddress, LocalPort, OwningProcess, State | Format-Table -AutoSize"
+  },
+  {
+   "platform": "windows",
+   "text": "install Git.Git",
+   "want": "winget install --id Git.Git -e",
+   "got": "winget install --id Git.Git --silent --accept-package-agreements --accept-source-agreements"
+  },
+  {
+   "platform": "windows",
+   "text": "is the sshd service up",
+   "want": "Get-Service sshd",
+   "got": "Get-Service sshd | Select-Object Status"
+  },
+  {
+   "platform": "windows",
+   "text": "list what's in this folder including hidden ones",
+   "want": "Get-ChildItem -Force",
+   "got": "Get-ChildItem -Force -Recurse -File | Select-Object FullName, Name, LastWriteTime, Length | Format-Table -AutoSize"
+  },
+  {
+   "platform": "windows",
+   "text": "show me C:\\temp\\old.txt",
+   "want": "Get-Content C:\\temp\\old.txt",
+   "got": "type \"C:\\temp\\old.txt\""
+  },
+  {
+   "platform": "windows",
+   "text": "which processes are eating memory",
+   "want": "Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10",
+   "got": "Get-Process | Sort-Object -Property WS -Descending | Select-Object -First 10 Name, WS, CPU | Format-Table -AutoSize"
+  },
+  {
+   "platform": "windows",
+   "text": "stop the nginx process",
+   "want": "Stop-Process -Name nginx",
+   "got": "Stop-Service -Name 'nginx' -Force"
+  },
+  {
+   "platform": "windows",
+   "text": "unpack .\\dist.zip into this folder",
+   "want": "Expand-Archive -Path .\\dist.zip -DestinationPath .",
+   "got": "Expand-Archive -Path '.\\dist.zip' -DestinationPath '.' -Force"
+  },
+  {
+   "platform": "ubuntu",
+   "text": "what's the weather in Denver tomorrow",
+   "want": "(nothing)",
+   "got": "curl -s 'wttr.in/Denver?format=%C+%t+%h'"
+  },
+  {
+   "platform": "macos",
+   "text": "remember my dentist is Dr. Lee",
+   "want": "(nothing)",
+   "got": "echo 'Reminder: Call Dr. Lee (your dentist)' | pbcopy && osascript -e 'display notification \"Reminder: Call Dr. Lee (your dentist)\" with title \"Dentist Appointment\" sound name \"Glass\"'"
+  },
+  {
+   "platform": "windows",
+   "text": "what's 17.5% of 2,340",
+   "want": "(nothing)",
+   "got": "($2340 * 0.175) | Out-Host"
+  }
+ ]
+}

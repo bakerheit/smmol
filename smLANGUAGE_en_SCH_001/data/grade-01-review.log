@@ -1,0 +1,25 @@
+reviewed 20/300 | accepted 7 | rejected 13 | rewrote 6
+reviewed 40/300 | accepted 17 | rejected 23 | rewrote 15
+reviewed 60/300 | accepted 30 | rejected 30 | rewrote 25
+reviewed 80/300 | accepted 42 | rejected 38 | rewrote 37
+reviewed 100/300 | accepted 51 | rejected 49 | rewrote 46
+reviewed 120/300 | accepted 61 | rejected 59 | rewrote 52
+reviewed 140/300 | accepted 76 | rejected 64 | rewrote 59
+reviewed 160/300 | accepted 91 | rejected 69 | rewrote 71
+reviewed 180/300 | accepted 105 | rejected 75 | rewrote 76
+reviewed 200/300 | accepted 116 | rejected 84 | rewrote 87
+reviewed 220/300 | accepted 125 | rejected 95 | rewrote 96
+reviewed 240/300 | accepted 137 | rejected 103 | rewrote 108
+reviewed 260/300 | accepted 151 | rejected 109 | rewrote 120
+reviewed 280/300 | accepted 159 | rejected 121 | rewrote 128
+reviewed 300/300 | accepted 168 | rejected 132 | rewrote 137
+{
+  "level": "grade_01",
+  "model": "ministral-8b",
+  "input": 300,
+  "carried_from_earlier_review": 0,
+  "accepted": 168,
+  "rejected": 132,
+  "rewritten": 137,
+  "round": 1
+}

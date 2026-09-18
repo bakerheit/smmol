@@ -1,0 +1,1367 @@
+{
+  "corpus_sha256": "13b883001ed7fd9ba16fdccb6cfcc09a1b56739e0cc25a8f59a67a414fed5e4b",
+  "created_unix_seconds": 1789619058.498563,
+  "data": {
+    "assistant_targets": 300,
+    "conversations": 25,
+    "history_message_counts": {
+      "1": 25,
+      "3": 35,
+      "4": 14,
+      "5": 79,
+      "6": 32,
+      "7": 74,
+      "8": 25,
+      "9": 13,
+      "10": 2,
+      "11": 1
+    },
+    "max_dropped_messages": 9,
+    "max_history_turns": 6,
+    "school_replay_examples": 89,
+    "school_replay_fraction": 0.25,
+    "train_conversations": 22,
+    "train_examples": 354,
+    "validation_conversations": 3,
+    "validation_domains": [
+      "game_and_story_ideas",
+      "learning_reflection",
+      "writing_revision"
+    ],
+    "validation_examples": 35
+  },
+  "environment": {
+    "device": "mps",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "python": "3.9.6",
+    "pytorch": "2.8.0"
+  },
+  "experiment": "smCONVERSATION_001-muon",
+  "format_version": 1,
+  "runs": [
+    {
+      "best_bits_per_byte": 3.6149053435171488,
+      "best_step": 500,
+      "best_validation_loss": 2.505661446849992,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.4336042404174805,
+      "mean_gradient_norm_before_clip": 2.0979908299446106,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 4.226377449942075,
+          "step": 25,
+          "train_loss": 2.805262327194214,
+          "training_seconds_before_eval": 7.559677499999999,
+          "validation_loss": 2.9295016134094807
+        },
+        {
+          "bits_per_byte": 3.8233880215197007,
+          "step": 50,
+          "train_loss": 2.5332705974578857,
+          "training_seconds_before_eval": 16.044268791999997,
+          "validation_loss": 2.650170627303048
+        },
+        {
+          "bits_per_byte": 3.734231474688782,
+          "step": 100,
+          "train_loss": 2.591975212097168,
+          "training_seconds_before_eval": 31.751150999999997,
+          "validation_loss": 2.588372018238736
+        },
+        {
+          "bits_per_byte": 3.6718205300225075,
+          "step": 200,
+          "train_loss": 2.470139503479004,
+          "training_seconds_before_eval": 62.358349208,
+          "validation_loss": 2.545112047907225
+        },
+        {
+          "bits_per_byte": 3.625572768687231,
+          "step": 350,
+          "train_loss": 1.9881073236465454,
+          "training_seconds_before_eval": 107.95823620799999,
+          "validation_loss": 2.513055542530469
+        },
+        {
+          "bits_per_byte": 3.6149053435171488,
+          "step": 500,
+          "train_loss": 2.4336042404174805,
+          "training_seconds_before_eval": 153.30295520800001,
+          "validation_loss": 2.505661446849992
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 3.2530359585040354,
+      "training_seconds_including_eval": 153.70257395800002,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.637877389148392,
+      "best_step": 350,
+      "best_validation_loss": 2.521584455510983,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.4294300079345703,
+      "mean_gradient_norm_before_clip": 3.117174261331558,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 5.50245017725402,
+          "step": 25,
+          "train_loss": 3.6281800270080566,
+          "training_seconds_before_eval": 7.75680616599999,
+          "validation_loss": 3.814007826535195
+        },
+        {
+          "bits_per_byte": 4.490390650248042,
+          "step": 50,
+          "train_loss": 2.861812114715576,
+          "training_seconds_before_eval": 15.604649582999997,
+          "validation_loss": 3.1125016188321695
+        },
+        {
+          "bits_per_byte": 3.7947145832148115,
+          "step": 100,
+          "train_loss": 2.664382219314575,
+          "training_seconds_before_eval": 30.920147500000013,
+          "validation_loss": 2.6302957143850545
+        },
+        {
+          "bits_per_byte": 3.664105877821973,
+          "step": 200,
+          "train_loss": 2.4608991146087646,
+          "training_seconds_before_eval": 61.997421083000006,
+          "validation_loss": 2.539764658485424
+        },
+        {
+          "bits_per_byte": 3.637877389148392,
+          "step": 350,
+          "train_loss": 1.9389253854751587,
+          "training_seconds_before_eval": 108.39459154100001,
+          "validation_loss": 2.521584455510983
+        },
+        {
+          "bits_per_byte": 3.639340588218091,
+          "step": 500,
+          "train_loss": 2.4294300079345703,
+          "training_seconds_before_eval": 154.88844325000002,
+          "validation_loss": 2.5225986678207426
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 3.21853408300663,
+      "training_seconds_including_eval": 155.35022687499998,
+      "validation_target_bytes": 6123,
+      "variant": "muon_rms"
+    },
+    {
+      "best_bits_per_byte": 3.6394082510184536,
+      "best_step": 350,
+      "best_validation_loss": 2.522645568100043,
+      "clipped_step_fraction": 0.902,
+      "final_train_loss": 2.3434200286865234,
+      "mean_gradient_norm_before_clip": 1.6876837218999863,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 4.091729023699341,
+          "step": 25,
+          "train_loss": 2.679028034210205,
+          "training_seconds_before_eval": 7.7824447090000035,
+          "validation_loss": 2.8361704363924956
+        },
+        {
+          "bits_per_byte": 3.786316774017796,
+          "step": 50,
+          "train_loss": 2.5595812797546387,
+          "training_seconds_before_eval": 15.816038375000005,
+          "validation_loss": 2.6244747966172626
+        },
+        {
+          "bits_per_byte": 3.7061023444244747,
+          "step": 100,
+          "train_loss": 2.5628111362457275,
+          "training_seconds_before_eval": 31.206052375000013,
+          "validation_loss": 2.568874390904428
+        },
+        {
+          "bits_per_byte": 3.664793090272163,
+          "step": 200,
+          "train_loss": 2.423041343688965,
+          "training_seconds_before_eval": 61.899489292,
+          "validation_loss": 2.540240997857719
+        },
+        {
+          "bits_per_byte": 3.6394082510184536,
+          "step": 350,
+          "train_loss": 2.127821683883667,
+          "training_seconds_before_eval": 108.45589891700001,
+          "validation_loss": 2.522645568100043
+        },
+        {
+          "bits_per_byte": 3.671547261471498,
+          "step": 500,
+          "train_loss": 2.3434200286865234,
+          "training_seconds_before_eval": 155.28852,
+          "validation_loss": 2.544922632581557
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 3.2114383624251492,
+      "training_seconds_including_eval": 155.69347549999998,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_10m"
+    },
+    {
+      "best_bits_per_byte": 3.630729263697592,
+      "best_step": 350,
+      "best_validation_loss": 2.516629752508472,
+      "clipped_step_fraction": 0.666,
+      "final_train_loss": 2.3685996532440186,
+      "mean_gradient_norm_before_clip": 1.436282123684883,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372786783499058,
+          "step": 0,
+          "validation_loss": 4.417279191292055
+        },
+        {
+          "bits_per_byte": 3.9482370334965617,
+          "step": 25,
+          "train_loss": 2.618250608444214,
+          "training_seconds_before_eval": 7.614285917000018,
+          "validation_loss": 2.736709367950504
+        },
+        {
+          "bits_per_byte": 3.7906947944884655,
+          "step": 50,
+          "train_loss": 2.5665066242218018,
+          "training_seconds_before_eval": 15.580214707999971,
+          "validation_loss": 2.627509409162941
+        },
+        {
+          "bits_per_byte": 3.7160637179799734,
+          "step": 100,
+          "train_loss": 2.5736730098724365,
+          "training_seconds_before_eval": 31.85681491700001,
+          "validation_loss": 2.5757790888989263
+        },
+        {
+          "bits_per_byte": 3.672975701563837,
+          "step": 200,
+          "train_loss": 2.4667789936065674,
+          "training_seconds_before_eval": 63.066832749999946,
+          "validation_loss": 2.5459127518041607
+        },
+        {
+          "bits_per_byte": 3.630729263697592,
+          "step": 350,
+          "train_loss": 2.201469659805298,
+          "training_seconds_before_eval": 110.07163154200003,
+          "validation_loss": 2.516629752508472
+        },
+        {
+          "bits_per_byte": 3.6308480079574426,
+          "step": 500,
+          "train_loss": 2.3685996532440186,
+          "training_seconds_before_eval": 157.00485450000002,
+          "validation_loss": 2.516712059757395
+        }
+      ],
+      "seed": 16001,
+      "steps_per_second_including_eval": 3.1762512801287466,
+      "training_seconds_including_eval": 157.41827579199997,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    },
+    {
+      "best_bits_per_byte": 3.612745627463395,
+      "best_step": 500,
+      "best_validation_loss": 2.5041644457565226,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.1284193992614746,
+      "mean_gradient_norm_before_clip": 2.1071562669277193,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 4.197000548610075,
+          "step": 25,
+          "train_loss": 2.933420419692993,
+          "training_seconds_before_eval": 7.39980700000001,
+          "validation_loss": 2.909139097077617
+        },
+        {
+          "bits_per_byte": 3.8490129666426682,
+          "step": 50,
+          "train_loss": 2.7795848846435547,
+          "training_seconds_before_eval": 15.302315458000066,
+          "validation_loss": 2.6679324857670363
+        },
+        {
+          "bits_per_byte": 3.7026890186001706,
+          "step": 100,
+          "train_loss": 2.609832525253296,
+          "training_seconds_before_eval": 30.694686124999976,
+          "validation_loss": 2.566508453732979
+        },
+        {
+          "bits_per_byte": 3.6636306994479892,
+          "step": 200,
+          "train_loss": 2.3178417682647705,
+          "training_seconds_before_eval": 60.807388916000036,
+          "validation_loss": 2.539435289935234
+        },
+        {
+          "bits_per_byte": 3.6224421597582164,
+          "step": 350,
+          "train_loss": 2.550495147705078,
+          "training_seconds_before_eval": 104.92344320799998,
+          "validation_loss": 2.5108855697778867
+        },
+        {
+          "bits_per_byte": 3.612745627463395,
+          "step": 500,
+          "train_loss": 2.1284193992614746,
+          "training_seconds_before_eval": 149.68923795800004,
+          "validation_loss": 2.5041644457565226
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 3.3305948063533597,
+      "training_seconds_including_eval": 150.12333504100002,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.636274104353224,
+      "best_step": 350,
+      "best_validation_loss": 2.5204731431755776,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.10687255859375,
+      "mean_gradient_norm_before_clip": 3.1218687992095946,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 5.485405335410406,
+          "step": 25,
+          "train_loss": 3.8478918075561523,
+          "training_seconds_before_eval": 7.434399208000059,
+          "validation_loss": 3.802193242468204
+        },
+        {
+          "bits_per_byte": 4.483350929088237,
+          "step": 50,
+          "train_loss": 3.2817776203155518,
+          "training_seconds_before_eval": 15.615113583000038,
+          "validation_loss": 3.107622055958323
+        },
+        {
+          "bits_per_byte": 3.7819853193595763,
+          "step": 100,
+          "train_loss": 2.676696300506592,
+          "training_seconds_before_eval": 31.416801208000038,
+          "validation_loss": 2.6214724610331945
+        },
+        {
+          "bits_per_byte": 3.663025056265314,
+          "step": 200,
+          "train_loss": 2.2604527473449707,
+          "training_seconds_before_eval": 61.79139512500001,
+          "validation_loss": 2.5390154900707373
+        },
+        {
+          "bits_per_byte": 3.636274104353224,
+          "step": 350,
+          "train_loss": 2.551626205444336,
+          "training_seconds_before_eval": 108.032694042,
+          "validation_loss": 2.5204731431755776
+        },
+        {
+          "bits_per_byte": 3.6394177712679414,
+          "step": 500,
+          "train_loss": 2.10687255859375,
+          "training_seconds_before_eval": 153.97175045799997,
+          "validation_loss": 2.5226521670341335
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 3.2386559269653,
+      "training_seconds_including_eval": 154.38503233300003,
+      "validation_target_bytes": 6123,
+      "variant": "muon_rms"
+    },
+    {
+      "best_bits_per_byte": 3.640818412807018,
+      "best_step": 350,
+      "best_validation_loss": 2.5236230177679193,
+      "clipped_step_fraction": 0.916,
+      "final_train_loss": 2.202678680419922,
+      "mean_gradient_norm_before_clip": 1.6948144121170043,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 4.058480429606593,
+          "step": 25,
+          "train_loss": 2.841294288635254,
+          "training_seconds_before_eval": 7.50837879200003,
+          "validation_loss": 2.8131242671395253
+        },
+        {
+          "bits_per_byte": 3.8422047802513744,
+          "step": 50,
+          "train_loss": 2.8194541931152344,
+          "training_seconds_before_eval": 15.464891875000035,
+          "validation_loss": 2.6632134105651843
+        },
+        {
+          "bits_per_byte": 3.6751674154349776,
+          "step": 100,
+          "train_loss": 2.6067357063293457,
+          "training_seconds_before_eval": 30.76750754200009,
+          "validation_loss": 2.547431932094536
+        },
+        {
+          "bits_per_byte": 3.647410581573603,
+          "step": 200,
+          "train_loss": 2.385481834411621,
+          "training_seconds_before_eval": 61.77525958300009,
+          "validation_loss": 2.528192360962253
+        },
+        {
+          "bits_per_byte": 3.640818412807018,
+          "step": 350,
+          "train_loss": 2.470133066177368,
+          "training_seconds_before_eval": 107.84112408299995,
+          "validation_loss": 2.5236230177679193
+        },
+        {
+          "bits_per_byte": 3.6447837980532842,
+          "step": 500,
+          "train_loss": 2.202678680419922,
+          "training_seconds_before_eval": 153.20415537500014,
+          "validation_loss": 2.526371613371203
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 3.2549381162539763,
+      "training_seconds_including_eval": 153.61275149999994,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_10m"
+    },
+    {
+      "best_bits_per_byte": 3.624339335517937,
+      "best_step": 500,
+      "best_validation_loss": 2.5122005918067636,
+      "clipped_step_fraction": 0.698,
+      "final_train_loss": 2.268720865249634,
+      "mean_gradient_norm_before_clip": 1.4506768183708192,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.375694975239888,
+          "step": 0,
+          "validation_loss": 4.419294996197738
+        },
+        {
+          "bits_per_byte": 3.884983287891866,
+          "step": 25,
+          "train_loss": 2.718999147415161,
+          "training_seconds_before_eval": 7.849612084,
+          "validation_loss": 2.692865212524753
+        },
+        {
+          "bits_per_byte": 3.8771388036484673,
+          "step": 50,
+          "train_loss": 2.771127939224243,
+          "training_seconds_before_eval": 15.986136249999845,
+          "validation_loss": 2.6874278303884944
+        },
+        {
+          "bits_per_byte": 3.692271205167792,
+          "step": 100,
+          "train_loss": 2.6028683185577393,
+          "training_seconds_before_eval": 31.583152250000012,
+          "validation_loss": 2.5592873757247263
+        },
+        {
+          "bits_per_byte": 3.6656026710046676,
+          "step": 200,
+          "train_loss": 2.3969228267669678,
+          "training_seconds_before_eval": 53.12352591700005,
+          "validation_loss": 2.54080215645989
+        },
+        {
+          "bits_per_byte": 3.627765891900441,
+          "step": 350,
+          "train_loss": 2.4901297092437744,
+          "training_seconds_before_eval": 75.65178858399986,
+          "validation_loss": 2.514575699702326
+        },
+        {
+          "bits_per_byte": 3.624339335517937,
+          "step": 500,
+          "train_loss": 2.268720865249634,
+          "training_seconds_before_eval": 97.73302433399999,
+          "validation_loss": 2.5122005918067636
+        }
+      ],
+      "seed": 16002,
+      "steps_per_second_including_eval": 5.105698037364804,
+      "training_seconds_including_eval": 97.92980241700002,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    },
+    {
+      "best_bits_per_byte": 3.617595892575577,
+      "best_step": 500,
+      "best_validation_loss": 2.507526393344,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.331758737564087,
+      "mean_gradient_norm_before_clip": 2.107574788570404,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 4.200233147885567,
+          "step": 25,
+          "train_loss": 2.906294822692871,
+          "training_seconds_before_eval": 3.5179651660000673,
+          "validation_loss": 2.9113797641513046
+        },
+        {
+          "bits_per_byte": 3.878390385692163,
+          "step": 50,
+          "train_loss": 2.605013847351074,
+          "training_seconds_before_eval": 7.225616500000115,
+          "validation_loss": 2.6882953609533216
+        },
+        {
+          "bits_per_byte": 3.7497207336519582,
+          "step": 100,
+          "train_loss": 2.5859439373016357,
+          "training_seconds_before_eval": 14.503080791000002,
+          "validation_loss": 2.5991083544180245
+        },
+        {
+          "bits_per_byte": 3.660699066609478,
+          "step": 200,
+          "train_loss": 2.4560606479644775,
+          "training_seconds_before_eval": 29.035606040999937,
+          "validation_loss": 2.537403236898783
+        },
+        {
+          "bits_per_byte": 3.6189196962097987,
+          "step": 350,
+          "train_loss": 1.9927821159362793,
+          "training_seconds_before_eval": 50.59883329100012,
+          "validation_loss": 2.508443984100676
+        },
+        {
+          "bits_per_byte": 3.617595892575577,
+          "step": 500,
+          "train_loss": 2.331758737564087,
+          "training_seconds_before_eval": 72.14080616599995,
+          "validation_loss": 2.507526393344
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.912070040424639,
+      "training_seconds_including_eval": 72.33722995800008,
+      "validation_target_bytes": 6123,
+      "variant": "adamw"
+    },
+    {
+      "best_bits_per_byte": 3.630553901277268,
+      "best_step": 350,
+      "best_validation_loss": 2.516508200541248,
+      "clipped_step_fraction": 1.0,
+      "final_train_loss": 2.316890001296997,
+      "mean_gradient_norm_before_clip": 3.116621201992035,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 5.510948049737948,
+          "step": 25,
+          "train_loss": 3.9048407077789307,
+          "training_seconds_before_eval": 3.6488489590001336,
+          "validation_loss": 3.819898102888188
+        },
+        {
+          "bits_per_byte": 4.48757282897214,
+          "step": 50,
+          "train_loss": 2.9062821865081787,
+          "training_seconds_before_eval": 7.476209625000138,
+          "validation_loss": 3.1105484539594563
+        },
+        {
+          "bits_per_byte": 3.8225107492247505,
+          "step": 100,
+          "train_loss": 2.6094512939453125,
+          "training_seconds_before_eval": 15.117049209000015,
+          "validation_loss": 2.64956254848522
+        },
+        {
+          "bits_per_byte": 3.6597524201702236,
+          "step": 200,
+          "train_loss": 2.43857479095459,
+          "training_seconds_before_eval": 30.152395958999932,
+          "validation_loss": 2.536747071588427
+        },
+        {
+          "bits_per_byte": 3.630553901277268,
+          "step": 350,
+          "train_loss": 1.9610663652420044,
+          "training_seconds_before_eval": 52.180563166999946,
+          "validation_loss": 2.516508200541248
+        },
+        {
+          "bits_per_byte": 3.63595166702125,
+          "step": 500,
+          "train_loss": 2.316890001296997,
+          "training_seconds_before_eval": 74.30830583400007,
+          "validation_loss": 2.5202496466480127
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.709658996795635,
+      "training_seconds_including_eval": 74.51943537500006,
+      "validation_target_bytes": 6123,
+      "variant": "muon_rms"
+    },
+    {
+      "best_bits_per_byte": 3.633396587373962,
+      "best_step": 350,
+      "best_validation_loss": 2.518478600394389,
+      "clipped_step_fraction": 0.858,
+      "final_train_loss": 2.2488901615142822,
+      "mean_gradient_norm_before_clip": 1.6748195496797562,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 4.070936885104147,
+          "step": 25,
+          "train_loss": 2.8336071968078613,
+          "training_seconds_before_eval": 3.8209241249999195,
+          "validation_loss": 2.8217584241474256
+        },
+        {
+          "bits_per_byte": 3.830293855182931,
+          "step": 50,
+          "train_loss": 2.516397476196289,
+          "training_seconds_before_eval": 7.678025083999955,
+          "validation_loss": 2.654957386436132
+        },
+        {
+          "bits_per_byte": 3.7041082692069764,
+          "step": 100,
+          "train_loss": 2.5947518348693848,
+          "training_seconds_before_eval": 15.261758874999941,
+          "validation_loss": 2.5674922032895946
+        },
+        {
+          "bits_per_byte": 3.644893410351768,
+          "step": 200,
+          "train_loss": 2.479452133178711,
+          "training_seconds_before_eval": 30.083089874999814,
+          "validation_loss": 2.5264475908268516
+        },
+        {
+          "bits_per_byte": 3.633396587373962,
+          "step": 350,
+          "train_loss": 2.192594528198242,
+          "training_seconds_before_eval": 52.181609624999965,
+          "validation_loss": 2.518478600394389
+        },
+        {
+          "bits_per_byte": 3.662817278977398,
+          "step": 500,
+          "train_loss": 2.2488901615142822,
+          "training_seconds_before_eval": 74.60222016699981,
+          "validation_loss": 2.538871469829434
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.684234986306273,
+      "training_seconds_including_eval": 74.80287587499993,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_10m"
+    },
+    {
+      "best_bits_per_byte": 3.619129918274773,
+      "best_step": 350,
+      "best_validation_loss": 2.508589698932304,
+      "clipped_step_fraction": 0.624,
+      "final_train_loss": 2.314605236053467,
+      "mean_gradient_norm_before_clip": 1.433083827972412,
+      "parameter_groups": {
+        "auxiliary_decay": [
+          "token_embedding.weight",
+          "position_embedding.weight"
+        ],
+        "auxiliary_no_decay": [
+          "blocks.0.attention_norm.weight",
+          "blocks.0.attention_norm.bias",
+          "blocks.0.mlp_norm.weight",
+          "blocks.0.mlp_norm.bias",
+          "blocks.1.attention_norm.weight",
+          "blocks.1.attention_norm.bias",
+          "blocks.1.mlp_norm.weight",
+          "blocks.1.mlp_norm.bias",
+          "blocks.2.attention_norm.weight",
+          "blocks.2.attention_norm.bias",
+          "blocks.2.mlp_norm.weight",
+          "blocks.2.mlp_norm.bias",
+          "blocks.3.attention_norm.weight",
+          "blocks.3.attention_norm.bias",
+          "blocks.3.mlp_norm.weight",
+          "blocks.3.mlp_norm.bias",
+          "norm.weight",
+          "norm.bias"
+        ],
+        "muon": [
+          "blocks.0.attention.qkv.weight",
+          "blocks.0.attention.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attention.qkv.weight",
+          "blocks.1.attention.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attention.qkv.weight",
+          "blocks.2.attention.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attention.qkv.weight",
+          "blocks.3.attention.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight"
+        ]
+      },
+      "records": [
+        {
+          "bits_per_byte": 6.372442731461676,
+          "step": 0,
+          "validation_loss": 4.417040712592377
+        },
+        {
+          "bits_per_byte": 3.9265472302895392,
+          "step": 25,
+          "train_loss": 2.795104503631592,
+          "training_seconds_before_eval": 3.649626165999962,
+          "validation_loss": 2.7216751420106564
+        },
+        {
+          "bits_per_byte": 3.8489546371382533,
+          "step": 50,
+          "train_loss": 2.5113015174865723,
+          "training_seconds_before_eval": 7.517472708000014,
+          "validation_loss": 2.6678920548355074
+        },
+        {
+          "bits_per_byte": 3.70646153969858,
+          "step": 100,
+          "train_loss": 2.5953075885772705,
+          "training_seconds_before_eval": 14.991723540999828,
+          "validation_loss": 2.5691233660959445
+        },
+        {
+          "bits_per_byte": 3.661802955356739,
+          "step": 200,
+          "train_loss": 2.491337776184082,
+          "training_seconds_before_eval": 29.715244332999873,
+          "validation_loss": 2.5381683942715987
+        },
+        {
+          "bits_per_byte": 3.619129918274773,
+          "step": 350,
+          "train_loss": 2.3235843181610107,
+          "training_seconds_before_eval": 52.0602060409999,
+          "validation_loss": 2.508589698932304
+        },
+        {
+          "bits_per_byte": 3.626892775726491,
+          "step": 500,
+          "train_loss": 2.314605236053467,
+          "training_seconds_before_eval": 74.2726721659999,
+          "validation_loss": 2.513970501688051
+        }
+      ],
+      "seed": 16003,
+      "steps_per_second_including_eval": 6.71387471355523,
+      "training_seconds_including_eval": 74.47264379099988,
+      "validation_target_bytes": 6123,
+      "variant": "muon_original_20m"
+    }
+  ],
+  "selected_variants": [
+    "adamw",
+    "muon_rms",
+    "muon_original_10m",
+    "muon_original_20m"
+  ],
+  "settings": {
+    "adamw_learning_rate": 0.0002,
+    "batch_size": 4,
+    "corpus_conversations": 25,
+    "eval_steps": [
+      0,
+      25,
+      50,
+      100,
+      200,
+      350,
+      500
+    ],
+    "format_version": 1,
+    "gradient_clip": 1.0,
+    "seeds": [
+      16001,
+      16002,
+      16003
+    ],
+    "steps": 500,
+    "variants": {
+      "adamw": {
+        "optimizer": "adamw"
+      },
+      "muon_original_10m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.01,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_original_20m": {
+        "match_adamw_decay_per_step": true,
+        "muon_adjustment": "original",
+        "muon_learning_rate": 0.02,
+        "optimizer": "hybrid_muon"
+      },
+      "muon_rms": {
+        "muon_adjustment": "match_rms_adamw",
+        "muon_learning_rate": 0.0002,
+        "optimizer": "hybrid_muon"
+      }
+    },
+    "warmup_steps": 50,
+    "weight_decay": 0.05
+  }
+}

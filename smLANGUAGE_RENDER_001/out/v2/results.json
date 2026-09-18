@@ -1,0 +1,155 @@
+{
+ "when": "2026-09-16 00:08",
+ "params": 10726272,
+ "step": 3500,
+ "seconds": 2062.6,
+ "args": {
+  "pool": 60000,
+  "steps": 6000,
+  "tokens": 8192,
+  "lr": 0.0006,
+  "d": 384,
+  "layers": 6,
+  "heads": 6,
+  "dropout": 0.1,
+  "max_len": 1024,
+  "eval_every": 500,
+  "seed": 0,
+  "out": "out/v2",
+  "device": "mps",
+  "resume": "out/v2/latest.pt"
+ },
+ "generated_teacher_exact": 0.465,
+ "dev": {
+  "exact": 0.182,
+  "grounded": 0.182
+ },
+ "test": {
+  "exact": 0.0,
+  "grounded": 0.0,
+  "rows": [
+   {
+    "kind": "math",
+    "reply": "7181 + 8888 = 717867688.",
+    "expected": "7304 - 188 = 7116.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 717867688, 7181, 8888",
+     "missing numbers: 188, 7116, 7304"
+    ]
+   },
+   {
+    "kind": "math",
+    "reply": "25% of 640 is 80.",
+    "expected": "12.5% of 640 is 80.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 25%",
+     "missing numbers: 12.5%"
+    ]
+   },
+   {
+    "kind": "memory",
+    "reply": "Your icch prace in is Tay We?",
+    "expected": "Taylor Brooks handles the cabin insurance.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing facts: brooks, cabin, handles, insurance, taylor",
+     "unexpected question"
+    ]
+   },
+   {
+    "kind": "ask",
+    "reply": "I don't ha ckappient amename.",
+    "expected": "I need the recipient. Who should receive the package?",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing facts: package, receive, recipient",
+     "ask reply needs exactly one question"
+    ]
+   },
+   {
+    "kind": "file",
+    "reply": "I couldn't save `weekend-weekend.txt`: file already exists.",
+    "expected": "`weekend.txt` contains: museum, lunch, and groceries.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing facts: groceries, lunch, museum, weekend"
+    ]
+   },
+   {
+    "kind": "file_error",
+    "reply": "I cow pin't save.",
+    "expected": "I couldn't save `missing.txt`: file does not exist.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing facts: exist, file, missing, txt"
+    ]
+   },
+   {
+    "kind": "web",
+    "reply": "It 4848 ay anaraie, 4848 Phin: s.",
+    "expected": "It is 84°F and rainy in Miami.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 4848",
+     "missing numbers: 84",
+     "missing facts: miami, rainy"
+    ]
+   },
+   {
+    "kind": "need",
+    "reply": "Iton: weanrews werevens, weand wes in Houston.",
+    "expected": "NEED: web_browser https://weather.example/phoenix/live",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing URLs",
+     "missing facts: example, https, live, phoenix, weather, web",
+     "bad NEED line"
+    ]
+   },
+   {
+    "kind": "direct",
+    "reply": "IMondesign is Monday at 4:75 PM.",
+    "expected": "The train leaves Saturday at 7:45 AM.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 4:75",
+     "missing numbers: 7:45",
+     "missing facts: leaves, saturday, train"
+    ]
+   },
+   {
+    "kind": "assumption",
+    "reply": "Asumpion///wean't.tpeans Pouicagonverytle///ton:/tompe peco/wenver.",
+    "expected": "Assumption: 02108 means Boston, Massachusetts.\nThe current temperature is 57°F.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "missing numbers: 02108, 57",
+     "missing facts: boston, massachusetts, means, temperature"
+    ]
+   },
+   {
+    "kind": "unavailable",
+    "reply": "8220 dwe he current data 28878 AM.",
+    "expected": "I don't have current data for that.",
+    "exact": false,
+    "grounded": false,
+    "problems": [
+     "invented numbers: 28878, 8220"
+    ]
+   }
+  ]
+ },
+ "ms_per_output_byte_cpu": 1.614
+}

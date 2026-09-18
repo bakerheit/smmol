@@ -1,0 +1,8 @@
+{
+  "corpus_sha256": "155fac684612a5b14bad43edc401015806cce3a6ff1be434d1ef34108e6804b1",
+  "format": "safetensors",
+  "items": 600,
+  "model": "smLANGUAGE_en_SCH_001",
+  "stage": "grade_01",
+  "step": 700
+}

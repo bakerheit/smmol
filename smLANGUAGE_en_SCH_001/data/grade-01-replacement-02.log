@@ -1,0 +1,11 @@
+1st grade: 293/300 accepted
+attempt 1: asked 10, received 10, kept 5 -> 298/300
+attempt 2: asked 5, received 5, kept 0 -> 298/300
+attempt 3: asked 5, received 5, kept 1 -> 299/300
+attempt 4: asked 4, received 4, kept 0 -> 299/300
+attempt 5: asked 4, received 4, kept 0 -> 299/300
+attempt 6: asked 4, received 4, kept 0 -> 299/300
+attempt 7: asked 4, received 4, kept 0 -> 299/300
+attempt 8: asked 4, received 4, kept 1 -> 300/300
+rejected: {'duplicate word': 27, 'sentence does not contain the target word': 4}
+complete: smLANGUAGE_en_SCH_001/data/levels/grade_01.jsonl

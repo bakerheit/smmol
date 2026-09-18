@@ -1,0 +1,343 @@
+{
+  "review": "Phase 0 cold review of smCLM_02 recall fixture",
+  "method": "Choices below were made from /tmp/smclm02-blind.XXXXXX.json only (queries + pools, no keys, no author notes) and written to disk before smCLM_02/test_recall.json was opened.",
+  "blind_choices": [
+    {
+      "id": "a01",
+      "choice": "m_dent_lee",
+      "why": "only pool item naming a dentist"
+    },
+    {
+      "id": "a02",
+      "choice": "m_contract",
+      "why": "only item about contract end date"
+    },
+    {
+      "id": "a03",
+      "choice": "m_manager",
+      "why": "names the manager directly"
+    },
+    {
+      "id": "a04",
+      "choice": "m_standup",
+      "why": "states the standup time"
+    },
+    {
+      "id": "a05",
+      "choice": "m_passport",
+      "why": "states passport expiry"
+    },
+    {
+      "id": "a06",
+      "choice": "m_car",
+      "why": "blue estate; only item with car colour"
+    },
+    {
+      "id": "a07",
+      "choice": "m_spare_key",
+      "why": "states where the spare key is"
+    },
+    {
+      "id": "a08",
+      "choice": "m_boiler",
+      "why": "boiler serviced every October"
+    },
+    {
+      "id": "a09",
+      "choice": "m_rent",
+      "why": "rent leaves on the 3rd"
+    },
+    {
+      "id": "a10",
+      "choice": "m_library",
+      "why": "library books due the 20th"
+    },
+    {
+      "id": "a11",
+      "choice": "m_wifi_pw",
+      "why": "where the wifi password is written"
+    },
+    {
+      "id": "a12",
+      "choice": "m_bank",
+      "why": "banks with Nationwide"
+    },
+    {
+      "id": "a13",
+      "choice": "m_insurance",
+      "why": "car insurance renews in November"
+    },
+    {
+      "id": "a14",
+      "choice": "m_allergy",
+      "why": "must not take penicillin; direct safety answer"
+    },
+    {
+      "id": "a15",
+      "choice": "m_swim",
+      "why": "Maya's swimming lessons start in June"
+    },
+    {
+      "id": "a16",
+      "choice": "m_gym",
+      "why": "gym is the Foundry Road leisure centre"
+    },
+    {
+      "id": "a17",
+      "choice": "m_birthday_p",
+      "why": "Priya's birthday 2nd June"
+    },
+    {
+      "id": "a18",
+      "choice": "m_allot",
+      "why": "tomatoes and beans at the allotment"
+    },
+    {
+      "id": "a19",
+      "choice": "m_bins",
+      "why": "recycling goes out Wednesday night"
+    },
+    {
+      "id": "a20",
+      "choice": "m_plumber",
+      "why": "Kelly the plumber"
+    },
+    {
+      "id": "b21",
+      "choice": "m_dent_lee",
+      "why": "teeth -> dentist paraphrase"
+    },
+    {
+      "id": "b22",
+      "choice": "m_peaks",
+      "why": "AMBIGUOUS: 'where' wants a place, and Peak District is the only named place; m_hills ('walks in the hills most weekends') is arguably the better habitual-hiking fact but names no location"
+    },
+    {
+      "id": "b23",
+      "choice": "m_daughter",
+      "why": "little girl -> daughter Maya turned seven"
+    },
+    {
+      "id": "b24",
+      "choice": "m_hairdresser",
+      "why": "Tonia at Green Street"
+    },
+    {
+      "id": "b25",
+      "choice": "m_coriander",
+      "why": "coriander is the only herb"
+    },
+    {
+      "id": "b26",
+      "choice": "m_dog",
+      "why": "Biscuit is a collie; m_vet is about the vet, not the animal"
+    },
+    {
+      "id": "b27",
+      "choice": "m_pension",
+      "why": "retirement savings -> pension top-up"
+    },
+    {
+      "id": "b28",
+      "choice": "m_mechanic",
+      "why": "Prospect Motors look after the car"
+    },
+    {
+      "id": "b29",
+      "choice": "m_optician",
+      "why": "optician appointment in April"
+    },
+    {
+      "id": "b30",
+      "choice": "m_crime",
+      "why": "detective fiction is the only reading-material fact"
+    },
+    {
+      "id": "b31",
+      "choice": "m_piano",
+      "why": "piano lessons for two years"
+    },
+    {
+      "id": "b32",
+      "choice": "m_landlord",
+      "why": "landlord owns the rented flat"
+    },
+    {
+      "id": "b33",
+      "choice": "m_holiday_book",
+      "why": "two weeks off from 12 July"
+    },
+    {
+      "id": "b34",
+      "choice": "m_cycle",
+      "why": "MILD AMBIGUITY: cycling to the office is the only commute fact, but it is conditional ('when it is dry') so 'usually' is a slight stretch; m_train is about cost not commuting"
+    },
+    {
+      "id": "b35",
+      "choice": "m_roof",
+      "why": "saving for a new roof = replacement; m_paint is decoration, not replacement"
+    },
+    {
+      "id": "b36",
+      "choice": "m_coffee",
+      "why": "two cups of black coffee before noon"
+    },
+    {
+      "id": "b37",
+      "choice": "m_shop_sun",
+      "why": "Sunday morning is the big shop"
+    },
+    {
+      "id": "b38",
+      "choice": "m_manager",
+      "why": "report to -> manager"
+    },
+    {
+      "id": "b39",
+      "choice": "m_gym",
+      "why": "gym is the only weights venue"
+    },
+    {
+      "id": "b40",
+      "choice": "m_vet",
+      "why": "Elm Row is where Biscuit gets injections"
+    },
+    {
+      "id": "b41",
+      "choice": "m_accountant",
+      "why": "receipts to accountant by end of January"
+    },
+    {
+      "id": "b42",
+      "choice": "m_train",
+      "why": "railcard takes a third off"
+    },
+    {
+      "id": "b43",
+      "choice": "m_neighbour_noise",
+      "why": "neighbours upstairs play music late"
+    },
+    {
+      "id": "b44",
+      "choice": "m_gran",
+      "why": "grandmother in a home near Stirling; only grandparent fact"
+    },
+    {
+      "id": "b45",
+      "choice": "m_review",
+      "why": "pay review in October"
+    },
+    {
+      "id": "c46",
+      "choice": "m_dent_lee",
+      "why": "toothache -> dentist; m_dent_when would be in the pool if timing were wanted, it is not"
+    },
+    {
+      "id": "c47",
+      "choice": "m_dent_when",
+      "why": "'when' wants the date: next check-up Tuesday 14th; m_dent_lee is the who-distractor"
+    },
+    {
+      "id": "c48",
+      "choice": "m_inhaler",
+      "why": "spare inhaler in the kitchen drawer; m_spare_key/m_spare_room are lexical 'spare' distractors"
+    },
+    {
+      "id": "c49",
+      "choice": "m_alarm",
+      "why": "gets up at six on weekdays; m_standup is a different weekday time"
+    },
+    {
+      "id": "c50",
+      "choice": "m_holiday_book",
+      "why": "only July-dated item"
+    },
+    {
+      "id": "c51",
+      "choice": "m_plumber",
+      "why": "Kelly came about the leak under the sink; m_leak_roof is a leak but has no 'who'"
+    },
+    {
+      "id": "c52",
+      "choice": "m_bins",
+      "why": "recycling goes out Wednesday night; m_veg_box arrives Wednesday (in, not out)"
+    },
+    {
+      "id": "c53",
+      "choice": "m_shop_sun",
+      "why": "explicitly Sunday morning; m_mum rings on Sundays but no time of day"
+    },
+    {
+      "id": "c54",
+      "choice": "m_boiler",
+      "why": "AMBIGUOUS: Hargreaves is the named boiler contractor, but m_landlord (repairs) and m_plumber are both defensible answers to 'who do I call'; the query does not disambiguate owner-occupier vs tenant"
+    },
+    {
+      "id": "c55",
+      "choice": "m_phone",
+      "why": "mobile ends 0142; m_broadband 4471 is the number distractor"
+    },
+    {
+      "id": "c56",
+      "choice": "m_mechanic",
+      "why": "Prospect Motors look after the car"
+    },
+    {
+      "id": "c57",
+      "choice": "m_swim",
+      "why": "'in the water' -> swimming lessons"
+    },
+    {
+      "id": "c58",
+      "choice": "m_partner",
+      "why": "identity question -> partner who works nights; m_birthday_p gives a date not an identity"
+    },
+    {
+      "id": "c59",
+      "choice": "m_partner",
+      "why": "Priya works nights at the hospital; only person who works at night"
+    },
+    {
+      "id": "c60",
+      "choice": "m_football",
+      "why": "five-a-side Thursday evenings; m_piano has no day"
+    }
+  ],
+  "result": {
+    "cases_reviewed": 60,
+    "cold_agreement_before_any_change": "59 / 60",
+    "gate": "Phase 0 gate is 'a second agent reading cold agrees on at least 55 of 60'. 59/60 cold. PASS.",
+    "group_counts_after_corrections": {
+      "A": 20,
+      "B": 25,
+      "C": 15
+    },
+    "disagreements": [
+      {
+        "id": "b22",
+        "query": "Where do I go hiking?",
+        "my_cold_choice": "m_peaks",
+        "key": "m_hills",
+        "verdict": "genuine ambiguity, not a bad key",
+        "why": "The pool held both m_hills ('User walks in the hills most weekends when the weather holds') and m_peaks ('Easter weekends are usually spent in the Peak District'). 'Where' asks for a place and m_peaks is the only named place, so it reads as the better answer to the literal question; m_hills is the better answer to the habit. Two defensible answers in one pool.",
+        "fix": "Rewrote the case rather than moving the key: dropped m_peaks from b22's pool (10 -> 9 memories, still inside the 8-12 rule) and added a note recording why. The key stays m_hills, which is the plan's own worked example of a group B case ('hiking' -> 'walks in the hills'), so the B intent is preserved exactly. With m_peaks gone the case has one answer and my cold choice and the key now coincide."
+      }
+    ],
+    "corrections_to_test_recall": [
+      "b22: removed pool member m_peaks; added a 'note' field explaining the removal. No key was changed, no case dropped, no other case touched."
+    ],
+    "cases_preserved": 60,
+    "final_tests": {
+      "command": "python3 -m unittest discover -s tests  (run from smCLM_02/)",
+      "result": "Ran 14 tests - OK (4 skipped)",
+      "skips": "The 4 skips are the leak checks and the ideas-inventory check; data/sentences.jsonl, data/tags.jsonl and ideas.json arrive in phases 1-2, and the tests are written to skip until then. All 10 fixture checks ran and passed."
+    },
+    "unresolved_concerns": [
+      "b34 'How do I usually travel to work?' -> m_cycle. I picked this cold and it matches the key, but 'cycles to the office when it is dry' is conditional, so 'usually' is a slight stretch. Left as is; worth watching if a ranker misses it.",
+      "c54 'Who do I call when the heating is off?' -> m_boiler (Hargreaves). I picked this cold and it matches the key. m_landlord ('slow about repairs') is still arguably defensible, and b32/c51 establish the user rents. Not changed, because the query asks who to call about heating and Hargreaves is the only heating contractor named, but it is the second-softest case in the set.",
+      "b26 'Who is my four-legged friend?' and b40 both lean on Biscuit appearing in two memories (m_dog, m_vet). The split is clean (animal vs venue) but the two cases are not independent.",
+      "The gate wording says a reviewer works 'without seeing the answer key'. I never opened test_recall.json before writing my choices, but the blind file was prepared by someone else, so the isolation is only as good as that extraction. The blind file does carry all 60 ids, queries and pools verbatim, which I confirmed after the fact.",
+      "Scope note: only smCLM_02/phase0_review.json and the one b22 edit in smCLM_02/test_recall.json were written. No model endpoint was called and no Phase 1 work started."
+    ]
+  }
+}

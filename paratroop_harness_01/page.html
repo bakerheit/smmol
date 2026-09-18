@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paratroop Harness</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2433; --muted: #5f6b7d; --line: #1d2433; --border: #d9dee7; --hub: #eef2f7;
+  --red: #fbd3d3; --blue: #d6e7fd; --green: #d8f0da; --yellow: #fdf0c2; --purple: #e6dbf8; --teal: #d3f0e6; --grey: #e8ebf0;
+  --red-ink: #b42323; --blue-ink: #1f5fb4; --green-ink: #267a35; --yellow-ink: #8a6a00; --purple-ink: #6a3fb4; --teal-ink: #1d7a5e; --grey-ink: #5f6b7d;
+  --ok: #267a35; --bad: #b42323; --warn: #8a6a00;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151b; --panel: #1b2029; --ink: #e8ecf2; --muted: #9aa5b5; --line: #c9d1dd; --border: #2e3542; --hub: #232a35;
+    --red: #4a2527; --blue: #1f3350; --green: #213b27; --yellow: #45391a; --purple: #35284d; --teal: #1d3d35; --grey: #262c36;
+    --red-ink: #ff9a9a; --blue-ink: #8cbcff; --green-ink: #8fdc9c; --yellow-ink: #f3d36b; --purple-ink: #c7a8ff; --teal-ink: #7fdcbf; --grey-ink: #9aa5b5;
+    --ok: #8fdc9c; --bad: #ff9a9a; --warn: #f3d36b;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 13px 22px; border-bottom: 1px solid var(--border); }
+h1 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
+h1 small { color: var(--muted); font-weight: 500; margin-left: 4px; }
+#providers { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; background: var(--bad); }
+.dot.up { background: var(--ok); }
+main { display: grid; grid-template-columns: minmax(740px, 1.3fr) minmax(360px, 1fr); gap: 24px; padding: 20px 22px 40px; align-items: start; }
+@media (max-width: 1180px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+#brain { position: relative; width: 100%; height: 640px; }
+#wires { position: absolute; inset: 0; width: 100%; height: 100%; }
+#wires line { stroke: var(--line); stroke-width: 2; vector-effect: non-scaling-stroke; opacity: .7; }
+#wires line.live { stroke: var(--live, var(--line)); stroke-width: 3.5; opacity: 1; stroke-dasharray: 7 6; animation: flow .55s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -13; } }
+.node { position: absolute; transform: translate(-50%, -50%); transition: box-shadow .2s; }
+.card { width: 226px; background: var(--c); border: 2px solid var(--line); border-radius: 13px; padding: 9px 11px 9px; }
+.card h2, .hub h2 { margin: 0; font-size: 16px; text-align: center; letter-spacing: -0.01em; }
+.tag { display: block; text-align: center; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--c-ink); margin-top: 1px; }
+.does { font-size: 12px; color: var(--muted); text-align: center; margin: 2px 0 7px; }
+select { width: 100%; font: inherit; font-size: 13px; padding: 5px 7px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--ink); }
+.node footer { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 7px; font-size: 12px; }
+.badge { padding: 1px 8px; border-radius: 999px; background: var(--panel); border: 1px solid var(--border); white-space: nowrap; }
+.badge.good { color: var(--ok); } .badge.meh { color: var(--warn); } .badge.bad { color: var(--bad); }
+.timer { font-variant-numeric: tabular-nums; color: var(--c-ink, var(--muted)); font-weight: 600; }
+button { font: inherit; cursor: pointer; }
+button.small { font-size: 12px; padding: 2px 9px; border-radius: 7px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+button:disabled { opacity: .5; cursor: default; }
+.node.busy { box-shadow: 0 0 0 5px color-mix(in srgb, var(--c-ink, var(--blue-ink)) 40%, transparent); }
+.hub { width: 232px; height: 232px; border-radius: 50%; background: var(--hub); border: 2px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 24px; --c-ink: var(--blue-ink); }
+.hub select { width: 168px; }
+#tools { margin-top: 10px; }
+#tools h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+#tools .strip { display: flex; gap: 12px; flex-wrap: wrap; }
+#tools .node { position: static; transform: none; }
+@media (max-width: 760px) {
+  #brain { height: auto; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  #wires { display: none; }
+  #brain .node { position: static; transform: none; }
+  .card { width: 100%; max-width: 440px; }
+}
+
+#ask { background: var(--panel); border: 1px solid var(--border); border-radius: 13px; padding: 13px; }
+#ask label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 5px; }
+textarea, input[type=text] { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--border); border-radius: 9px; padding: 8px 10px; }
+textarea { min-height: 82px; resize: vertical; }
+.row { display: flex; gap: 8px; margin-top: 8px; }
+.row input { flex: 1; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+button.go { font-weight: 600; padding: 7px 18px; border-radius: 9px; border: 0; background: var(--ink); color: var(--bg); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.chip { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); }
+#board { margin-top: 14px; }
+.runhead { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--muted); }
+.runhead code { color: var(--ink); }
+.empty { color: var(--muted); }
+.final { background: var(--panel); border: 2px solid var(--line); border-radius: 12px; padding: 11px 13px; margin-top: 10px; }
+.final h3 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.step { background: var(--panel); border: 1px solid var(--border); border-left: 5px solid var(--c-ink, var(--border)); border-radius: 10px; padding: 9px 12px; margin-top: 9px; }
+.step.skipped { opacity: .65; }
+.step .head { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--muted); }
+.step .head b { color: var(--ink); }
+.step .why { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--c-ink, var(--muted)); margin-top: 2px; }
+pre { white-space: pre-wrap; word-break: break-word; margin: 6px 0 0; font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+pre.mono { font: 12.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.tokens { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.tokens span { font: 12.5px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--c, var(--grey)); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; }
+.meta { font-size: 12px; color: var(--muted); margin-top: 5px; }
+.bad { color: var(--bad); }
+details summary { cursor: pointer; font-size: 12px; color: var(--muted); margin-top: 5px; }
+.step img, .final img { display: block; max-width: 100%; border-radius: 8px; margin-top: 8px; }
+.sources { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; }
+.sources a { color: var(--blue-ink); }
+#toast { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 9px; font-size: 13px; max-width: 90vw; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Paratroop Harness <small>01</small></h1>
+  <div id="providers" aria-label="Servers"></div>
+</header>
+<main>
+  <div>
+    <section id="brain" aria-label="Brain functions">
+      <svg id="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </section>
+    <section id="tools" aria-label="Tools">
+      <h3>Tools the router can call</h3>
+      <div class="strip"></div>
+    </section>
+  </div>
+  <section>
+    <form id="ask">
+      <label for="request">Message</label>
+      <textarea id="request" placeholder="Tell it something or ask something…" required></textarea>
+      <div class="row">
+        <input id="pipe" type="text" autocomplete="off" spellcheck="false" aria-label="Pipe">
+        <button id="go" class="go" type="submit">Run</button>
+      </div>
+      <div id="examples" class="chips"></div>
+    </form>
+    <div id="board" aria-live="polite"></div>
+  </section>
+</main>
+<div id="toast" hidden></div>
+<script>
+"use strict";
+let state = null, current = null, source = null, ticker = null, testPoll = null;
+const $ = (s) => document.querySelector(s);
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+// Models write **bold** and *italic*. Show those as real text styles, built from text nodes only.
+function rich(tag, cls, text) {
+  const box = el(tag, cls);
+  for (const part of String(text).split(/(\*\*[^*\n]+\*\*|\*[^*\s][^*\n]*\*)/)) {
+    if (/^\*\*[^*\n]+\*\*$/.test(part)) box.append(el("strong", null, part.slice(2, -2)));
+    else if (/^\*[^*\s][^*\n]*\*$/.test(part)) box.append(el("em", null, part.slice(1, -1)));
+    else if (part) box.append(document.createTextNode(part));
+  }
+  return box;
+}
+
+async function api(path, body) {
+  const opts = body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {};
+  const res = await fetch(path, opts);
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "HTTP " + res.status);
+  return data;
+}
+
+let toastTimer = null;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, 3500);
+}
+
+const slotBy = (id) => state && state.slots.find((s) => s.slot === id);
+const colorOf = (s) => (s && s.group !== "router" ? s.color : "blue");
+
+async function loadState() {
+  try {
+    state = await api("/api/state");
+    render();
+    const testing = state.slots.some((s) => s.testing);
+    if (testing && !testPoll) testPoll = setInterval(loadState, 3000);
+    if (!testing && testPoll) { clearInterval(testPoll); testPoll = null; }
+    for (const s of state.slots) if (s.test_error) toast(`${s.name} test: ${s.test_error}`);
+  } catch (e) { toast(e.message); }
+}
+
+function render() {
+  const pv = $("#providers");
+  pv.replaceChildren();
+  for (const p of Object.values(state.providers)) {
+    const item = el("span");
+    item.title = p.up ? "reachable" : (p.error || "not reachable");
+    item.append(el("i", "dot" + (p.up ? " up" : "")), document.createTextNode(p.label));
+    pv.append(item);
+  }
+  $("#pipe").placeholder = state.flow + "   (the default)";
+
+  const brain = $("#brain"), wires = $("#wires");
+  brain.querySelectorAll(".node").forEach((n) => n.remove());
+  wires.replaceChildren();
+  const ring = state.slots.filter((s) => s.group === "stage" || s.group === "process");
+  ring.forEach((s, i) => {
+    const angle = (-90 + (360 / ring.length) * i) * Math.PI / 180;
+    const x = 50 + 34 * Math.cos(angle), y = 50 + 38 * Math.sin(angle);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 50); line.setAttribute("y1", 50);
+    line.setAttribute("x2", x.toFixed(2)); line.setAttribute("y2", y.toFixed(2));
+    line.dataset.slot = s.slot;
+    wires.append(line);
+    brain.append(slotNode(s, x, y));
+  });
+  const router = state.slots.find((s) => s.group === "router");
+  if (router) brain.append(slotNode(router, 50, 50));
+
+  const strip = $("#tools .strip");
+  strip.replaceChildren(...state.slots.filter((s) => s.group === "tool").map((s) => slotNode(s)));
+
+  const chips = $("#examples");
+  chips.replaceChildren(...state.examples.map((ex) => {
+    const b = el("button", "chip", ex.label);
+    b.type = "button";
+    b.addEventListener("click", () => { $("#request").value = ex.request; $("#pipe").value = ex.pipe; $("#request").focus(); });
+    return b;
+  }));
+  paintRun();
+}
+
+function slotNode(s, x, y) {
+  const node = el("div", "node " + (s.group === "router" ? "hub" : "card"));
+  node.dataset.slot = s.slot;
+  if (x != null) { node.style.left = x + "%"; node.style.top = y + "%"; }
+  if (s.group !== "router") {
+    node.style.setProperty("--c", `var(--${s.color})`);
+    node.style.setProperty("--c-ink", `var(--${s.color}-ink)`);
+  }
+  node.append(el("h2", null, s.name));
+  node.append(el("span", "tag", s.call || (s.group === "router" ? "the hub" : "stage")));
+  node.append(el("div", "does", s.does));
+
+  const sel = el("select");
+  sel.setAttribute("aria-label", `${s.name} model`);
+  const groups = new Map();
+  for (const o of s.options) {
+    if (!groups.has(o.provider)) {
+      const g = el("optgroup");
+      g.label = o.label + (o.up ? "" : " (offline)");
+      groups.set(o.provider, g);
+      sel.append(g);
+    }
+    const opt = el("option", null, o.model + (o.loaded ? "  ● loaded" : ""));
+    opt.value = o.choice;
+    opt.disabled = !o.up;
+    groups.get(o.provider).append(opt);
+  }
+  if (!s.choice) {
+    const opt = el("option", null, s.options.length ? "pick a model" : "no model available yet");
+    opt.value = ""; sel.prepend(opt);
+  } else if (!s.options.some((o) => o.choice === s.choice)) {
+    const opt = el("option", null, s.choice + " (not reachable)");
+    opt.value = s.choice; sel.prepend(opt);
+  }
+  sel.value = s.choice || "";
+  sel.disabled = !s.options.some((o) => o.up);
+  sel.addEventListener("change", async () => {
+    const want = sel.value;
+    if (!want) return;
+    sel.disabled = true;
+    try {
+      state = await api("/api/choose", { slot: s.slot, choice: want });
+      toast(`${s.name} now uses ${want}`);
+      render();
+    } catch (e) { sel.value = s.choice || ""; sel.disabled = false; toast(e.message); }
+  });
+  node.append(sel);
+
+  const foot = el("footer");
+  const badge = el("span", "badge");
+  if (s.score) {
+    const ratio = s.score.passed / s.score.total;
+    badge.textContent = `${s.score.passed}/${s.score.total} · ${s.score.avg_seconds}s`;
+    badge.classList.add(ratio === 1 ? "good" : ratio >= 0.5 ? "meh" : "bad");
+    badge.title = `Checked ${s.score.when}\n` + s.score.results.map((r) => `${r.ok ? "✓" : "✗"} ${r.input} — ${r.why}`).join("\n");
+  } else {
+    badge.textContent = !s.choice ? "no model" : s.has_checks ? "not tested" : "no checks";
+  }
+  const timer = el("span", "timer");
+  const btn = el("button", "small", s.testing ? "testing…" : "Test");
+  btn.type = "button";
+  btn.disabled = s.testing || !s.has_checks || !s.choice;
+  btn.title = "Run this function's checks with the chosen model";
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; btn.textContent = "testing…";
+    try { await api("/api/test", { slot: s.slot }); loadState(); }
+    catch (e) { btn.disabled = false; btn.textContent = "Test"; toast(e.message); }
+  });
+  foot.append(badge, timer, btn);
+  node.append(foot);
+  return node;
+}
+
+$("#ask").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const request = $("#request").value.trim();
+  if (!request) return;
+  $("#go").disabled = true;
+  try {
+    const { id } = await api("/api/run", { request, pipe: $("#pipe").value });
+    follow(id);
+  } catch (e) { $("#go").disabled = false; toast(e.message); }
+});
+$("#request").addEventListener("keydown", (ev) => {
+  if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) $("#ask").requestSubmit();
+});
+
+function follow(id) {
+  if (source) source.close();
+  source = new EventSource(`/api/runs/${id}/events`);
+  source.onmessage = (msg) => {
+    current = JSON.parse(msg.data);
+    paintRun();
+    if (current.status !== "running") {
+      source.close(); source = null;
+      $("#go").disabled = false;
+    }
+  };
+  source.onerror = () => {
+    if (source) { source.close(); source = null; }
+    $("#go").disabled = false;
+    if (current && current.status === "running") toast("Lost the live view. The run keeps going on the server.");
+  };
+}
+
+function paintRun() {
+  document.querySelectorAll(".node.busy").forEach((n) => n.classList.remove("busy"));
+  document.querySelectorAll(".node .timer").forEach((t) => { t.textContent = ""; });
+  document.querySelectorAll("#wires line.live").forEach((l) => l.classList.remove("live"));
+  clearInterval(ticker);
+
+  const board = $("#board");
+  board.replaceChildren();
+  if (!current) {
+    board.append(el("p", "empty", "Send a message. It drops through Attention → Context → Route → Respond, and Route calls processes and tools on the way. Or type your own pipe, like lookup | draw."));
+    return;
+  }
+  const running = current.status === "running";
+  const active = current.steps.find((s) => s.status === "running");
+  if (running && active) {
+    const node = document.querySelector(`.node[data-slot="${active.function}"]`);
+    if (node) {
+      node.classList.add("busy");
+      const timer = node.querySelector(".timer");
+      const tick = () => { if (timer) timer.textContent = ((Date.now() / 1000) - active.started).toFixed(0) + "s"; };
+      tick(); ticker = setInterval(tick, 500);
+    }
+    const line = document.querySelector(`#wires line[data-slot="${active.function}"]`);
+    if (line) { line.classList.add("live"); line.style.setProperty("--live", `var(--${colorOf(slotBy(active.function))}-ink)`); }
+    if (active.kind === "route" || (active.why && active.why.startsWith("@"))) {
+      const hub = document.querySelector(".node.hub");
+      if (hub && active.kind === "route") hub.classList.add("busy");
+    }
+  }
+
+  const head = el("div", "runhead");
+  const label = el("span");
+  label.append(document.createTextNode(current.mode === "flow" ? "Flow: " : "Pipe: "), el("code", null, current.pipe.join(" | ")));
+  head.append(label, el("span", null, running ? "running…" : `${current.status} in ${current.seconds}s`));
+  board.append(head);
+  if (!running && current.note) board.append(el("p", current.status === "done" ? "meta" : "bad", current.note));
+
+  if (current.final) {
+    const f = el("section", "final");
+    f.append(el("h3", null, `Reply · from ${current.final.name}`));
+    if (current.final.image) {
+      const img = el("img"); img.src = "/" + current.final.image; img.alt = current.final.caption;
+      f.append(img, el("div", "meta", current.final.caption));
+    } else {
+      f.append(rich("pre", null, current.final.text));
+    }
+    board.append(f);
+  }
+  for (const step of current.steps) board.append(stepCard(step));
+}
+
+function stepCard(step) {
+  const slot = slotBy(step.function);
+  const card = el("article", "step" + (step.status === "skipped" ? " skipped" : ""));
+  card.style.setProperty("--c", `var(--${colorOf(slot)})`);
+  card.style.setProperty("--c-ink", `var(--${colorOf(slot)}-ink)`);
+  const head = el("div", "head");
+  const left = el("span");
+  left.append(el("b", null, `${step.n}. ${step.name}`), document.createTextNode(step.model ? ` · ${step.model}` : ""));
+  const right = el("span", step.status === "error" ? "bad" : "",
+    step.status === "running" ? "working…" : step.status === "skipped" ? "skipped" : `${step.seconds}s`);
+  head.append(left, right);
+  card.append(head);
+  if (step.why) card.append(el("div", "why", step.why));
+
+  const meta = step.meta || {};
+  if (step.kind === "gate" && typeof meta.pass === "boolean") {
+    card.append(el("pre", meta.pass ? "" : "bad", step.output));
+  } else if (meta.tokens && meta.tokens.length) {
+    const row = el("div", "tokens");
+    for (const t of meta.tokens) row.append(el("span", null, `[${t}]`));
+    card.append(row);
+    const extra = [meta.when && `when: ${meta.when}`, meta.intent && `intent: ${meta.intent}`].filter(Boolean).join(" · ");
+    if (extra) card.append(el("div", "meta", extra));
+  } else if (step.kind === "route") {
+    card.append(el("pre", "mono", step.output));
+  } else if (step.image) {
+    const img = el("img"); img.src = "/" + step.image; img.alt = step.output;
+    card.append(img, el("div", "meta", `prompt: ${step.output}`));
+  } else if (step.output) {
+    card.append(step.status === "error" ? el("pre", "bad", step.output) : rich("pre", null, step.output));
+  }
+  if (meta.question) card.append(el("div", "meta", `searched: ${meta.question}`));
+  if (Array.isArray(meta.sources) && meta.sources.length) {
+    const list = el("ol", "sources");
+    for (const src of meta.sources) {
+      const li = el("li");
+      if (/^https?:\/\//i.test(src.url)) {
+        const a = el("a", null, src.title || src.url);
+        a.href = src.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        li.append(a);
+      } else {
+        li.textContent = src.title || src.url;
+      }
+      list.append(li);
+    }
+    card.append(list);
+  }
+  if (step.input && step.status !== "skipped") {
+    const d = el("details");
+    d.append(el("summary", null, "input"), el("pre", "mono", step.input));
+    card.append(d);
+  }
+  return card;
+}
+
+loadState();
+setInterval(() => {
+  const busySelect = document.activeElement && document.activeElement.tagName === "SELECT";
+  if (!document.hidden && !busySelect) loadState();
+}, 20000);
+</script>
+</body>
+</html>

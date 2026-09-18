@@ -1,0 +1,558 @@
+{
+ "score": {
+  "intent": 0.796,
+  "tool": 0.806,
+  "ask_first": 0.946,
+  "for_me": 0.978,
+  "all": 0.581
+ },
+ "median_seconds": 1.99,
+ "mistakes": [
+  {
+   "prev": "",
+   "text": "Can you add up 129, 88 and 406 for me",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "task",
+    "calculator",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "we need to split the check",
+   "want": [
+    "question",
+    "calculator",
+    true
+   ],
+   "got": [
+    "task",
+    "none",
+    true
+   ]
+  },
+  {
+   "prev": "",
+   "text": "find a sushi place near downtown Minneapolis that's open late",
+   "want": [
+    "question",
+    "web_search",
+    false
+   ],
+   "got": [
+    "task",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "is it hot out today?",
+   "want": [
+    "question",
+    "web_search",
+    true
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "when do they close tonight?",
+   "want": [
+    "question",
+    "web_search",
+    true
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "can you check https://shop.example.org/deals and see if the blender is still on sale",
+   "want": [
+    "question",
+    "web_browser",
+    false
+   ],
+   "got": [
+    "task",
+    "web_browser",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "jot down that the wifi guy is coming Wednesday",
+   "want": [
+    "task",
+    "file_write",
+    false
+   ],
+   "got": [
+    "remember",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "put it on the list",
+   "want": [
+    "task",
+    "file_write",
+    true
+   ],
+   "got": [
+    "task",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "read back my to do list",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "task",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "did I already put batteries on the grocery list?",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "remember",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "open my budget notes",
+   "want": [
+    "question",
+    "file_read",
+    false
+   ],
+   "got": [
+    "task",
+    "file_read",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what did I say my locker combo was",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "remind me what my car insurance company is",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "where did I say I parked at the airport?",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what did I tell you about it?",
+   "want": [
+    "question",
+    "memory_recall",
+    true
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Remember that my dentist is Dr. Lee and my appointments are on Tuesdays.",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "please remember I'm allergic to shellfish",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "don't forget my mom's flight lands at 4:15 on Sunday",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "keep in mind that Jordan is vegan",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "remember this: the storage unit code is 2291",
+   "want": [
+    "remember",
+    "none",
+    false
+   ],
+   "got": [
+    "remember",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "Why do cats purr?",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "how do I get red wine out of a carpet",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what's the difference between baking soda and baking powder",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "who painted the Mona Lisa",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "any tips for a toddler who won't sleep?",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "what's a good name for a golden retriever",
+   "want": [
+    "question",
+    "none",
+    false
+   ],
+   "got": [
+    "question",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "give me five easy dinner ideas with chicken",
+   "want": [
+    "task",
+    "none",
+    false
+   ],
+   "got": [
+    "task",
+    "web_search",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "tell me a dad joke",
+   "want": [
+    "task",
+    "none",
+    false
+   ],
+   "got": [
+    "small_talk",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "",
+   "text": "book us a table for Saturday",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "task",
+    "web_search",
+    true
+   ]
+  },
+  {
+   "prev": "",
+   "text": "remind me later",
+   "want": [
+    "task",
+    "none",
+    true
+   ],
+   "got": [
+    "remember",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Which city should I check the weather for?",
+   "text": "Albuquerque",
+   "want": [
+    "answer",
+    "web_search",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "What should I name the file?",
+   "text": "just call it errands",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Want me to save that list to a file?",
+   "text": "yes please",
+   "want": [
+    "answer",
+    "file_write",
+    false
+   ],
+   "got": [
+    "task",
+    "file_write",
+    false
+   ]
+  },
+  {
+   "prev": "How much was the total bill?",
+   "text": "$212.40",
+   "want": [
+    "answer",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "How many people are splitting it?",
+   "text": "five of us",
+   "want": [
+    "answer",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Would you like help preparing for the meeting, or are you just letting me know about it for now?",
+   "text": "I'm the investor. A local bakery is pitching to me.",
+   "want": [
+    "answer",
+    "none",
+    false
+   ],
+   "got": [
+    "statement",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Should I remember that for next time?",
+   "text": "nah",
+   "want": [
+    "answer",
+    "none",
+    false
+   ],
+   "got": [
+    "small_talk",
+    "none",
+    false
+   ]
+  },
+  {
+   "prev": "Dr. Lee is your dentist.",
+   "text": "and when's my next cleaning?",
+   "want": [
+    "question",
+    "memory_recall",
+    false
+   ],
+   "got": [
+    "answer",
+    "memory_recall",
+    false
+   ]
+  },
+  {
+   "prev": "Which city should I check the weather for?",
+   "text": "actually what's 15% of 80",
+   "want": [
+    "question",
+    "calculator",
+    false
+   ],
+   "got": [
+    "answer",
+    "calculator",
+    false
+   ]
+  }
+ ]
+}

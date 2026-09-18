@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paratroop Harness 02</title>
+<style>
+:root {
+  --bg: #f2f5f9; --panel: #ffffff; --sunk: #f6f8fb; --ink: #151b26; --muted: #5c6878; --faint: #8b95a5;
+  --border: #dbe1ea; --line: #b9c3d2; --hub: #eef2f8; --you: #e2ecfc; --focus: #2f6fd0;
+  --shadow: 0 1px 2px rgba(20, 28, 42, .05), 0 10px 30px rgba(20, 28, 42, .10);
+  --red: #fbd3d3; --orange: #fde0c6; --yellow: #fdf0c2; --green: #d8f0da; --teal: #d3f0e6; --blue: #d6e7fd; --purple: #e6dbf8; --pink: #f8d9ea; --grey: #e6eaf0; --brown: #eedfd0; --lime: #e4f2cf;
+  --red-ink: #b42323; --orange-ink: #a24e0b; --yellow-ink: #8a6a00; --green-ink: #267a35; --teal-ink: #1d7a5e; --blue-ink: #1f5fb4; --purple-ink: #6a3fb4; --pink-ink: #a8326f; --grey-ink: #59647a; --brown-ink: #86582f; --lime-ink: #4f7a14;
+  --ok: #267a35; --bad: #b42323; --warn: #8a6a00;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10141a; --panel: #1a1f28; --sunk: #151a22; --ink: #e9edf3; --muted: #99a4b4; --faint: #7a8494;
+    --border: #2c333f; --line: #4a5464; --hub: #202733; --you: #223350; --focus: #7db0ff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .35);
+    --red: #4a2527; --orange: #4a3121; --yellow: #45391a; --green: #213b27; --teal: #1d3d35; --blue: #1f3350; --purple: #35284d; --pink: #47263a; --grey: #262c36; --brown: #3f3024; --lime: #2d3a1d;
+    --red-ink: #ff9a9a; --orange-ink: #ffb67a; --yellow-ink: #f3d36b; --green-ink: #8fdc9c; --teal-ink: #7fdcbf; --blue-ink: #8cbcff; --purple-ink: #c7a8ff; --pink-ink: #ff9fcf; --grey-ink: #a3aec0; --brown-ink: #e0b88f; --lime-ink: #b5dc7a;
+    --ok: #8fdc9c; --bad: #ff9a9a; --warn: #f3d36b;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+button { font: inherit; cursor: pointer; color: inherit; }
+button:disabled { opacity: .45; cursor: default; }
+h1, h2, h3 { letter-spacing: -0.01em; }
+
+/* ---------- frame ---------- */
+header {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding: 10px 18px; border-bottom: 1px solid var(--border); background: var(--panel);
+}
+h1 { font-size: 16px; margin: 0; }
+h1 small { color: var(--muted); font-weight: 500; margin-left: 6px; font-size: 12.5px; }
+#providers { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+#providers span { display: inline-flex; align-items: center; gap: 5px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bad); flex: none; }
+.dot.up { background: var(--ok); }
+
+main {
+  display: grid; grid-template-columns: minmax(430px, 1.15fr) minmax(392px, 1fr);
+  gap: 16px; padding: 16px; align-items: start; max-width: 1760px; margin: 0 auto;
+}
+@media (max-width: 1120px) { main { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
+.panelhead { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 11px 14px 0; }
+.panelhead h2 { font-size: 13px; margin: 0; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.legend { padding: 3px 14px 8px; font-size: 12px; color: var(--faint); }
+
+/* ---------- the ring ---------- */
+#ring { position: relative; margin: 0 auto; }
+#wires { position: absolute; left: 0; top: 0; overflow: visible; }
+#wires .spoke { stroke: var(--line); stroke-width: 1; opacity: .35; stroke-dasharray: 2 4; fill: none; }
+#wires .flow { stroke: var(--line); stroke-width: 2; fill: none; opacity: .55; }
+#wires .arrow { fill: var(--line); opacity: .65; }
+#wires .loop { stroke: var(--line); stroke-width: 1.5; fill: none; opacity: .55; stroke-dasharray: 5 4; }
+#wires .loop.faded { opacity: .22; }
+#wires .loop.hot, #wires .loop.hot + .arrow { opacity: 1; stroke: var(--purple-ink); fill: var(--purple-ink); }
+#wires .looptext { fill: var(--muted); font: 10px -apple-system, system-ui, sans-serif; text-anchor: middle; }
+#wires .spoke.live { stroke: var(--live); stroke-width: 2.5; opacity: 1; stroke-dasharray: 6 5; animation: flow .55s linear infinite; }
+#wires .flow.lit { stroke: var(--live); opacity: 1; stroke-width: 2.5; }
+@keyframes flow { to { stroke-dashoffset: -11; } }
+
+.mod {
+  position: absolute; transform: translate(-50%, -50%); border-radius: 11px; background: var(--panel);
+  border: 1px solid var(--border); display: flex; transition: box-shadow .18s, transform .18s;
+}
+.mod.on { background: var(--c); border-color: color-mix(in srgb, var(--c-ink) 40%, transparent); }
+.mod.off { border: 1px dashed var(--line); background: var(--sunk); transform: translate(-50%, -50%) scale(.92); }
+.mod-open {
+  flex: 1; min-width: 0; text-align: left; background: none; border: 0; border-radius: 11px;
+  padding: 5px 24px 5px 8px; display: flex; flex-direction: column; justify-content: center; gap: 1px;
+}
+.mod .nm { font-weight: 600; font-size: var(--nm, 12.5px); line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mod .sub { display: flex; align-items: center; gap: 4px; font-size: var(--sm, 10.5px); color: var(--muted); min-width: 0; }
+.mod .sub b { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mod.off .nm { color: var(--muted); font-weight: 500; }
+.mod.off .sub { color: var(--faint); }
+.mod .pip { font-size: 9.5px; padding: 0 4px; border-radius: 999px; border: 1px solid var(--border); background: var(--panel); flex: none; font-variant-numeric: tabular-nums; }
+.mod .pip.good { color: var(--ok); } .mod .pip.meh { color: var(--warn); } .mod .pip.bad { color: var(--bad); }
+.mod .timer { font-size: 10px; font-variant-numeric: tabular-nums; color: var(--c-ink); font-weight: 700; }
+.mod.busy { box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-ink) 38%, transparent); }
+.mod-open[aria-expanded="true"] { box-shadow: 0 0 0 2px var(--focus); }
+
+/* the on/off switch that lives in the corner of every card */
+.sw {
+  position: absolute; top: 5px; right: 6px; width: 22px; height: 12px; padding: 0; flex: none;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--sunk);
+}
+.sw::after { content: ""; position: absolute; top: 1px; left: 1px; width: 8px; height: 8px; border-radius: 50%; background: var(--line); transition: transform .15s, background .15s; }
+.sw[aria-checked="true"] { background: color-mix(in srgb, var(--ok) 30%, transparent); border-color: var(--ok); }
+.sw[aria-checked="true"]::after { transform: translateX(10px); background: var(--ok); }
+.sw:disabled { opacity: .4; }
+
+.hub {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--hub); border: 2px dashed var(--line); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; padding: 16px; overflow: hidden;
+}
+.hub h3 { margin: 0; font-size: 13px; }
+.hub .tag { font-size: 10px; color: var(--faint); margin-bottom: 4px; }
+.hub .goal { font-size: 11.5px; color: var(--ink); max-width: 88%; margin-bottom: 4px; }
+.hub dl { display: grid; grid-template-columns: auto auto; gap: 0 8px; margin: 0; font-size: 11.5px; }
+.hub dt { color: var(--muted); text-align: right; }
+.hub dd { margin: 0; text-align: left; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* the ring falls back to a plain top-to-bottom pipeline when it can't fit */
+#ring.stack { display: flex; flex-direction: column; align-items: stretch; gap: 6px; padding: 4px 0; }
+#ring.stack #wires { display: none; }
+#ring.stack .mod, #ring.stack .hub { position: static; transform: none; width: auto; height: auto; }
+#ring.stack .mod.off { transform: none; }
+#ring.stack .hub { border-radius: 12px; margin: 6px 0; padding: 10px; }
+
+/* ---------- the module inspector ---------- */
+.pop {
+  position: absolute; z-index: 20; width: 286px; max-height: 96%; overflow: auto;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: 10px 12px 12px;
+}
+.pop .pophead { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.pop h3 { margin: 0; font-size: 14px; }
+.pop .does { font-size: 11.5px; color: var(--muted); margin: 2px 0 8px; }
+.pop h4 { margin: 10px 0 3px; font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); }
+.pop .rail { height: 3px; border-radius: 2px; background: var(--c-ink); margin: -2px 0 8px; }
+.x { border: 0; background: none; font-size: 15px; line-height: 1; color: var(--muted); padding: 2px 4px; border-radius: 6px; }
+select, input[type=number] {
+  font: inherit; font-size: 12.5px; padding: 4px 6px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--sunk); color: var(--ink);
+}
+select { width: 100%; }
+.btn { font-size: 12px; padding: 3px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--sunk); }
+.btn:hover:not(:disabled) { border-color: var(--line); }
+.onoff { display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-bottom: 8px; }
+.onoff .sw { position: static; }
+.badge { font-size: 11.5px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); background: var(--sunk); white-space: nowrap; }
+.badge.good { color: var(--ok); } .badge.meh { color: var(--warn); } .badge.bad { color: var(--bad); }
+.checks { list-style: none; margin: 6px 0 0; padding: 0; font-size: 11.5px; }
+.checks li { display: flex; gap: 6px; padding: 2px 0; border-top: 1px solid var(--border); }
+.checks .yes { color: var(--ok); } .checks .no { color: var(--bad); }
+.setrow { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; font-size: 12.5px; margin: 6px 0; }
+.setrow .note { grid-column: 1 / -1; font-size: 10.5px; color: var(--faint); }
+.setrow input[type=number] { width: 84px; }
+.weightbox { border: 1px solid var(--border); border-radius: 9px; padding: 7px 8px; background: var(--sunk); }
+.weightfacts { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; margin: 0; font-size: 11.5px; }
+.weightfacts dt { color: var(--muted); }
+.weightfacts dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.weightsub { margin: 8px 0 3px; padding-top: 6px; border-top: 1px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); }
+.weightnote { margin: 6px 0 0; color: var(--muted); font-size: 10.5px; line-height: 1.35; }
+.weightnote.changed { color: var(--warn); font-weight: 600; }
+
+/* ---------- bench: tools and memory ---------- */
+.bench { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 14px; padding: 4px 14px 14px; }
+@media (max-width: 720px) { .bench { grid-template-columns: minmax(0, 1fr); } }
+.bench h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 8px 0 6px; }
+.bench h3 span { text-transform: none; letter-spacing: 0; color: var(--faint); font-weight: 400; }
+.tools { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.tool { position: relative; display: flex; align-items: center; gap: 8px; padding: 4px 30px 4px 8px; border-radius: 9px; border: 1px solid var(--border); background: var(--panel); }
+.tool.on { background: var(--c); border-color: color-mix(in srgb, var(--c-ink) 35%, transparent); }
+.tool.off { border-style: dashed; background: transparent; }
+.tool .nm { font-size: 12.5px; font-weight: 600; flex: none; }
+.tool.off .nm { color: var(--faint); font-weight: 500; }
+.tool .does { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
+.tool .timer { font-size: 11px; font-variant-numeric: tabular-nums; color: var(--c-ink); font-weight: 600; flex: none; }
+.tool.busy { box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-ink) 38%, transparent); }
+.tool .sw { top: 50%; margin-top: -6px; }
+.memlist { list-style: none; margin: 0; padding: 0; max-height: 190px; overflow: auto; font-size: 12.5px; }
+.memlist li { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 4px 0; border-top: 1px solid var(--border); }
+.memlist li:first-child { border-top: 0; }
+
+/* ---------- chat ---------- */
+#chat { display: flex; flex-direction: column; min-height: 0; }
+@media (min-width: 1121px) { #chat { position: sticky; top: 16px; max-height: calc(100vh - 32px); } }
+.chathead { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.chathead .title { font-weight: 600; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chathead .controls { display: flex; gap: 6px; align-items: center; flex: none; }
+.chathead select { width: 170px; }
+#thread { flex: 1; min-height: 120px; overflow: auto; padding: 14px; display: flex; flex-direction: column; gap: 16px; }
+.turn { display: flex; flex-direction: column; gap: 6px; }
+.bubble { max-width: 90%; padding: 8px 12px; border-radius: 13px; }
+.bubble.you { align-self: flex-end; background: var(--you); white-space: pre-wrap; word-break: break-word; }
+.bubble.ai { align-self: flex-start; background: var(--sunk); border: 1px solid var(--border); }
+.bubble.ai pre { margin: 0; }
+.working { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12.5px; }
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--focus); animation: pulse 1.1s ease-in-out infinite; flex: none; }
+@keyframes pulse { 0%, 100% { opacity: .25; transform: scale(.8); } 50% { opacity: 1; transform: scale(1); } }
+.tracebar { display: flex; align-items: flex-start; gap: 6px; }
+details.trace { flex: 1; min-width: 0; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
+details.trace > summary { cursor: pointer; font-size: 12px; color: var(--muted); padding: 5px 10px; list-style: none; display: flex; gap: 6px; align-items: center; }
+details.trace > summary::-webkit-details-marker { display: none; }
+details.trace > summary::before { content: "▸"; font-size: 9px; color: var(--faint); }
+details.trace[open] > summary::before { content: "▾"; }
+details.trace[open] > summary { border-bottom: 1px solid var(--border); }
+details.trace .board { padding: 10px; }
+#ask { border-top: 1px solid var(--border); padding: 10px 14px 12px; }
+textarea { width: 100%; min-height: 58px; resize: vertical; font: inherit; color: var(--ink); background: var(--sunk); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 8px; }
+.hint { font-size: 11.5px; color: var(--faint); }
+button.go { font-weight: 600; padding: 7px 18px; border-radius: 9px; border: 0; background: var(--ink); color: var(--bg); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.chip { font-size: 11.5px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); }
+.chip:hover { border-color: var(--line); color: var(--ink); }
+.empty { color: var(--muted); font-size: 13px; }
+
+/* ---------- how it got there ---------- */
+.boardhead { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.pill { font-size: 11px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); background: var(--sunk); }
+.pill.done { color: var(--ok); } .pill.error { color: var(--bad); } .pill.stopped { color: var(--warn); }
+.step { display: grid; grid-template-columns: 11px minmax(0, 1fr); gap: 9px; }
+.step > .rail { position: relative; }
+.step > .rail::before { content: ""; position: absolute; left: 4px; top: 13px; bottom: -2px; width: 1px; background: var(--border); }
+.step:last-child > .rail::before { display: none; }
+.step > .rail::after { content: ""; position: absolute; left: 0; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c-ink, var(--line)); }
+.step > .body { padding-bottom: 12px; min-width: 0; }
+.step .head { display: flex; align-items: baseline; gap: 7px; flex-wrap: wrap; }
+.step .head b { font-size: 12.5px; }
+.step .head .sum { font-size: 12px; color: var(--muted); }
+.step .head .t { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; margin-left: auto; }
+details.more > summary { cursor: pointer; font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+.items { list-style: none; margin: 5px 0 0; padding: 0; }
+.items li { padding: 4px 0; border-top: 1px solid var(--border); font-size: 12.5px; }
+.items li:first-child { border-top: 0; }
+.kind { font: 10.5px ui-monospace, SFMono-Regular, Menlo, monospace; padding: 0 5px; border-radius: 5px; background: var(--c, var(--sunk)); border: 1px solid var(--border); margin-right: 5px; white-space: nowrap; }
+.meta { font-size: 11.5px; color: var(--muted); }
+.bar { display: inline-block; height: 5px; border-radius: 3px; background: var(--c-ink, var(--line)); vertical-align: middle; margin-left: 6px; opacity: .75; }
+.pick { background: color-mix(in srgb, var(--ok) 10%, transparent); border-radius: 6px; padding-left: 4px; margin-left: -4px; }
+.pick > .what::before { content: "✓ "; color: var(--ok); font-weight: 700; }
+.what { font-weight: 600; }
+.cyc { border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; margin-bottom: 8px; background: var(--sunk); }
+.sev { font-size: 11px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--border); margin-right: 5px; }
+.sev-high { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 45%, transparent); }
+.sev-medium { color: var(--warn); } .sev-low { color: var(--muted); }
+.bad { color: var(--bad); }
+.out { margin: 5px 0 0; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); font: 11.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; word-break: break-word; max-height: 150px; overflow: auto; }
+.out.all { max-height: 420px; }
+pre.reply { white-space: pre-wrap; word-break: break-word; margin: 0; font: inherit; }
+table.calls { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 4px; }
+table.calls td { padding: 2px 4px; border-top: 1px solid var(--border); }
+table.calls td.num { text-align: right; font-variant-numeric: tabular-nums; }
+dialog.wide { background: var(--panel); color: var(--ink); border: 1px solid var(--border); border-radius: 14px; padding: 16px; width: min(920px, 94vw); max-height: 88vh; overflow: auto; }
+dialog.wide::backdrop { background: rgba(0, 0, 0, .4); }
+#toast { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 9px; font-size: 13px; max-width: 90vw; z-index: 50; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Paratroop Harness <small>02 · cognitive modules</small></h1>
+  <div id="providers" aria-label="Servers"></div>
+</header>
+<main>
+  <section class="panel" aria-label="The brain">
+    <div class="panelhead">
+      <h2>The brain</h2>
+      <span class="count" id="oncount"></span>
+    </div>
+    <p class="legend">A message goes clockwise round the ring. The middle is the shared scratchpad every part reads and writes. Faded, dashed cards are switched off. Click a card to pick its model, test it or change its settings.</p>
+    <div id="ring"></div>
+    <div class="bench">
+      <div>
+        <h3>Tools <span>· what the modules reach for, not models</span></h3>
+        <ul id="tools" class="tools"></ul>
+      </div>
+      <div>
+        <h3 id="memtitle">Long-term memory</h3>
+        <ul id="memories" class="memlist"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="chat" class="panel" aria-label="Chat">
+    <div class="chathead">
+      <span class="title" id="chattitle">New chat</span>
+      <span class="controls">
+        <select id="recent" aria-label="Recent chats"></select>
+        <button id="newchat" class="btn" type="button">New chat</button>
+      </span>
+    </div>
+    <div id="thread" aria-live="polite"></div>
+    <form id="ask">
+      <label for="message" class="hint">Message</label>
+      <textarea id="message" placeholder="Tell it something, ask something, or answer its question…" required></textarea>
+      <div class="row">
+        <span class="hint">⌘↩ to send · replies stay in this chat</span>
+        <button id="go" class="go" type="submit">Send</button>
+      </div>
+      <div id="examples" class="chips"></div>
+    </form>
+  </section>
+</main>
+<div id="toast" hidden></div>
+<script>
+"use strict";
+const STORE_KEY = "paratroop02.conversation";
+// The ring reads clockwise in the order a message actually travels, which isn't harness.json's order.
+const RING_ORDER = ["router", "perception", "attention", "recall", "math_language", "math",
+                    "planner", "predictor", "critic", "decision", "language"];
+const SVG = "http://www.w3.org/2000/svg";
+const LEGEND = "A message goes clockwise round the ring. The middle is the shared scratchpad every part reads and writes. Faded, dashed cards are switched off. Click a card to pick its model, test it or change its settings.";
+
+let state = null;          // /api/state
+let conversation = null;   // {id, turns} of the open chat
+let live = null;           // working memory of the turn being thought about right now
+let liveOpen = true;
+let openModule = null;     // id of the module whose inspector is open
+let source = null, ticker = null, testPoll = null;
+const runCache = new Map();
+const $ = (s) => document.querySelector(s);
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function svg(tag, attrs) {
+  const e = document.createElementNS(SVG, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+
+// Models write **bold** and *italic*. Show those as real text styles, built from text nodes only.
+function rich(tag, cls, text) {
+  const box = el(tag, cls);
+  for (const part of String(text).split(/(\*\*[^*\n]+\*\*|\*[^*\s][^*\n]*\*)/)) {
+    if (/^\*\*[^*\n]+\*\*$/.test(part)) box.append(el("strong", null, part.slice(2, -2)));
+    else if (/^\*[^*\s][^*\n]*\*$/.test(part)) box.append(el("em", null, part.slice(1, -1)));
+    else if (part) box.append(document.createTextNode(part));
+  }
+  return box;
+}
+
+function saveChatId(id) { try { id ? localStorage.setItem(STORE_KEY, id) : localStorage.removeItem(STORE_KEY); } catch (e) { /* storage blocked */ } }
+function savedChatId() { try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; } }
+
+async function api(path, body) {
+  const opts = body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {};
+  const res = await fetch(path, opts);
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "HTTP " + res.status);
+  return data;
+}
+
+let toastTimer = null;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, 3500);
+}
+
+const moduleBy = (id) => state && state.modules.find((m) => m.id === id);
+const colorOf = (id) => (moduleBy(id) || { color: "grey" }).color;
+const inkOf = (id) => `var(--${colorOf(id)}-ink)`;
+const fillOf = (id) => `var(--${colorOf(id)})`;
+const shortModel = (choice) => String(choice || "").split("/").pop();
+function paint(node, color) {
+  node.style.setProperty("--c", `var(--${color})`);
+  node.style.setProperty("--c-ink", `var(--${color}-ink)`);
+}
+
+async function loadState() {
+  try {
+    state = await api("/api/state");
+    render();
+    const testing = state.modules.some((m) => m.testing);
+    if (testing && !testPoll) testPoll = setInterval(loadState, 3000);
+    if (!testing && testPoll) { clearInterval(testPoll); testPoll = null; }
+    for (const m of state.modules) if (m.test_error) toast(`${m.name} test: ${m.test_error}`);
+  } catch (e) { toast(e.message); }
+}
+
+function render() {
+  const reopen = openModule;
+  closeInspector(true);
+  renderProviders();
+  buildRing();
+  layoutRing();
+  renderBench();
+  renderChatControls();
+  paintLive();
+  if (reopen && moduleBy(reopen)) openInspector(reopen);
+}
+
+function renderProviders() {
+  const box = $("#providers");
+  box.replaceChildren();
+  for (const p of Object.values(state.providers)) {
+    const item = el("span");
+    item.title = p.up ? "reachable" : (p.error || "not reachable");
+    item.append(el("i", "dot" + (p.up ? " up" : "")), el("span", null, p.label));
+    box.append(item);
+  }
+}
+
+// ---------- the ring ----------
+
+const ringModules = () => {
+  const known = RING_ORDER.map((id) => moduleBy(id)).filter(Boolean);
+  return known.concat(state.modules.filter((m) => !RING_ORDER.includes(m.id)));
+};
+
+/* Spread n cards round an ellipse so none touch. A card at the top needs horizontal room and one
+   at the side needs vertical room, so even angles crowd the top and bottom: give each card an
+   angular share of the ring in proportion to how much of the ring it actually covers. */
+function spread(n, w, h, gap) {
+  let ang = Array.from({ length: n }, (_, i) => (2 * Math.PI * i) / n);
+  let total = 0;
+  for (let pass = 0; pass < 8; pass++) {
+    const need = ang.map((a) => (w / 2) * Math.abs(Math.cos(a)) + (h / 2) * Math.abs(Math.sin(a)) + gap);
+    total = need.reduce((a, b) => a + b, 0);
+    let run = 0;
+    ang = need.map((x) => { const mid = run + x / 2; run += x; return (2 * Math.PI * mid) / total; });
+    ang = ang.map((a) => a - ang[0]);   // the first module sits at the top, where a message starts
+  }
+  return { ang, need: total / Math.PI };  // need: the smallest radius that fits them all
+}
+
+// Shrink the cards until the ring fits the space it has. Returns null when even the smallest won't.
+function fitRing(boxW, maxH, n) {
+  for (let s = 1; s >= 0.78; s -= 0.03) {
+    const w = Math.round(132 * s), h = Math.round(44 * s), gap = Math.round(15 * s);
+    const { ang, need } = spread(n, w, h, gap);
+    const rx = (boxW - w) / 2 - 2, ry = (maxH - h) / 2;
+    if (rx >= need && ry >= need) {
+      return { w, h, s, ang, rx: Math.min(rx, need * 1.28), ry: Math.min(ry, need * 1.1) };
+    }
+  }
+  return null;
+}
+
+function buildRing() {
+  const box = $("#ring");
+  box.replaceChildren();
+  box.append(svg("svg", { id: "wires", "aria-hidden": "true" }));
+  for (const m of ringModules()) box.append(moduleCard(m));
+  box.append(hubNode());
+}
+
+function moduleCard(m) {
+  const node = el("div", "mod " + (m.on ? "on" : "off"));
+  node.dataset.module = m.id;
+  paint(node, m.color);
+
+  const open = el("button", "mod-open");
+  open.type = "button";
+  open.setAttribute("aria-expanded", "false");
+  open.title = `${m.name} — ${m.does}`;
+  open.append(el("span", "nm", m.name));
+  const sub = el("span", "sub");
+  sub.append(el("b", null, m.on ? (shortModel(m.choice) || "no model") : "off"));
+  if (m.score) {
+    const ratio = m.score.passed / m.score.total;
+    const pip = el("span", "pip " + (ratio === 1 ? "good" : ratio >= 0.5 ? "meh" : "bad"), `${m.score.passed}/${m.score.total}`);
+    pip.title = `last test: ${m.score.passed} of ${m.score.total} checks passed`;
+    sub.append(pip);
+  }
+  sub.append(el("span", "timer"));
+  open.append(sub);
+  open.addEventListener("click", () => (openModule === m.id ? closeInspector() : openInspector(m.id)));
+  node.append(open, switchButton(m.name, m.on, false, (on) => toggle("module", m.id, on)));
+  return node;
+}
+
+function switchButton(name, on, disabled, onChange) {
+  const sw = el("button", "sw");
+  sw.type = "button";
+  sw.setAttribute("role", "switch");
+  sw.setAttribute("aria-checked", on ? "true" : "false");
+  sw.setAttribute("aria-label", name);   // role=switch plus aria-checked already say on or off
+  sw.disabled = disabled;
+  sw.title = disabled ? "Not built yet" : on ? `On: click to switch ${name} off` : `Off: the rest of the brain can't tell ${name} exists`;
+  sw.addEventListener("click", () => onChange(!on));
+  return sw;
+}
+
+function hubNode() {
+  const node = el("div", "hub");
+  node.append(el("h3", null, "Working memory"), el("div", "tag", "structured state · not a model"),
+              el("div", "goal"), el("dl"));
+  return node;
+}
+
+/* Place the cards, then draw the wires: an arc from each switched-on module to the next one that's
+   on (so the ring shows the route a message really takes), a faint spoke to working memory, and the
+   plan -> decide -> act -> plan loop across the middle. */
+function layoutRing() {
+  if (!state) return;
+  const box = $("#ring");
+  const mods = ringModules();
+  const boxW = (box.parentElement.clientWidth || 0) - 28;   // the panel's own side padding
+  const maxH = Math.max(340, Math.min(540, window.innerHeight - 300));
+  const fit = boxW > 320 ? fitRing(boxW, maxH, mods.length) : null;
+  const wires = box.querySelector("#wires");
+  const cards = [...box.querySelectorAll(".mod")];
+
+  const legend = document.querySelector(".legend");
+  if (!fit) {                                   // too narrow for a ring: a plain pipeline instead
+    legend.textContent = "The parts in the order a message travels through them, then the shared scratchpad they all read and write. Faded, dashed cards are switched off. Tap a card to pick its model, test it or change its settings.";
+    box.classList.add("stack");
+    box.style.height = box.style.width = "";
+    for (const c of box.querySelectorAll(".mod, .hub")) {   // drop the sizes the ring set
+      c.style.left = c.style.top = c.style.width = c.style.height = "";
+    }
+    return;
+  }
+  legend.textContent = LEGEND;
+  box.classList.remove("stack");
+  const height = Math.round(2 * fit.ry + fit.h + 4);
+  const width = Math.round(2 * fit.rx + fit.w + 4);   // sized to the ring itself, then centred
+  const cx = width / 2, cy = height / 2;
+  box.style.height = height + "px";
+  box.style.width = width + "px";
+  wires.setAttribute("width", width);
+  wires.setAttribute("height", height);
+  wires.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  wires.replaceChildren();
+
+  const at = (a, k) => [cx + fit.rx * k * Math.sin(a), cy - fit.ry * k * Math.cos(a)];
+  const spots = fit.ang.map((a) => at(a, 1));
+  cards.forEach((card, i) => {
+    card.style.width = fit.w + "px";
+    card.style.height = fit.h + "px";
+    card.style.setProperty("--nm", (12.5 * fit.s).toFixed(1) + "px");
+    card.style.setProperty("--sm", (10.5 * fit.s).toFixed(1) + "px");
+    card.style.left = spots[i][0].toFixed(1) + "px";
+    card.style.top = spots[i][1].toFixed(1) + "px";
+  });
+
+  const hub = box.querySelector(".hub");
+  const hubSize = Math.round(Math.min(fit.rx, fit.ry) * 0.86);   // leaves room for the loop arc at 0.56
+  hub.style.width = hub.style.height = hubSize + "px";
+
+  const on = mods.map((m) => m.on);
+  for (let i = 0; i < mods.length; i++) {
+    if (!on[i]) continue;
+    const spoke = svg("path", { class: "spoke", d: `M${cx} ${cy} L${spots[i][0].toFixed(1)} ${spots[i][1].toFixed(1)}` });
+    spoke.dataset.module = mods[i].id;
+    wires.append(spoke);
+  }
+  const liveOnes = mods.map((m, i) => i).filter((i) => on[i]);
+  for (let step = 0; liveOnes.length > 1 && step < liveOnes.length; step++) {
+    const i = liveOnes[step], j = liveOnes[(step + 1) % liveOnes.length];
+    const skips = (j - i + mods.length) % mods.length > 1;   // switched-off modules in between
+    let a1 = fit.ang[i], a2 = fit.ang[j];
+    if (a2 <= a1) a2 += 2 * Math.PI;
+    const span = a2 - a1, mid = (a1 + a2) / 2, p1 = spots[i], p2 = spots[j];
+    // A short hop over switched-off modules cuts inside the ring, so you can see the route skip
+    // them; a long one stays on the ring, because a curve that wide would swing across the middle.
+    const bowed = skips && span < 2.6;
+    const bow = at(mid, Math.min(1.2, 1.24 - Math.cos(span / 2)));   // keeps the curve near 0.62 of the way out
+    const d = bowed
+      ? `M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} Q${bow[0].toFixed(1)} ${bow[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`
+      : `M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} A${fit.rx} ${fit.ry} 0 ${span > Math.PI ? 1 : 0} 1 ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+    const arc = svg("path", { class: "flow", d: d });
+    arc.dataset.to = mods[j].id;
+    const knee = bowed ? [0, 1].map((n) => 0.25 * p1[n] + 0.5 * bow[n] + 0.25 * p2[n]) : at(mid, 1);
+    const facing = bowed ? Math.atan2(p2[1] - p1[1], p2[0] - p1[0]) : mid;
+    wires.append(arc, arrow(knee, facing, 5));
+  }
+  drawLoop(wires, mods, fit, at);
+}
+
+function arrow(point, facing, size) {
+  const pts = [[0, -size], [size * 1.5, 0], [0, size]]
+    .map(([x, y]) => [point[0] + x * Math.cos(facing) - y * Math.sin(facing), point[1] + x * Math.sin(facing) + y * Math.cos(facing)])
+    .map((p) => p.map((n) => n.toFixed(1)).join(",")).join(" ");
+  return svg("polygon", { class: "arrow", points: pts });
+}
+
+// plan -> decide -> act -> plan again, up to max_cycles times. It only exists when there's a tool to use.
+function drawLoop(wires, mods, fit, at) {
+  const iPlan = mods.findIndex((m) => m.id === "planner"), iDec = mods.findIndex((m) => m.id === "decision");
+  const tools = state.tools.filter((t) => t.on && t.kind === "tool").length;
+  if (iPlan < 0 || iDec < 0 || !tools) return;
+  const k = 0.58, a1 = fit.ang[iDec], a2 = fit.ang[iPlan], mid = (a1 + a2) / 2;
+  const p1 = at(a1, k), p2 = at(a2, k);
+  const r = Math.min(fit.rx, fit.ry) * k;
+  const path = svg("path", { class: "loop" + (mods[iPlan].on ? "" : " faded"),
+                             d: `M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} A${r} ${r} 0 0 0 ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}` });
+  const label = svg("text", { class: "looptext", x: at(mid, k + 0.17)[0].toFixed(1), y: at(mid, k + 0.17)[1].toFixed(1) });
+  label.textContent = `loops up to ${state.max_cycles}×`;
+  wires.append(path, arrow(p2, a2 + Math.PI, 4.5), label);
+}
+
+// ---------- the module inspector ----------
+
+function closeInspector(quiet) {
+  const pop = $("#ring .pop");
+  const chip = openModule && document.querySelector(`.mod[data-module="${openModule}"] .mod-open`);
+  if (chip) chip.setAttribute("aria-expanded", "false");
+  if (pop) pop.remove();
+  if (chip && !quiet) chip.focus();
+  openModule = null;
+}
+
+function openInspector(id) {
+  closeInspector(true);
+  const m = moduleBy(id);
+  const card = document.querySelector(`.mod[data-module="${id}"]`);
+  if (!m || !card) return;
+  openModule = id;
+  card.querySelector(".mod-open").setAttribute("aria-expanded", "true");
+
+  const pop = el("div", "pop");
+  pop.setAttribute("role", "dialog");
+  pop.setAttribute("aria-label", `${m.name} settings`);
+  paint(pop, m.color);
+  const head = el("div", "pophead");
+  const close = el("button", "x", "✕");
+  close.type = "button";
+  close.setAttribute("aria-label", "Close");
+  close.addEventListener("click", () => closeInspector());
+  head.append(el("h3", null, m.name), close);
+  pop.append(head, el("div", "rail"), el("p", "does", m.does));
+
+  const onoff = el("div", "onoff");
+  onoff.append(switchButton(m.name, m.on, false, (on) => toggle("module", m.id, on)),
+               el("span", null, m.on ? "On" : "Off — the rest of the brain can't tell it exists"));
+  pop.append(onoff);
+
+  pop.append(el("h4", null, "Model / weights"), modelSelect(m));
+  if (m.weights) pop.append(el("h4", null, "Weight configuration"), weightConfig(m));
+  pop.append(el("h4", null, "Checks"), scoreBlock(m));
+  if (m.settings && m.settings.length) {
+    pop.append(el("h4", null, m.weights ? "Generation" : "Settings"));
+    for (const s of m.settings) pop.append(settingRow(m, s));
+  }
+
+  $("#ring").append(pop);
+  placeInspector(pop, card);
+  pop.addEventListener("keydown", (ev) => { if (ev.key === "Escape") { ev.stopPropagation(); closeInspector(); } });
+  (pop.querySelector("select") || close).focus({ preventScroll: true });
+}
+
+function placeInspector(pop, card) {
+  const box = $("#ring");
+  const w = pop.offsetWidth, h = pop.offsetHeight;
+  const cx = card.offsetLeft, cy = card.offsetTop, cw = card.offsetWidth, ch = card.offsetHeight;
+  const stacked = box.classList.contains("stack");
+  const left = stacked ? (box.clientWidth - w) / 2
+    : cx < box.clientWidth / 2 ? cx + cw / 2 + 10 : cx - cw / 2 - 10 - w;
+  const top = (stacked ? cy + ch + 6 : cy - ch / 2 - 8);
+  pop.style.left = Math.max(2, Math.min(left, box.clientWidth - w - 2)) + "px";
+  pop.style.top = Math.max(2, Math.min(top, Math.max(2, box.clientHeight - h - 2))) + "px";
+}
+
+function modelSelect(m) {
+  const sel = el("select");
+  sel.setAttribute("aria-label", `${m.name} model`);
+  const groups = new Map();
+  for (const o of m.options) {
+    if (!groups.has(o.provider)) {
+      const g = el("optgroup");
+      g.label = o.label + (o.up || o.note ? "" : " (offline)");
+      groups.set(o.provider, g);
+      sel.append(g);
+    }
+    const opt = el("option", null, o.model + (o.loaded ? "  ● loaded" : "") + (o.note ? ` (${o.note})` : ""));
+    opt.value = o.choice; opt.disabled = !o.up;
+    groups.get(o.provider).append(opt);
+  }
+  if (m.choice && !m.options.some((o) => o.choice === m.choice)) {
+    const opt = el("option", null, m.choice + " (not reachable)");
+    opt.value = m.choice; sel.prepend(opt);
+  }
+  sel.value = m.choice || "";
+  sel.addEventListener("change", async () => {
+    const want = sel.value;
+    sel.disabled = true;
+    try { state = await api("/api/choose", { module: m.id, choice: want }); toast(`${m.name} now uses ${shortModel(want)}`); render(); }
+    catch (e) { sel.value = m.choice || ""; sel.disabled = false; toast(e.message); }
+  });
+  return sel;
+}
+
+function compactCount(value) {
+  return value >= 1e9 ? `${(value / 1e9).toFixed(2)}B`
+    : value >= 1e6 ? `${(value / 1e6).toFixed(2)}M`
+    : value >= 1e3 ? `${(value / 1e3).toFixed(1)}K` : String(value);
+}
+
+function compactBytes(value) {
+  return value >= 1048576 ? `${(value / 1048576).toFixed(1)} MB`
+    : value >= 1024 ? `${(value / 1024).toFixed(1)} KB` : `${value} B`;
+}
+
+function weightConfig(m) {
+  const weights = m.weights;
+  const current = weights.current;
+  const box = el("div", "weightbox");
+  const facts = el("dl", "weightfacts");
+  const fact = (name, value) => facts.append(el("dt", null, name), el("dd", null, String(value)));
+  fact("Current checkpoint", `${current.stage} · step ${current.step}`);
+  fact("Parameters", compactCount(current.parameters));
+  fact("Shape", `${current.layers} layers · width ${current.width} · ${current.heads} heads`);
+  fact("Context", `${current.context_length} bytes`);
+  fact("Weight file", `${current.format} · ${compactBytes(current.bytes)}`);
+  fact("Tokenizer", weights.tokenizer.replaceAll("_", " "));
+  box.append(facts, el("div", "weightsub", "Next training checkpoint"));
+  for (const setting of weights.next) box.append(weightSettingRow(m, setting));
+  const note = el("p", "weightnote" + (weights.changed ? " changed" : ""),
+    weights.changed
+      ? "Changed from the loaded weights. Train a new checkpoint to apply this shape."
+      : "Shape changes save to model_config.json and apply when the next checkpoint is trained.");
+  box.append(note);
+  return box;
+}
+
+function weightSettingRow(m, setting) {
+  const row = el("label", "setrow");
+  const input = el("input");
+  if (setting.type === "bool") { input.type = "checkbox"; input.checked = setting.value; }
+  else {
+    input.type = "number"; input.min = setting.min; input.max = setting.max;
+    input.step = setting.step; input.value = setting.value;
+  }
+  input.setAttribute("aria-label", `${setting.label} for next checkpoint`);
+  input.addEventListener("change", async () => {
+    const value = setting.type === "bool" ? input.checked : Number(input.value);
+    try {
+      state = await api("/api/weight-config", { module: m.id, key: setting.key, value });
+      render();
+      toast(`${setting.label} → ${value} for the next checkpoint`);
+    } catch (e) {
+      toast(e.message);
+      if (setting.type === "bool") input.checked = setting.value; else input.value = setting.value;
+    }
+  });
+  row.append(el("span", null, setting.label), input);
+  return row;
+}
+
+function scoreBlock(m) {
+  const box = el("div");
+  const row = el("div", "onoff");
+  const badge = el("span", "badge");
+  if (m.score) {
+    const ratio = m.score.passed / m.score.total;
+    badge.textContent = `${m.score.passed}/${m.score.total} · ${m.score.avg_seconds}s each`;
+    badge.classList.add(ratio === 1 ? "good" : ratio >= 0.5 ? "meh" : "bad");
+  } else {
+    badge.textContent = m.has_checks ? "not tested" : "no checks";
+  }
+  const btn = el("button", "btn", m.testing ? "testing…" : "Test");
+  btn.type = "button";
+  btn.disabled = m.testing || !m.has_checks;
+  btn.title = "Run this module's checks with the chosen model";
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; btn.textContent = "testing…";
+    try { await api("/api/test", { module: m.id }); loadState(); }
+    catch (e) { btn.disabled = false; btn.textContent = "Test"; toast(e.message); }
+  });
+  row.append(badge, btn);
+  box.append(row);
+  if (m.score) {
+    box.append(el("div", "meta", `checked ${m.score.when}`));
+    const ul = el("ul", "checks");
+    for (const r of m.score.results) {
+      const li = el("li");
+      li.append(el("span", r.ok ? "yes" : "no", r.ok ? "✓" : "✗"), el("span", null, `${r.input} — ${r.why}`));
+      ul.append(li);
+    }
+    box.append(ul);
+  }
+  return box;
+}
+
+function settingRow(m, s) {
+  const row = el("label", "setrow");
+  const input = el("input");
+  if (s.type === "bool") { input.type = "checkbox"; input.checked = s.value; }
+  else { input.type = "number"; input.min = s.min; input.max = s.max; input.step = s.step; input.value = s.value; }
+  const note = el("span", "note", s.value === s.default ? "default" : `default: ${s.default}`);
+  input.addEventListener("change", async () => {
+    const value = s.type === "bool" ? input.checked : Number(input.value);
+    try {
+      state = await api("/api/settings", { module: m.id, key: s.key, value });
+      s.value = value;
+      note.textContent = value === s.default ? "default" : `default: ${s.default}`;
+      toast(`${m.name}: ${s.label} → ${value}`);
+    } catch (e) {
+      toast(e.message);
+      if (s.type === "bool") input.checked = s.value; else input.value = s.value;
+    }
+  });
+  row.append(el("span", null, s.label), input, note);
+  return row;
+}
+
+async function toggle(kind, id, on) {
+  if (live) return toast("Wait for this reply first.");
+  try {
+    state = await api("/api/toggle", { kind, id, on });
+    render();
+    toast(`${id} switched ${on ? "on" : "off"}`);
+  } catch (e) { toast(e.message); loadState(); }
+}
+
+// ---------- tools and memory ----------
+
+function renderBench() {
+  const mods = state.modules;
+  const tools = state.tools.filter((t) => t.built);
+  $("#oncount").textContent = `${mods.filter((m) => m.on).length} of ${mods.length} modules on · ` +
+    `${tools.filter((t) => t.on).length} of ${tools.length} tools on`;
+
+  $("#tools").replaceChildren(...state.tools.map(toolRow));
+
+  $("#memtitle").textContent = `Long-term memory · ${state.memory.count}`;
+  const list = $("#memories");
+  list.replaceChildren();
+  if (!state.memory.recent.length) list.append(el("li", "meta", "Nothing remembered yet."));
+  for (const m of state.memory.recent) {
+    const li = el("li");
+    const forget = el("button", "btn", "Forget");
+    forget.type = "button";
+    forget.setAttribute("aria-label", `Forget: ${m.text}`);
+    forget.addEventListener("click", async () => {
+      try { state = await api("/api/forget", { id: m.id }); render(); } catch (e) { toast(e.message); }
+    });
+    li.append(el("span", null, m.text), forget);
+    list.append(li);
+  }
+}
+
+function toolRow(t) {
+  const row = el("li", "tool " + (t.on ? "on" : "off"));
+  row.dataset.tool = t.name;
+  paint(row, t.color);
+  row.append(el("span", "nm", t.label), el("span", "does", t.built ? t.does : "not built yet"), el("span", "timer"));
+  row.append(switchButton(t.label, t.on, !t.built, (on) => toggle("tool", t.name, on)));
+  return row;
+}
+
+// ---------- the live turn ----------
+
+function paintLive() {
+  document.querySelectorAll(".busy").forEach((n) => n.classList.remove("busy"));
+  document.querySelectorAll(".timer").forEach((t) => { t.textContent = ""; });
+  document.querySelectorAll("#wires .live, #wires .lit, #wires .hot").forEach((l) => l.classList.remove("live", "lit", "hot"));
+  clearInterval(ticker);
+
+  const hub = document.querySelector(".hub");
+  const s = live && live.trace ? live : null;
+  if (hub && state) {
+    hub.querySelector(".goal").textContent = s && s.goal ? `goal: ${s.goal}` : "";
+    const dl = hub.querySelector("dl");
+    dl.replaceChildren();
+    const rows = s ? [
+      ["round", `${Math.max(1, s.cycles.length)} of ${state.max_cycles}`], ["noticed", s.observations.length],
+      ["memories", s.memories.length], ["model calls", s.trace.length],
+    ] : [["remembers", state.memory.count], ["rounds max", state.max_cycles],
+         ["this chat", conversation ? conversation.turns.length : 0]];
+    for (const [k, v] of rows) dl.append(el("dt", null, k), el("dd", null, String(v)));
+  }
+  if (!s) return;
+
+  for (const c of s.cycles || []) {                     // what each tool did this turn, on its own row
+    if (!c.action || c.action.status !== "done") continue;
+    const cell = document.querySelector(`.tool[data-tool="${c.action.tool}"] .timer`);
+    if (cell) cell.textContent = `${c.action.ok ? "ran" : "failed"} · ${c.action.seconds}s`;
+  }
+  if (s.cycles.length > 1) document.querySelectorAll("#wires .loop").forEach((l) => l.classList.add("hot"));
+  if (s.status !== "running") return;
+
+  const active = [...s.trace].reverse().find((t) => t.status === "running");
+  const last = s.cycles.length ? s.cycles[s.cycles.length - 1] : null;
+  if (active) {
+    const node = document.querySelector(`.mod[data-module="${active.module}"]`);
+    if (node) countUp(node, active.started);
+    const spoke = document.querySelector(`#wires .spoke[data-module="${active.module}"]`);
+    if (spoke) { spoke.classList.add("live"); spoke.style.setProperty("--live", inkOf(active.module)); }
+    const arc = document.querySelector(`#wires .flow[data-to="${active.module}"]`);
+    if (arc) { arc.classList.add("lit"); arc.style.setProperty("--live", inkOf(active.module)); }
+  } else if (last && last.action && last.action.status === "running") {
+    const row = document.querySelector(`.tool[data-tool="${last.action.tool}"]`);
+    if (row) countUp(row, last.action.started);
+  }
+}
+
+function countUp(node, started) {
+  node.classList.add("busy");
+  const cell = node.querySelector(".timer");
+  const tick = () => { cell.textContent = (Date.now() / 1000 - started).toFixed(0) + "s"; };
+  tick();
+  ticker = setInterval(tick, 500);
+}
+
+// ---------- the chat ----------
+
+function renderChatControls() {
+  const recent = $("#recent");
+  recent.replaceChildren(el("option", null, "Recent chats…"));
+  recent.firstChild.value = "";
+  for (const c of state.conversations) {
+    const opt = el("option", null, `${c.first} (${c.turns})`);
+    opt.value = c.id;
+    recent.append(opt);
+  }
+  recent.value = "";
+
+  $("#examples").replaceChildren(...state.examples.map((ex) => {
+    const b = el("button", "chip", ex.label);
+    b.type = "button";
+    b.title = ex.message;
+    b.addEventListener("click", () => { $("#message").value = ex.message; $("#message").focus(); });
+    return b;
+  }));
+}
+
+async function openConversation(id) {
+  conversation = null;
+  if (id) {
+    try { conversation = await api(`/api/conversations/${id}`); } catch (e) { conversation = null; }
+  }
+  saveChatId(conversation ? conversation.id : null);
+  renderThread();
+  paintLive();
+}
+
+function renderThread() {
+  const thread = $("#thread");
+  const stick = thread.scrollHeight - thread.scrollTop - thread.clientHeight < 90;
+  thread.replaceChildren();
+  const turns = conversation ? conversation.turns : [];
+  $("#chattitle").textContent = turns.length ? turns[0].message : (live ? live.message : "New chat");
+  if (!turns.length && !live) {
+    thread.append(el("p", "empty", "Send a message and watch it move through the modules. Replies stay in this chat, so you can answer its questions."));
+  }
+  for (const t of turns) thread.append(turnEl(t));
+  if (live && !turns.some((t) => t.run === live.id)) thread.append(liveTurnEl());
+  if (stick) thread.scrollTop = thread.scrollHeight;
+}
+
+function turnEl(t) {
+  const box = el("div", "turn");
+  box.append(el("div", "bubble you", t.message));
+  const ai = el("div", "bubble ai");
+  if (t.reply) ai.append(rich("pre", "reply", t.reply));
+  else if (t.status === "stopped") ai.append(el("div", "meta", "No reply needed. " + (t.note || "")));
+  else ai.append(el("div", t.status === "error" ? "bad" : "meta", t.note || t.status));
+  box.append(ai);
+
+  const bar = el("div", "tracebar");
+  const d = el("details", "trace");
+  d.append(el("summary", null, `How it got there · ${t.seconds == null ? "?" : t.seconds + "s"}`));
+  const body = el("div", "board");
+  d.append(body);
+  d.addEventListener("toggle", async () => {
+    if (!d.open || body.childElementCount) return;
+    try {
+      const s = runCache.get(t.run) || await api(`/api/runs/${t.run}`);
+      runCache.set(t.run, s);
+      renderBoard(s, body);
+    } catch (e) { body.append(el("p", "bad", e.message)); }
+  });
+  bar.append(d, wideButton(t.run));
+  box.append(bar);
+  return box;
+}
+
+function wideButton(runId) {
+  const btn = el("button", "btn", "⤢");
+  btn.type = "button";
+  btn.title = "Open this trace in a bigger window";
+  btn.setAttribute("aria-label", "Open this trace in a bigger window");
+  btn.addEventListener("click", async () => {
+    let s = runCache.get(runId);
+    if (!s) {
+      try { s = await api(`/api/runs/${runId}`); runCache.set(runId, s); }
+      catch (e) { return toast(e.message); }
+    }
+    const dialog = el("dialog", "wide");
+    const close = el("button", "btn", "Close");
+    close.type = "button";
+    close.style.marginLeft = "auto";
+    close.addEventListener("click", () => dialog.close());
+    const head = el("div", "boardhead");
+    head.append(el("b", null, "How it got there"), close);
+    const body = el("div");
+    dialog.append(head, body);
+    renderBoard(s, body);
+    dialog.addEventListener("close", () => dialog.remove());
+    document.body.append(dialog);
+    dialog.showModal();
+  });
+  return btn;
+}
+
+function liveTurnEl() {
+  const box = el("div", "turn");
+  box.append(el("div", "bubble you", live.message));
+  const ai = el("div", "bubble ai");
+  const active = live.trace ? [...live.trace].reverse().find((x) => x.status === "running") : null;
+  const says = el("div", "working");
+  says.append(el("i", "pulse"), el("span", null, active ? `${active.name} is working${active.part ? " (" + active.part + ")" : ""}…` : "thinking…"));
+  ai.append(says);
+  box.append(ai);
+  const d = el("details", "trace");
+  d.open = liveOpen;
+  d.addEventListener("toggle", () => { liveOpen = d.open; });
+  d.append(el("summary", null, "Thinking live"));
+  const body = el("div", "board");
+  d.append(body);
+  if (live.trace) renderBoard(live, body);
+  box.append(d);
+  return box;
+}
+
+$("#ask").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const message = $("#message").value.trim();
+  if (!message) return;
+  $("#go").disabled = true;
+  try {
+    const res = await api("/api/run", { message, conversation: conversation ? conversation.id : null });
+    if (!conversation || conversation.id !== res.conversation) conversation = { id: res.conversation, turns: [] };
+    saveChatId(res.conversation);
+    live = { id: res.id, message, status: "running" };
+    liveOpen = true;
+    $("#message").value = "";
+    renderThread();
+    follow(res.id);
+  } catch (e) { $("#go").disabled = false; toast(e.message); }
+});
+$("#message").addEventListener("keydown", (ev) => {
+  if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) $("#ask").requestSubmit();
+});
+$("#newchat").addEventListener("click", () => {
+  if (live) return toast("Wait for this reply first.");
+  openConversation(null);
+  $("#message").focus();
+});
+$("#recent").addEventListener("change", (ev) => {
+  if (live) { ev.target.value = ""; return toast("Wait for this reply first."); }
+  if (ev.target.value) openConversation(ev.target.value);
+});
+document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && openModule) closeInspector(); });
+document.addEventListener("pointerdown", (ev) => {
+  if (openModule && !ev.target.closest(".pop") && !ev.target.closest(".mod")) closeInspector(true);
+});
+
+function follow(id) {
+  if (source) source.close();
+  source = new EventSource(`/api/runs/${id}/events`);
+  source.onmessage = async (msg) => {
+    live = JSON.parse(msg.data);
+    paintLive();
+    renderThread();
+    if (live.status !== "running") {
+      source.close(); source = null;
+      runCache.set(live.id, live);
+      const cid = live.conversation;
+      live = null;
+      await openConversation(cid);
+      $("#go").disabled = false;
+      loadState();
+      $("#message").focus();
+    }
+  };
+  source.onerror = () => {
+    if (source) { source.close(); source = null; }
+    $("#go").disabled = false;
+    if (live && live.status === "running") toast("Lost the live view. It keeps thinking on the server; reopen the chat in a bit.");
+  };
+}
+
+// ---------- how a turn got its reply ----------
+
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+const pct = (p) => `${Math.round(100 * p)}%`;
+
+function tookFor(s, moduleId) {
+  const parts = s.trace.filter((t) => t.module === moduleId && t.seconds != null);
+  return parts.length ? parts.reduce((a, t) => a + t.seconds, 0).toFixed(1) + "s" : "";
+}
+
+/* One step per thing that happened, in the order it happened, each with its own detail behind a
+   twisty. The dense stuff (raw tool output, math working, the model-call table) stays folded. */
+function renderBoard(s, box) {
+  box.replaceChildren();
+  const head = el("div", "boardhead");
+  head.append(el("span", "pill " + s.status, s.status === "running" ? "thinking…" : s.status));
+  if (s.seconds != null) head.append(el("span", null, `${s.seconds}s`));
+  head.append(el("span", null, plural(s.trace.length, "model call", "model calls")));
+  if (s.switches) {
+    const names = s.switches.modules.map((id) => (moduleBy(id) || { name: id }).name);
+    const on = el("span", null, `${names.length} of ${state ? state.modules.length : 11} modules on`);
+    on.title = names.join(" · ");
+    head.append(on);
+  }
+  box.append(head);
+  if (s.note) box.append(el("p", s.status === "error" ? "bad" : "meta", s.note));
+
+  const steps = el("div");
+  box.append(steps);
+  const add = (moduleId, title, summary, fill) => {
+    const row = el("div", "step");
+    if (moduleId) row.style.setProperty("--c-ink", inkOf(moduleId));
+    const body = el("div", "body");
+    const h = el("div", "head");
+    h.append(el("b", null, title));
+    if (summary) h.append(el("span", "sum", summary));
+    const took = moduleId ? tookFor(s, moduleId) : "";
+    if (took) h.append(el("span", "t", took));
+    body.append(h);
+    row.append(el("div", "rail"), body);
+    steps.append(row);
+    if (fill) fill(body);
+    return body;
+  };
+
+  if (s.route) {
+    const r = s.route;
+    add("router", "Router", `${r.intent}${r.tool && r.tool !== "none" ? " · wants " + r.tool : ""} · ${Math.round(r.ms)}ms`, (body) => {
+      body.append(el("div", "meta", `${r.for_me ? "for me" : "not for me"} · ${r.intent} (${pct(r.intent_p)} sure)` +
+        (r.tool && r.tool !== "none" ? ` · tool ${r.tool} (${pct(r.tool_p)} sure)` : " · no tool") +
+        ` · ask first ${pct(r.ask_p)}`));
+    });
+  }
+
+  const ranWith = (id) => !s.switches || s.switches.modules.includes(id);
+  if (s.observations.length) {
+    // With Perception off, a rule turns the whole message into one observation. Say so, don't credit the module.
+    add("perception", ranWith("perception") ? "Perception" : "The message",
+        ranWith("perception") ? `noticed ${plural(s.observations.length, "thing", "things")}${s.goal ? " · goal: " + s.goal : ""}`
+                              : "Perception is off, so the message went in whole", (body) => {
+      const ul = el("ul", "items");
+      for (const o of s.observations) {
+        const li = el("li");
+        const tag = el("span", "kind", o.kind);
+        li.append(tag, document.createTextNode(o.text));
+        if (o.when) li.append(el("span", "meta", `  ·  ${o.when}`));
+        if (o.relevance != null) {
+          const bar = el("span", "bar");
+          bar.style.width = Math.max(2, Math.round(o.relevance * 40)) + "px";
+          bar.title = `attention gave this ${o.relevance}`;
+          li.append(bar);
+        }
+        ul.append(li);
+      }
+      body.append(ul);
+    });
+  }
+  if (s.attention) {
+    add("attention", "Attention", `${s.attention.for_me ? "this is for me" : "not for me"} — ${s.attention.why}`);
+  }
+
+  if (s.problems && s.problems.length) mathLanguageStep(s, add);
+  if (s.math_language && !s.math_language.trusted) {
+    add("math_language", "Math Language", `${s.math_language.note || "not sure enough"}, so its problems were dropped`);
+  }
+  if (s.recall) {
+    add("recall", "Recall", s.recall.note || `${s.recall.queries.length ? "looked for " + s.recall.queries.join(" · ") : "no queries"} · ${plural(s.recall.found, "hit", "hits")}`, (body) => {
+      if (!s.memories.length) return;
+      const ul = el("ul", "items");
+      for (const m of s.memories) ul.append(el("li", null, `${m.text}  (${m.relevance})`));
+      body.append(ul);
+    });
+  }
+
+  for (const c of s.cycles) {
+    const body = add("planner", `Round ${c.n}${s.cycles.length > 1 ? " of " + s.cycles.length : ""}`,
+                     c.action ? `used ${c.action.tool}` : c.decision ? decisionLine(c) : "");
+    body.append(cycleCard(c));
+  }
+
+  if (s.remembered && s.remembered.length) {
+    add("recall", "Remembered", plural(s.remembered.length, "new thing", "new things"), (body) => {
+      const ul = el("ul", "items");
+      for (const r of s.remembered) ul.append(el("li", null, r.text));
+      body.append(ul);
+    });
+  }
+  if (s.reply) add("language", "Language", "wrote the reply", (body) => body.append(rich("pre", "reply", s.reply)));
+
+  if (s.trace.length) {
+    const d = el("details", "more");
+    d.append(el("summary", null, `All ${plural(s.trace.length, "model call", "model calls")}`));
+    const table = el("table", "calls");
+    for (const t of s.trace) {
+      const tr = el("tr");
+      tr.append(el("td", null, t.name + (t.part ? ` (${t.part})` : "")), el("td", "meta", t.model || ""),
+                el("td", "num", t.status === "running" ? "…" : `${t.seconds}s`),
+                el("td", t.error ? "bad" : "meta", t.error || (t.retries ? "retried" : "")));
+      table.append(tr);
+    }
+    d.append(table);
+    box.append(d);
+  }
+}
+
+function mathLanguageStep(s, add) {
+  const how = s.math_language;
+  add("math_language", "Math Language", `found ${plural(s.problems.length, "problem", "problems")}` +
+      (how ? ` · ${pct(how.sure)} sure` : ""), (body) => {
+    const ul = el("ul", "items");
+    for (const p of s.problems) {
+      const li = el("li");
+      li.append(el("span", "kind", p.id), document.createTextNode(p.expression + (p.unit ? `  (${p.unit})` : "")));
+      if (p.answer != null) {
+        li.append(el("div", null, `= ${p.answer}${p.unit ? " " + p.unit : ""}`));
+        li.append(el("div", "meta", `worked out by ${p.by}` +
+          (p.math && p.math.misses ? ` · the calculator caught ${p.math.misses}` : "") +
+          (p.worked && p.worked !== p.expression ? ` · as ${p.worked}` : "")));
+      }
+      if (p.unsure) li.append(el("div", "meta", "the reader wasn't certain about this one"));
+      if (p.error) li.append(el("div", "bad", p.error));
+      if (p.math) li.append(mathWork(p.math));
+      ul.append(li);
+    }
+    body.append(ul);
+  });
+}
+
+// The model's long division and the calculator's corrections: real machine output, folded away.
+function mathWork(m) {
+  const fixed = m.steps.filter((x) => x.used !== "model");
+  const d = el("details", "more");
+  d.append(el("summary", null, `working · ${m.steps.length - fixed.length} of ${plural(m.steps.length, "step", "steps")} by the model` +
+    (m.checked ? (fixed.length ? `, ${fixed.length} put right by the calculator` : ", all checked") : ", unchecked (the calculator is off)")));
+  for (const x of m.steps) {
+    d.append(el("div", "meta", `${x.step} = ${x.value}` + (x.used === "model" ? `  (the model wrote it)` : `  (calculator: ${x.why})`)));
+  }
+  if (m.work && m.work.length) d.append(el("pre", "out", m.work.join("\n")));
+  if (m.error) d.append(el("div", "bad", m.error));
+  return d;
+}
+
+function decisionLine(c) {
+  const pickedOne = c.candidates.find((x) => c.decision && x.index === c.decision.choice);
+  return pickedOne ? `${pickedOne.type}: ${pickedOne.summary}` : "";
+}
+
+function cycleCard(c) {
+  const box = el("div", "cyc");
+  if (c.goal) box.append(el("div", "meta", `goal: ${c.goal}`));
+
+  const ul = el("ul", "items");
+  for (const cand of c.candidates) {
+    const picked = c.decision && c.decision.choice === cand.index;
+    const li = el("li", picked ? "pick" : null);
+    const what = el("span", "what");
+    what.append(el("span", "kind", cand.type), document.createTextNode(cand.summary));
+    li.append(what);
+    if (cand.type === "tool") li.append(el("div", "meta", `${cand.tool}${cand.action !== "none" ? "." + cand.action : ""} ${cand.target}`));
+    const p = (c.predictions || []).find((x) => x.index === cand.index);
+    if (p && p.helpful != null) {
+      li.append(el("div", "meta", `Predictor: ${pct(p.helpful)} helpful · ${p.outcome}${p.risk && p.risk !== "none" ? " · risk: " + p.risk : ""}`));
+    }
+    ul.append(li);
+  }
+  if (c.candidates.length) box.append(ul);
+  for (const [label, rows] of [["dropped by guards", c.dropped], ["changed by guards", c.changed], ["skipped", c.skipped]]) {
+    if (rows && rows.length) box.append(el("div", "meta", `${label}: ${rows.join(" · ")}`));
+  }
+
+  if (c.critique) {
+    const crit = el("div");
+    crit.style.marginTop = "5px";
+    if (!c.critique.issues.length) crit.append(el("div", "meta", "Critic: no problems found"));
+    for (const i of c.critique.issues) {
+      const row = el("div");
+      row.style.fontSize = "12.5px";
+      row.append(el("span", "sev sev-" + i.severity, `${i.severity} · ${i.kind}`), document.createTextNode(i.text));
+      crit.append(row);
+    }
+    if (c.critique.question) crit.append(el("div", "meta", `it would ask: ${c.critique.question}`));
+    box.append(crit);
+  }
+  if (c.decision) box.append(el("div", "meta", `Decision (${c.decision.by}): #${c.decision.choice} — ${c.decision.why}`));
+  if (c.action) box.append(actionBlock(c.action));
+  return box;
+}
+
+function actionBlock(a) {
+  const box = el("div");
+  box.style.marginTop = "5px";
+  const line = `${a.tool}${a.action !== "none" ? "." + a.action : ""} ${a.target} — ` +
+    (a.status === "running" ? "running…" : (a.ok ? "ok" : "failed") + ` in ${a.seconds}s`);
+  box.append(el("div", a.status === "done" && !a.ok ? "bad" : "meta", line));
+  if (a.result) box.append(resultBlock(a.result));
+  if (a.math) box.append(mathWork(a.math));
+  return box;
+}
+
+// Tool output can be a page of text. Show the first few lines; the rest is one click away.
+function resultBlock(text) {
+  const short = text.length > 340 || text.split("\n").length > 6;
+  const pre = el("pre", "out", short ? text.slice(0, 340).split("\n").slice(0, 6).join("\n") + " …" : text);
+  if (!short) return pre;
+  const box = el("div");
+  const more = el("button", "btn", `Show all ${text.length} characters`);
+  more.type = "button";
+  let all = false;
+  more.addEventListener("click", () => {
+    all = !all;
+    pre.textContent = all ? text.slice(0, 20000) : text.slice(0, 340).split("\n").slice(0, 6).join("\n") + " …";
+    pre.classList.toggle("all", all);
+    more.textContent = all ? "Show less" : `Show all ${text.length} characters`;
+  });
+  box.append(pre, more);
+  return box;
+}
+
+// ---------- start ----------
+
+loadState().then(() => openConversation(savedChatId()));
+// Re-lay the ring whenever the column it lives in changes width, whatever caused it.
+let resizeTimer = null, lastWidth = 0;
+const relayout = () => {
+  const width = $("#ring").parentElement.clientWidth;
+  if (width === lastWidth || !state) return;
+  lastWidth = width;
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { closeInspector(true); layoutRing(); paintLive(); }, 100);
+};
+new ResizeObserver(relayout).observe($("#ring").parentElement);
+window.addEventListener("resize", relayout);
+setInterval(() => {
+  const typing = document.activeElement && ["SELECT", "INPUT", "TEXTAREA"].includes(document.activeElement.tagName);
+  if (!document.hidden && !typing && !live && !openModule) loadState();
+}, 20000);
+</script>
+</body>
+</html>

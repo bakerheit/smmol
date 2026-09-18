@@ -1,0 +1,33 @@
+{
+  "architecture": {
+    "context_length": 128,
+    "dropout": 0.1,
+    "heads": 6,
+    "layers": 4,
+    "tie_embeddings": true,
+    "vocab_size": 256,
+    "width": 192
+  },
+  "format_version": 1,
+  "generation": {
+    "max_tokens": 160,
+    "repetition_penalty": 1.1,
+    "temperature": 0.5,
+    "top_k": 30
+  },
+  "name": "smLANGUAGE_en_GENERAL_001-micro",
+  "tokenizer": {
+    "kind": "utf8_bytes",
+    "vocab_size": 256
+  },
+  "training": {
+    "batch_size": 32,
+    "eval_batches": 12,
+    "eval_every": 100,
+    "learning_rate": 0.0003,
+    "seed": 14001,
+    "steps": 1600,
+    "warmup_steps": 50,
+    "weight_decay": 0.05
+  }
+}

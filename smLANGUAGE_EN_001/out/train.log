@@ -1,0 +1,22 @@
+smLANGUAGE_EN_001 | 10.82M params | mps | 132.6 MB train | steps 100->5000
+step   250 |     4.1M bytes |   21922 byte/s | train 1.775 | val 1.695 (2.45 bpb) | best
+step   500 |     8.2M bytes |   24047 byte/s | train 1.271 | val 1.182 (1.71 bpb) | best
+step   750 |    12.3M bytes |   24584 byte/s | train 1.029 | val 1.007 (1.45 bpb) | best
+step  1000 |    16.4M bytes |   24802 byte/s | train 0.962 | val 0.922 (1.33 bpb) | best
+step  1250 |    20.5M bytes |   25023 byte/s | train 0.920 | val 0.861 (1.24 bpb) | best
+step  1500 |    24.6M bytes |   25161 byte/s | train 0.856 | val 0.821 (1.18 bpb) | best
+step  1750 |    28.7M bytes |   25262 byte/s | train 0.776 | val 0.794 (1.15 bpb) | best
+step  2000 |    32.8M bytes |   25303 byte/s | train 0.808 | val 0.770 (1.11 bpb) | best
+step  2250 |    36.9M bytes |   25335 byte/s | train 0.779 | val 0.752 (1.09 bpb) | best
+step  2500 |    41.0M bytes |   25386 byte/s | train 0.766 | val 0.739 (1.07 bpb) | best
+step  2750 |    45.1M bytes |   25420 byte/s | train 0.714 | val 0.725 (1.05 bpb) | best
+step  3000 |    49.2M bytes |   25450 byte/s | train 0.729 | val 0.716 (1.03 bpb) | best
+step  3250 |    53.2M bytes |   25475 byte/s | train 0.679 | val 0.704 (1.02 bpb) | best
+step  3500 |    57.3M bytes |   25473 byte/s | train 0.712 | val 0.697 (1.01 bpb) | best
+step  3750 |    61.4M bytes |   25474 byte/s | train 0.685 | val 0.690 (1.00 bpb) | best
+step  4000 |    65.5M bytes |   25478 byte/s | train 0.690 | val 0.684 (0.99 bpb) | best
+step  4250 |    69.6M bytes |   25476 byte/s | train 0.672 | val 0.678 (0.98 bpb) | best
+step  4500 |    73.7M bytes |   25469 byte/s | train 0.687 | val 0.674 (0.97 bpb) | best
+step  4750 |    77.8M bytes |   25471 byte/s | train 0.698 | val 0.670 (0.97 bpb) | best
+step  5000 |    81.9M bytes |   25468 byte/s | train 0.695 | val 0.669 (0.96 bpb) | best
+done | step 5000 | best validation 0.6688 | smLANGUAGE_EN_001/out/best.pt

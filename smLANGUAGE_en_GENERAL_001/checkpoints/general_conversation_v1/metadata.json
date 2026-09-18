@@ -1,0 +1,10 @@
+{
+  "base": "smLANGUAGE_en_SCH_001-grade-01",
+  "corpus_sha256": "0bcfd7cafd334699025136edba632894e75f9872ad8312a0089e7e479e7d7c08",
+  "format": "safetensors",
+  "items": 835,
+  "model": "smLANGUAGE_en_GENERAL_001",
+  "selection": "latest",
+  "stage": "general_conversation_v1",
+  "step": 1600
+}

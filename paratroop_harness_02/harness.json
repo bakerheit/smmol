@@ -1,0 +1,335 @@
+{
+ "max_cycles": 3,
+ "providers": {
+  "pc": {
+   "kind": "openai",
+   "url": "http://127.0.0.1:8081",
+   "label": "PC · RX 580"
+  },
+  "mac": {
+   "kind": "openai",
+   "url": "http://127.0.0.1:11435",
+   "label": "Mac · UnlimitedStudio"
+  },
+  "browse": {
+   "kind": "browse",
+   "url": "http://127.0.0.1:8080",
+   "label": "PC · browse server"
+  },
+  "smmol": {
+   "kind": "local",
+   "label": "Mac · trained in SMMOL",
+   "models": {
+    "smROUTER_01": {
+     "path": "../smROUTER_01/out/router.pt",
+     "kind": "classifier"
+    },
+    "smMATH_LANGUAGE_001": {
+     "path": "../smMATH_LANGUAGE_001/out/reader.pt",
+     "kind": "math_language"
+    },
+    "smMATH001-a": {
+     "path": "../smMATH001-a/out/math.pt",
+     "kind": "math"
+    },
+    "smMATH01-abacus": {
+     "path": "../smMATH01/out/abacus.pt",
+     "kind": "math"
+    },
+    "smMATH01-reversed": {
+     "path": "../smMATH01/out/reversed.pt",
+     "kind": "math"
+    },
+    "smMATH01-plain": {
+     "path": "../smMATH01/out/plain.pt",
+     "kind": "math"
+    },
+    "smLANGUAGE_EN_001": {
+     "path": "../smLANGUAGE_EN_001/out/best.pt",
+     "kind": "language"
+    },
+    "smLANGUAGE_en_SCH_001-kindergarten": {
+     "path": "../smLANGUAGE_en_SCH_001/checkpoints/kindergarten/weights.safetensors",
+     "training_config": "../smLANGUAGE_en_SCH_001/model_config.json",
+     "kind": "language",
+     "settings": [
+      {
+       "key": "top_k",
+       "label": "Top K",
+       "type": "int",
+       "min": 0,
+       "max": 256,
+       "step": 1,
+       "default": 40
+      },
+      {
+       "key": "repetition_penalty",
+       "label": "Repetition penalty",
+       "type": "number",
+       "min": 1.0,
+       "max": 2.0,
+       "step": 0.05,
+       "default": 1.05
+      }
+     ]
+    },
+    "smLANGUAGE_en_SCH_001-grade-01": {
+     "path": "../smLANGUAGE_en_SCH_001/out/latest.safetensors",
+     "training_config": "../smLANGUAGE_en_SCH_001/model_config.json",
+     "kind": "language",
+     "settings": [
+      {
+       "key": "top_k",
+       "label": "Top K",
+       "type": "int",
+       "min": 0,
+       "max": 256,
+       "step": 1,
+       "default": 40
+      },
+      {
+       "key": "repetition_penalty",
+       "label": "Repetition penalty",
+       "type": "number",
+       "min": 1.0,
+       "max": 2.0,
+       "step": 0.05,
+       "default": 1.05
+      }
+     ]
+    },
+    "smLANGUAGE_en_GENERAL_001-conversation-v1": {
+     "path": "../smLANGUAGE_en_GENERAL_001/out/latest.safetensors",
+     "training_config": "../smLANGUAGE_en_GENERAL_001/model_config.json",
+     "kind": "language",
+     "settings": [
+      {
+       "key": "top_k",
+       "label": "Top K",
+       "type": "int",
+       "min": 0,
+       "max": 256,
+       "step": 1,
+       "default": 30
+      },
+      {
+       "key": "repetition_penalty",
+       "label": "Repetition penalty",
+       "type": "number",
+       "min": 1.0,
+       "max": 2.0,
+       "step": 0.05,
+       "default": 1.1
+      }
+     ]
+    }
+   }
+  }
+ },
+ "modules": [
+  {
+   "id": "router",
+   "name": "Router",
+   "color": "grey",
+   "kind": "classifier",
+   "provider": "smmol",
+   "model": "smROUTER_01",
+   "does": "Small trained model: kind of message, which tool, ask or act"
+  },
+  {
+   "id": "perception",
+   "name": "Perception",
+   "color": "red",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 500,
+   "does": "Turns the message into structured observations",
+   "prompt": "You are the Perception module of a small modular AI. Turn the person's message into structured observations, one for each thing the message actually says or asks. Only include what the message says: no analysis, guesses or advice. Keep every field short and plain, with no markdown.\n\nkind is one of: event (something happening), fact (something true about the person or their world that will still matter later, like \"User's dentist is Dr. Lee\"; details of what they're asking for go in the request, not in facts), request (they want something done), question (they want to know something), feeling, preference, small_talk.\ntext is one short, self-contained sentence about the User, like \"User's dentist is Dr. Lee\".\nwho, what, when and where come only from the message; leave a field empty if the message doesn't say. Write when as a real date like Friday 2026-09-18, counting from today ({today}).\ngoal is what the person most likely wants from the assistant, in a few words, or empty for small talk.\nIf a conversation is included and the message continues it (like \"yes\", \"the second one\" or \"I'm the investor\"), use the conversation to fill in what the message leaves out, and make goal what the person wants now.\n\nExample for \"Remember my sister Ana lands at 6pm tomorrow\" when today is Monday 2026-09-14:\n{\"observations\":[{\"kind\":\"request\",\"text\":\"User wants this remembered\",\"who\":\"User\",\"what\":\"remember\",\"when\":\"\",\"where\":\"\"},{\"kind\":\"event\",\"text\":\"User's sister Ana lands at 6pm\",\"who\":\"Ana, User's sister\",\"what\":\"lands\",\"when\":\"Tuesday 2026-09-15 6pm\",\"where\":\"\"}],\"goal\":\"remember when Ana lands\"}\n\nReply with JSON only."
+  },
+  {
+   "id": "attention",
+   "name": "Attention",
+   "color": "orange",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 250,
+   "does": "Is this for me? Scores what's relevant",
+   "prompt": "You are the Attention module of a small modular AI. You get the observations Perception made.\nfor_me is true if the message is meant for the assistant: a question, a request, or something the person tells it about their life, plans or preferences. It is false only for small talk that needs nothing, like \"ok\", \"lol\" or \"thanks\". A short answer to something the assistant just asked in the conversation is for the assistant.\nScore each observation's relevance to the goal from 0 to 1, using its index. why is one short sentence.\n\nExample: {\"for_me\":true,\"scores\":[{\"index\":1,\"relevance\":0.9},{\"index\":2,\"relevance\":0.3}],\"why\":\"They asked for help planning the trip\"}\n\nReply with JSON only."
+  },
+  {
+   "id": "recall",
+   "name": "Recall",
+   "color": "yellow",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 200,
+   "does": "Writes memory queries and ranks what comes back",
+   "prompt": "You are the Recall module of a small modular AI. Write up to 3 short search queries for the person's long-term memory: the names, places, topics and dates that matter for the goal.\n\nExample: {\"queries\":[\"dentist\",\"Dr. Lee appointment\"]}\n\nReply with JSON only.",
+   "rank_prompt": "You are the Recall module of a small modular AI. Rank the stored memories by how much each one helps with the goal right now, from 0 to 1. Only memories that really help should score above 0.5. Use each memory's id exactly.\n\nExample: {\"ranked\":[{\"id\":\"m1a2b3c\",\"relevance\":0.9},{\"id\":\"m4d5e6f\",\"relevance\":0.1}]}\n\nReply with JSON only."
+  },
+  {
+   "id": "planner",
+   "name": "Planner",
+   "color": "green",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0.2,
+   "max_tokens": 600,
+   "does": "Proposes candidate next steps",
+   "prompt": "You are the Planner module of a small modular AI. Propose up to 3 different candidate next steps toward the goal. type is answer (reply now with what's known), make (write the thing the person asked for right now: code, a draft, a list, a plan), ask (ask the person one question first), or tool (use a tool, then plan again).\n\nTools:\n{tools}\n\n{tool_rules}\nFor answer, make and ask candidates, set tool and action to none and leave target and content empty.\nWhen the person asks you to write or build something, include a make candidate that does it now with sensible defaults, and don't ask about details a sensible default covers. When they ask to save, store or keep something, that's a tool step, not make.\nIf actions already has what you need, propose answer instead of repeating a tool. Use the conversation: if the person just answered a question, move forward instead of asking again. Keep summaries short. Today is {today}.\n\nExample for \"Help me plan a picnic for Saturday\":\n{\"goal\":\"plan a Saturday picnic\",\"candidates\":[{\"type\":\"answer\",\"summary\":\"Suggest a simple picnic plan with a checklist\",\"tool\":\"none\",\"action\":\"none\",\"target\":\"\",\"content\":\"\"},{\"type\":\"ask\",\"summary\":\"Ask how many people are coming\",\"tool\":\"none\",\"action\":\"none\",\"target\":\"\",\"content\":\"\"}]}\n\nExample for \"Write a Python function that checks if a word is a palindrome\":\n{\"goal\":\"write a Python palindrome check\",\"candidates\":[{\"type\":\"make\",\"summary\":\"Write the function, ignoring case, with a usage example\",\"tool\":\"none\",\"action\":\"none\",\"target\":\"\",\"content\":\"\"}]}\n\nReply with JSON only."
+  },
+  {
+   "id": "predictor",
+   "name": "Predictor",
+   "color": "teal",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 400,
+   "does": "Estimates what happens if a step is taken",
+   "prompt": "You are the Predictor module of a small modular AI. For each candidate step, predict what will happen if it is taken: the likely outcome, how helpful it will be to the person from 0 to 1, and the main risk (for example a wrong assumption, a missing fact, wasted time, or bothering the person with a question they didn't need). Use each candidate's index. Keep outcome and risk short.\n\nExample: {\"predictions\":[{\"index\":1,\"outcome\":\"The list is saved and can be read later\",\"helpful\":0.9,\"risk\":\"none\"},{\"index\":2,\"outcome\":\"They must answer before anything is saved\",\"helpful\":0.4,\"risk\":\"a question they didn't need\"}]}\n\nReply with JSON only."
+  },
+  {
+   "id": "critic",
+   "name": "Critic",
+   "color": "blue",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 400,
+   "does": "Finds errors, contradictions, weak assumptions, gaps",
+   "prompt": "You are the Critic module of a small modular AI. Today is {today}. Look for problems before anything is said to the person: errors, contradictions, weak assumptions (things the candidates treat as true that the message doesn't actually say), and missing information. Check tool results against the request. Be specific and short, and don't invent problems: if there are none, return an empty issues list.\nseverity is high when acting on the problem would probably give a wrong or unhelpful reply. If one question to the person would clear up the biggest problem, write it in question; otherwise leave question empty. Don't raise anything the person already answered earlier in the conversation, and never repeat a question the assistant already asked. A short reply like \"yes\", \"all\" or \"sounds good\" is an answer: accept it.\nWhen the person asks you to write or make something, a detail they left open is not high severity if a sensible default exists (like which operators a calculator function supports, or what happens when dividing by zero): the reply can pick the default and say so. Call it low, or leave it out. It is high only when no reasonable version can be made without their answer.\n\nExample for \"Book us a table for Saturday\":\n{\"issues\":[{\"kind\":\"missing\",\"text\":\"The message doesn't say which restaurant or what time\",\"severity\":\"high\"}],\"question\":\"Which restaurant, and what time on Saturday?\"}\n\nExample for \"Write a JavaScript function that adds two numbers\":\n{\"issues\":[],\"question\":\"\"}\n\nReply with JSON only."
+  },
+  {
+   "id": "decision",
+   "name": "Decision",
+   "color": "purple",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0,
+   "max_tokens": 150,
+   "does": "Chooses among the candidates",
+   "prompt": "You are the Decision module of a small modular AI. Choose one candidate by its index.\n- Prefer a tool when exact or current facts are needed and aren't in actions yet.\n- Prefer make when the person asked for something to be written or built.\n- Prefer ask only when the Critic found a high-severity problem that a question would clear up.\n- Otherwise choose the candidate predicted to be most helpful.\nwhy is one short sentence.\n\nExample: {\"choice\":2,\"why\":\"The time is missing, and asking clears it up\"}\n\nReply with JSON only."
+  },
+  {
+   "id": "math_language",
+   "name": "Math Language",
+   "color": "lime",
+   "kind": "math_language",
+   "provider": "smmol",
+   "model": "smMATH_LANGUAGE_001",
+   "does": "Small trained model: reads the math problems out of a message, as a list"
+  },
+  {
+   "id": "math",
+   "name": "Math",
+   "color": "brown",
+   "kind": "math",
+   "provider": "smmol",
+   "model": "smMATH01-abacus",
+   "does": "Small trained model: does whole-number arithmetic itself, checked by the calculator",
+   "tool_does": "whole-number arithmetic: + - * only, decimals allowed (no division, powers or functions)",
+   "tool_how": "calculator: action none; target an expression with only numbers, + - * and parentheses, like (48213 + 9977) * 2."
+  },
+  {
+   "id": "language",
+   "name": "Language",
+   "color": "pink",
+   "provider": "pc",
+   "model": "ministral-8b",
+   "temperature": 0.4,
+   "max_tokens": 500,
+   "make_max_tokens": 1800,
+   "does": "Turns the result into the reply",
+   "prompt": "You are the Language module of a small modular AI. Write the reply the person reads, based on the decided step and what is known.\n- If the decision type is ask: say in a few words why you're asking, then ask one clear question.\n- If it is answer: be warm, clear and practical, under 150 words.\nUse tool results, problems and memories exactly as given. If assumptions are listed, state the main one in one short line. Don't invent facts or numbers. If there is a conversation, continue it naturally and don't repeat what you already said. Don't mention modules, JSON, tools, files or memory stores by those names.\nWhat this assistant can reach for, whether or not it was used this turn:\n{tools}\nOnly what is in tool_results actually happened, and nothing runs after you, so never offer to look something up, search, open a page or check back later. When the answer needs something you weren't given — including the page behind a search result — don't guess at it: reply with that one line and nothing else, like\nNEED: web_browser https://example.com/the-page\nUse it to look something up, never to write a file. Titles, links and snippets are not facts: if that's all you were given, the number they asked for isn't in it. If no tool could get it, say plainly what you don't know. Today is {today}.",
+   "make_prompt": "You are the Language module of a small modular AI. The decided step is to make what the person asked for, so write the thing itself, complete and ready to use: code, a draft, a list, a plan. Don't describe what you would write, and don't ask whether to write it.\n- Code goes in one fenced block with its language, like ```javascript. Handle the edge cases a careful programmer would, and show one short usage example.\n- If open_details are listed, or the request leaves anything else open, pick a sensible default yourself. Defaults decide what it supports; never quietly replace bad input with a default, reject it with a clear error instead. After the thing, name the defaults you picked in one short line, so the person can ask for changes.\n- Keep the words around it short: at most one line before it.\nBuild on what the conversation already settled. Use tool results, problems and memories exactly as given, and don't invent facts. Don't mention modules, JSON, tools or memory stores by those names. What this assistant can do beyond writing:\n{tools}\nOnly what appears in tool_results actually happened, so don't offer to look anything up or check later. Today is {today}."
+  }
+ ],
+ "tools": {
+  "calculator": {
+   "label": "Calculator",
+   "color": "lime",
+   "enabled": true,
+   "does": "exact arithmetic: + - * / ** %, sqrt, round, min, max",
+   "how": "calculator: action none; target an arithmetic expression like 0.175 * 2340. Never do arithmetic in your head when the calculator can do it."
+  },
+  "web_search": {
+   "label": "Web search",
+   "color": "blue",
+   "enabled": true,
+   "provider": "browse",
+   "count": 5,
+   "does": "searches the web; returns titles, links and snippets",
+   "how": "web_search: action none; target a search query."
+  },
+  "web_browser": {
+   "label": "Web browser",
+   "color": "teal",
+   "enabled": true,
+   "provider": "browse",
+   "max_words": 700,
+   "does": "reads one public web page by its https address",
+   "how": "web_browser: action none; target a full https address copied from earlier search results."
+  },
+  "file_system": {
+   "label": "Files",
+   "color": "brown",
+   "enabled": true,
+   "folder": "workspace",
+   "max_bytes": 262144,
+   "does": "creates, reads, updates, lists and deletes text files in the assistant's own workspace folder",
+   "how": "file_system: action create, read, update, delete or list; target a plain file name like shopping-list.txt; content the text to write. If you're not sure a file exists, list first instead of guessing between create and update."
+  },
+  "command_line": {
+   "label": "Command line",
+   "color": "red",
+   "enabled": false,
+   "built": false,
+   "does": "runs a program after a person approves it (not built yet)"
+  },
+  "memory": {
+   "label": "Long-term memory",
+   "color": "yellow",
+   "enabled": true,
+   "kind": "store",
+   "does": "long-term memory: keeps facts, preferences and events, and lets Recall find them later"
+  }
+ },
+ "memory": {
+  "recall_top": 8,
+  "keep": 2000
+ },
+ "examples": [
+  {
+   "label": "The Friday meeting",
+   "message": "I have a meeting this Friday to discuss an investment opportunity for our business"
+  },
+  {
+   "label": "Percent",
+   "message": "What's 17.5% of 2,340?"
+  },
+  {
+   "label": "Remember",
+   "message": "Remember that my dentist is Dr. Lee and my appointments are on Tuesdays."
+  },
+  {
+   "label": "Recall",
+   "message": "Who's my dentist?"
+  },
+  {
+   "label": "Save a file",
+   "message": "Save a shopping list with eggs, milk and bread."
+  },
+  {
+   "label": "Read it back",
+   "message": "What's on my shopping list?"
+  },
+  {
+   "label": "Not for me",
+   "message": "lol ok"
+  }
+ ]
+}

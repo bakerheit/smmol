@@ -1,0 +1,60 @@
+smLLM_01: 10.8M params on mps, 1.00M train bytes, 20 min budget
+step     0 |   0.0M tokens |   0.0 min |      0 tok/s | train 5.656 | val 5.660 (8.17 bits/char)
+step   250 |   4.1M tokens |   2.6 min |  26139 tok/s | train 1.983 | val 2.101 (3.03 bits/char)
+step   500 |   8.2M tokens |   5.2 min |  26470 tok/s | train 1.497 | val 1.701 (2.45 bits/char)
+step   750 |  12.3M tokens |   7.6 min |  26857 tok/s | train 1.334 | val 1.566 (2.26 bits/char)
+step  1000 |  16.4M tokens |  10.1 min |  27049 tok/s | train 1.224 | val 1.495 (2.16 bits/char)
+----
+
+She's attend, and love from his peace forth,
+And have his that and your shepherds in the world,
+That two do your swords friends will warm your honour.
+
+LADY CAPULET:
+What is my rest?
+
+Many secrect:
+My tale hath forth fortunes to so?
+
+MISTRESS OVERDONE:
+King Richard, and he was too angry.
+
+FLORIZEL:
+
+----
+step  1250 |  20.5M tokens |  12.7 min |  26862 tok/s | train 1.142 | val 1.492 (2.15 bits/char)
+step  1500 |  24.6M tokens |  15.2 min |  26892 tok/s | train 1.074 | val 1.471 (2.12 bits/char)
+step  1750 |  28.7M tokens |  17.9 min |  26701 tok/s | train 1.024 | val 1.485 (2.14 bits/char)
+step  1915 |  31.4M tokens |  20.0 min |  26134 tok/s | train 1.011 | val 1.479 (2.13 bits/char)
+done: 1915 steps, best val 1.471 (2.12 bits/char), saved smLLM_01/out/ckpt.pt
+----
+ROMEO:
+Stand such a greyhousand father!
+
+MERCUTIO:
+Here's no reason and said.
+
+ROMEO:
+As far before I will prove before him.
+
+Nurse:
+'Tis some time that day not strange of heaven.
+
+ROMEO:
+Hark! why should you e'er the town of me?--
+What, here's the children and state enough,
+Is the thing of this fine and man doth good?
+
+Nurse:
+The strength of the absence hath been so mortal,
+For such wonder such rank reprievels as thou speak'st
+That hall bring thee, by the daughter with thee.
+
+PAULINA:
+Hear me speak.
+
+JULIET:
+Sir, nurse: the lord say I had more had:
+I protest of you, the most imprisonment place,
+I s
+----
