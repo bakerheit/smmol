@@ -1,6 +1,6 @@
 # smLLM_01: tiny Shakespeare byte GPT
 
-Project: [`smLLM_01/`](../../../smLLM_01/README.md). Checked against `model.py`, `train.py`, `sample.py`, `out/train.log`
+Project: [`smLLM_01/`](../../../models/smLLM_01/README.md). Checked against `model.py`, `train.py`, `sample.py`, `out/train.log`
 and `out/log.csv` on 2026-09-15.
 
 ## Purpose

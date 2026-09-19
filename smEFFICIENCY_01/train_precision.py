@@ -24,7 +24,7 @@ from dataclasses import asdict
 import torch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SMLLM = os.path.join(os.path.dirname(HERE), "smLLM_01")
+SMLLM = os.path.join(os.path.dirname(HERE), "models", "smLLM_01")
 sys.path.insert(0, SMLLM)
 
 from model import Config, TinyGPT  # noqa: E402

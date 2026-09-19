@@ -63,17 +63,17 @@ not a status page: [../product/whats-next.md](../product/whats-next.md) says wha
 
 | Folder | What it is | Write-up |
 |---|---|---|
-| `paratroop_harness_01/` | First harness: a pipe of functions around a shared whiteboard. Page on port 8770 | [README](../../paratroop_harness_01/README.md) |
-| `paratroop_harness_02/` | The main project: a "brain" of small modules around structured working memory. Page on port 8771, CLI, shell pipes | [README](../../paratroop_harness_02/README.md), [architecture.md](paratroop_harness/architecture.md) |
-| `smLLM_01/` | Tiny Shakespeare byte GPT | [README](../../smLLM_01/README.md) |
-| `smALLM_01/` | Learn-by-doing model in a gadget world | [README](../../smALLM_01/README.md) |
+| `paratroop_harness_01/` | First harness: a pipe of functions around a shared whiteboard. Page on port 8770 | [README](../../harnesses/paratroop_harness_01/README.md) |
+| `paratroop_harness_02/` | The main project: a "brain" of small modules around structured working memory. Page on port 8771, CLI, shell pipes | [README](../../harnesses/paratroop_harness_02/README.md), [architecture.md](paratroop_harness/architecture.md) |
+| `smLLM_01/` | Tiny Shakespeare byte GPT | [README](../../models/smLLM_01/README.md) |
+| `smALLM_01/` | Learn-by-doing model in a gadget world | [README](../../models/smALLM_01/README.md) |
 | `smEFFICIENCY_01/` | Not a model: measures the MacBook Pro M5's real training-throughput ceiling, and which free optimizations (bf16, `torch.compile`, batch size) are real | [README](../../smEFFICIENCY_01/README.md) |
-| `smCLM_01/` | Ideas reader vs words reader | [README](../../smCLM_01/README.md) |
-| `smROUTER_01/` | Trained Router module | [README](../../smROUTER_01/README.md) |
-| `smMATH01/` | Arithmetic in the model's own weights, three variants | [README](../../smMATH01/README.md) |
-| `smMATH_LANGUAGE_001/` | Reads the math problems out of a message | [README](../../smMATH_LANGUAGE_001/README.md) |
-| `smMATH001-a/` | Works whole expressions out step by step | [README](../../smMATH001-a/README.md) |
-| `smTOOLS_COMPUTER_CLI_01/` | Turns a plain request into the right shell command for Ubuntu, Fedora, Arch, macOS or Windows. Runs nothing | [README](../../smTOOLS_COMPUTER_CLI_01/README.md), [smTOOLS_COMPUTER_CLI_01.md](smModels/smTOOLS_COMPUTER_CLI_01.md) |
+| `smCLM_01/` | Ideas reader vs words reader | [README](../../models/smCLM_01/README.md) |
+| `smROUTER_01/` | Trained Router module | [README](../../models/smROUTER_01/README.md) |
+| `smMATH01/` | Arithmetic in the model's own weights, three variants | [README](../../models/smMATH01/README.md) |
+| `smMATH_LANGUAGE_001/` | Reads the math problems out of a message | [README](../../models/smMATH_LANGUAGE_001/README.md) |
+| `smMATH001-a/` | Works whole expressions out step by step | [README](../../models/smMATH001-a/README.md) |
+| `smTOOLS_COMPUTER_CLI_01/` | Turns a plain request into the right shell command for Ubuntu, Fedora, Arch, macOS or Windows. Runs nothing | [README](../../models/smTOOLS_COMPUTER_CLI_01/README.md), [smTOOLS_COMPUTER_CLI_01.md](smModels/smTOOLS_COMPUTER_CLI_01.md) |
 
 ## Where the project READMEs disagree with the code
 

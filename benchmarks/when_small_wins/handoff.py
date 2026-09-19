@@ -31,7 +31,7 @@ SMALL_MS = {"mathlang": 28.9, "router": 2.04, "cli": 47.1}
 
 
 def project(name):
-    path = os.path.join(ROOT, name)
+    path = os.path.join(ROOT, "models", name)
     if path not in sys.path:
         sys.path.insert(0, path)
     return path

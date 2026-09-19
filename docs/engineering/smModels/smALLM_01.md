@@ -1,6 +1,6 @@
 # smALLM_01: learn-by-doing gadget world
 
-Project: [`smALLM_01/`](../../../smALLM_01/README.md). Checked against `world.py`, `model.py`, `train.py`,
+Project: [`smALLM_01/`](../../../models/smALLM_01/README.md). Checked against `world.py`, `model.py`, `train.py`,
 `evaluate.py`, `demo.py`, `check_curious.py`, `out/train.log` and `out/eval.md` on 2026-09-15.
 
 ## Purpose

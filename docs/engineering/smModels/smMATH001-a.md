@@ -1,6 +1,6 @@
 # smMATH001-a: whole expressions, worked out step by step
 
-Project: [`smMATH001-a/`](../../../smMATH001-a/README.md). Checked against `work.py`, `model.py`, `train.py`,
+Project: [`smMATH001-a/`](../../../models/smMATH001-a/README.md). Checked against `work.py`, `model.py`, `train.py`,
 `solve.py`, `tests/test_work.py`, `out/train.log`, `out/results.json` and the README on 2026-09-15.
 
 > **Trained.** 10,000 steps finished on 2026-09-15 at 18:09. Results are from `out/results.json` and `out/train.log`.

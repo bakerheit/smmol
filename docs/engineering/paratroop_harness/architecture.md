@@ -26,9 +26,9 @@ SMMOL is a research workspace for small models. It has two kinds of project:
   smMATH01, smMATH_LANGUAGE_001 and smMATH001-a. Each is a folder with `model.py`, `train.py`, usually `tests/`, and
   `out/` for checkpoints and results. See [smModels/](../smModels/).
 - **Harnesses** that run a "brain" made of parts:
-  - [paratroop_harness_01](../../../paratroop_harness_01/README.md) runs `attention | context | route | respond` as a pipe.
+  - [paratroop_harness_01](../../../harnesses/paratroop_harness_01/README.md) runs `attention | context | route | respond` as a pipe.
     Route calls `@process` and `@tool` functions, and every function writes to a shared whiteboard.
-  - [paratroop_harness_02](../../../paratroop_harness_02/README.md) is the main project and the subject of this file.
+  - [paratroop_harness_02](../../../harnesses/paratroop_harness_02/README.md) is the main project and the subject of this file.
 
 The idea behind v02: each module is a small model with one job and a narrow JSON contract. Anything that doesn't need a
 model is code: working memory, long-term memory, math, the web and files.
@@ -386,7 +386,7 @@ Language has no schema, so its only "contract" is a non-empty reply.
 
 Why the length caps are short: in the first nested test, Ministral 8B filled every field with long speculative text in
 markdown and was cut off at 500 tokens after 32 s. Short `maxLength` limits plus one example per prompt fixed it
-([harness README](../../../paratroop_harness_02/README.md#contracts)).
+([harness README](../../../harnesses/paratroop_harness_02/README.md#contracts)).
 
 ---
 
@@ -486,7 +486,7 @@ Three turns later it still hadn't written it:
 - Decision asked, then asked again;
 - the Planner's "Draft the function implementation" was typed as a tool with no tool, and a guard threw it away.
 
-The full story is in the [harness README](../../../paratroop_harness_02/README.md#make-steps).
+The full story is in the [harness README](../../../harnesses/paratroop_harness_02/README.md#make-steps).
 
 **In code now:**
 

@@ -26,7 +26,7 @@ QUIET = "(nothing)"
 
 
 def load(path):
-    with open(os.path.join(ROOT, path)) as f:
+    with open(os.path.join(ROOT, "models", path)) as f:
         return json.load(f)
 
 
@@ -89,7 +89,7 @@ def mathlang_rows():
     """smMATH_LANGUAGE_001: message -> the arithmetic in it. 'Right' means every problem."""
     test = load("smMATH_LANGUAGE_001/test.json")
     small = load("smMATH_LANGUAGE_001/out/results.json")
-    llm_path = os.path.join(ROOT, "smMATH_LANGUAGE_001/out/llm_baseline.json")
+    llm_path = os.path.join(ROOT, "models", "smMATH_LANGUAGE_001/out/llm_baseline.json")
     if os.path.exists(llm_path):
         with open(llm_path) as f:
             llm = json.load(f)

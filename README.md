@@ -106,7 +106,7 @@ These are written up in full in [`docs/engineering/research/results.md`](docs/en
   messages apart out of 93, inside the run-to-run gap between two identical configs. An earlier version of this
   README called epoch 3 "a real peak"; that was reading noise, and the correction is recorded in place.
 
-- **A negative result, kept.** [`smCONVERSATION_001/experiments/muon/FINDINGS.md`](smCONVERSATION_001/experiments/muon/FINDINGS.md)
+- **A negative result, kept.** [`smCONVERSATION_001/experiments/muon/FINDINGS.md`](models/smCONVERSATION_001/experiments/muon/FINDINGS.md)
   — the Muon optimiser came out 0.075% ahead, called out as smaller than seed variance and explicitly *not*
   worth a production switch.
 
@@ -125,7 +125,7 @@ These are written up in full in [`docs/engineering/research/results.md`](docs/en
   Four symptoms, one cause.
 
 - **A file whose entire job is to say "this is not a result."**
-  [`smRTS_01/out/smoke-cpu/NOT_A_RESULT.md`](smRTS_01/out/smoke-cpu/NOT_A_RESULT.md)
+  [`smRTS_01/out/smoke-cpu/NOT_A_RESULT.md`](models/smRTS_01/out/smoke-cpu/NOT_A_RESULT.md)
 
 ---
 

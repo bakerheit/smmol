@@ -1,6 +1,6 @@
 # smMATH_LANGUAGE_001: the math reader
 
-Project: [`smMATH_LANGUAGE_001/`](../../../smMATH_LANGUAGE_001/README.md). Checked against `data.py`, `model.py`,
+Project: [`smMATH_LANGUAGE_001/`](../../../models/smMATH_LANGUAGE_001/README.md). Checked against `data.py`, `model.py`,
 `score.py`, `train.py`, `read.py`, `baseline_llm.py`, `test.json`, `tests/test_reader.py`, `out/results.json`,
 `out/train.log` and `out/llm_baseline.json` on 2026-09-15. Training finished at 17:37.
 

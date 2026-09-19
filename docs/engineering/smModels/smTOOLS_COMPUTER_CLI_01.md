@@ -1,6 +1,6 @@
 # smTOOLS_COMPUTER_CLI_01: plain request to shell command
 
-Project: [`smTOOLS_COMPUTER_CLI_01/`](../../../smTOOLS_COMPUTER_CLI_01/README.md). Checked against `catalog.py`,
+Project: [`smTOOLS_COMPUTER_CLI_01/`](../../../models/smTOOLS_COMPUTER_CLI_01/README.md). Checked against `catalog.py`,
 `check.py`, `data.py`, `model.py`, `score.py`, `train.py`, `cli.py`, `baseline_llm.py`, `test.json`,
 `tests/test_cli.py`, `out/results.json`, `out/train.log` and `out/llm_baseline.json` on 2026-09-15. Training
 finished at 21:45. **A retrain is planned and hasn't run** — see [Retraining](#retraining).

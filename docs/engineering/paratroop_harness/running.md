@@ -165,7 +165,7 @@ python3 -m unittest discover -s tests
 
 ## paratroop_harness_01
 
-Run from `~/workspace/SMMOL/paratroop_harness_01`. Details are in its [README](../../../paratroop_harness_01/README.md).
+Run from `~/workspace/SMMOL/paratroop_harness_01`. Details are in its [README](../../../harnesses/paratroop_harness_01/README.md).
 
 The page:
 

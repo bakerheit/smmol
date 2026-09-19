@@ -1,6 +1,6 @@
 # smCLM_01: ideas reader vs words reader
 
-Project: [`smCLM_01/`](../../../smCLM_01/README.md). Checked against `world.py`, `model.py`, `train.py`, `ask.py`,
+Project: [`smCLM_01/`](../../../models/smCLM_01/README.md). Checked against `world.py`, `model.py`, `train.py`, `ask.py`,
 `tests/test_smclm.py`, `concepts.json`, `out/train.log` and `out/results.json` on 2026-09-15.
 
 ## Purpose

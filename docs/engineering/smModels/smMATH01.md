@@ -1,6 +1,6 @@
 # smMATH01: arithmetic in the model's weights
 
-Project: [`smMATH01/`](../../../smMATH01/README.md). Checked against `problems.py`, `model.py`, `train.py`,
+Project: [`smMATH01/`](../../../models/smMATH01/README.md). Checked against `problems.py`, `model.py`, `train.py`,
 `evaluate.py`, `ask.py`, `solve.py`, `tests/test_math.py`, `out/train.log` and `out/results.json` on 2026-09-15.
 
 ## Purpose
