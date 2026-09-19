@@ -33,5 +33,5 @@ remain under their own terms:
 smSOFTWARE_ENGINEERING_001 trains on source from 75 permissively licensed
 repositories (MIT, Apache-2.0, BSD-3-Clause). Their pinned commits, license
 identifiers and upstream license texts are recorded in
-smSOFTWARE_ENGINEERING_001/data/raw/manifest.json and the licenses/ directory
+archive/models/smSOFTWARE_ENGINEERING_001/data/raw/manifest.json and the licenses/ directory
 beside it.

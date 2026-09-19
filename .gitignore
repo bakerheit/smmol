@@ -18,7 +18,7 @@
 *.bin
 
 # ---- Corpora and derived splits -----------------------------------------------------
-# Targeted by name, not by a blanket data/raw/ rule: models/smSOFTWARE_ENGINEERING_001/data/raw/
+# Targeted by name, not by a blanket data/raw/ rule: archive/models/smSOFTWARE_ENGINEERING_001/data/raw/
 # holds a provenance manifest with pinned commits and upstream license files, which is
 # exactly the kind of thing a public repo should carry. Fetch scripts stay tracked too.
 #
@@ -36,7 +36,7 @@ models/smLLM_01/data/input.txt
 # code under our own repo's licence is the cleaner call. github_corpus.py rebuilds it
 # byte-for-byte from the pinned commits and blob SHAs in the manifest, which IS tracked,
 # along with every upstream licence text.
-models/smSOFTWARE_ENGINEERING_001/data/raw/records.jsonl
+archive/models/smSOFTWARE_ENGINEERING_001/data/raw/records.jsonl
 
 # ---- Live harness state -------------------------------------------------------------
 # Real conversations, real memory, real run transcripts. Every one is read through

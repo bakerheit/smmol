@@ -99,8 +99,8 @@
      ]
     },
     "smLANGUAGE_en_GENERAL_001-conversation-v1": {
-     "path": "../../models/smLANGUAGE_en_GENERAL_001/out/latest.safetensors",
-     "training_config": "../../models/smLANGUAGE_en_GENERAL_001/model_config.json",
+     "path": "../../archive/models/smLANGUAGE_en_GENERAL_001/out/latest.safetensors",
+     "training_config": "../../archive/models/smLANGUAGE_en_GENERAL_001/model_config.json",
      "kind": "language",
      "settings": [
       {

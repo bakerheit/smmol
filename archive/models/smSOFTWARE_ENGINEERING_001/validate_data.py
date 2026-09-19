@@ -17,7 +17,7 @@ def main():
         raise ValueError("raw corpus hash does not match its manifest")
     config = json.loads((HERE / "model_config.json").read_text())
     records = read_records(corpus)
-    school = read_school_items(HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl")
+    school = read_school_items(HERE.parent / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl")
     _, _, split = build_splits(
         records, school, config["training"]["seed"], config["training"]["school_replay_fraction"],
     )
