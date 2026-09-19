@@ -1,0 +1,692 @@
+{
+  "what": "The held-out words of smCLM_02. Picked by held_out.py; tagged by a person.",
+  "human_gate": "Every word here needs its ideas written by a person in test_words.json. This file carries no tags and the teacher's tags for these words are dropped from data/tags.jsonl by tag_words.py.",
+  "seed": 17001,
+  "target": 60,
+  "bands": [
+    {
+      "name": "high",
+      "from": 100,
+      "to": null
+    },
+    {
+      "name": "mid",
+      "from": 30,
+      "to": 100
+    },
+    {
+      "name": "low",
+      "from": 10,
+      "to": 30
+    },
+    {
+      "name": "rare",
+      "from": 0,
+      "to": 10
+    }
+  ],
+  "vocabulary_words": 2619,
+  "pos_known_for": 2619,
+  "picked": 83,
+  "from_v1": 23,
+  "by_band_and_pos": {
+    "high/adjective": 1,
+    "high/noun": 1,
+    "high/other": 1,
+    "high/verb": 1,
+    "low/adjective": 4,
+    "low/noun": 10,
+    "low/other": 1,
+    "low/verb": 4,
+    "mid/adjective": 1,
+    "mid/noun": 5,
+    "mid/other": 1,
+    "mid/verb": 2,
+    "rare/adjective": 4,
+    "rare/noun": 19,
+    "rare/other": 1,
+    "rare/verb": 4,
+    "v1/noun": 23
+  },
+  "words": [
+    {
+      "word": "bakery",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "building",
+        "food",
+        "work",
+        "place",
+        "money"
+      ]
+    },
+    {
+      "word": "bee",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "animal",
+        "living",
+        "small",
+        "sky",
+        "nature",
+        "danger"
+      ]
+    },
+    {
+      "word": "candle",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "light",
+        "fire",
+        "hot",
+        "small",
+        "home"
+      ]
+    },
+    {
+      "word": "canoe",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "transportation",
+        "vehicle",
+        "control",
+        "water",
+        "wood",
+        "people"
+      ]
+    },
+    {
+      "word": "car",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "transportation",
+        "vehicle",
+        "machine",
+        "control",
+        "people",
+        "road",
+        "speed",
+        "metal"
+      ]
+    },
+    {
+      "word": "coin",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "money",
+        "metal",
+        "small"
+      ]
+    },
+    {
+      "word": "drum",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "music",
+        "sound",
+        "play",
+        "wood"
+      ]
+    },
+    {
+      "word": "grandfather",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "person",
+        "family"
+      ]
+    },
+    {
+      "word": "hammer",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "tool",
+        "metal",
+        "heavy"
+      ]
+    },
+    {
+      "word": "helmet",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "clothing",
+        "sport"
+      ]
+    },
+    {
+      "word": "jacket",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "clothing",
+        "soft"
+      ]
+    },
+    {
+      "word": "laptop",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "machine",
+        "electricity",
+        "communication",
+        "learning",
+        "work",
+        "metal"
+      ]
+    },
+    {
+      "word": "lemonade",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "drink",
+        "cold"
+      ]
+    },
+    {
+      "word": "library",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "building",
+        "learning",
+        "place",
+        "people"
+      ]
+    },
+    {
+      "word": "mango",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "food",
+        "plant",
+        "soft"
+      ]
+    },
+    {
+      "word": "nurse",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "person",
+        "work",
+        "health"
+      ]
+    },
+    {
+      "word": "river",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "water",
+        "nature",
+        "place"
+      ]
+    },
+    {
+      "word": "scooter",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "transportation",
+        "vehicle",
+        "control",
+        "road",
+        "speed",
+        "small"
+      ]
+    },
+    {
+      "word": "soup",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "food",
+        "hot"
+      ]
+    },
+    {
+      "word": "storm",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "weather",
+        "danger",
+        "sound",
+        "water"
+      ]
+    },
+    {
+      "word": "tram",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "transportation",
+        "vehicle",
+        "machine",
+        "control",
+        "people",
+        "electricity",
+        "metal"
+      ]
+    },
+    {
+      "word": "violin",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "music",
+        "sound",
+        "wood",
+        "art"
+      ]
+    },
+    {
+      "word": "wolf",
+      "band": null,
+      "pos": "noun",
+      "source": "v1",
+      "v1_ideas": [
+        "animal",
+        "living",
+        "danger",
+        "nature",
+        "speed"
+      ]
+    },
+    {
+      "word": "key",
+      "band": "high",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "look",
+      "band": "high",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "best",
+      "band": "high",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "two",
+      "band": "high",
+      "pos": "other",
+      "source": "stratified"
+    },
+    {
+      "word": "budget",
+      "band": "mid",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "fabric",
+      "band": "mid",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "friday",
+      "band": "mid",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "model",
+      "band": "mid",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "practice",
+      "band": "mid",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "commit",
+      "band": "mid",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "drive",
+      "band": "mid",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "tied",
+      "band": "mid",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "instead",
+      "band": "mid",
+      "pos": "other",
+      "source": "stratified"
+    },
+    {
+      "word": "account",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "bridge",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "center",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "custom",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "drainage",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "drawer",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "nap",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "result",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "sauce",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "thought",
+      "band": "low",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "drain",
+      "band": "low",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "grow",
+      "band": "low",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "recall",
+      "band": "low",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "touch",
+      "band": "low",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "initial",
+      "band": "low",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "minor",
+      "band": "low",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "mirrorless",
+      "band": "low",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "nostalgic",
+      "band": "low",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "especially",
+      "band": "low",
+      "pos": "other",
+      "source": "stratified"
+    },
+    {
+      "word": "basil",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "business",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "castle",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "clock",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "congee",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "dad",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "darkwood",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "discount",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "doing",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "dusk",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "exploration",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "individual",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "musician",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "opportunity",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "peg",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "ruler",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "square",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "survival",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "versatility",
+      "band": "rare",
+      "pos": "noun",
+      "source": "stratified"
+    },
+    {
+      "word": "assist",
+      "band": "rare",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "cross",
+      "band": "rare",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "optimize",
+      "band": "rare",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "prove",
+      "band": "rare",
+      "pos": "verb",
+      "source": "stratified"
+    },
+    {
+      "word": "cheap",
+      "band": "rare",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "little",
+      "band": "rare",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "obvious",
+      "band": "rare",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "present",
+      "band": "rare",
+      "pos": "adjective",
+      "source": "stratified"
+    },
+    {
+      "word": "tightly",
+      "band": "rare",
+      "pos": "other",
+      "source": "stratified"
+    }
+  ]
+}

@@ -25,10 +25,16 @@ always gives the same file.
     python3 tag_words.py --pass 16001           # one pass, resuming where the log left off
     python3 tag_words.py                        # all three passes
     python3 tag_words.py --aggregate-only       # rebuild data/tags.jsonl from the log, no calls
+    KIMI_API_KEY=... python3 tag_words.py --provider kimi --workers 12 --max-budget-usd 3
+
+With `--workers` above 1 the calls run in parallel. Nothing depends on the order they finish in:
+the log is keyed by (pass, batch) and the aggregate is rebuilt from the whole log. Rejected calls
+are asked again on the next run, so run it until it reports 0 to go.
 """
 
 import argparse
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 from pathlib import Path
 
@@ -136,9 +142,12 @@ def check(answer, words, inventory):
         outside = [i for i in ideas if i not in inventory]
         if outside:
             return None, "%s: ideas outside the inventory: %s" % (word, ", ".join(map(str, outside)))
-        if len(set(ideas)) != len(ideas):
-            return None, "%s: the same idea twice" % word
-        tags[word] = {"pos": pos, "ideas": list(ideas)}
+        # A repeated idea is a slip, not a wrong answer: Kimi repeated one for `proof`, `ruin` and
+        # `hybrid` on every retry (2026-09-19), which left 40 words untagged. Keep the first copy.
+        ideas = list(dict.fromkeys(ideas))
+        if len(ideas) < MIN_IDEAS:
+            return None, "%s: wants %d to %d ideas, got %r" % (word, MIN_IDEAS, MAX_IDEAS, ideas)
+        tags[word] = {"pos": pos, "ideas": ideas}
     return tags, None
 
 
@@ -238,6 +247,7 @@ def main():
                         help="run one pass seed; repeatable. Default: all three")
     parser.add_argument("--batch-size", type=int, default=BATCH)
     parser.add_argument("--limit", type=int, default=0, help="stop after this many new calls")
+    parser.add_argument("--workers", type=int, default=1, help="calls in flight at once")
     parser.add_argument("--aggregate-only", action="store_true",
                         help="rebuild data/tags.jsonl from the log; make no calls")
     parser.add_argument("--allow-partial-inventory", action="store_true",
@@ -260,30 +270,42 @@ def main():
     if not args.aggregate_only:
         teacher = teacher_from(args, args.log)
         schema = schema_for(inventory)
-        made = 0
-        for seed, index, chunk in todo:
-            if args.limit and made >= args.limit:
-                print("stopping at --limit %d; rerun to carry on" % args.limit)
-                break
+        if args.limit:
+            todo = todo[:args.limit]
+        if teacher.dry_run and todo:
+            seed, index, chunk = todo[0]
             try:
-                answer = teacher.ask(KIND, SYSTEM, prompt_for(chunk, inventory), schema, seed,
-                                     TEMPERATURE, MAX_TOKENS, {"pass": seed, "batch": index})
+                teacher.ask(KIND, SYSTEM, prompt_for(chunk, inventory), schema, seed, TEMPERATURE,
+                            MAX_TOKENS, {"pass": seed, "batch": index})
             except DryRun as dry:
                 print("\n-- pass %d batch %d, the request that would be sent --" % (seed, index))
                 print(json.dumps(dry.body, indent=2))
-                print("\ndry run: %d calls would be made to %s, none were."
-                      % (len(todo), teacher.endpoint))
-                return
-            tags, problem = check(answer, chunk, inventory)
-            if problem:
-                append_jsonl(args.quarantine, {"pass": seed, "batch": index, "why": problem,
-                                               "words": chunk, "answer": answer})
-                append_jsonl(args.log, {"pass": seed, "batch": index, "ok": False, "why": problem})
-                print("pass %d batch %d rejected: %s" % (seed, index, problem))
-                continue
-            append_jsonl(args.log, {"pass": seed, "batch": index, "ok": True, "tags": tags})
-            made += 1
-            print("pass %d batch %d: %d words" % (seed, index, len(tags)))
+                print("\ndry run: %d calls would be made to %s, none were." % (len(todo), teacher.endpoint))
+            return
+
+        def ask(item):
+            seed, index, chunk = item
+            try:
+                return item, teacher.ask(KIND, SYSTEM, prompt_for(chunk, inventory), schema, seed,
+                                         TEMPERATURE, MAX_TOKENS, {"pass": seed, "batch": index})
+            except RuntimeError as error:  # retries used up, or the spend cap
+                return item, error
+
+        with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
+            for future in as_completed([pool.submit(ask, item) for item in todo]):
+                (seed, index, chunk), answer = future.result()
+                if isinstance(answer, Exception):
+                    print("pass %d batch %d: teacher failed, not logged: %s" % (seed, index, answer))
+                    continue
+                tags, problem = check(answer, chunk, inventory)
+                if problem:
+                    append_jsonl(args.quarantine, {"pass": seed, "batch": index, "why": problem,
+                                                   "words": chunk, "answer": answer})
+                    append_jsonl(args.log, {"pass": seed, "batch": index, "ok": False, "why": problem})
+                    print("pass %d batch %d rejected: %s" % (seed, index, problem))
+                    continue
+                append_jsonl(args.log, {"pass": seed, "batch": index, "ok": True, "tags": tags})
+                print("pass %d batch %d: %d words" % (seed, index, len(tags)), flush=True)
         done = done_calls(args.log)
 
     hidden = held_out_words()

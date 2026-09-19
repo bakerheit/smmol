@@ -11,5 +11,1020 @@
     "source": "human, or v1 where the tags come straight from smCLM_01/concepts.json",
     "note": "only where a word needed a word of explanation"
   },
-  "words": []
+  "words": [
+    {
+      "word": "bakery",
+      "pos": "noun",
+      "ideas": [
+        "building",
+        "food",
+        "work",
+        "place",
+        "money"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "bee",
+      "pos": "noun",
+      "ideas": [
+        "animal",
+        "living",
+        "small",
+        "sky",
+        "nature",
+        "danger"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "candle",
+      "pos": "noun",
+      "ideas": [
+        "light",
+        "fire",
+        "hot",
+        "small",
+        "home"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "canoe",
+      "pos": "noun",
+      "ideas": [
+        "transportation",
+        "vehicle",
+        "control",
+        "water",
+        "wood",
+        "people"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "car",
+      "pos": "noun",
+      "ideas": [
+        "transportation",
+        "vehicle",
+        "machine",
+        "control",
+        "people",
+        "road",
+        "speed",
+        "metal"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "coin",
+      "pos": "noun",
+      "ideas": [
+        "money",
+        "metal",
+        "small"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "drum",
+      "pos": "noun",
+      "ideas": [
+        "music",
+        "sound",
+        "play",
+        "wood"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "grandfather",
+      "pos": "noun",
+      "ideas": [
+        "person",
+        "family"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "hammer",
+      "pos": "noun",
+      "ideas": [
+        "tool",
+        "metal",
+        "heavy"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "helmet",
+      "pos": "noun",
+      "ideas": [
+        "clothing",
+        "sport",
+        "protection"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+protection"
+    },
+    {
+      "word": "jacket",
+      "pos": "noun",
+      "ideas": [
+        "clothing",
+        "soft"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "laptop",
+      "pos": "noun",
+      "ideas": [
+        "machine",
+        "electricity",
+        "communication",
+        "learning",
+        "work",
+        "metal",
+        "technology",
+        "device"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "lemonade",
+      "pos": "noun",
+      "ideas": [
+        "drink",
+        "cold"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "library",
+      "pos": "noun",
+      "ideas": [
+        "building",
+        "learning",
+        "place",
+        "people"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "mango",
+      "pos": "noun",
+      "ideas": [
+        "food",
+        "plant",
+        "soft",
+        "fruit"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+fruit"
+    },
+    {
+      "word": "nurse",
+      "pos": "noun",
+      "ideas": [
+        "person",
+        "work",
+        "health"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "river",
+      "pos": "noun",
+      "ideas": [
+        "water",
+        "nature",
+        "place"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "scooter",
+      "pos": "noun",
+      "ideas": [
+        "transportation",
+        "vehicle",
+        "control",
+        "road",
+        "speed",
+        "small"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "soup",
+      "pos": "noun",
+      "ideas": [
+        "food",
+        "hot",
+        "liquid"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+liquid"
+    },
+    {
+      "word": "storm",
+      "pos": "noun",
+      "ideas": [
+        "weather",
+        "danger",
+        "sound",
+        "water"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "tram",
+      "pos": "noun",
+      "ideas": [
+        "transportation",
+        "vehicle",
+        "machine",
+        "control",
+        "people",
+        "electricity",
+        "metal"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "violin",
+      "pos": "noun",
+      "ideas": [
+        "music",
+        "sound",
+        "wood",
+        "art"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "wolf",
+      "pos": "noun",
+      "ideas": [
+        "animal",
+        "living",
+        "danger",
+        "nature",
+        "speed"
+      ],
+      "band": null,
+      "source": "v1+model-draft, person-reviewed",
+      "note": "keep+"
+    },
+    {
+      "word": "key",
+      "pos": "noun",
+      "ideas": [
+        "tool",
+        "access",
+        "control",
+        "metal",
+        "small"
+      ],
+      "band": "high",
+      "source": "model-draft, person-reviewed",
+      "note": "opening device"
+    },
+    {
+      "word": "look",
+      "pos": "verb",
+      "ideas": [
+        "perception",
+        "attention"
+      ],
+      "band": "high",
+      "source": "model-draft, person-reviewed",
+      "note": "verb of seeing"
+    },
+    {
+      "word": "best",
+      "pos": "adjective",
+      "ideas": [
+        "quality",
+        "comparison",
+        "judgment"
+      ],
+      "band": "high",
+      "source": "model-draft, person-reviewed",
+      "note": "superlative"
+    },
+    {
+      "word": "two",
+      "pos": "other",
+      "ideas": [
+        "quantity"
+      ],
+      "band": "high",
+      "source": "model-draft, person-reviewed",
+      "note": "number"
+    },
+    {
+      "word": "budget",
+      "pos": "noun",
+      "ideas": [
+        "money",
+        "plan",
+        "value"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "financial plan"
+    },
+    {
+      "word": "fabric",
+      "pos": "noun",
+      "ideas": [
+        "material",
+        "texture",
+        "clothing"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "cloth material"
+    },
+    {
+      "word": "friday",
+      "pos": "noun",
+      "ideas": [
+        "time"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "day of week"
+    },
+    {
+      "word": "model",
+      "pos": "noun",
+      "ideas": [
+        "design",
+        "identity",
+        "pattern"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "representation"
+    },
+    {
+      "word": "practice",
+      "pos": "noun",
+      "ideas": [
+        "skill",
+        "learning",
+        "repetition",
+        "process"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "repeated effort"
+    },
+    {
+      "word": "commit",
+      "pos": "verb",
+      "ideas": [
+        "commitment",
+        "decision",
+        "action"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "pledge"
+    },
+    {
+      "word": "drive",
+      "pos": "verb",
+      "ideas": [
+        "control",
+        "movement",
+        "vehicle",
+        "action"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "to operate vehicle"
+    },
+    {
+      "word": "tied",
+      "pos": "adjective",
+      "ideas": [
+        "connection",
+        "comparison",
+        "state"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "equal or fastened"
+    },
+    {
+      "word": "instead",
+      "pos": "other",
+      "ideas": [
+        "comparison",
+        "decision"
+      ],
+      "band": "mid",
+      "source": "model-draft, person-reviewed",
+      "note": "substitution"
+    },
+    {
+      "word": "account",
+      "pos": "noun",
+      "ideas": [
+        "money",
+        "information",
+        "communication"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "record or story"
+    },
+    {
+      "word": "bridge",
+      "pos": "noun",
+      "ideas": [
+        "structure",
+        "connection",
+        "road",
+        "building"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "crosses gap"
+    },
+    {
+      "word": "center",
+      "pos": "noun",
+      "ideas": [
+        "location",
+        "place",
+        "structure"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "middle point"
+    },
+    {
+      "word": "custom",
+      "pos": "noun",
+      "ideas": [
+        "behavior",
+        "pattern",
+        "identity"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "tradition"
+    },
+    {
+      "word": "drainage",
+      "pos": "noun",
+      "ideas": [
+        "water",
+        "system",
+        "removal"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "water removal system"
+    },
+    {
+      "word": "drawer",
+      "pos": "noun",
+      "ideas": [
+        "container",
+        "storage",
+        "object"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "holds items"
+    },
+    {
+      "word": "nap",
+      "pos": "noun",
+      "ideas": [
+        "health",
+        "time",
+        "state"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "short sleep"
+    },
+    {
+      "word": "result",
+      "pos": "noun",
+      "ideas": [
+        "outcome",
+        "process"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "end effect"
+    },
+    {
+      "word": "sauce",
+      "pos": "noun",
+      "ideas": [
+        "food",
+        "liquid"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "condiment"
+    },
+    {
+      "word": "thought",
+      "pos": "noun",
+      "ideas": [
+        "thought",
+        "knowledge",
+        "perception"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "mental idea"
+    },
+    {
+      "word": "drain",
+      "pos": "verb",
+      "ideas": [
+        "water",
+        "removal",
+        "system"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "remove liquid"
+    },
+    {
+      "word": "grow",
+      "pos": "verb",
+      "ideas": [
+        "growth",
+        "change",
+        "plant"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "increase"
+    },
+    {
+      "word": "recall",
+      "pos": "verb",
+      "ideas": [
+        "memory",
+        "thought"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "remember"
+    },
+    {
+      "word": "touch",
+      "pos": "verb",
+      "ideas": [
+        "perception",
+        "body",
+        "texture"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "sense of feeling"
+    },
+    {
+      "word": "initial",
+      "pos": "adjective",
+      "ideas": [
+        "origin",
+        "sequence",
+        "time"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "first"
+    },
+    {
+      "word": "minor",
+      "pos": "adjective",
+      "ideas": [
+        "small",
+        "degree",
+        "comparison"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "less important"
+    },
+    {
+      "word": "mirrorless",
+      "pos": "adjective",
+      "ideas": [
+        "technology",
+        "device",
+        "design"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "camera type"
+    },
+    {
+      "word": "nostalgic",
+      "pos": "adjective",
+      "ideas": [
+        "emotion",
+        "memory"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "feeling about past"
+    },
+    {
+      "word": "especially",
+      "pos": "other",
+      "ideas": [
+        "degree",
+        "comparison"
+      ],
+      "band": "low",
+      "source": "model-draft, person-reviewed",
+      "note": "emphasis"
+    },
+    {
+      "word": "basil",
+      "pos": "noun",
+      "ideas": [
+        "plant",
+        "food"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "herb"
+    },
+    {
+      "word": "business",
+      "pos": "noun",
+      "ideas": [
+        "work",
+        "money",
+        "system"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "commercial activity"
+    },
+    {
+      "word": "castle",
+      "pos": "noun",
+      "ideas": [
+        "building",
+        "structure",
+        "place"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "fortified building"
+    },
+    {
+      "word": "clock",
+      "pos": "noun",
+      "ideas": [
+        "time",
+        "object",
+        "device"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "tells time"
+    },
+    {
+      "word": "congee",
+      "pos": "noun",
+      "ideas": [
+        "food",
+        "liquid"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "rice porridge"
+    },
+    {
+      "word": "dad",
+      "pos": "noun",
+      "ideas": [
+        "person",
+        "family"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "father"
+    },
+    {
+      "word": "darkwood",
+      "pos": "noun",
+      "ideas": [
+        "wood",
+        "material",
+        "color"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "dark colored wood"
+    },
+    {
+      "word": "discount",
+      "pos": "noun",
+      "ideas": [
+        "money",
+        "value",
+        "transaction"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "price reduction"
+    },
+    {
+      "word": "doing",
+      "pos": "noun",
+      "ideas": [
+        "action",
+        "process"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "performing act"
+    },
+    {
+      "word": "dusk",
+      "pos": "noun",
+      "ideas": [
+        "time",
+        "light",
+        "sky"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "evening light"
+    },
+    {
+      "word": "exploration",
+      "pos": "noun",
+      "ideas": [
+        "search",
+        "knowledge",
+        "experience"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "discovery process"
+    },
+    {
+      "word": "individual",
+      "pos": "noun",
+      "ideas": [
+        "person",
+        "identity"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "single human"
+    },
+    {
+      "word": "musician",
+      "pos": "noun",
+      "ideas": [
+        "person",
+        "music",
+        "skill",
+        "work"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "plays music"
+    },
+    {
+      "word": "opportunity",
+      "pos": "noun",
+      "ideas": [
+        "possibility",
+        "access"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "chance to act"
+    },
+    {
+      "word": "peg",
+      "pos": "noun",
+      "ideas": [
+        "object",
+        "tool",
+        "connection"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "small fastener"
+    },
+    {
+      "word": "ruler",
+      "pos": "noun",
+      "ideas": [
+        "tool",
+        "measurement"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "measuring tool; the king sense is rare"
+    },
+    {
+      "word": "square",
+      "pos": "noun",
+      "ideas": [
+        "shape",
+        "place"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "geometric shape"
+    },
+    {
+      "word": "survival",
+      "pos": "noun",
+      "ideas": [
+        "living",
+        "health",
+        "danger"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "staying alive"
+    },
+    {
+      "word": "versatility",
+      "pos": "noun",
+      "ideas": [
+        "skill",
+        "quality",
+        "fit"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "adaptability"
+    },
+    {
+      "word": "assist",
+      "pos": "verb",
+      "ideas": [
+        "support",
+        "action"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "help"
+    },
+    {
+      "word": "cross",
+      "pos": "verb",
+      "ideas": [
+        "movement",
+        "direction",
+        "boundary"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "go across"
+    },
+    {
+      "word": "optimize",
+      "pos": "verb",
+      "ideas": [
+        "improvement",
+        "process"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "make best"
+    },
+    {
+      "word": "prove",
+      "pos": "verb",
+      "ideas": [
+        "judgment",
+        "knowledge",
+        "reality"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "show true"
+    },
+    {
+      "word": "cheap",
+      "pos": "adjective",
+      "ideas": [
+        "money",
+        "value",
+        "quality"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "low cost"
+    },
+    {
+      "word": "little",
+      "pos": "adjective",
+      "ideas": [
+        "small",
+        "size"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "small amount"
+    },
+    {
+      "word": "obvious",
+      "pos": "adjective",
+      "ideas": [
+        "clarity",
+        "perception"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "easy to see"
+    },
+    {
+      "word": "present",
+      "pos": "adjective",
+      "ideas": [
+        "time",
+        "state"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "current; the gift sense is the noun"
+    },
+    {
+      "word": "tightly",
+      "pos": "other",
+      "ideas": [
+        "degree",
+        "force"
+      ],
+      "band": "rare",
+      "source": "model-draft, person-reviewed",
+      "note": "firmly bound"
+    }
+  ],
+  "filled": {
+    "on": "2026-09-19",
+    "drafted_by": "claude-sonnet-5 (medium effort)",
+    "reviewed_by": "owner (bakerheit), with Claude's 4 review edits",
+    "why": "the owner chose a reviewed model draft over hand-tagging all 83; the drafter is not the teacher and never saw the teacher's tags"
+  }
 }

@@ -12,8 +12,8 @@ What they're really guarding:
   * resuming asks only for what's missing, and the aggregate is the same file every time;
   * soft weights are the fraction of passes that gave the idea;
   * held-out words keep no teacher tags, and no script ever writes a tag a person should write;
-  * ideas.json is smCLM_01's 51, verbatim, and tagging refuses to run against that seed unless
-    it's told to.
+  * ideas.json starts with smCLM_01's 51, verbatim and in order, and tagging refuses a seed-only
+    inventory unless it's told to.
 
     python3 -m unittest discover -s tests
 """
@@ -227,23 +227,27 @@ class TeacherClient(Scratch):
 
 
 class Inventory(Scratch):
-    def test_ideas_json_is_smclm_01s_fifty_one_ideas_verbatim(self):
+    def v1(self):
+        return json.loads((ROOT.parent / "smCLM_01" / "concepts.json").read_text())["concepts"]
+
+    def test_ideas_json_starts_with_smclm_01s_fifty_one_ideas_verbatim(self):
         shipped = json.loads((ROOT / "ideas.json").read_text())
-        v1 = json.loads((ROOT.parent / "smCLM_01" / "concepts.json").read_text())["concepts"]
-        self.assertEqual(shipped, v1)
-        self.assertEqual(list(shipped), list(v1), "the order changed; the plan says verbatim")
-        self.assertEqual(len(shipped), teacher_module.V1_IDEAS)
+        v1 = self.v1()
+        first = dict(list(shipped.items())[:teacher_module.V1_IDEAS])
+        self.assertEqual(first, v1)
+        self.assertEqual(list(first), list(v1), "the order changed; the plan says verbatim")
 
-    def test_the_seed_inventory_is_refused_until_a_person_has_added_the_new_ideas(self):
+    def test_the_approved_inventory_loads_and_meets_the_gate(self):
+        loaded = teacher_module.load_inventory(ROOT / "ideas.json")
+        self.assertGreaterEqual(len(loaded), teacher_module.MIN_IDEAS)
+
+    def test_a_seed_only_inventory_is_still_refused_unless_the_caller_says_so(self):
+        seed = self.dir / "seed.json"
+        teacher_module.write_json(seed, self.v1())
         with self.assertRaises(SystemExit) as caught:
-            teacher_module.load_inventory(ROOT / "ideas.json")
-        message = str(caught.exception)
-        self.assertIn("waiting on a person", message)
-        self.assertIn("propose_ideas.py", message)
-
-    def test_a_partial_inventory_is_allowed_only_when_the_caller_says_so(self):
-        loaded = teacher_module.load_inventory(ROOT / "ideas.json", allow_partial=True)
-        self.assertEqual(len(loaded), teacher_module.V1_IDEAS)
+            teacher_module.load_inventory(seed)
+        self.assertIn("waiting on a person", str(caught.exception))
+        self.assertEqual(len(teacher_module.load_inventory(seed, allow_partial=True)), teacher_module.V1_IDEAS)
 
     def test_an_idea_with_no_meaning_or_a_bad_name_is_refused(self):
         bad = self.dir / "bad.json"
@@ -257,10 +261,11 @@ class Proposals(Scratch):
     def answer(self, words, ideas=("health", "person")):
         return {"words": [{"word": w, "ideas": list(ideas)} for w in words]}
 
-    def test_prompt_prefers_the_approved_inventory_and_rejects_narrow_new_ideas(self):
+    def test_prompt_is_open_and_rejects_narrow_new_ideas(self):
+        # open_v3: showing the inventory made Ministral cram words into it (see PROMPT_VERSION).
         prompt = propose_ideas.prompt_for(["apple", "doctor"], INVENTORY)
-        self.assertIn("- health: to do with being well or unwell", prompt)
-        self.assertIn("Prefer these exact names", prompt)
+        self.assertNotIn("- health: to do with being well or unwell", prompt)
+        self.assertIn("Do not force a word into a category", prompt)
         self.assertIn("at least 8 different words", prompt)
         self.assertIn("1 to %d ideas" % propose_ideas.MAX_IDEAS_PER_WORD, prompt)
         self.assertLessEqual(propose_ideas.MAX_IDEAS_PER_WORD, 3)
@@ -384,10 +389,6 @@ class Tagging(Scratch):
         answer["words"][0]["ideas"] = sorted(INVENTORY) * 3
         self.assertIsNone(tag_words.check(answer, ["apple"], INVENTORY)[0])
 
-    def test_the_same_idea_twice_throws_the_call_away(self):
-        answer = self.tags(["apple"], ["food", "food"])
-        self.assertIsNone(tag_words.check(answer, ["apple"], INVENTORY)[0])
-
     def test_weights_are_the_share_of_passes_that_gave_the_idea(self):
         done = {
             (16001, 0): {"apple": {"pos": "noun", "ideas": ["food", "health"]}},
@@ -469,16 +470,48 @@ class Tagging(Scratch):
         self.assertEqual(prompt.count("\napple"), 1)
 
 
+class HeldOutPick(Scratch):
+    def test_pos_comes_from_the_log_by_majority_so_dropping_tags_cant_move_the_pick(self):
+        for seed, pos in ((16001, "verb"), (16002, "noun"), (16003, "noun")):
+            teacher_module.append_jsonl(self.log, {"pass": seed, "batch": 0, "ok": True,
+                                                   "tags": {"run": {"pos": pos, "ideas": ["speed"]}}})
+        teacher_module.append_jsonl(self.log, {"pass": 16001, "batch": 1, "ok": False, "why": "x"})
+        self.assertEqual(held_out.pos_from_log(self.log), {"run": "noun"})
+
+    def test_an_excluded_word_is_never_picked(self):
+        self.assertIn("theo", held_out.EXCLUDE)
+        picked = {r["word"] for r in json.loads((ROOT / "data" / "held_out.json").read_text())["words"]}
+        self.assertFalse(picked & set(held_out.EXCLUDE))
+
+
+class RepeatedIdeas(Scratch):
+    def test_a_repeated_idea_is_dropped_not_the_whole_call(self):
+        answer = {"words": [{"word": "apple", "pos": "noun", "ideas": ["food", "food", "health"]}]}
+        tags, problem = tag_words.check(answer, ["apple"], INVENTORY)
+        self.assertIsNone(problem)
+        self.assertEqual(tags["apple"]["ideas"], ["food", "health"])
+
+
 class Resuming(Scratch):
     """The log is the resume point, for both scripts."""
 
     def test_proposals_only_ask_for_the_batches_the_log_is_missing(self):
-        teacher_module.append_jsonl(self.log, {"batch": 0, "ok": True,
+        version = propose_ideas.PROMPT_VERSION
+        teacher_module.append_jsonl(self.log, {"batch": 0, "ok": True, "prompt_version": version,
                                                "proposals": {"apple": ["food"]}})
-        teacher_module.append_jsonl(self.log, {"batch": 1, "ok": False, "why": "words came back wrong"})
+        teacher_module.append_jsonl(self.log, {"batch": 1, "ok": False, "why": "words came back wrong",
+                                               "prompt_version": version})
         done = propose_ideas.done_batches(self.log)
         self.assertEqual(sorted(done), [0], "a rejected batch must be asked again")
         self.assertEqual(done[0], {"apple": ["food"]})
+
+    def test_a_batch_from_another_prompt_version_is_asked_again(self):
+        teacher_module.append_jsonl(self.log, {"batch": 0, "ok": True, "prompt_version": "reuse_v2",
+                                               "proposals": {"apple": ["food"]}})
+        teacher_module.append_jsonl(self.log, {"batch": 1, "ok": True,
+                                               "proposals": {"doctor": ["health"]}})
+        self.assertEqual(propose_ideas.done_batches(self.log), {},
+                         "an old prompt's answers must not be mixed into this prompt's tally")
 
     def test_tagging_only_asks_for_the_calls_the_log_is_missing(self):
         teacher_module.append_jsonl(self.log, {"pass": 16001, "batch": 0, "ok": True,
@@ -640,9 +673,13 @@ class HeldOut(Scratch):
 class NothingIsPretendHumanTruth(unittest.TestCase):
     """The rule the whole phase turns on, checked on the files as they are on disk."""
 
-    def test_test_words_json_is_still_a_persons_to_fill(self):
-        words = json.loads((ROOT / "test_words.json").read_text())["words"]
-        self.assertEqual(words, [], "phase 1 tooling must not write rows into test_words.json")
+    def test_test_words_rows_name_their_reviewer_and_say_how_they_were_made(self):
+        shipped = json.loads((ROOT / "test_words.json").read_text())
+        if not shipped["words"]:
+            return
+        self.assertTrue(shipped["filled"]["reviewed_by"], "rows without a named person reviewing them")
+        for row in shipped["words"]:
+            self.assertIn("person-reviewed", row["source"], row["word"])
 
     def test_no_phase_1_script_writes_test_words_json(self):
         for name in ("teacher.py", "propose_ideas.py", "tag_words.py", "held_out.py"):
@@ -661,8 +698,9 @@ class NothingIsPretendHumanTruth(unittest.TestCase):
     def test_generated_proposals_are_derived_from_the_logged_teacher_answers(self):
         """A canary may create proposals, but it still must not pretend they are human truth."""
         for name in ("tags.jsonl", "held_out.json"):
-            self.assertFalse((ROOT / "data" / name).exists(),
-                             "%s must wait for the human-approved idea inventory" % name)
+            if (ROOT / "data" / name).exists():
+                # Only once a person has approved the inventory; this raises on a seed-only one.
+                teacher_module.load_inventory(ROOT / "ideas.json")
 
         proposals = ROOT / "data" / "idea_proposals.json"
         if not proposals.exists():

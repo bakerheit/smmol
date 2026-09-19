@@ -1,0 +1,142 @@
+{
+  "name": "smCLM_02 training data",
+  "target_usages": 30,
+  "sentences": 42253,
+  "by_source": {
+    "conversations": 10128,
+    "curriculum": 600,
+    "teacher": 31525
+  },
+  "dropped": {},
+  "words_under_target": 0,
+  "under_target": [],
+  "files": {
+    "held_out.json": {
+      "sha256": "ea1057284e4aca34f5fef1f3c6352b180dba4d3b103e121c684044cb1c0f6876",
+      "bytes": 12302
+    },
+    "idea_proposals.json": {
+      "sha256": "3bda3a6063733fe2f7b7042d61574d216c62b4899de699827ca5f4ac57f96053",
+      "bytes": 259746
+    },
+    "idea_proposals_v1_canary.json": {
+      "sha256": "dcd2d23b1b9304cbca6b68f97d967e4ef6b8a11d09c934d123cd6762f3a0c08b",
+      "bytes": 9441
+    },
+    "idea_proposals_v2_canary.json": {
+      "sha256": "83caf372a37b3fd1367813ae1eb6e90bd0506fbd4fb1f093a020f93b28f71d8f",
+      "bytes": 5508
+    },
+    "idea_proposals_v2_comparison.json": {
+      "sha256": "ed641224230945188fc3717b5bbe5af212cfe2f7f2fed597101e0398523d4fa0",
+      "bytes": 5150
+    },
+    "ideas_draft.json": {
+      "sha256": "37e824eec6940991ea1137f3d5d8775f850b79e868e726164a781054ad1186db",
+      "bytes": 32125
+    },
+    "ideas_draft.md": {
+      "sha256": "679e22f3d2a347436d775c14e99d45e584a8c56360fd517f4a7708de6148b540",
+      "bytes": 11971
+    },
+    "logs/idea_proposals.jsonl": {
+      "sha256": "299fb059328f27dbca45146b20564c04f846c1938701334d3e7026bf9947d5b4",
+      "bytes": 170963,
+      "rows": 262
+    },
+    "logs/idea_proposals_v1_canary.jsonl": {
+      "sha256": "0701b3b4854f2f200667a1aa4d74432cf76d2b1ee8ff70dd99cee6ec722fb94d",
+      "bytes": 5031,
+      "rows": 5
+    },
+    "logs/idea_proposals_v2_canary.jsonl": {
+      "sha256": "dfc5a624c688ae68f178e7bcf5bcebe5bec5423e3c00e8896c5bb9cb96bb1968",
+      "bytes": 3666,
+      "rows": 6
+    },
+    "logs/idea_proposals_v2_comparison.jsonl": {
+      "sha256": "5dafdcfc7358d98a6174078fbce4aa90862e48a2c3d44c1dcbf10a7f482557ab",
+      "bytes": 2687,
+      "rows": 4
+    },
+    "logs/prompt_ab_2026-09-19/prompt_ab.py": {
+      "sha256": "a205051cb8f35aa0c6fe9984ed2d4420c7bf88c73b31985aa0de4f6245eb2bc1",
+      "bytes": 5134
+    },
+    "logs/prompt_ab_2026-09-19/results.json": {
+      "sha256": "9ed1eec464e3b0356e1d527f1415adfbc05c9c4e8affa122c54bec486bd2a18a",
+      "bytes": 10678
+    },
+    "logs/prompt_ab_2026-09-19/reuse_v2_batch0_ministral.jsonl": {
+      "sha256": "c7d9b2b575271bfc096caec83afbb6560013de9aef484d92ae9bebf2158c1b3b",
+      "bytes": 5286,
+      "rows": 3
+    },
+    "logs/prompt_ab_2026-09-19/v1_open.jsonl": {
+      "sha256": "f28d71ed0971625975b075a5b9d8ce0c201b47188fb05b5b90a720e62c0013d2",
+      "bytes": 883,
+      "rows": 3
+    },
+    "logs/prompt_ab_2026-09-19/v2_reuse.jsonl": {
+      "sha256": "ec0c4d78909d9104f16eb020d190d060d37c0a7d2d1e940dca0f9ea6e89c6a2c",
+      "bytes": 889,
+      "rows": 3
+    },
+    "logs/prompt_ab_2026-09-19/v3_open_broad.jsonl": {
+      "sha256": "b48e3991cab2278d7ac485f2bb07304d0bb13668d7a6013bd93db9b31870592b",
+      "bytes": 900,
+      "rows": 3
+    },
+    "logs/sentence_calls.jsonl": {
+      "sha256": "3e12e4e514e1b81bde118f842f78e86290925881082b94ec6b6a0c6644bb514c",
+      "bytes": 3862900,
+      "rows": 6490
+    },
+    "logs/sentence_calls_ministral_partial.jsonl": {
+      "sha256": "6a8ccebcf42134d29bd106e089e454ddaebcb008e2229dd52c9f37cac6cfede4",
+      "bytes": 213991,
+      "rows": 316
+    },
+    "logs/tag_calls.jsonl": {
+      "sha256": "592924225dec695871d0bffcc197b7bb082086443e2f4b1a89ebbf34671fef0c",
+      "bytes": 714141,
+      "rows": 910
+    },
+    "quarantine/tag_calls.jsonl": {
+      "sha256": "8c8ab81caa85a48db16e12f4d8831dbb8bde4a3eea04d1081675467023b5baa9",
+      "bytes": 109462,
+      "rows": 60
+    },
+    "review_sample_50.txt": {
+      "sha256": "f6423fba813605534270f14c1d8a5e89edc6d155f411d7e4a9952359ae888af4",
+      "bytes": 4088
+    },
+    "sentences.jsonl": {
+      "sha256": "09be3c03414055c30377237242f638be4f269b2c15861afbca32f1a1890cd5c8",
+      "bytes": 9649099,
+      "rows": 42253
+    },
+    "tags.jsonl": {
+      "sha256": "b753b6df89dae93dfdfb7be518a37b9115340f0d73c34d26a728675180e8e110",
+      "bytes": 268537,
+      "rows": 2536
+    },
+    "tags_report.json": {
+      "sha256": "85b1d5eaa7a2dd95bb5b1c7625416d71f54ab5dc4369811d75c62146f5232884",
+      "bytes": 1842
+    },
+    "test_words_draft.json": {
+      "sha256": "b20ca606ef5aa7b3eaeeb8db7ebbe10fe2e2eb8bc9a82f34950f07b22717fda2",
+      "bytes": 14287
+    },
+    "test_words_draft.md": {
+      "sha256": "04b6130f42395232a1a3ffa1fa20cc559422632efeda508fe359f2bf22ce37ca",
+      "bytes": 6346
+    },
+    "vocabulary.jsonl": {
+      "sha256": "680d67d60bab492b3e785d87d0b266da556c5cd5797d5256a6f222c899253a84",
+      "bytes": 260554,
+      "rows": 2619
+    }
+  }
+}

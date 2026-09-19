@@ -43,6 +43,12 @@ BANDS = (
 )
 
 TAGS = DATA / "tags.jsonl"
+TAG_LOG = DATA / "logs" / "tag_calls.jsonl"
+
+# Vocabulary words that may not be held out, and why. Checked by eye after the first pick.
+EXCLUDE = {
+    "theo": "a first name; vocabulary.py's name rule missed it (capitalised in too few uses)",
+}
 OUT = DATA / "held_out.json"
 V1 = HERE.parent / "smCLM_01" / "concepts.json"
 
@@ -90,6 +96,21 @@ def share_out(cells, target):
 
 
 BANDS_ORDER = {name: i for i, (name, _low, _high) in enumerate(BANDS)}
+
+
+def pos_from_log(path):
+    """Each word's part of speech: the one most passes gave, first pass breaking a tie."""
+    votes = {}
+    for row in read_jsonl(path):
+        if row.get("ok") and row.get("tags"):
+            for word, tag in row["tags"].items():
+                votes.setdefault(word, []).append((row.get("pass", 0), tag.get("pos") or "other"))
+    out = {}
+    for word, got in votes.items():
+        got.sort()
+        names = [pos for _, pos in got]
+        out[word] = max(names, key=lambda pos: (names.count(pos), -names.index(pos)))
+    return out
 
 
 def pick(vocabulary, pos_of, target=TARGET, seed=SEED):
@@ -155,6 +176,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vocabulary", default=None)
     parser.add_argument("--tags", default=str(TAGS))
+    parser.add_argument("--tag-log", default=str(TAG_LOG))
     parser.add_argument("--ideas", default=None)
     parser.add_argument("--out", default=str(OUT))
     parser.add_argument("--target", type=int, default=TARGET)
@@ -172,10 +194,15 @@ def main():
     # Part of speech comes from the teacher's tags where they exist, falling back to whatever
     # vocabulary.py put on the row ("other" until something fills it). It steers the stratification
     # only; it is never written into test_words.json as truth.
+    #
+    # From the raw tagging log, not data/tags.jsonl: that file drops the held-out words once this
+    # script has picked them, so reading it made a rerun see them as "other" and pick a different
+    # set (found 2026-09-19). The log never loses a row.
     pos_of = {row["word"]: row.get("pos") or "other" for row in vocabulary}
-    pos_of.update({row["word"]: row.get("pos") or "other" for row in read_jsonl(args.tags)})
+    pos_of.update(pos_from_log(args.tag_log))
 
-    stratified = pick(vocabulary, pos_of, args.target, args.seed)
+    pickable = [row for row in vocabulary if row["word"] not in EXCLUDE]
+    stratified = pick(pickable, pos_of, args.target, args.seed)
     v1 = v1_held_out(words, inventory)
     rows = combine(stratified, v1)
 
