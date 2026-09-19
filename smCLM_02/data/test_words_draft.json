@@ -1,0 +1,783 @@
+{
+  "model": "claude-sonnet-5",
+  "effort": "medium",
+  "drafted": "2026-09-19",
+  "usage": {
+    "input_tokens": 4359,
+    "output_tokens": 2731
+  },
+  "checks": [],
+  "accepted": {
+    "by": "owner (bakerheit), with Claude's 4 review edits",
+    "on": "2026-09-19"
+  },
+  "draft": {
+    "words": [
+      {
+        "word": "bakery",
+        "ideas": [
+          "building",
+          "food",
+          "work",
+          "place",
+          "money"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "bee",
+        "ideas": [
+          "animal",
+          "living",
+          "small",
+          "sky",
+          "nature",
+          "danger"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "candle",
+        "ideas": [
+          "light",
+          "fire",
+          "hot",
+          "small",
+          "home"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "canoe",
+        "ideas": [
+          "transportation",
+          "vehicle",
+          "control",
+          "water",
+          "wood",
+          "people"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "car",
+        "ideas": [
+          "transportation",
+          "vehicle",
+          "machine",
+          "control",
+          "people",
+          "road",
+          "speed",
+          "metal"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "coin",
+        "ideas": [
+          "money",
+          "metal",
+          "small"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "drum",
+        "ideas": [
+          "music",
+          "sound",
+          "play",
+          "wood"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "grandfather",
+        "ideas": [
+          "person",
+          "family"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "hammer",
+        "ideas": [
+          "tool",
+          "metal",
+          "heavy"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "helmet",
+        "ideas": [
+          "clothing",
+          "sport",
+          "protection"
+        ],
+        "note": "keep+protection"
+      },
+      {
+        "word": "jacket",
+        "ideas": [
+          "clothing",
+          "soft"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "laptop",
+        "ideas": [
+          "machine",
+          "electricity",
+          "communication",
+          "learning",
+          "work",
+          "metal",
+          "technology",
+          "device"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "lemonade",
+        "ideas": [
+          "drink",
+          "cold"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "library",
+        "ideas": [
+          "building",
+          "learning",
+          "place",
+          "people"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "mango",
+        "ideas": [
+          "food",
+          "plant",
+          "soft",
+          "fruit"
+        ],
+        "note": "keep+fruit"
+      },
+      {
+        "word": "nurse",
+        "ideas": [
+          "person",
+          "work",
+          "health"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "river",
+        "ideas": [
+          "water",
+          "nature",
+          "place"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "scooter",
+        "ideas": [
+          "transportation",
+          "vehicle",
+          "control",
+          "road",
+          "speed",
+          "small"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "soup",
+        "ideas": [
+          "food",
+          "hot",
+          "liquid"
+        ],
+        "note": "keep+liquid"
+      },
+      {
+        "word": "storm",
+        "ideas": [
+          "weather",
+          "danger",
+          "sound",
+          "water"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "tram",
+        "ideas": [
+          "transportation",
+          "vehicle",
+          "machine",
+          "control",
+          "people",
+          "electricity",
+          "metal"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "violin",
+        "ideas": [
+          "music",
+          "sound",
+          "wood",
+          "art"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "wolf",
+        "ideas": [
+          "animal",
+          "living",
+          "danger",
+          "nature",
+          "speed"
+        ],
+        "note": "keep+"
+      },
+      {
+        "word": "key",
+        "ideas": [
+          "tool",
+          "access",
+          "control",
+          "metal",
+          "small"
+        ],
+        "note": "opening device"
+      },
+      {
+        "word": "look",
+        "ideas": [
+          "perception",
+          "attention"
+        ],
+        "note": "verb of seeing"
+      },
+      {
+        "word": "best",
+        "ideas": [
+          "quality",
+          "comparison",
+          "judgment"
+        ],
+        "note": "superlative"
+      },
+      {
+        "word": "two",
+        "ideas": [
+          "quantity"
+        ],
+        "note": "number"
+      },
+      {
+        "word": "budget",
+        "ideas": [
+          "money",
+          "plan",
+          "value"
+        ],
+        "note": "financial plan"
+      },
+      {
+        "word": "fabric",
+        "ideas": [
+          "material",
+          "texture",
+          "clothing"
+        ],
+        "note": "cloth material"
+      },
+      {
+        "word": "friday",
+        "ideas": [
+          "time"
+        ],
+        "note": "day of week"
+      },
+      {
+        "word": "model",
+        "ideas": [
+          "design",
+          "identity",
+          "pattern"
+        ],
+        "note": "representation"
+      },
+      {
+        "word": "practice",
+        "ideas": [
+          "skill",
+          "learning",
+          "repetition",
+          "process"
+        ],
+        "note": "repeated effort"
+      },
+      {
+        "word": "commit",
+        "ideas": [
+          "commitment",
+          "decision",
+          "action"
+        ],
+        "note": "pledge"
+      },
+      {
+        "word": "drive",
+        "ideas": [
+          "control",
+          "movement",
+          "vehicle",
+          "action"
+        ],
+        "note": "to operate vehicle"
+      },
+      {
+        "word": "tied",
+        "ideas": [
+          "connection",
+          "comparison",
+          "state"
+        ],
+        "note": "equal or fastened"
+      },
+      {
+        "word": "instead",
+        "ideas": [
+          "comparison",
+          "decision"
+        ],
+        "note": "substitution"
+      },
+      {
+        "word": "account",
+        "ideas": [
+          "money",
+          "information",
+          "communication"
+        ],
+        "note": "record or story"
+      },
+      {
+        "word": "bridge",
+        "ideas": [
+          "structure",
+          "connection",
+          "road",
+          "building"
+        ],
+        "note": "crosses gap"
+      },
+      {
+        "word": "center",
+        "ideas": [
+          "location",
+          "place",
+          "structure"
+        ],
+        "note": "middle point"
+      },
+      {
+        "word": "custom",
+        "ideas": [
+          "behavior",
+          "pattern",
+          "identity"
+        ],
+        "note": "tradition"
+      },
+      {
+        "word": "drainage",
+        "ideas": [
+          "water",
+          "system",
+          "removal"
+        ],
+        "note": "water removal system"
+      },
+      {
+        "word": "drawer",
+        "ideas": [
+          "container",
+          "storage",
+          "object"
+        ],
+        "note": "holds items"
+      },
+      {
+        "word": "nap",
+        "ideas": [
+          "health",
+          "time",
+          "state"
+        ],
+        "note": "short sleep"
+      },
+      {
+        "word": "result",
+        "ideas": [
+          "outcome",
+          "process"
+        ],
+        "note": "end effect"
+      },
+      {
+        "word": "sauce",
+        "ideas": [
+          "food",
+          "liquid"
+        ],
+        "note": "condiment"
+      },
+      {
+        "word": "thought",
+        "ideas": [
+          "thought",
+          "knowledge",
+          "perception"
+        ],
+        "note": "mental idea"
+      },
+      {
+        "word": "drain",
+        "ideas": [
+          "water",
+          "removal",
+          "system"
+        ],
+        "note": "remove liquid"
+      },
+      {
+        "word": "grow",
+        "ideas": [
+          "growth",
+          "change",
+          "plant"
+        ],
+        "note": "increase"
+      },
+      {
+        "word": "recall",
+        "ideas": [
+          "memory",
+          "thought"
+        ],
+        "note": "remember"
+      },
+      {
+        "word": "touch",
+        "ideas": [
+          "perception",
+          "body",
+          "texture"
+        ],
+        "note": "sense of feeling"
+      },
+      {
+        "word": "initial",
+        "ideas": [
+          "origin",
+          "sequence",
+          "time"
+        ],
+        "note": "first"
+      },
+      {
+        "word": "minor",
+        "ideas": [
+          "small",
+          "degree",
+          "comparison"
+        ],
+        "note": "less important"
+      },
+      {
+        "word": "mirrorless",
+        "ideas": [
+          "technology",
+          "device",
+          "design"
+        ],
+        "note": "camera type"
+      },
+      {
+        "word": "nostalgic",
+        "ideas": [
+          "emotion",
+          "memory"
+        ],
+        "note": "feeling about past"
+      },
+      {
+        "word": "especially",
+        "ideas": [
+          "degree",
+          "comparison"
+        ],
+        "note": "emphasis"
+      },
+      {
+        "word": "basil",
+        "ideas": [
+          "plant",
+          "food"
+        ],
+        "note": "herb"
+      },
+      {
+        "word": "business",
+        "ideas": [
+          "work",
+          "money",
+          "system"
+        ],
+        "note": "commercial activity"
+      },
+      {
+        "word": "castle",
+        "ideas": [
+          "building",
+          "structure",
+          "place"
+        ],
+        "note": "fortified building"
+      },
+      {
+        "word": "clock",
+        "ideas": [
+          "time",
+          "object",
+          "device"
+        ],
+        "note": "tells time"
+      },
+      {
+        "word": "congee",
+        "ideas": [
+          "food",
+          "liquid"
+        ],
+        "note": "rice porridge"
+      },
+      {
+        "word": "dad",
+        "ideas": [
+          "person",
+          "family"
+        ],
+        "note": "father"
+      },
+      {
+        "word": "darkwood",
+        "ideas": [
+          "wood",
+          "material",
+          "color"
+        ],
+        "note": "dark colored wood"
+      },
+      {
+        "word": "discount",
+        "ideas": [
+          "money",
+          "value",
+          "transaction"
+        ],
+        "note": "price reduction"
+      },
+      {
+        "word": "doing",
+        "ideas": [
+          "action",
+          "process"
+        ],
+        "note": "performing act"
+      },
+      {
+        "word": "dusk",
+        "ideas": [
+          "time",
+          "light",
+          "sky"
+        ],
+        "note": "evening light"
+      },
+      {
+        "word": "exploration",
+        "ideas": [
+          "search",
+          "knowledge",
+          "experience"
+        ],
+        "note": "discovery process"
+      },
+      {
+        "word": "individual",
+        "ideas": [
+          "person",
+          "identity"
+        ],
+        "note": "single human"
+      },
+      {
+        "word": "musician",
+        "ideas": [
+          "person",
+          "music",
+          "skill",
+          "work"
+        ],
+        "note": "plays music"
+      },
+      {
+        "word": "opportunity",
+        "ideas": [
+          "possibility",
+          "access"
+        ],
+        "note": "chance to act"
+      },
+      {
+        "word": "peg",
+        "ideas": [
+          "object",
+          "tool",
+          "connection"
+        ],
+        "note": "small fastener"
+      },
+      {
+        "word": "ruler",
+        "ideas": [
+          "tool",
+          "measurement"
+        ],
+        "note": "measuring tool; the king sense is rare"
+      },
+      {
+        "word": "square",
+        "ideas": [
+          "shape",
+          "place"
+        ],
+        "note": "geometric shape"
+      },
+      {
+        "word": "survival",
+        "ideas": [
+          "living",
+          "health",
+          "danger"
+        ],
+        "note": "staying alive"
+      },
+      {
+        "word": "versatility",
+        "ideas": [
+          "skill",
+          "quality",
+          "fit"
+        ],
+        "note": "adaptability"
+      },
+      {
+        "word": "assist",
+        "ideas": [
+          "support",
+          "action"
+        ],
+        "note": "help"
+      },
+      {
+        "word": "cross",
+        "ideas": [
+          "movement",
+          "direction",
+          "boundary"
+        ],
+        "note": "go across"
+      },
+      {
+        "word": "optimize",
+        "ideas": [
+          "improvement",
+          "process"
+        ],
+        "note": "make best"
+      },
+      {
+        "word": "prove",
+        "ideas": [
+          "judgment",
+          "knowledge",
+          "reality"
+        ],
+        "note": "show true"
+      },
+      {
+        "word": "cheap",
+        "ideas": [
+          "money",
+          "value",
+          "quality"
+        ],
+        "note": "low cost"
+      },
+      {
+        "word": "little",
+        "ideas": [
+          "small",
+          "size"
+        ],
+        "note": "small amount"
+      },
+      {
+        "word": "obvious",
+        "ideas": [
+          "clarity",
+          "perception"
+        ],
+        "note": "easy to see"
+      },
+      {
+        "word": "present",
+        "ideas": [
+          "time",
+          "state"
+        ],
+        "note": "current; the gift sense is the noun"
+      },
+      {
+        "word": "tightly",
+        "ideas": [
+          "degree",
+          "force"
+        ],
+        "note": "firmly bound"
+      }
+    ]
+  },
+  "review_edits": [
+    "touch: sound -> texture",
+    "present: dropped possession (noun sense)",
+    "ruler: dropped authority (rare sense)",
+    "two: dropped measurement"
+  ]
+}

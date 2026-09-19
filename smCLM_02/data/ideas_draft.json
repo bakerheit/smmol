@@ -1,0 +1,1489 @@
+{
+  "model": "claude-sonnet-5",
+  "effort": "medium",
+  "drafted": "2026-09-19",
+  "usage": {
+    "input_tokens": 8432,
+    "output_tokens": 17067
+  },
+  "checks": [
+    "1 candidates neither used nor dropped: importance"
+  ],
+  "accepted": {
+    "by": "owner (bakerheit), with Claude's 5 review edits",
+    "on": "2026-09-19"
+  },
+  "draft": {
+    "new_ideas": [
+      {
+        "idea": "action",
+        "meaning": "is an act of doing something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "act",
+          "action",
+          "apply",
+          "break",
+          "bring"
+        ]
+      },
+      {
+        "idea": "movement",
+        "meaning": "involves moving or motion",
+        "merges": [
+          "motion"
+        ],
+        "source": "tally",
+        "examples": [
+          "advance",
+          "approach",
+          "rotate",
+          "turn",
+          "flight"
+        ]
+      },
+      {
+        "idea": "object",
+        "meaning": "is a physical thing or item",
+        "merges": [
+          "thing"
+        ],
+        "source": "tally",
+        "examples": [
+          "article",
+          "artifact",
+          "box",
+          "button",
+          "notebook"
+        ]
+      },
+      {
+        "idea": "structure",
+        "meaning": "is a built framework or arrangement of parts",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "bridge",
+          "cabin",
+          "basement",
+          "brick",
+          "assembly"
+        ]
+      },
+      {
+        "idea": "change",
+        "meaning": "makes or undergoes a difference over time",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "adapt",
+          "adjust",
+          "alter",
+          "become",
+          "damage"
+        ]
+      },
+      {
+        "idea": "material",
+        "meaning": "is a substance something is made of",
+        "merges": [
+          "substance"
+        ],
+        "source": "tally",
+        "examples": [
+          "cloth",
+          "ceramic",
+          "fabric",
+          "dough",
+          "concrete"
+        ]
+      },
+      {
+        "idea": "quality",
+        "meaning": "describes how good or bad something is",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "accuracy",
+          "best",
+          "durable",
+          "fair",
+          "fine"
+        ]
+      },
+      {
+        "idea": "state",
+        "meaning": "describes the condition something is currently in",
+        "merges": [
+          "condition"
+        ],
+        "source": "tally",
+        "examples": [
+          "active",
+          "awake",
+          "frozen",
+          "fit",
+          "fresh"
+        ]
+      },
+      {
+        "idea": "group",
+        "meaning": "is a collection of things or people together",
+        "merges": [
+          "collection"
+        ],
+        "source": "tally",
+        "examples": [
+          "army",
+          "band",
+          "batch",
+          "class",
+          "museum"
+        ]
+      },
+      {
+        "idea": "comparison",
+        "meaning": "involves comparing two or more things",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "better",
+          "bigger",
+          "contrast",
+          "difference",
+          "analog"
+        ]
+      },
+      {
+        "idea": "location",
+        "meaning": "has to do with where something is",
+        "merges": [
+          "position"
+        ],
+        "source": "tally",
+        "examples": [
+          "across",
+          "behind",
+          "center",
+          "coordinate",
+          "front"
+        ]
+      },
+      {
+        "idea": "connection",
+        "meaning": "links or joins two things together",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "adapter",
+          "attachment",
+          "bridge",
+          "chain",
+          "align"
+        ]
+      },
+      {
+        "idea": "measurement",
+        "meaning": "has to do with measuring size or amount",
+        "merges": [
+          "measure"
+        ],
+        "source": "tally",
+        "examples": [
+          "clock",
+          "diameter",
+          "duration",
+          "length",
+          "height"
+        ]
+      },
+      {
+        "idea": "information",
+        "meaning": "carries facts or data",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "data",
+          "dataset",
+          "document",
+          "email",
+          "detail"
+        ]
+      },
+      {
+        "idea": "process",
+        "meaning": "is a series of steps to reach a result",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "brew",
+          "cook",
+          "compile",
+          "finalize",
+          "delivery"
+        ]
+      },
+      {
+        "idea": "knowledge",
+        "meaning": "has to do with what is known or learned",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "book",
+          "discover",
+          "document",
+          "experience",
+          "historical"
+        ]
+      },
+      {
+        "idea": "perception",
+        "meaning": "has to do with sensing or noticing things",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "eye",
+          "hear",
+          "look",
+          "image",
+          "insight"
+        ]
+      },
+      {
+        "idea": "space",
+        "meaning": "has to do with room or area",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "apartment",
+          "area",
+          "backyard",
+          "depth",
+          "corner"
+        ]
+      },
+      {
+        "idea": "storage",
+        "meaning": "holds things for later use",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "cabinet",
+          "drawer",
+          "folder",
+          "bin",
+          "closet"
+        ]
+      },
+      {
+        "idea": "shape",
+        "meaning": "has to do with the form or outline of something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "circle",
+          "curl",
+          "fold",
+          "arc",
+          "flat"
+        ]
+      },
+      {
+        "idea": "possession",
+        "meaning": "has to do with owning or holding something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "borrow",
+          "claim",
+          "grab",
+          "hold",
+          "inventory"
+        ]
+      },
+      {
+        "idea": "relationship",
+        "meaning": "has to do with how people or things connect",
+        "merges": [
+          "relation",
+          "bond"
+        ],
+        "source": "tally",
+        "examples": [
+          "account",
+          "date",
+          "dad",
+          "uncle",
+          "attachment"
+        ]
+      },
+      {
+        "idea": "direction",
+        "meaning": "shows which way something goes or points",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "ahead",
+          "aim",
+          "compass",
+          "forward",
+          "back"
+        ]
+      },
+      {
+        "idea": "force",
+        "meaning": "pushes, pulls, or resists motion",
+        "merges": [
+          "resistance"
+        ],
+        "source": "tally",
+        "examples": [
+          "brake",
+          "friction",
+          "grip",
+          "press",
+          "strong"
+        ]
+      },
+      {
+        "idea": "protection",
+        "meaning": "shields or guards something from harm",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "apron",
+          "blanket",
+          "cover",
+          "glove",
+          "defensive"
+        ]
+      },
+      {
+        "idea": "size",
+        "meaning": "has to do with how big or small something is",
+        "merges": [
+          "scale"
+        ],
+        "source": "tally",
+        "examples": [
+          "big",
+          "bulk",
+          "large",
+          "narrow",
+          "dimensions"
+        ]
+      },
+      {
+        "idea": "surface",
+        "meaning": "is the outer or top layer of something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "floor",
+          "ground",
+          "gravel",
+          "gloss",
+          "matte"
+        ]
+      },
+      {
+        "idea": "technology",
+        "meaning": "has to do with electronic devices and computing",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "chipset",
+          "dashboard",
+          "digital",
+          "gadget",
+          "backend"
+        ]
+      },
+      {
+        "idea": "design",
+        "meaning": "has to do with planning how something looks or works",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "blueprints",
+          "decor",
+          "decorative",
+          "format",
+          "feature"
+        ]
+      },
+      {
+        "idea": "identity",
+        "meaning": "shows who or what something is",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "badge",
+          "brand",
+          "character",
+          "distinct",
+          "face"
+        ]
+      },
+      {
+        "idea": "support",
+        "meaning": "helps hold up or assist something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "aid",
+          "assist",
+          "backup",
+          "encourage",
+          "handle"
+        ]
+      },
+      {
+        "idea": "liquid",
+        "meaning": "is a flowing wet substance",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "bottle",
+          "drop",
+          "juice",
+          "foam",
+          "leak"
+        ]
+      },
+      {
+        "idea": "value",
+        "meaning": "has to do with how much something is worth",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "cheap",
+          "dollar",
+          "discount",
+          "expensive",
+          "gold"
+        ]
+      },
+      {
+        "idea": "quantity",
+        "meaning": "has to do with how many or how much",
+        "merges": [
+          "number"
+        ],
+        "source": "tally",
+        "examples": [
+          "amount",
+          "batch",
+          "half",
+          "fewer",
+          "eight"
+        ]
+      },
+      {
+        "idea": "boundary",
+        "meaning": "marks the edge or limit of something",
+        "merges": [
+          "limit",
+          "edge"
+        ],
+        "source": "tally",
+        "examples": [
+          "barrier",
+          "fence",
+          "frame",
+          "border",
+          "sharp"
+        ]
+      },
+      {
+        "idea": "memory",
+        "meaning": "has to do with remembering the past",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "childhood",
+          "forget",
+          "nostalgia",
+          "photo",
+          "legacy"
+        ]
+      },
+      {
+        "idea": "system",
+        "meaning": "is a set of rules or methods that work together",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "code",
+          "language",
+          "law",
+          "mechanism",
+          "method"
+        ]
+      },
+      {
+        "idea": "resource",
+        "meaning": "is something available to use or supply",
+        "merges": [
+          "supply"
+        ],
+        "source": "tally",
+        "examples": [
+          "allocate",
+          "available",
+          "grocery",
+          "provide",
+          "refill"
+        ]
+      },
+      {
+        "idea": "degree",
+        "meaning": "shows how much or how strong something is",
+        "merges": [
+          "intensity",
+          "extent"
+        ],
+        "source": "tally",
+        "examples": [
+          "absolutely",
+          "fairly",
+          "overly",
+          "hot",
+          "loud"
+        ]
+      },
+      {
+        "idea": "transaction",
+        "meaning": "involves buying, selling, or exchanging",
+        "merges": [
+          "exchange"
+        ],
+        "source": "tally",
+        "examples": [
+          "buy",
+          "checkout",
+          "deal",
+          "pay",
+          "purchase"
+        ]
+      },
+      {
+        "idea": "purpose",
+        "meaning": "is the reason something is done or made",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "aim",
+          "function",
+          "intent",
+          "meaningful",
+          "errand"
+        ]
+      },
+      {
+        "idea": "sequence",
+        "meaning": "puts things in order, one after another",
+        "merges": [
+          "order"
+        ],
+        "source": "tally",
+        "examples": [
+          "first",
+          "last",
+          "earlier",
+          "align",
+          "priority"
+        ]
+      },
+      {
+        "idea": "attention",
+        "meaning": "has to do with focusing on something",
+        "merges": [
+          "focus"
+        ],
+        "source": "tally",
+        "examples": [
+          "distract",
+          "emphasis",
+          "engage",
+          "highlight",
+          "notice"
+        ]
+      },
+      {
+        "idea": "texture",
+        "meaning": "is how something feels to the touch",
+        "merges": [
+          "touch"
+        ],
+        "source": "tally",
+        "examples": [
+          "crisp",
+          "rough",
+          "smooth",
+          "fluffy",
+          "prickly",
+          "feel",
+          "hug",
+          "soft",
+          "squishy",
+          "stroke"
+        ]
+      },
+      {
+        "idea": "thought",
+        "meaning": "has to do with thinking or ideas",
+        "merges": [
+          "mind"
+        ],
+        "source": "tally",
+        "examples": [
+          "idea",
+          "imagine",
+          "logic",
+          "reflection",
+          "brain"
+        ]
+      },
+      {
+        "idea": "appearance",
+        "meaning": "has to do with how something looks",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "color",
+          "decor",
+          "gloss",
+          "graceful",
+          "lovely"
+        ]
+      },
+      {
+        "idea": "arrangement",
+        "meaning": "is how things are laid out or organized",
+        "merges": [
+          "organization"
+        ],
+        "source": "tally",
+        "examples": [
+          "layer",
+          "layout",
+          "stack",
+          "column",
+          "series",
+          "arrange",
+          "calendar",
+          "checklist",
+          "firm",
+          "folder"
+        ]
+      },
+      {
+        "idea": "creation",
+        "meaning": "is something made or invented",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "art",
+          "build",
+          "invent",
+          "design",
+          "made"
+        ]
+      },
+      {
+        "idea": "reality",
+        "meaning": "is what is actually true or real",
+        "merges": [
+          "truth"
+        ],
+        "source": "tally",
+        "examples": [
+          "actual",
+          "honest",
+          "real",
+          "valid",
+          "confirmation"
+        ]
+      },
+      {
+        "idea": "device",
+        "meaning": "is an electronic gadget or instrument",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "camera",
+          "adapter",
+          "sensor",
+          "smartwatch",
+          "turntable"
+        ]
+      },
+      {
+        "idea": "event",
+        "meaning": "is something that happens at a time",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "arrival",
+          "party",
+          "parade",
+          "instance",
+          "finale"
+        ]
+      },
+      {
+        "idea": "judgment",
+        "meaning": "involves deciding or evaluating something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "appeal",
+          "approval",
+          "compare",
+          "recommend",
+          "mistake"
+        ]
+      },
+      {
+        "idea": "pattern",
+        "meaning": "is a repeated design or trend",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "grid",
+          "groove",
+          "rhythm",
+          "theme",
+          "trend"
+        ]
+      },
+      {
+        "idea": "removal",
+        "meaning": "takes something away or gets rid of it",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "cleanup",
+          "discard",
+          "drain",
+          "eraser",
+          "peel"
+        ]
+      },
+      {
+        "idea": "stability",
+        "meaning": "stays steady, balanced, or unchanging",
+        "merges": [
+          "balance"
+        ],
+        "source": "tally",
+        "examples": [
+          "anchor",
+          "consistent",
+          "steady",
+          "stable",
+          "wobble"
+        ]
+      },
+      {
+        "idea": "trust",
+        "meaning": "can be relied on or believed in",
+        "merges": [
+          "certainty"
+        ],
+        "source": "tally",
+        "examples": [
+          "faith",
+          "reliable",
+          "reputation",
+          "loyal",
+          "sure"
+        ]
+      },
+      {
+        "idea": "decision",
+        "meaning": "is a choice that is made",
+        "merges": [
+          "choice"
+        ],
+        "source": "tally",
+        "examples": [
+          "decide",
+          "choose",
+          "option",
+          "vote",
+          "dilemma"
+        ]
+      },
+      {
+        "idea": "color",
+        "meaning": "has to do with color",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "black",
+          "blue",
+          "dye",
+          "green",
+          "paint"
+        ]
+      },
+      {
+        "idea": "authority",
+        "meaning": "has power to command or decide",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "captain",
+          "command",
+          "officer",
+          "ranger",
+          "title"
+        ]
+      },
+      {
+        "idea": "distance",
+        "meaning": "is how far apart things are",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "apart",
+          "far",
+          "mile",
+          "nearby",
+          "remote"
+        ]
+      },
+      {
+        "idea": "environment",
+        "meaning": "has to do with the surroundings or climate",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "air",
+          "atmosphere",
+          "climate",
+          "humidity",
+          "outdoor"
+        ]
+      },
+      {
+        "idea": "obstacle",
+        "meaning": "is something that blocks or makes things hard",
+        "merges": [
+          "challenge"
+        ],
+        "source": "tally",
+        "examples": [
+          "hurdle",
+          "problem",
+          "difficulty",
+          "snag",
+          "tackle"
+        ]
+      },
+      {
+        "idea": "outcome",
+        "meaning": "is the result of something",
+        "merges": [
+          "result"
+        ],
+        "source": "tally",
+        "examples": [
+          "consequence",
+          "success",
+          "win",
+          "loss",
+          "effect"
+        ]
+      },
+      {
+        "idea": "role",
+        "meaning": "is the job or part someone plays",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "job",
+          "musician",
+          "sailor",
+          "student",
+          "user"
+        ]
+      },
+      {
+        "idea": "skill",
+        "meaning": "is an ability to do something well",
+        "merges": [
+          "capability"
+        ],
+        "source": "tally",
+        "examples": [
+          "craft",
+          "technique",
+          "trade",
+          "practice",
+          "versatility"
+        ]
+      },
+      {
+        "idea": "transition",
+        "meaning": "is a change from one state to another",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "dawn",
+          "merge",
+          "threshold",
+          "flow",
+          "abrupt"
+        ]
+      },
+      {
+        "idea": "access",
+        "meaning": "is the ability to reach or use something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "available",
+          "entry",
+          "key",
+          "open",
+          "unlock"
+        ]
+      },
+      {
+        "idea": "repetition",
+        "meaning": "happens again and again",
+        "merges": [
+          "cycle"
+        ],
+        "source": "tally",
+        "examples": [
+          "daily",
+          "recurring",
+          "repeat",
+          "routine",
+          "loop"
+        ]
+      },
+      {
+        "idea": "separation",
+        "meaning": "divides things apart",
+        "merges": [
+          "division"
+        ],
+        "source": "tally",
+        "examples": [
+          "divide",
+          "split",
+          "fork",
+          "segment",
+          "isolate"
+        ]
+      },
+      {
+        "idea": "mechanism",
+        "meaning": "is a physical part that moves to do a job",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "hinge",
+          "hook",
+          "screw",
+          "spindle",
+          "faucet"
+        ]
+      },
+      {
+        "idea": "plan",
+        "meaning": "is an idea for doing something in the future",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "draft",
+          "outline",
+          "project",
+          "propose",
+          "spec"
+        ]
+      },
+      {
+        "idea": "symbol",
+        "meaning": "stands for or represents something else",
+        "merges": [
+          "representation"
+        ],
+        "source": "tally",
+        "examples": [
+          "arrow",
+          "badge",
+          "flag",
+          "emoji",
+          "sign",
+          "model",
+          "picture",
+          "sketch",
+          "symbol",
+          "describe"
+        ]
+      },
+      {
+        "idea": "timing",
+        "meaning": "has to do with when something happens",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "mid",
+          "prompt",
+          "sync",
+          "occasionally",
+          "staggered"
+        ]
+      },
+      {
+        "idea": "clarity",
+        "meaning": "is how clear or easy to understand something is",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "obvious",
+          "specific",
+          "vague",
+          "visible",
+          "legibility"
+        ]
+      },
+      {
+        "idea": "community",
+        "meaning": "is a group of people living or connected together",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "neighborhood",
+          "town",
+          "village",
+          "public",
+          "household"
+        ]
+      },
+      {
+        "idea": "covering",
+        "meaning": "is a layer that goes over something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "blanket",
+          "carpet",
+          "roof",
+          "rug",
+          "scarf"
+        ]
+      },
+      {
+        "idea": "experience",
+        "meaning": "is something lived through or felt",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "journey",
+          "outing",
+          "tour",
+          "immersion",
+          "scenic"
+        ]
+      },
+      {
+        "idea": "fit",
+        "meaning": "matches or suits something well",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "adapt",
+          "compatible",
+          "suit",
+          "tailor",
+          "tight"
+        ]
+      },
+      {
+        "idea": "frequency",
+        "meaning": "is how often something happens",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "common",
+          "often",
+          "regular",
+          "usually",
+          "twice"
+        ]
+      },
+      {
+        "idea": "fruit",
+        "meaning": "is a fruit",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "apple",
+          "banana",
+          "berry",
+          "cherry",
+          "lemon"
+        ]
+      },
+      {
+        "idea": "meaning",
+        "meaning": "is what something stands for or means",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "context",
+          "define",
+          "message",
+          "sense",
+          "symbol"
+        ]
+      },
+      {
+        "idea": "part",
+        "meaning": "is a piece of something larger",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "item",
+          "piece",
+          "section",
+          "tip",
+          "header"
+        ]
+      },
+      {
+        "idea": "possibility",
+        "meaning": "could happen or be true",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "allow",
+          "future",
+          "likely",
+          "option",
+          "scenario"
+        ]
+      },
+      {
+        "idea": "pressure",
+        "meaning": "is a force pushing or squeezing something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "crowd",
+          "jam",
+          "overload",
+          "push",
+          "squeeze"
+        ]
+      },
+      {
+        "idea": "rule",
+        "meaning": "tells what must or must not be done",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "formula",
+          "law",
+          "policy",
+          "requirement",
+          "standard"
+        ]
+      },
+      {
+        "idea": "strength",
+        "meaning": "is how strong or powerful something is",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "confident",
+          "reinforce",
+          "sturdy",
+          "tough",
+          "steel"
+        ]
+      },
+      {
+        "idea": "text",
+        "meaning": "is written words",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "article",
+          "editor",
+          "label",
+          "paragraph",
+          "poem"
+        ]
+      },
+      {
+        "idea": "absence",
+        "meaning": "is when something is missing or not there",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "away",
+          "dark",
+          "empty",
+          "lack",
+          "silent"
+        ]
+      },
+      {
+        "idea": "achievement",
+        "meaning": "is something accomplished or won",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "complete",
+          "medal",
+          "milestone",
+          "prize",
+          "score"
+        ]
+      },
+      {
+        "idea": "commitment",
+        "meaning": "is a promise to do something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "appointment",
+          "dedicate",
+          "promise",
+          "sacrifice",
+          "engagement"
+        ]
+      },
+      {
+        "idea": "competition",
+        "meaning": "is a contest to win against others",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "chess",
+          "game",
+          "league",
+          "match",
+          "strategy"
+        ]
+      },
+      {
+        "idea": "improvement",
+        "meaning": "makes something better",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "boost",
+          "developer",
+          "optimize",
+          "refine",
+          "smoother"
+        ]
+      },
+      {
+        "idea": "origin",
+        "meaning": "is where something comes from",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "base",
+          "create",
+          "natural",
+          "source",
+          "stem"
+        ]
+      },
+      {
+        "idea": "reason",
+        "meaning": "explains why something happens",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "cause",
+          "explanation",
+          "justify",
+          "motivation",
+          "logic"
+        ]
+      },
+      {
+        "idea": "search",
+        "meaning": "looks for something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "browse",
+          "dig",
+          "discover",
+          "explore",
+          "hunt"
+        ]
+      },
+      {
+        "idea": "story",
+        "meaning": "tells about events, real or made up",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "documentary",
+          "drama",
+          "narrative",
+          "plot",
+          "scene"
+        ]
+      },
+      {
+        "idea": "style",
+        "meaning": "is a particular way something looks or is done",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "cool",
+          "formal",
+          "modern",
+          "vintage",
+          "minimalist"
+        ]
+      },
+      {
+        "idea": "uncertainty",
+        "meaning": "is not knowing for sure",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "ambiguity",
+          "guess",
+          "question",
+          "risk",
+          "unpredictability"
+        ]
+      },
+      {
+        "idea": "conflict",
+        "meaning": "is a fight or disagreement",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "anger",
+          "clash",
+          "feud",
+          "row",
+          "strike"
+        ]
+      },
+      {
+        "idea": "behavior",
+        "meaning": "is how someone acts",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "habit",
+          "friendly",
+          "playful",
+          "polite",
+          "typically"
+        ]
+      },
+      {
+        "idea": "effort",
+        "meaning": "is hard work put into doing something",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "labor",
+          "strain",
+          "struggle",
+          "try",
+          "achieve"
+        ]
+      },
+      {
+        "idea": "growth",
+        "meaning": "is getting bigger or developing over time",
+        "merges": [],
+        "source": "tally",
+        "examples": [
+          "bloom",
+          "expand",
+          "sprout",
+          "thrive",
+          "tree"
+        ]
+      }
+    ],
+    "dropped": [
+      {
+        "candidate": "feeling",
+        "reason": "duplicates approved emotion"
+      },
+      {
+        "candidate": "transport",
+        "reason": "duplicates approved transportation"
+      },
+      {
+        "candidate": "body_part",
+        "reason": "duplicates approved body"
+      },
+      {
+        "candidate": "heat",
+        "reason": "duplicates approved hot"
+      },
+      {
+        "candidate": "temperature",
+        "reason": "duplicates approved hot and cold"
+      },
+      {
+        "candidate": "creature",
+        "reason": "duplicates approved animal"
+      },
+      {
+        "candidate": "path",
+        "reason": "duplicates approved road"
+      },
+      {
+        "candidate": "day",
+        "reason": "too narrow, duplicates approved time"
+      },
+      {
+        "candidate": "duration",
+        "reason": "duplicates approved time"
+      },
+      {
+        "candidate": "smallness",
+        "reason": "duplicates approved small"
+      },
+      {
+        "candidate": "activity",
+        "reason": "overlaps with action and play"
+      },
+      {
+        "candidate": "function",
+        "reason": "overlaps with fit and skill"
+      },
+      {
+        "candidate": "power",
+        "reason": "overlaps with approved energy, control, and force"
+      },
+      {
+        "candidate": "importance",
+        "reason": "reviewer: left out, not needed for a first run"
+      }
+    ]
+  },
+  "review_edits": [
+    "system and mechanism had the same meaning; reworded both",
+    "representation merged into symbol",
+    "organization merged into arrangement",
+    "touch merged into texture",
+    "importance, missed by the draft, dropped"
+  ]
+}

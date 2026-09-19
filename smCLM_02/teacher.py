@@ -12,8 +12,14 @@ things phase 1 of docs/engineering/plans/smCLM_02.md needs on top:
     vocabulary is ordered, and how a run is cut into resumable batches.
 
 The default endpoint is Ministral 8B on the PC. `--provider openai` switches to OpenAI's
-Chat Completions API, reads the key only from `OPENAI_API_KEY`, and applies a software spend cap.
-Nothing here downloads anything, and API keys are never written to the request log.
+Chat Completions API and reads the key only from `OPENAI_API_KEY`; `--provider kimi` switches to
+Moonshot's `kimi-k2.6` with thinking off and reads the key only from `KIMI_API_KEY`. Both paid
+providers get a software spend cap. Nothing here downloads anything, and API keys are never written
+to the request log.
+
+`ask()` is safe to call from several threads at once: log writes are serialised, and the spend cap
+is an in-memory ledger that reserves each call's worst case before it's sent, so parallel calls
+can't all see "under budget" at the same moment.
 
     python3 teacher.py --dry-run          # print the body of one small call, post nothing
 """
@@ -23,6 +29,7 @@ import json
 import os
 from pathlib import Path
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -38,9 +45,16 @@ OPENAI_DEFAULT_BUDGET_USD = 0.25
 
 # Standard, short-context prices per million tokens. The cap deliberately charges every input
 # token at the full (not cached) rate, so caching can only make the real bill smaller.
-OPENAI_PRICES = {
+PRICES = {
     "gpt-5.6-luna": {"input": 0.20, "output": 1.20},
+    "kimi-k2.6": {"input": 0.95, "output": 4.00},
+    "kimi-k3": {"input": 3.00, "output": 15.00},
 }
+OPENAI_PRICES = PRICES  # the old name, kept for callers that still use it
+PAID = ("openai", "kimi")
+KIMI_ENDPOINT = "https://api.moonshot.ai"
+KIMI_MODEL = "kimi-k2.6"
+_WRITE = threading.Lock()
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
@@ -67,10 +81,12 @@ class BudgetExceeded(RuntimeError):
 
 def append_jsonl(path, item):
     path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a") as handle:
-        handle.write(json.dumps(item, ensure_ascii=False, separators=(",", ":")) + "\n")
-        handle.flush()
+    line = json.dumps(item, ensure_ascii=False, separators=(",", ":")) + "\n"
+    with _WRITE:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a") as handle:
+            handle.write(line)
+            handle.flush()
 
 
 def read_jsonl(path):
@@ -186,8 +202,8 @@ def post_json(url, body, timeout=900, headers=None):
 class Teacher:
     def __init__(self, endpoint, model, log_path, retries=3, dry_run=False, provider="pc",
                  api_key=None, max_budget_usd=None):
-        if provider not in ("pc", "openai"):
-            raise ValueError("provider must be 'pc' or 'openai'")
+        if provider not in ("pc",) + PAID:
+            raise ValueError("provider must be 'pc', 'openai' or 'kimi'")
         self.endpoint = endpoint.rstrip("/")
         self.model = model
         self.log_path = Path(log_path)
@@ -196,18 +212,21 @@ class Teacher:
         self.provider = provider
         self.api_key = api_key
         self.max_budget_usd = max_budget_usd
+        self._ledger = threading.Lock()
+        self._spent = None  # read from the log once, then kept in memory
+        self._reserved = 0.0
 
     def completion_url(self):
         suffix = "/chat/completions" if self.endpoint.endswith("/v1") else "/v1/chat/completions"
         return self.endpoint + suffix
 
     def request_headers(self):
-        if self.provider == "openai":
+        if self.provider in PAID and self.api_key:
             return {"Authorization": "Bearer " + self.api_key}
         return None
 
     def prices(self):
-        for name, prices in OPENAI_PRICES.items():
+        for name, prices in PRICES.items():
             if self.model == name or self.model.startswith(name + "-"):
                 return prices
         raise ValueError(
@@ -215,7 +234,7 @@ class Teacher:
 
     def usage_cost(self, usage):
         """Charge a Chat Completions usage record at the configured full-token rates."""
-        if self.provider != "openai" or not usage:
+        if self.provider not in PAID or not usage:
             return 0.0
         prices = self.prices()
         input_tokens = int(usage.get("prompt_tokens", usage.get("input_tokens", 0)) or 0)
@@ -224,13 +243,12 @@ class Teacher:
                      9)
 
     def logged_cost(self):
-        """Cost already recorded in this run log. Calls are sequential, so this is the ledger."""
-        total = 0.0
-        for row in read_jsonl(self.log_path):
-            value = row.get("cost_usd")
-            if isinstance(value, (int, float)):
-                total += value
-        return total
+        """Cost already recorded in this run log, read from disk once and then kept in memory."""
+        with self._ledger:
+            if self._spent is None:
+                self._spent = sum(row["cost_usd"] for row in read_jsonl(self.log_path)
+                                  if isinstance(row.get("cost_usd"), (int, float)))
+            return self._spent
 
     def worst_case_cost(self, body):
         """Conservative upper bound for the next call, used before a socket is opened.
@@ -244,14 +262,26 @@ class Teacher:
         return (input_tokens * prices["input"] + output_tokens * prices["output"]) / 1_000_000
 
     def check_budget(self, body):
-        if self.provider != "openai" or self.max_budget_usd is None:
-            return
+        """Reserve this call's worst case, or refuse. Returns the reservation to settle afterwards."""
+        if self.provider not in PAID or self.max_budget_usd is None:
+            return 0.0
         spent = self.logged_cost()
         reserve = self.worst_case_cost(body)
-        if spent + reserve > self.max_budget_usd:
-            raise BudgetExceeded(
-                "OpenAI spend cap would be crossed: $%.6f logged + $%.6f maximum next call > "
-                "$%.6f cap" % (spent, reserve, self.max_budget_usd))
+        with self._ledger:
+            if spent + self._reserved + reserve > self.max_budget_usd:
+                raise BudgetExceeded(
+                    "%s spend cap would be crossed: $%.6f logged + $%.6f in flight + $%.6f maximum "
+                    "next call > $%.6f cap" % (self.provider, spent, self._reserved, reserve,
+                                               self.max_budget_usd))
+            self._reserved += reserve
+        return reserve
+
+    def settle(self, reserve, cost):
+        """Swap a call's reservation for what it actually cost."""
+        with self._ledger:
+            self._reserved -= reserve
+            if self._spent is not None:
+                self._spent += cost
 
     def body(self, kind, system, prompt, schema, seed, temperature, max_tokens):
         """The request, built but not sent. A dry run prints this; `ask` posts it."""
@@ -271,6 +301,11 @@ class Teacher:
             # GPT-5 family models use max_completion_tokens and reasoning_effort. Omitting
             # temperature/seed also keeps this body compatible with reasoning models.
             body.update({"max_completion_tokens": max_tokens, "reasoning_effort": "none"})
+        elif self.provider == "kimi":
+            # kimi-k2.6 thinks by default: 2,811 hidden tokens and 75 s for ten sentences, measured
+            # 2026-09-19, against 188 tokens and 6 s with it off. It only accepts temperature 1,
+            # and takes no seed, so both are left out and the sampling is the server's.
+            body.update({"max_tokens": max_tokens, "thinking": {"type": "disabled"}})
         else:
             body.update({
                 "temperature": temperature,
@@ -291,19 +326,19 @@ class Teacher:
                 "sent": False,
                 "ok": False,
                 "dry_run": True,
-                "provider": self.provider,
-                "endpoint": self.endpoint,
+                "provider": self.provider,  # not the endpoint: it's a LAN address, and this log is published
                 "body": body,
             })
             raise DryRun(body)
-        if self.provider == "openai" and not self.api_key:
+        if self.provider in PAID and not self.api_key:
             raise RuntimeError(
-                "OPENAI_API_KEY is not set. Install a fresh key locally; do not reuse a key "
-                "that was pasted into chat.")
+                "%s is not set. Install a fresh key locally; do not reuse a key "
+                "that was pasted into chat." % ("OPENAI_API_KEY" if self.provider == "openai"
+                                                else "KIMI_API_KEY"))
         last_error = None
         for attempt in range(1, self.retries + 1):
             try:
-                self.check_budget(body)
+                reserve = self.check_budget(body)
             except BudgetExceeded as exc:
                 append_jsonl(self.log_path, {
                     "kind": kind,
@@ -320,9 +355,11 @@ class Teacher:
                 raise
             started = time.time()
             data = None
+            cost = 0.0
             try:
-                if self.provider == "openai":
-                    data = post_json(self.completion_url(), body, headers=self.request_headers())
+                headers = self.request_headers()
+                if headers:
+                    data = post_json(self.completion_url(), body, headers=headers)
                 else:
                     data = post_json(self.completion_url(), body)
                 text = str(data["choices"][0]["message"]["content"])
@@ -345,12 +382,12 @@ class Teacher:
                     "sent": True,
                     "ok": True,
                 }
-                if self.provider == "openai":
-                    row["cost_usd"] = self.usage_cost(usage)
+                if self.provider in PAID:
+                    cost = row["cost_usd"] = self.usage_cost(usage)
                     row["budget_usd"] = self.max_budget_usd
                 append_jsonl(self.log_path, row)
                 return parsed
-            except (KeyError, IndexError, TypeError, ValueError, urllib.error.URLError) as exc:
+            except (KeyError, IndexError, TypeError, ValueError, OSError) as exc:
                 last_error = exc
                 usage = data.get("usage") or {} if isinstance(data, dict) else {}
                 row = {
@@ -367,24 +404,27 @@ class Teacher:
                 }
                 if usage:
                     row["usage"] = usage
-                if self.provider == "openai":
-                    row["cost_usd"] = self.usage_cost(usage)
+                if self.provider in PAID:
+                    cost = row["cost_usd"] = self.usage_cost(usage)
                     row["budget_usd"] = self.max_budget_usd
                 append_jsonl(self.log_path, row)
                 if attempt < self.retries:
-                    time.sleep(min(2 ** attempt, 8))
+                    limited = isinstance(exc, urllib.error.HTTPError) and exc.code == 429
+                    time.sleep(10 * attempt if limited else min(2 ** attempt, 8))
+            finally:
+                self.settle(reserve, cost)
         raise RuntimeError("teacher failed after %d attempts: %s" % (self.retries, last_error))
 
 
 def add_teacher_arguments(parser):
     """The flags every phase 1 script shares. `--dry-run` is the default nowhere; it's always typed."""
-    parser.add_argument("--provider", choices=("pc", "openai"), default="pc")
+    parser.add_argument("--provider", choices=("pc",) + PAID, default="pc")
     parser.add_argument("--endpoint", default=None,
                         help="override the provider endpoint (normally leave this unset)")
     parser.add_argument("--model", default=None,
                         help="override the provider model (normally leave this unset)")
     parser.add_argument("--max-budget-usd", type=float, default=OPENAI_DEFAULT_BUDGET_USD,
-                        help="OpenAI software spend cap across this log (default: $0.25)")
+                        help="paid-provider spend cap across this log (default: $0.25)")
     parser.add_argument("--retries", type=int, default=3)
     parser.add_argument("--dry-run", action="store_true",
                         help="build every request and show the plan, but post nothing")
@@ -400,6 +440,11 @@ def teacher_from(args, log):
         endpoint = args.endpoint or OPENAI_ENDPOINT
         model = args.model or OPENAI_MODEL
         api_key = os.environ.get("OPENAI_API_KEY")
+        budget = args.max_budget_usd
+    elif args.provider == "kimi":
+        endpoint = args.endpoint or KIMI_ENDPOINT
+        model = args.model or KIMI_MODEL
+        api_key = os.environ.get("KIMI_API_KEY")
         budget = args.max_budget_usd
     else:
         endpoint = args.endpoint or DEFAULT_ENDPOINT

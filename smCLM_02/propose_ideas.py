@@ -29,7 +29,12 @@ from teacher import (DATA, IDEAS, DryRun, add_teacher_arguments, append_jsonl, b
 
 
 KIND = "idea_proposals"
-PROMPT_VERSION = "reuse_v2"
+# open_v3 (2026-09-19). reuse_v2 showed the teacher the approved inventory and said "usually use
+# it". Tuned on OpenAI, it made Ministral 8B cram words into the 51 old ideas: on the same 3 batches
+# (60 words) it proposed 9 new ideas against open_v3's 93, and filed triangle under art and
+# detective under danger. Open is the safer way to be wrong: a narrow idea drops out of the tally
+# at under 8 words, a missing one never shows up. Evidence: data/logs/prompt_ab_2026-09-19/.
+PROMPT_VERSION = "open_v3"
 SEED = 15001
 BATCH = 20
 TEMPERATURE = 0.7
@@ -51,15 +56,11 @@ An idea is a broad, reusable category that many different words share, like heal
 danger, family, food, person, place, action or feeling. It is never a definition of the word and
 never a synonym of it.
 
-The approved inventory is below. Prefer these exact names whenever they plausibly fit:
-{inventory}
-
 Rules:
 - Give 1 to {max_ideas} ideas per word, most important first.
-- Usually use approved ideas. Invent a new idea only when the word's core ordinary meaning is not
-  represented above.
-- A new idea must be broad enough to fit at least 8 different words in a 2,500-word vocabulary.
-  If it mainly fits this word, one word family, or one narrow object, do not invent it.
+- Name what the word is really about. Do not force a word into a category that only loosely fits.
+- Every idea must be broad enough to fit at least 8 different words in a 2,500-word vocabulary.
+  If it mainly fits this word, one word family, or one narrow object, do not use it.
 - Use one shared name for related meanings. Do not create near-synonyms or grammatical variants.
 - Each idea is one lowercase English word, or two joined by an underscore. No spaces, no phrases.
 - Reuse the same idea name across words wherever it fits. That is the whole point.
@@ -147,11 +148,14 @@ def check(answer, words, self_ideas=ROLE_IDEAS):
     return proposals, None
 
 
-def done_batches(log_path):
-    """{batch index: {word: [idea, ...]}} for the batches already answered."""
+def done_batches(log_path, version=PROMPT_VERSION):
+    """{batch index: {word: [idea, ...]}} for the batches already answered with this prompt.
+
+    A batch answered under another prompt version is asked again rather than mixed into the tally.
+    """
     done = {}
     for row in read_jsonl(log_path):
-        if row.get("ok") and row.get("batch") is not None:
+        if row.get("ok") and row.get("batch") is not None and row.get("prompt_version") == version:
             done[int(row["batch"])] = row["proposals"]
     return done
 
@@ -204,7 +208,7 @@ def main():
     parser = add_teacher_arguments(argparse.ArgumentParser(description=__doc__))
     parser.add_argument("--vocabulary", default=None)
     parser.add_argument("--ideas", default=str(IDEAS),
-                        help="approved inventory to show the teacher before it proposes additions")
+                        help="approved inventory; its names may equal the word they tag (action -> action)")
     parser.add_argument("--log", default=str(LOG))
     parser.add_argument("--out", default=str(TALLY))
     parser.add_argument("--batch-size", type=int, default=BATCH)

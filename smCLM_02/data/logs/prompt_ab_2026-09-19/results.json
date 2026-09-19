@@ -1,0 +1,888 @@
+{
+ "v1_open": {
+  "desk": [
+   "place",
+   "work",
+   "object",
+   "surface"
+  ],
+  "despite": [
+   "condition",
+   "contrast",
+   "relationship",
+   "obstacle",
+   "connection"
+  ],
+  "destination": [
+   "place",
+   "goal",
+   "end",
+   "direction",
+   "journey"
+  ],
+  "detail": [
+   "part",
+   "information",
+   "description",
+   "small",
+   "focus"
+  ],
+  "detective": [
+   "person",
+   "investigation",
+   "inquiry",
+   "problem_solver"
+  ],
+  "detergent": [
+   "cleaning",
+   "chemical",
+   "substance",
+   "removal",
+   "surface"
+  ],
+  "determine": [
+   "action",
+   "decision",
+   "find_out",
+   "resolve"
+  ],
+  "detour": [
+   "journey",
+   "path",
+   "direction",
+   "change",
+   "route"
+  ],
+  "developer": [
+   "person",
+   "building",
+   "construction",
+   "software",
+   "creation"
+  ],
+  "device": [
+   "object",
+   "mechanism",
+   "tool",
+   "technology",
+   "purpose"
+  ],
+  "dialogue": [
+   "communication",
+   "conversation",
+   "exchange",
+   "speech"
+  ],
+  "diameter": [
+   "measurement",
+   "size",
+   "shape",
+   "distance",
+   "circle"
+  ],
+  "dictionary": [
+   "information",
+   "language",
+   "source",
+   "knowledge",
+   "word"
+  ],
+  "diesel": [
+   "fuel",
+   "energy",
+   "engine",
+   "machine",
+   "transport"
+  ],
+  "difference": [
+   "comparison",
+   "variation",
+   "distinction",
+   "change",
+   "quality"
+  ],
+  "different": [
+   "variation",
+   "distinction",
+   "comparison",
+   "quality",
+   "change"
+  ],
+  "differently": [
+   "manner",
+   "way",
+   "variation",
+   "change"
+  ],
+  "difficulty": [
+   "challenge",
+   "problem",
+   "effort",
+   "obstacle",
+   "struggle"
+  ],
+  "dig": [
+   "action",
+   "earth",
+   "search",
+   "excavation",
+   "effort"
+  ],
+  "digital": [
+   "technology",
+   "information",
+   "coding",
+   "representation",
+   "computation"
+  ],
+  "nest": [
+   "place",
+   "home",
+   "protection",
+   "reproduction"
+  ],
+  "net": [
+   "object",
+   "trap",
+   "measurement",
+   "catching"
+  ],
+  "neutral": [
+   "balance",
+   "color",
+   "position",
+   "state"
+  ],
+  "newer": [
+   "time",
+   "comparison",
+   "progress",
+   "generation"
+  ],
+  "newspaper": [
+   "information",
+   "print",
+   "media",
+   "current_events"
+  ],
+  "nice": [
+   "feeling",
+   "manner",
+   "approval",
+   "appearance"
+  ],
+  "niche": [
+   "place",
+   "market",
+   "fit",
+   "specialization"
+  ],
+  "night": [
+   "time",
+   "darkness",
+   "sleep",
+   "rest"
+  ],
+  "nod": [
+   "action",
+   "agreement",
+   "movement",
+   "communication"
+  ],
+  "noise": [
+   "sound",
+   "interference",
+   "loudness",
+   "disturbance"
+  ],
+  "noisy": [
+   "sound",
+   "disturbance",
+   "loudness",
+   "quality"
+  ],
+  "non": [
+   "prefix",
+   "negation",
+   "category",
+   "comparison"
+  ],
+  "none": [
+   "quantity",
+   "negation",
+   "total",
+   "selection"
+  ],
+  "noodles": [
+   "food",
+   "carbohydrate",
+   "cooked",
+   "shaped"
+  ],
+  "nook": [
+   "place",
+   "corner",
+   "hiding",
+   "spot"
+  ],
+  "noon": [
+   "time",
+   "day",
+   "midpoint",
+   "sun_position"
+  ],
+  "nose": [
+   "body_part",
+   "smell",
+   "face",
+   "shape"
+  ],
+  "nostalgia": [
+   "feeling",
+   "memory",
+   "past",
+   "sentiment"
+  ],
+  "nostalgic": [
+   "feeling",
+   "memory",
+   "past",
+   "sentiment"
+  ],
+  "note": [
+   "information",
+   "music",
+   "reminder",
+   "writing"
+  ],
+  "transparent": [
+   "light",
+   "see",
+   "clear"
+  ],
+  "transport": [
+   "move",
+   "thing",
+   "vehicle",
+   "place"
+  ],
+  "trap": [
+   "danger",
+   "capture",
+   "place"
+  ],
+  "trash": [
+   "waste",
+   "thing",
+   "disposal"
+  ],
+  "travel": [
+   "move",
+   "place",
+   "journey",
+   "time"
+  ],
+  "tray": [
+   "thing",
+   "hold",
+   "flat"
+  ],
+  "treasure": [
+   "value",
+   "hidden",
+   "thing"
+  ],
+  "treat": [
+   "food",
+   "care",
+   "person",
+   "action"
+  ],
+  "tree": [
+   "nature",
+   "plant",
+   "grow"
+  ],
+  "trend": [
+   "time",
+   "group",
+   "change"
+  ],
+  "trial": [
+   "test",
+   "legal",
+   "challenge"
+  ],
+  "triangle": [
+   "shape",
+   "math",
+   "thing"
+  ],
+  "tricky": [
+   "difficult",
+   "challenge"
+  ],
+  "trigger": [
+   "action",
+   "start",
+   "mechanism"
+  ],
+  "trim": [
+   "shape",
+   "cut",
+   "clean"
+  ],
+  "trip": [
+   "move",
+   "place",
+   "stumble"
+  ],
+  "truck": [
+   "vehicle",
+   "move",
+   "thing"
+  ],
+  "true": [
+   "fact",
+   "belief",
+   "correct"
+  ],
+  "trumpet": [
+   "music",
+   "sound",
+   "thing"
+  ],
+  "trunk": [
+   "thing",
+   "hold",
+   "animal_body"
+  ]
+ },
+ "v2_reuse": {
+  "desk": [
+   "container",
+   "place",
+   "work"
+  ],
+  "despite": [
+   "emotion",
+   "communication"
+  ],
+  "destination": [
+   "place",
+   "transportation"
+  ],
+  "detail": [
+   "learning",
+   "art"
+  ],
+  "detective": [
+   "person",
+   "danger",
+   "work"
+  ],
+  "detergent": [
+   "tool",
+   "plant",
+   "food"
+  ],
+  "determine": [
+   "work",
+   "control"
+  ],
+  "detour": [
+   "road",
+   "transportation"
+  ],
+  "developer": [
+   "person",
+   "work",
+   "building"
+  ],
+  "device": [
+   "machine",
+   "tool",
+   "electrical"
+  ],
+  "dialogue": [
+   "communication",
+   "learning"
+  ],
+  "diameter": [
+   "measurement",
+   "geometry"
+  ],
+  "dictionary": [
+   "learning",
+   "communication"
+  ],
+  "diesel": [
+   "energy",
+   "machine"
+  ],
+  "difference": [
+   "measurement",
+   "learning"
+  ],
+  "different": [
+   "learning",
+   "communication"
+  ],
+  "differently": [
+   "learning",
+   "communication"
+  ],
+  "difficulty": [
+   "danger",
+   "learning"
+  ],
+  "dig": [
+   "tool",
+   "work",
+   "earth"
+  ],
+  "digital": [
+   "communication",
+   "technology",
+   "learning"
+  ],
+  "nest": [
+   "place",
+   "home",
+   "animal"
+  ],
+  "net": [
+   "tool",
+   "container",
+   "transportation"
+  ],
+  "neutral": [
+   "emotion",
+   "place",
+   "control"
+  ],
+  "newer": [
+   "time",
+   "money"
+  ],
+  "newspaper": [
+   "communication",
+   "people",
+   "place"
+  ],
+  "nice": [
+   "emotion",
+   "health"
+  ],
+  "niche": [
+   "place",
+   "people"
+  ],
+  "night": [
+   "time",
+   "sky"
+  ],
+  "nod": [
+   "action",
+   "communication"
+  ],
+  "noise": [
+   "sound",
+   "danger"
+  ],
+  "noisy": [
+   "sound",
+   "danger"
+  ],
+  "non": [
+   "control"
+  ],
+  "none": [
+   "place",
+   "counting"
+  ],
+  "noodles": [
+   "food",
+   "container"
+  ],
+  "nook": [
+   "place",
+   "building"
+  ],
+  "noon": [
+   "time"
+  ],
+  "nose": [
+   "body",
+   "animal"
+  ],
+  "nostalgia": [
+   "emotion",
+   "time"
+  ],
+  "nostalgic": [
+   "emotion",
+   "time"
+  ],
+  "note": [
+   "communication",
+   "music"
+  ],
+  "transparent": [
+   "light",
+   "material"
+  ],
+  "transport": [
+   "transportation"
+  ],
+  "trap": [
+   "danger",
+   "container"
+  ],
+  "trash": [
+   "container"
+  ],
+  "travel": [
+   "transportation",
+   "place"
+  ],
+  "tray": [
+   "container",
+   "food"
+  ],
+  "treasure": [
+   "money"
+  ],
+  "treat": [
+   "food",
+   "treat_reward_or_favor"
+  ],
+  "tree": [
+   "plant",
+   "nature",
+   "place"
+  ],
+  "trend": [
+   "learning"
+  ],
+  "trial": [
+   "danger",
+   "work"
+  ],
+  "triangle": [
+   "art"
+  ],
+  "tricky": [
+   "danger"
+  ],
+  "trigger": [
+   "control",
+   "danger"
+  ],
+  "trim": [
+   "tool",
+   "control"
+  ],
+  "trip": [
+   "transportation",
+   "play"
+  ],
+  "truck": [
+   "vehicle",
+   "transportation",
+   "control"
+  ],
+  "true": [
+   "learning"
+  ],
+  "trumpet": [
+   "music",
+   "sound"
+  ],
+  "trunk": [
+   "container",
+   "animal"
+  ]
+ },
+ "v3_open_broad": {
+  "desk": [
+   "place",
+   "object",
+   "work"
+  ],
+  "despite": [
+   "reason",
+   "obstacle",
+   "opposition"
+  ],
+  "destination": [
+   "place",
+   "goal",
+   "path"
+  ],
+  "detail": [
+   "part",
+   "information",
+   "focus"
+  ],
+  "detective": [
+   "person",
+   "investigation",
+   "truth"
+  ],
+  "detergent": [
+   "substance",
+   "cleaning",
+   "chemistry"
+  ],
+  "determine": [
+   "action",
+   "decision",
+   "knowledge"
+  ],
+  "detour": [
+   "path",
+   "route",
+   "change"
+  ],
+  "developer": [
+   "person",
+   "creation",
+   "technology"
+  ],
+  "device": [
+   "object",
+   "tool",
+   "technology"
+  ],
+  "dialogue": [
+   "communication",
+   "conversation",
+   "exchange"
+  ],
+  "diameter": [
+   "measurement",
+   "size",
+   "shape"
+  ],
+  "dictionary": [
+   "information",
+   "language",
+   "reference"
+  ],
+  "diesel": [
+   "fuel",
+   "energy",
+   "machine"
+  ],
+  "difference": [
+   "comparison",
+   "variation",
+   "identity"
+  ],
+  "different": [
+   "comparison",
+   "identity",
+   "variation"
+  ],
+  "differently": [
+   "way",
+   "comparison",
+   "method"
+  ],
+  "difficulty": [
+   "challenge",
+   "obstacle",
+   "effort"
+  ],
+  "dig": [
+   "action",
+   "search",
+   "earth"
+  ],
+  "digital": [
+   "technology",
+   "information",
+   "representation"
+  ],
+  "nest": [
+   "home",
+   "protection"
+  ],
+  "net": [
+   "container",
+   "capture"
+  ],
+  "neutral": [
+   "balance",
+   "state"
+  ],
+  "newer": [
+   "time",
+   "progress"
+  ],
+  "newspaper": [
+   "information",
+   "text"
+  ],
+  "nice": [
+   "judgment",
+   "pleasure"
+  ],
+  "niche": [
+   "space",
+   "specialization"
+  ],
+  "night": [
+   "time",
+   "darkness"
+  ],
+  "nod": [
+   "movement",
+   "agreement"
+  ],
+  "noise": [
+   "sound",
+   "disturbance"
+  ],
+  "noisy": [
+   "sound",
+   "disturbance"
+  ],
+  "non": [
+   "negation",
+   "absence"
+  ],
+  "none": [
+   "quantity",
+   "negation"
+  ],
+  "noodles": [
+   "food",
+   "shape"
+  ],
+  "nook": [
+   "space",
+   "seclusion"
+  ],
+  "noon": [
+   "time"
+  ],
+  "nose": [
+   "body_part",
+   "sense"
+  ],
+  "nostalgia": [
+   "memory",
+   "emotion"
+  ],
+  "nostalgic": [
+   "memory",
+   "emotion"
+  ],
+  "note": [
+   "information",
+   "sound"
+  ],
+  "transparent": [
+   "light",
+   "material",
+   "visibility"
+  ],
+  "transport": [
+   "movement",
+   "vehicle",
+   "transfer"
+  ],
+  "trap": [
+   "danger",
+   "object",
+   "deception"
+  ],
+  "trash": [
+   "waste",
+   "discard",
+   "contaminant"
+  ],
+  "travel": [
+   "movement",
+   "journey",
+   "displacement"
+  ],
+  "tray": [
+   "container",
+   "surface",
+   "support"
+  ],
+  "treasure": [
+   "value",
+   "possession",
+   "wealth"
+  ],
+  "treat": [
+   "action",
+   "food",
+   "care"
+  ],
+  "tree": [
+   "plant",
+   "structure",
+   "nature"
+  ],
+  "trend": [
+   "pattern",
+   "change",
+   "culture"
+  ],
+  "trial": [
+   "test",
+   "challenge",
+   "judgment"
+  ],
+  "triangle": [
+   "shape",
+   "geometry",
+   "structure"
+  ],
+  "tricky": [
+   "challenge",
+   "difficulty",
+   "deception"
+  ],
+  "trigger": [
+   "activation",
+   "mechanism",
+   "action"
+  ],
+  "trim": [
+   "cutting",
+   "shape",
+   "maintenance"
+  ],
+  "trip": [
+   "movement",
+   "journey",
+   "mistake"
+  ],
+  "truck": [
+   "vehicle",
+   "transport",
+   "load"
+  ],
+  "true": [
+   "fact",
+   "truth",
+   "accuracy"
+  ],
+  "trumpet": [
+   "instrument",
+   "sound",
+   "horn"
+  ],
+  "trunk": [
+   "container",
+   "body_part",
+   "tree"
+  ]
+ }
+}

@@ -1,0 +1,53 @@
+# Phase 2 gate: 50 random teacher sentences (seed 20260919), read by the owner 2026-09-19.
+# Result: 0 of 50 wrong or nonsense (limit 5). PASS.
+
+ 1. He laughed and said only a fairy could have organized such a perfect surprise.
+ 2. My grandmother loves to chat with her neighbors every morning over coffee.
+ 3. This insurance plan has two tiers depending on your annual income.
+ 4. Overcomplicating your explanation only confused the new employees more.
+ 5. Without visual cues, it becomes difficult to judge distances accurately.
+ 6. He always uses softer language when correcting his students to avoid hurting their feelings.
+ 7. After the storm, gravel covered what used to be our lawn.
+ 8. I was surprised by the sheer quantity of emails waiting in my inbox this morning.
+ 9. My grandmother was tying bundles of herbs to hang in her kitchen.
+10. She bought a silk robe for her sister's wedding day.
+11. She prefers the newer recipes because they use healthier ingredients.
+12. After weeks of reflection, Maya finally decided to change careers completely.
+13. The museum occasionally hosts free concerts featuring local jazz musicians on Friday evenings.
+14. The architect spread the blueprints across the table so the clients could see the layout.
+15. The junior varsity basketball team celebrated their unexpected championship victory.
+16. Engineers are designing a new battery that charges in just five minutes.
+17. After thirty years, his faithfulness to that small neighborhood church finally received recognition.
+18. He stuffed the crumpled twenty-dollar bill into his back pocket.
+19. Scanning the crowd for my friend took longer than I expected.
+20. Ancient paintings cover the walls of this remote cave.
+21. Washing machines rely on an agitator to clean clothes thoroughly.
+22. My daughter struggled with algebra until she found a patient tutor who explained variables clearly.
+23. The bartender put my drink on my tab without asking.
+24. The team has several milestones to complete before the product launch.
+25. Smoke rose in a dark column from the distant fire.
+26. Scientists discovered that a single whale can consume up to four tons of krill per day.
+27. The children counted seconds between the lightning and thunder to gauge distance.
+28. Parking in that alley will get your car towed by morning.
+29. She had visited Paris once prior to moving there last year.
+30. The travel blog features accounts from backpackers across Southeast Asia.
+31. Street art transformed this once-grim neighborhood into a vibrant tourist destination.
+32. My introduction to jazz came from my grandfather's old vinyl collection.
+33. Finding a twenty-dollar bill in his jacket pocket made Tom incredibly happy.
+34. The old dog would always tug his leash toward the park entrance.
+35. Clamping down on spending helped the family save for their vacation.
+36. Tired children sat with drawn faces during the long flight delay.
+37. Before the storm hits, we should test the backup generator in the basement.
+38. After three revisions, her thesis finally reached an acceptable standard for publication.
+39. He nervously checked over his shoulder as he walked through the dark alley alone.
+40. The teacher's inspection of our lab notebooks revealed several calculation errors.
+41. Children learn to read visually before they understand phonics.
+42. The backend server crashed right before our big product launch yesterday.
+43. The children became more adventurous after building confidence at summer camp.
+44. Doing business in multiple countries requires understanding many different cultural norms.
+45. For many couples, adopting a pet together becomes an unexpected relationship milestone.
+46. The artist's latest installation challenges our concept of what constitutes a home.
+47. The nurse will monitor your heart rate throughout the night.
+48. The artist applied each stroke of the brush with deliberate care and precision.
+49. She explained that cooking at home is cheaper than ordering delivery every night.
+50. His collection of stackable cookware impressed everyone at the dinner party.
