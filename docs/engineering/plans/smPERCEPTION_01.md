@@ -1,8 +1,8 @@
 # smPERCEPTION_01 plan: a small Perception module, requested by lamRD
 
 **Status: a request from lamRD, and a plan. Nothing here is built.** Written 2026-09-19 by the lamRD team, checked
-against `paratroop_harness_02/` (`harness.json`, `contracts.json`, `checks.json`, `harness.py`),
-`smMATH_LANGUAGE_001/`, [results.md](../research/results.md) and the 45 files in `paratroop_harness_02/runs/` on that
+against `harnesses/paratroop_harness_02/` (`harness.json`, `contracts.json`, `checks.json`, `harness.py`),
+`models/smMATH_LANGUAGE_001/`, [results.md](../research/results.md) and the 45 files in `harnesses/paratroop_harness_02/runs/` on that
 date. The runs were read for their structure and messages only. Their timings belong to lamRD's Q23, which fixes its
 columns before reading any timing, so this plan doesn't read them. Each phase has deliverables, a gate, and what to
 write down. A phase that fails its gate is still a result, and it goes in [results.md](../research/results.md).
@@ -257,11 +257,11 @@ Not up for debate inside the run. If one turns out to be wrong, stop and say so 
 
 | File | What it is |
 |---|---|
-| `smPERCEPTION_01/predictions.md` | P1–P6, F1–F4 and the margin, copied from section 4 and dated before any run |
-| `smPERCEPTION_01/when.py` | `resolve_when(phrase, today)`, and `back_map(message, date, today)` for phase 3 |
-| `smPERCEPTION_01/tests/test_when.py` | 40 hand-written phrases with their dates, across weekdays, "tomorrow", times, month names and year ends |
-| `smPERCEPTION_01/tests/test_target.py` | `parse_target` round-trips the contract; a malformed target is refused, not guessed |
-| `smPERCEPTION_01/tests/test_leak.py` | the leak gate, with its planted-duplicate control |
+| `models/smPERCEPTION_01/predictions.md` | P1–P6, F1–F4 and the margin, copied from section 4 and dated before any run |
+| `models/smPERCEPTION_01/when.py` | `resolve_when(phrase, today)`, and `back_map(message, date, today)` for phase 3 |
+| `models/smPERCEPTION_01/tests/test_when.py` | 40 hand-written phrases with their dates, across weekdays, "tomorrow", times, month names and year ends |
+| `models/smPERCEPTION_01/tests/test_target.py` | `parse_target` round-trips the contract; a malformed target is refused, not guessed |
+| `models/smPERCEPTION_01/tests/test_leak.py` | the leak gate, with its planted-duplicate control |
 
 **Gate.** lamRD's Q23 result is published, and F1 doesn't fire. The tests pass.
 
@@ -271,9 +271,9 @@ Not up for debate inside the run. If one turns out to be wrong, stop and say so 
 
 **Deliverables**
 
-- **`smPERCEPTION_01/eval/messages.json`.** The 300 hand-written messages and the 39 from the runs, flagged
+- **`models/smPERCEPTION_01/eval/messages.json`.** The 300 hand-written messages and the 39 from the runs, flagged
   separately. Each item has the message, its earlier turn if it's a continuation, and who wrote it.
-- **`smPERCEPTION_01/eval/README.md`.** The writing brief, with the mix fixed before writing starts:
+- **`models/smPERCEPTION_01/eval/README.md`.** The writing brief, with the mix fixed before writing starts:
   - at least 30 of each kind;
   - at least 40 with a time phrase;
   - at least 30 continuations;
@@ -291,7 +291,7 @@ Not up for debate inside the run. If one turns out to be wrong, stop and say so 
 
 ### Phase 2: the floor and the no-model control. Nothing is trained
 
-`smPERCEPTION_01/eval/run_arms.py` runs arms A, A′ and B end to end on the eval set, each message in its own scratch
+`models/smPERCEPTION_01/eval/run_arms.py` runs arms A, A′ and B end to end on the eval set, each message in its own scratch
 folder. For each turn it stores:
 
 - the turn outcome;
@@ -320,8 +320,8 @@ to 5 don't run.
 
 | File | What it is |
 |---|---|
-| `smPERCEPTION_01/data.py` | the Perception generator, and the pool drawn from the existing generators, each row tagged with its template |
-| `smPERCEPTION_01/label.py` | calls the committed Perception prompt on each pool message; resumable, one line per message in `data/labels.jsonl` |
+| `models/smPERCEPTION_01/data.py` | the Perception generator, and the pool drawn from the existing generators, each row tagged with its template |
+| `models/smPERCEPTION_01/label.py` | calls the committed Perception prompt on each pool message; resumable, one line per message in `data/labels.jsonl` |
 | `data/split.json` | train and held-out templates, with 20% of templates held out, stratified by kind |
 
 - **Start with 3,000 labelled messages** (about 8 PC-hours at Perception's recorded 9.5 s).
@@ -399,7 +399,7 @@ falsifier fired.
 
 ### Phase 6: write up
 
-- **`smPERCEPTION_01/README.md`**, in the house format: the idea, the data, the model, results, what it means, next,
+- **`models/smPERCEPTION_01/README.md`**, in the house format: the idea, the data, the model, results, what it means, next,
   run it, files.
 - **[smModels/smPERCEPTION_01.md](../smModels/)**, whatever the outcome.
 - **[results.md](../research/results.md)**: dated entries for phases 2 and 5 at least, each with its falsifier's
@@ -412,7 +412,7 @@ falsifier fired.
 ## 7. Project layout
 
 ```text
-smPERCEPTION_01/
+models/smPERCEPTION_01/
   README.md
   predictions.md       P1–P6, F1–F4 and the margin, dated before any run (phase 0)
   when.py              resolve_when(phrase, today) and back_map(message, date, today)
@@ -434,7 +434,7 @@ smPERCEPTION_01/
 ## 8. Ground rules that apply
 
 - **Leave the owner's page state alone.** Every harness run uses a scratch data folder. `switches.json`,
-  `choices.json` and `settings.json` in `paratroop_harness_02/` aren't touched.
+  `choices.json` and `settings.json` in `harnesses/paratroop_harness_02/` aren't touched.
 - **Share the PC.** Labels and arms come to about 31 PC-hours, run in resumable batches that pause when the family
   portal wants the RX 580.
 - **Don't train and serve on the same box.** Phase 4 runs with the Mac's served model unloaded.
