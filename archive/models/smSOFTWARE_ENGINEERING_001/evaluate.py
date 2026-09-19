@@ -12,8 +12,8 @@ from training_data import build_splits, read_records, read_school_items, render_
 
 
 HERE = Path(__file__).resolve().parent
-DEFAULT_BASE = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
-DEFAULT_SCHOOL = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
+DEFAULT_BASE = HERE.parent / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
+DEFAULT_SCHOOL = HERE.parent / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
 
 
 def load_model(path, device):

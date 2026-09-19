@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-SCHOOL_CORPUS = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
+SCHOOL_CORPUS = HERE.parent / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
 OUTPUT = HERE / "data" / "conversations.jsonl"
 MANIFEST = HERE / "data" / "manifest.json"
 

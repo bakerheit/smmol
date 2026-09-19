@@ -23,7 +23,7 @@ from training_data import build_supervised_sets, read_examples
 
 
 HERE = Path(__file__).resolve().parent
-DEFAULT_INIT = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
+DEFAULT_INIT = HERE.parent / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
 STAGE = "general_conversation_v1"
 DTYPES = {"fp32": None, "bf16": torch.bfloat16, "fp16": torch.float16}
 

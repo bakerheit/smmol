@@ -24,8 +24,8 @@ from training_data import build_splits, read_records, read_school_items
 
 
 HERE = Path(__file__).resolve().parent
-DEFAULT_INIT = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
-DEFAULT_SCHOOL = HERE.parent.parent / "archive" / "models" / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
+DEFAULT_INIT = HERE.parent / "smLANGUAGE_en_SCH_001" / "checkpoints" / "grade_01" / "best.pt"
+DEFAULT_SCHOOL = HERE.parent / "smLANGUAGE_en_SCH_001" / "data" / "curriculum.jsonl"
 STAGE = "software_engineering_v1"
 DTYPES = {"fp32": None, "bf16": torch.bfloat16, "fp16": torch.float16}
 
