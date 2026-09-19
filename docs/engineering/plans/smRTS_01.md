@@ -1,17 +1,17 @@
 # smRTS_01 plan: a recurrent state that learns online, tested against its claims
 
 **Status: Phases 0-1 complete; Phase 2 paused after a partial S2. Phase 3 not started.** Written and research-reviewed
-2026-09-17. The research bundle is [smRTS_01/research/README.md](../../../smRTS_01/research/README.md). Each phase has
+2026-09-17. The research bundle is [smRTS_01/research/README.md](../../../models/smRTS_01/research/README.md). Each phase has
 deliverables, a gate, and what to write down. A phase that fails its gate is still a result, and it goes in
 [results.md](../research/results.md).
 
-Phase 0's evidence is in [phase0_results.md](../../../smRTS_01/phase0_results.md). The one-layer online traces pass
+Phase 0's evidence is in [phase0_results.md](../../../models/smRTS_01/phase0_results.md). The one-layer online traces pass
 the float64 and constant-memory gates. Two- and four-layer online gradients are substantially biased, so the main
 recall comparison starts with one recurrent layer and treats deeper online models as ablations.
 
 **Phase 2 state, 2026-09-17.** Predictions were registered in
-[predictions.md](../../../smRTS_01/predictions.md) before any run; evidence is in
-[phase2_results.md](../../../smRTS_01/phase2_results.md).
+[predictions.md](../../../models/smRTS_01/predictions.md) before any run; evidence is in
+[phase2_results.md](../../../models/smRTS_01/phase2_results.md).
 
 - **S1 complete.** `leaky-tbptt` with decay frozen at half-life 128 scored 0.053, Wilson
   [0.041, 0.069] at `(pairs=16, gap=128)` over 121M training bytes. Its answer NLL parks at `ln 33`:
@@ -129,7 +129,7 @@ Source: [jrz97619761/test-model-thing](https://github.com/jrz97619761/test-model
 
 The repo never checked that its online gradient equals the true gradient. This phase does, before anything is trained.
 The detailed derivation and tensor audit are in
-[trace_math.md](../../../smRTS_01/research/trace_math.md).
+[trace_math.md](../../../models/smRTS_01/research/trace_math.md).
 
 **The common recurrence and the gradient that is actually needed.** For an online-trace cell,
 `s_t = a ⊙ s_{t-1} + b_t`, `a = sigmoid(decay_logit)`. Define
@@ -275,7 +275,7 @@ weights; Phase 0 records a moving-optimizer cosine as a diagnostic, not a gate.
 constructible and exact; pair count and gap vary independently; keys are distinct; filler cannot parse as a pair;
 and lazy-guess rates match the construction.
 
-**Write down.** The lazy-guess rates by gap. Phase 1 evidence is in [`smRTS_01/phase1_results.md`](../../../smRTS_01/phase1_results.md).
+**Write down.** The lazy-guess rates by gap. Phase 1 evidence is in [`smRTS_01/phase1_results.md`](../../../models/smRTS_01/phase1_results.md).
 
 ### Phase 2: recall runs
 

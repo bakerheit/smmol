@@ -18,16 +18,16 @@
 *.bin
 
 # ---- Corpora and derived splits -----------------------------------------------------
-# Targeted by name, not by a blanket data/raw/ rule: smSOFTWARE_ENGINEERING_001/data/raw/
+# Targeted by name, not by a blanket data/raw/ rule: models/smSOFTWARE_ENGINEERING_001/data/raw/
 # holds a provenance manifest with pinned commits and upstream license files, which is
 # exactly the kind of thing a public repo should carry. Fetch scripts stay tracked too.
 #
 # TinyStories is not ours to redistribute; Tiny Shakespeare is small but still a download.
-smLANGUAGE_EN_001/data/raw/
-smLANGUAGE_EN_001/data/train.txt
-smLANGUAGE_EN_001/data/val.txt
-smLANGUAGE_EN_001/data/test.txt
-smLLM_01/data/input.txt
+models/smLANGUAGE_EN_001/data/raw/
+models/smLANGUAGE_EN_001/data/train.txt
+models/smLANGUAGE_EN_001/data/val.txt
+models/smLANGUAGE_EN_001/data/test.txt
+models/smLLM_01/data/input.txt
 
 # 483 KB of verbatim source from 75 other people's repositories. Permissively licensed
 # (MIT/Apache-2.0/BSD-3-Clause) and properly attributed, so redistributing it would be
@@ -36,20 +36,20 @@ smLLM_01/data/input.txt
 # code under our own repo's licence is the cleaner call. github_corpus.py rebuilds it
 # byte-for-byte from the pinned commits and blob SHAs in the manifest, which IS tracked,
 # along with every upstream licence text.
-smSOFTWARE_ENGINEERING_001/data/raw/records.jsonl
+models/smSOFTWARE_ENGINEERING_001/data/raw/records.jsonl
 
 # ---- Live harness state -------------------------------------------------------------
 # Real conversations, real memory, real run transcripts. Every one is read through
 # `read_json(path, default)`, and `module_on()` falls back to each module's own `enabled`
 # flag in harness.json — which IS tracked. So a fresh clone starts with the intended
 # defaults and writes its own state on first run. Nothing here needs a committed example.
-paratroop_harness_*/conversations/
-paratroop_harness_*/memory/
-paratroop_harness_*/runs/
-paratroop_harness_*/scores.json
-paratroop_harness_*/settings.json
-paratroop_harness_*/switches.json
-paratroop_harness_*/choices.json
+harnesses/paratroop_harness_*/conversations/
+harnesses/paratroop_harness_*/memory/
+harnesses/paratroop_harness_*/runs/
+harnesses/paratroop_harness_*/scores.json
+harnesses/paratroop_harness_*/settings.json
+harnesses/paratroop_harness_*/switches.json
+harnesses/paratroop_harness_*/choices.json
 
 # ---- Training output ----------------------------------------------------------------
 # Results and logs ARE the experimental record and are deliberately tracked — the research

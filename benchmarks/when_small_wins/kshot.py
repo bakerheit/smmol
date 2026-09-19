@@ -36,7 +36,7 @@ from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-ROUTER = os.path.join(ROOT, "smROUTER_01")
+ROUTER = os.path.join(ROOT, "models", "smROUTER_01")
 sys.path.insert(0, ROUTER)
 
 import baseline_llm as B     # noqa: E402  SYSTEM, SCHEMA and URL, unchanged

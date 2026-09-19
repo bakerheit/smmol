@@ -8,7 +8,7 @@ Three questions:
 import argparse, json, os, sys, time
 import torch
 
-HERE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "smLLM_01")
+HERE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models", "smLLM_01")
 sys.path.insert(0, HERE)
 from model import Config, TinyGPT  # noqa: E402
 

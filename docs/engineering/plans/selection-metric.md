@@ -185,7 +185,7 @@ this run reproduces v3's decisions exactly. Add `hard` to the epoch line and `be
 **Runs** (Mac idle, harness on `pc`, model unloaded):
 
 ```bash
-cd smROUTER_01
+cd models/smROUTER_01
 python3 train.py --seed 0 --epochs 10 --patience 0 --out out/hard-probe-s0  2>&1 | tee out/hard-probe-s0/train.log
 python3 train.py --seed 1 --epochs 10 --patience 0 --out out/hard-probe-s1  2>&1 | tee out/hard-probe-s1/train.log
 ```
@@ -227,7 +227,7 @@ messages changed side; whether the loss curve moved.
 Only after phases 1 and 2 both pass.
 
 ```bash
-cd smROUTER_01
+cd models/smROUTER_01
 python3 train.py --seed 0 --epochs 10 --val-split phrasings --patience 3 2>&1 | tee out/v4-train.log
 ```
 
@@ -259,7 +259,7 @@ line with it. Keep the hand-written score on the log line — it is the most inf
 must not enter `standing()` or `no_improve`.
 
 ```bash
-cd smTOOLS_COMPUTER_CLI_01
+cd models/smTOOLS_COMPUTER_CLI_01
 python3 train.py --seed 0 --steps 6000 --patience 3 2>&1 | tee out/v2-train.log
 ```
 

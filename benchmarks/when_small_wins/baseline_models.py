@@ -29,7 +29,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-CLI = os.path.join(ROOT, "smTOOLS_COMPUTER_CLI_01")
+CLI = os.path.join(ROOT, "models", "smTOOLS_COMPUTER_CLI_01")
 sys.path.insert(0, CLI)
 sys.path.insert(0, HERE)
 

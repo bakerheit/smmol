@@ -1,6 +1,6 @@
 # smROUTER_01: the Router module
 
-Project: [`smROUTER_01/`](../../../smROUTER_01/README.md). Checked against `model.py`, `route.py`, `train.py`,
+Project: [`smROUTER_01/`](../../../models/smROUTER_01/README.md). Checked against `model.py`, `route.py`, `train.py`,
 `rules.py`, `baseline_llm.py`, `labels.json`, `data.py`, `tests/test_router.py` and `out/` (including `out/v1/`) on
 2026-09-15.
 
