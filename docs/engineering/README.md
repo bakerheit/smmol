@@ -59,6 +59,7 @@ not a status page: [../product/whats-next.md](../product/whats-next.md) says wha
 | [selection-metric.md](plans/selection-metric.md) | A generated validation split that holds out phrasings rather than rows, so best-checkpoint and early-stopping have a metric that can rank epochs | 2026-09-17 |
 | [smRTS_01.md](plans/smRTS_01.md) | Three minimal recurrent state cells trained online with eligibility traces, no backprop through time, tested on associative recall and Tiny Shakespeare against truncated BPTT and smLLM_01. From a public repo's claims | 2026-09-17 |
 | [smPERCEPTION_01.md](plans/smPERCEPTION_01.md) | A small trained model for paratroop's Perception module, judged on whether turns come out the same as with the 8B, at a fraction of the time. Checks first whether turning Perception off does just as well. Requested by lamRD | 2026-09-19 |
+| [smOEM_01.md](plans/smOEM_01.md) | Organic Emulated Modeling: a model whose only goal is to copy itself and grow. Containment first: an emulated substrate inside a Docker box with no network, attacked by escape probes before any replicator runs | 2026-09-19 |
 
 ## The projects
 
